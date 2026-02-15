@@ -60,7 +60,7 @@ OVERALL (pre-commit): PASS
 
 ## Fechamento de sync e estado final
 
-- head_after_commit: `7e53be134415e241988e63eed36823b07b77d481`
+- head_after_commit: `bf9e5760441b61c1114d2bb269a0070985807957`
 - branch: `wt/analysis-gaps`
 - sync evidencias:
   - `outputs/instrumentation/m3_w1_w2/20260215_costs_v3/evidence/sync_fetch.txt`
