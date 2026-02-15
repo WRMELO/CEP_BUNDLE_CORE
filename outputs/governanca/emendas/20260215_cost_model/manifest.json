@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_005_EMENDA_COST_MODEL_0025PCT_V1",
-  "generated_at_utc": "2026-02-15T20:55:42.187525+00:00",
+  "generated_at_utc": "2026-02-15T20:56:18.528499+00:00",
   "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
   "branch": "wt/bootstrap",
   "head_before_commit": "1ab8d76a797d0d0589c4f13779e6dddf7d3aad00",
@@ -16,9 +16,13 @@
   ],
   "hashes_sha256": {
     "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
-    "outputs/governanca/emendas/20260215_cost_model/report.md": "65d4327755a3c8fa3980dc671ab9e1452c8f08045cba73243feda746c71da3a0",
+    "outputs/governanca/emendas/20260215_cost_model/report.md": "e54b8d0c5a9fc0709972ff3c59bdf43f51bf8573a9ac8a9cdc800facb9d6f23c",
     "outputs/governanca/emendas/20260215_cost_model/evidence/status_before.txt": "15a383d6174eba835f5da875ed8d3d57eaae0cc596f064fcc7ce742382f54e7b",
-    "outputs/governanca/emendas/20260215_cost_model/evidence/affected_artifacts_hashes.txt": "4d875744429c4cccf1291c79002b3b14890a610646cd5166beae0f2985e812e2"
+    "outputs/governanca/emendas/20260215_cost_model/evidence/affected_artifacts_hashes.txt": "4d875744429c4cccf1291c79002b3b14890a610646cd5166beae0f2985e812e2",
+    "outputs/governanca/emendas/20260215_cost_model/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/governanca/emendas/20260215_cost_model/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/governanca/emendas/20260215_cost_model/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/governanca/emendas/20260215_cost_model/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "gates": {
     "S1_GATE_ALLOWLIST": "PASS",
@@ -26,6 +30,19 @@
     "S3_VERIFY_EMENDA_CREATED": "PASS",
     "S4_VERIFY_EMENDA_CONTAINS_RULE": "PASS",
     "S5_WRITE_MANIFEST_HASHES": "PASS",
-    "S6_VERIFY_WORKTREE_CLEAN": "PENDING"
+    "S6_VERIFY_WORKTREE_CLEAN": "PASS"
+  },
+  "head_after_commit": "4c277f7fa62ff817411a22fb66b97be65aba0efd",
+  "sync_evidence": {
+    "fetch": "outputs/governanca/emendas/20260215_cost_model/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/governanca/emendas/20260215_cost_model/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/governanca/emendas/20260215_cost_model/evidence/sync_push.txt",
+    "status_after_sync": "outputs/governanca/emendas/20260215_cost_model/evidence/status_after_sync.txt"
+  },
+  "acceptance": {
+    "OVERALL": "PASS",
+    "emenda_criada_e_versionada": true,
+    "regra_0_025pct_clara_e_rastreavel": true,
+    "sync_remoto_agno_evidenciado": true
   }
 }

@@ -45,3 +45,15 @@ Hashes em: `outputs/governanca/emendas/20260215_cost_model/evidence/affected_art
 - S6_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `4c277f7fa62ff817411a22fb66b97be65aba0efd`
+- branch: `wt/bootstrap`
+- sync evidencias:
+  - `outputs/governanca/emendas/20260215_cost_model/evidence/sync_fetch.txt`
+  - `outputs/governanca/emendas/20260215_cost_model/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/emendas/20260215_cost_model/evidence/sync_push.txt`
+  - `outputs/governanca/emendas/20260215_cost_model/evidence/status_after_sync.txt`
+- gate S6 (worktree clean): PASS
+- OVERALL: **PASS**
