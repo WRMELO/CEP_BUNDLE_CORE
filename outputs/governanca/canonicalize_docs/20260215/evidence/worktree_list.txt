@@ -1,0 +1,20 @@
+worktree /home/wilson/CEP_BUNDLE_CORE
+HEAD 4c84a020fa947401f26f5fd98c551e5f4ae7d59c
+branch refs/heads/main
+
+worktree /home/wilson/_wt/CEP_BUNDLE_CORE/analysis
+HEAD 5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730
+branch refs/heads/wt/analysis-gaps
+
+worktree /home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap
+HEAD 989271dc4960c21db347bd8c12f06d859e35ad69
+branch refs/heads/wt/bootstrap
+
+worktree /home/wilson/_wt/CEP_BUNDLE_CORE/experiments
+HEAD 4c84a020fa947401f26f5fd98c551e5f4ae7d59c
+branch refs/heads/wt/experiments
+
+worktree /home/wilson/_wt/CEP_BUNDLE_CORE/ssot
+HEAD 4c84a020fa947401f26f5fd98c551e5f4ae7d59c
+branch refs/heads/wt/ssot
+

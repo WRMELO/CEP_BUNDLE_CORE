@@ -1,0 +1,104 @@
+[
+  {
+    "label": "cost_model_emenda",
+    "hint": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "found": true,
+    "attempts": [
+      {
+        "scope": "current_worktree_fs",
+        "checked": "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "found": false
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "found": false,
+        "origin_ref": "refs/heads/wt/analysis-gaps"
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "found": true,
+        "origin_ref": "refs/heads/wt/bootstrap"
+      }
+    ]
+  },
+  {
+    "label": "cost_model_emenda",
+    "hint": "outputs/governanca/emendas/20260215_cost_model/",
+    "found": true,
+    "attempts": [
+      {
+        "scope": "current_worktree_fs",
+        "checked": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/emendas/20260215_cost_model",
+        "found": false
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/governanca/emendas/20260215_cost_model",
+        "found": false,
+        "origin_ref": "refs/heads/wt/analysis-gaps"
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model",
+        "found": true,
+        "origin_ref": "refs/heads/wt/bootstrap"
+      }
+    ]
+  },
+  {
+    "label": "instrumentation_costs_v3",
+    "hint": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/report.md",
+    "found": true,
+    "attempts": [
+      {
+        "scope": "current_worktree_fs",
+        "checked": "/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/report.md",
+        "found": false
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/report.md",
+        "found": true,
+        "origin_ref": "refs/heads/wt/analysis-gaps"
+      }
+    ]
+  },
+  {
+    "label": "instrumentation_costs_v3",
+    "hint": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+    "found": true,
+    "attempts": [
+      {
+        "scope": "current_worktree_fs",
+        "checked": "/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+        "found": false
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+        "found": true,
+        "origin_ref": "refs/heads/wt/analysis-gaps"
+      }
+    ]
+  },
+  {
+    "label": "instrumentation_costs_v3",
+    "hint": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/manifest.json",
+    "found": true,
+    "attempts": [
+      {
+        "scope": "current_worktree_fs",
+        "checked": "/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/manifest.json",
+        "found": false
+      },
+      {
+        "scope": "worktree_fs",
+        "checked": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/manifest.json",
+        "found": true,
+        "origin_ref": "refs/heads/wt/analysis-gaps"
+      }
+    ]
+  }
+]

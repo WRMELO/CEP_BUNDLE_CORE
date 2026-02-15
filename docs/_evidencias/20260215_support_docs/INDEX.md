@@ -1,0 +1,68 @@
+# INDEX - Support docs canonizados
+
+- generated_at_utc: `2026-02-15T21:16:14.853676+00:00`
+- total_arquivos_copiados: **12**
+- origem_repo: `/home/wilson/CEP_BUNDLE_CORE`
+
+## Arquivos canonizados
+
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/EMENDA_COST_MODEL_ARB_0025PCT_V1.md`
+  - sha256: `27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/report.md`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/report.md`
+  - sha256: `43913f7543f718516457e99e2fb204a7e3b7db271da9898e21e74f4caeb9d94d`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/manifest.json`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/manifest.json`
+  - sha256: `b5712473c9b252d6290a0555381a5db9599bfc0f83d9c9854f485b904ca4b16d`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/evidence/sync_push.txt`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_push.txt`
+  - sha256: `163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/evidence/affected_artifacts_hashes.txt`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/affected_artifacts_hashes.txt`
+  - sha256: `4d875744429c4cccf1291c79002b3b14890a610646cd5166beae0f2985e812e2`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/evidence/status_after_sync.txt`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/status_after_sync.txt`
+  - sha256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/evidence/sync_fetch.txt`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_fetch.txt`
+  - sha256: `b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/evidence/status_before.txt`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/status_before.txt`
+  - sha256: `15a383d6174eba835f5da875ed8d3d57eaae0cc596f064fcc7ce742382f54e7b`
+- label: `cost_model_emenda`
+  - origem: `refs/heads/wt/bootstrap` @ `989271dc4960c21db347bd8c12f06d859e35ad69`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/emendas/20260215_cost_model/evidence/sync_pull_ff_only.txt`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_pull_ff_only.txt`
+  - sha256: `cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d`
+- label: `instrumentation_costs_v3`
+  - origem: `refs/heads/wt/analysis-gaps` @ `5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/report.md`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/report.md`
+  - sha256: `f14657d06488358deb0cda280257a21375e048fd8a5e514404e7f2d07ebc8ce1`
+- label: `instrumentation_costs_v3`
+  - origem: `refs/heads/wt/analysis-gaps` @ `5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/metrics_m3_w1_w2_v3.json`
+  - sha256: `d4c3e59aaeec1520815099985ef43cc6e77d962e2abc5bc88ea5a6658f9948b9`
+- label: `instrumentation_costs_v3`
+  - origem: `refs/heads/wt/analysis-gaps` @ `5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730`
+  - caminho_original: `/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/manifest.json`
+  - fixado_em: `docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/manifest.json`
+  - sha256: `48d016a690058f06d9e9da0f2ca9ce64f1be5d00c1a27cb9156693dbd3533734`

@@ -1,0 +1,50 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_007_CANONICALIZE_SUPPORT_DOCS_FROM_WORKTREES_AND_REMOTE_V1",
+  "generated_at_utc": "2026-02-15T21:16:14.859364+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "main",
+  "head_before_commit": "4c84a020fa947401f26f5fd98c551e5f4ae7d59c",
+  "outputs": {
+    "report_md": "outputs/governanca/canonicalize_docs/20260215/report.md",
+    "manifest_json": "outputs/governanca/canonicalize_docs/20260215/manifest.json",
+    "evidence_dir": "outputs/governanca/canonicalize_docs/20260215/evidence/",
+    "canonical_drop_dir": "docs/_evidencias/20260215_support_docs/",
+    "index_md": "docs/_evidencias/20260215_support_docs/INDEX.md",
+    "index_json": "docs/_evidencias/20260215_support_docs/index.json"
+  },
+  "stats": {
+    "entries_count": 12,
+    "targets_found": true
+  },
+  "hashes_sha256": {
+    "docs/_evidencias/20260215_support_docs/INDEX.md": "c8c8133a3fa435b2e71ac40ca4be239cc6b35bf7d4415364b81147558f56f9a5",
+    "docs/_evidencias/20260215_support_docs/index.json": "f177d812a902a7574d1a3bc5d671621fb26595011c1be7f736f6341825802ea2",
+    "outputs/governanca/canonicalize_docs/20260215/report.md": "8f3982767d744b42c5ae25e12d23f06fcac4431e10ed8752caae0f3102385442",
+    "outputs/governanca/canonicalize_docs/20260215/evidence/worktree_list.txt": "1605ea822e90e6fb2c58f40254f20d2f6b098ce75f165aaa7eeea7150196d510",
+    "outputs/governanca/canonicalize_docs/20260215/evidence/branches_local.txt": "3bcdf284779cd6c8d812549654d3030c4be071e96c52ee9023dfe9242e3fc99e",
+    "outputs/governanca/canonicalize_docs/20260215/evidence/branches_remote.txt": "683110bfd207642a2a552ba87edf8de7734375e8f499f1a104ed1552dbdc465a",
+    "outputs/governanca/canonicalize_docs/20260215/evidence/search_log.json": "ca221d2873f56eb7ed5b6a1ed7ce1699c89fccda260d8a48f57194d9abe2829c",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/EMENDA_COST_MODEL_ARB_0025PCT_V1.md": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/report.md": "43913f7543f718516457e99e2fb204a7e3b7db271da9898e21e74f4caeb9d94d",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/manifest.json": "b5712473c9b252d6290a0555381a5db9599bfc0f83d9c9854f485b904ca4b16d",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/affected_artifacts_hashes.txt": "4d875744429c4cccf1291c79002b3b14890a610646cd5166beae0f2985e812e2",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/status_before.txt": "15a383d6174eba835f5da875ed8d3d57eaae0cc596f064fcc7ce742382f54e7b",
+    "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/report.md": "f14657d06488358deb0cda280257a21375e048fd8a5e514404e7f2d07ebc8ce1",
+    "docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/metrics_m3_w1_w2_v3.json": "d4c3e59aaeec1520815099985ef43cc6e77d962e2abc5bc88ea5a6658f9948b9",
+    "docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/manifest.json": "48d016a690058f06d9e9da0f2ca9ce64f1be5d00c1a27cb9156693dbd3533734"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_REPO_AND_GIT_OK": "PASS",
+    "S3_VERIFY_SEARCH_COMPLETED_ALL_SCOPES": "PASS",
+    "S4_VERIFY_AT_LEAST_ONE_TARGET_FOUND": "PASS",
+    "S5_VERIFY_CANONICAL_DIR_POPULATED": "PASS",
+    "S6_VERIFY_INDEX_CREATED": "PASS",
+    "S7_WRITE_MANIFEST_HASHES": "PASS",
+    "S8_VERIFY_WORKTREE_CLEAN": "PENDING"
+  }
+}
