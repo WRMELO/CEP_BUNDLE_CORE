@@ -1,0 +1,31 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_005_EMENDA_COST_MODEL_0025PCT_V1",
+  "generated_at_utc": "2026-02-15T20:55:42.187525+00:00",
+  "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+  "branch": "wt/bootstrap",
+  "head_before_commit": "1ab8d76a797d0d0589c4f13779e6dddf7d3aad00",
+  "outputs": {
+    "emenda_path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "report_md": "outputs/governanca/emendas/20260215_cost_model/report.md",
+    "manifest_json": "outputs/governanca/emendas/20260215_cost_model/manifest.json",
+    "evidence_dir": "outputs/governanca/emendas/20260215_cost_model/evidence/"
+  },
+  "affected_artifacts": [
+    "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215/turnover_costs_derivation.json",
+    "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json"
+  ],
+  "hashes_sha256": {
+    "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+    "outputs/governanca/emendas/20260215_cost_model/report.md": "65d4327755a3c8fa3980dc671ab9e1452c8f08045cba73243feda746c71da3a0",
+    "outputs/governanca/emendas/20260215_cost_model/evidence/status_before.txt": "15a383d6174eba835f5da875ed8d3d57eaae0cc596f064fcc7ce742382f54e7b",
+    "outputs/governanca/emendas/20260215_cost_model/evidence/affected_artifacts_hashes.txt": "4d875744429c4cccf1291c79002b3b14890a610646cd5166beae0f2985e812e2"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_WORKTREE_BOOTSTRAP": "PASS",
+    "S3_VERIFY_EMENDA_CREATED": "PASS",
+    "S4_VERIFY_EMENDA_CONTAINS_RULE": "PASS",
+    "S5_WRITE_MANIFEST_HASHES": "PASS",
+    "S6_VERIFY_WORKTREE_CLEAN": "PENDING"
+  }
+}
