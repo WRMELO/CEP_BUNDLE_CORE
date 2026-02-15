@@ -136,6 +136,16 @@
       "excerpt": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
     },
     {
+      "path": "/home/wilson/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json",
+      "line": 31,
+      "excerpt": "          \"Deve falhar se houver SyntaxError ou imports invalidos.\""
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv",
+      "line": 10,
+      "excerpt": "2023-03-10,\"Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"\"FDIC Acts to Protect All Depositors of the former Silicon ...\"\"))\""
+    },
+    {
       "path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md",
       "line": 10,
       "excerpt": "## Recomendação"
@@ -154,6 +164,11 @@
       "path": "/home/wilson/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md",
       "line": 27,
       "excerpt": "| 8 | 2023-03-10 | Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"FDIC Acts to Protect All Depositors of the former Silicon ...\")) | True |"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv",
+      "line": 10,
+      "excerpt": "8,2023-03-10,\"Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"\"FDIC Acts to Protect All Depositors of the former Silicon ...\"\"))\",True,\"E_STRESS_I_62,E_TREND_RUN7_16,E_"
     },
     {
       "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md",
@@ -769,6 +784,16 @@
       "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_104940/relatorio_task_009_plato_e_rompimentos.md",
       "line": 25,
       "excerpt": "- A explicação do plateau deve considerar a combinação de: regime Master (RISK_ON/OFF/PRESERVACAO), vendas por I/MR e performance dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/monthly_regime_structured.json",
+      "line": 68,
+      "excerpt": "    \"motivos\": \"Selic em forte alta, inflação global, risco fiscal doméstico.\","
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/monthly_regime_structured.json",
+      "line": 82,
+      "excerpt": "    \"motivos\": \"Piora das expectativas econômicas, saída de investidores estrangeiros, aversão a risco.\","
     },
     {
       "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/report.md",
