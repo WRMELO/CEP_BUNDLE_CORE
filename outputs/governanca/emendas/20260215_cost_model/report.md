@@ -48,7 +48,7 @@ OVERALL (pre-commit): PASS
 
 ## Fechamento de sync e estado final
 
-- head_after_commit: `4c277f7fa62ff817411a22fb66b97be65aba0efd`
+- head_after_commit: `80557da1861aea20456f139883957ba3d501831f`
 - branch: `wt/bootstrap`
 - sync evidencias:
   - `outputs/governanca/emendas/20260215_cost_model/evidence/sync_fetch.txt`
