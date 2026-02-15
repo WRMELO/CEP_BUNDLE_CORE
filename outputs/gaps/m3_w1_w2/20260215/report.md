@@ -62,3 +62,14 @@ Comando principal usado:
 - S8_VERIFY_WORKTREE_CLEAN: PENDING (validado apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- commit_head: `04270fdda28698de969690c3d446d160afd9ff1d`
+- branch: `wt/analysis-gaps`
+- sync evidencias:
+  - `outputs/gaps/m3_w1_w2/20260215/evidence/sync_fetch.txt`
+  - `outputs/gaps/m3_w1_w2/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/gaps/m3_w1_w2/20260215/evidence/sync_push.txt`
+- gate S8 (worktree clean): PASS
+- OVERALL: **PASS**
