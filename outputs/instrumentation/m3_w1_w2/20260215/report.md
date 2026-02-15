@@ -75,3 +75,14 @@ Inclui por segmento M3_full/W1/W2:
 - S9_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- commit_head: `c85793fa497ec5b7b586cdb414149e70116c8441`
+- branch: `wt/analysis-gaps`
+- sync evidencias:
+  - `outputs/instrumentation/m3_w1_w2/20260215/evidence/sync_fetch.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215/evidence/sync_push.txt`
+- gate S9 (worktree clean): PASS
+- OVERALL: **PASS**
