@@ -57,3 +57,15 @@ Foi utilizada a mesma base de `notional` do ledger usada na derivacao de turnove
 - S7_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `7e53be134415e241988e63eed36823b07b77d481`
+- branch: `wt/analysis-gaps`
+- sync evidencias:
+  - `outputs/instrumentation/m3_w1_w2/20260215_costs_v3/evidence/sync_fetch.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215_costs_v3/evidence/sync_pull_ff_only.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215_costs_v3/evidence/sync_push.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215_costs_v3/evidence/status_after_sync.txt`
+- gate S7 (worktree clean): PASS
+- OVERALL: **PASS**
