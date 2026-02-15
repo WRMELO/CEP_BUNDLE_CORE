@@ -92,6 +92,7 @@ Construir um bundle operacional orientado por evidencias, com controle de risco 
   - `evidence/`
 - Visualizacao padrao em Plotly para diagnosticos de controle/regime.
 - Qualquer mudanca de regra estrutural exige emenda formal alinhada a `docs/CONSTITUICAO.md`.
+- Regra normativa de caixa remunerado a CDI definida em `docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md`.
 
 ## Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL)
 

@@ -1,0 +1,9 @@
+# Search scope
+files: docs/CONSTITUICAO.md, docs/emendas/
+terms: CDI|caixa|cash|remunerado|remuneracao|taxa CDI
+
+## docs/CONSTITUICAO.md
+NO_MATCH
+
+## docs/emendas/
+NO_MATCH

@@ -1,0 +1,2 @@
+ M docs/MASTERPLAN.md
+?? docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md
