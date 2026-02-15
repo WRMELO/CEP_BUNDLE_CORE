@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_007_CANONICALIZE_SUPPORT_DOCS_FROM_WORKTREES_AND_REMOTE_V1",
-  "generated_at_utc": "2026-02-15T21:17:04.221379+00:00",
+  "generated_at_utc": "2026-02-15T21:17:26.118102+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "main",
   "head_before_commit": "4c84a020fa947401f26f5fd98c551e5f4ae7d59c",
@@ -39,7 +39,7 @@
     "outputs/governanca/canonicalize_docs/20260215/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
     "outputs/governanca/canonicalize_docs/20260215/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/governanca/canonicalize_docs/20260215/evidence/worktree_list.txt": "1605ea822e90e6fb2c58f40254f20d2f6b098ce75f165aaa7eeea7150196d510",
-    "outputs/governanca/canonicalize_docs/20260215/report.md": "844efcacd6e72f76a80897be6176849f6b7066a335f3636fabc73a9c1c67b9a5"
+    "outputs/governanca/canonicalize_docs/20260215/report.md": "a80923262ca54d74427aef2d8e0b8348b999935b7d9e02f651d8d57c576f871c"
   },
   "gates": {
     "S1_GATE_ALLOWLIST": "PASS",
@@ -51,7 +51,7 @@
     "S7_WRITE_MANIFEST_HASHES": "PASS",
     "S8_VERIFY_WORKTREE_CLEAN": "PASS"
   },
-  "head_after_commit": "f42560b8a82dc5b9d3df2e5e79c617c0a3df1dc7",
+  "head_after_commit": "95d97c23fb07858fc535b5f359d9fb9a69aded8f",
   "sync_evidence": {
     "fetch": "outputs/governanca/canonicalize_docs/20260215/evidence/sync_fetch.txt",
     "pull_ff_only": "outputs/governanca/canonicalize_docs/20260215/evidence/sync_pull_ff_only.txt",

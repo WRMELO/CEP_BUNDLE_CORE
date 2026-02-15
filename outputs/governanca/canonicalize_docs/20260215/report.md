@@ -42,7 +42,7 @@ OVERALL (pre-commit): PASS
 
 ## Fechamento de sync e estado final
 
-- head_after_commit: `f42560b8a82dc5b9d3df2e5e79c617c0a3df1dc7`
+- head_after_commit: `95d97c23fb07858fc535b5f359d9fb9a69aded8f`
 - branch: `main`
 - sync evidencias:
   - `outputs/governanca/canonicalize_docs/20260215/evidence/sync_fetch.txt`
