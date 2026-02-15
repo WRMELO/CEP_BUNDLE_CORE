@@ -80,4 +80,3 @@ Ela e a fonte normativa principal para bootstrap, evolucao e operacao do reposit
 ## 6) Vigencia
 
 Esta versao entra em vigor imediatamente como **Constituicao V1** do `CEP_BUNDLE_CORE`.
-
