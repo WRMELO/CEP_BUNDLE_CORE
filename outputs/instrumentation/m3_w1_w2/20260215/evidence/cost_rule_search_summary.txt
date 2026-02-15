@@ -1,0 +1,3 @@
+Escopo de busca: docs/CONSTITUICAO.md e docs/corpus/.
+Matches na Constituicao para tokens de custo: []
+Resultado: REGRA AUSENTE para estimativa de custo_total.

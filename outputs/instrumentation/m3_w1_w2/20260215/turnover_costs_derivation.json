@@ -1,0 +1,132 @@
+{
+  "generated_at_utc": "2026-02-15T19:38:05.346895+00:00",
+  "inputs": {
+    "daily_equity_source": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet",
+    "ledger_source": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet"
+  },
+  "ledger_schema": {
+    "columns": [
+      "date",
+      "mechanism",
+      "action",
+      "ticker",
+      "qty",
+      "price",
+      "notional",
+      "reason",
+      "master_state"
+    ],
+    "numeric_columns": [
+      "notional"
+    ],
+    "sample_rows": [
+      {
+        "date": "2018-07-02",
+        "mechanism": "M3",
+        "action": "BUY",
+        "ticker": "FHER3",
+        "qty": null,
+        "price": null,
+        "notional": 0.1,
+        "reason": "WEEKLY_BUY",
+        "master_state": "RISK_ON"
+      },
+      {
+        "date": "2018-07-02",
+        "mechanism": "M3",
+        "action": "BUY",
+        "ticker": "GOGL34",
+        "qty": null,
+        "price": null,
+        "notional": 0.1,
+        "reason": "WEEKLY_BUY",
+        "master_state": "RISK_ON"
+      },
+      {
+        "date": "2018-07-02",
+        "mechanism": "M3",
+        "action": "BUY",
+        "ticker": "HOME34",
+        "qty": null,
+        "price": null,
+        "notional": 0.1,
+        "reason": "WEEKLY_BUY",
+        "master_state": "RISK_ON"
+      }
+    ]
+  },
+  "turnover_method": {
+    "status": "DERIVED",
+    "formula": "turnover_daily = sum(abs(notional) por dia) / equity_do_dia",
+    "notes": "notional presente no ledger permitiu derivacao objetiva; num_trades por contagem de linhas no recorte."
+  },
+  "cost_method": {
+    "status": "REGRA AUSENTE",
+    "direct_cost_columns_found": [],
+    "ssot_rule_found_in_constitution": false,
+    "constitution_token_matches": [],
+    "decision": "cost_total mantido como null por ausencia de coluna direta e de regra SSOT de estimativa no escopo normativo atual."
+  },
+  "supporting_corpus_mentions": [
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 10,
+      "excerpt": "- M0 risco/execução: turnover=0.0584, cash_ratio=0.1161, n_positions=9.99, buys=295, sells=253"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 14,
+      "excerpt": "- M1 risco/execução: turnover=0.0902, cash_ratio=0.1703, n_positions=8.93, buys=493, sells=383"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 18,
+      "excerpt": "- M3 risco/execução: turnover=0.0971, cash_ratio=0.1741, n_positions=8.89, buys=489, sells=392"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 26,
+      "excerpt": "- M0 risco/execução: turnover=0.0227, cash_ratio=0.0339, n_positions=10.91, buys=65, sells=53"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 30,
+      "excerpt": "- M1 risco/execução: turnover=0.0722, cash_ratio=0.1267, n_positions=9.08, buys=184, sells=152"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 34,
+      "excerpt": "- M3 risco/execução: turnover=0.0754, cash_ratio=0.1299, n_positions=9.33, buys=191, sells=158"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 42,
+      "excerpt": "- M0 risco/execução: turnover=0.0164, cash_ratio=0.0228, n_positions=12.85, buys=44, sells=40"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 46,
+      "excerpt": "- M1 risco/execução: turnover=0.0761, cash_ratio=0.1231, n_positions=8.11, buys=150, sells=119"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 50,
+      "excerpt": "- M3 risco/execução: turnover=0.0568, cash_ratio=0.1051, n_positions=9.99, buys=122, sells=106"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 58,
+      "excerpt": "- M0 risco/execução: turnover=0.0712, cash_ratio=0.0897, n_positions=9.82, buys=10, sells=8"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 62,
+      "excerpt": "- M1 risco/execução: turnover=0.1320, cash_ratio=0.1480, n_positions=10.45, buys=19, sells=16"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 66,
+      "excerpt": "- M3 risco/execução: turnover=0.1152, cash_ratio=0.1515, n_positions=9.05, buys=16, sells=14"
+    }
+  ]
+}
