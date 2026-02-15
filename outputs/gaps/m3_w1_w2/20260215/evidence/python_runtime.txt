@@ -1,0 +1,1 @@
+/home/wilson/PortfolioZero/.venv/bin/python

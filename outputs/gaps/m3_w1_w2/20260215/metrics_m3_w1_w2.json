@@ -1,0 +1,77 @@
+{
+  "generated_at_utc": "2026-02-15T19:25:55.144210+00:00",
+  "source_windows": {
+    "W1": {
+      "start": "2018-07-02",
+      "end": "2021-06-30",
+      "source": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md"
+    },
+    "W2": {
+      "start": "2021-07-01",
+      "end": "2022-12-30",
+      "source": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md"
+    }
+  },
+  "metrics": {
+    "M3_full": {
+      "available": true,
+      "start_date": "2018-07-02",
+      "end_date": "2025-12-30",
+      "n_obs": 1864,
+      "equity_initial": 1.0000000000000002,
+      "equity_final": 2.38543962694251,
+      "multiple": 2.3854396269425098,
+      "return_pct": 1.3854396269425098,
+      "MDD": -0.6803348624996948,
+      "tempo_em_drawdown_dias": 1742,
+      "tempo_recuperacao_max_dias": 1137,
+      "turnover_mean": null,
+      "turnover_sum": null,
+      "custo_total": null
+    },
+    "W1": {
+      "available": true,
+      "start_date": "2018-07-02",
+      "end_date": "2021-06-30",
+      "n_obs": 740,
+      "equity_initial": 1.0000000000000002,
+      "equity_final": 5.369645122088539,
+      "multiple": 5.369645122088538,
+      "return_pct": 4.369645122088538,
+      "MDD": -0.18737225795599066,
+      "tempo_em_drawdown_dias": 618,
+      "tempo_recuperacao_max_dias": 136,
+      "turnover_mean": null,
+      "turnover_sum": null,
+      "custo_total": null
+    },
+    "W2": {
+      "available": true,
+      "start_date": "2021-07-01",
+      "end_date": "2022-12-29",
+      "n_obs": 375,
+      "equity_initial": 5.365495617179715,
+      "equity_final": 2.507541739507133,
+      "multiple": 0.4673457809709631,
+      "return_pct": -0.5326542190290369,
+      "MDD": -0.5981000548432676,
+      "tempo_em_drawdown_dias": 361,
+      "tempo_recuperacao_max_dias": 346,
+      "turnover_mean": null,
+      "turnover_sum": null,
+      "custo_total": null
+    }
+  },
+  "reported_from_task018": {
+    "W1_returns_pct_M0_M1_M3": [
+      "+168.10%",
+      "+408.02%",
+      "+436.96%"
+    ],
+    "W2_returns_pct_M0_M1_M3": [
+      "-8.08%",
+      "-60.74%",
+      "-53.27%"
+    ]
+  }
+}

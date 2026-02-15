@@ -1,0 +1,44 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_003_CLOSE_GAPS_M3_W1_W2_QUANT_V1",
+  "generated_at_utc": "2026-02-15T19:25:55.251138+00:00",
+  "worktree_target": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
+  "branch_target": "wt/analysis-gaps",
+  "inputs": {
+    "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+    "bootstrap_worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+    "corpus_dir": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/corpus",
+    "masterplan": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/MASTERPLAN.md",
+    "m3_w1_w2_evidence": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/outputs/governanca/masterplan/20260215/evidence/m3_w1_w2_evidence.json"
+  },
+  "outputs": {
+    "report_md": "outputs/gaps/m3_w1_w2/20260215/report.md",
+    "manifest_json": "outputs/gaps/m3_w1_w2/20260215/manifest.json",
+    "evidence_dir": "outputs/gaps/m3_w1_w2/20260215/evidence/",
+    "curves_dir": "outputs/gaps/m3_w1_w2/20260215/curves/",
+    "metrics_json": "outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json",
+    "sources_json": "outputs/gaps/m3_w1_w2/20260215/sources_m3_w1_w2.json",
+    "plots_html": "outputs/gaps/m3_w1_w2/20260215/curves/plots_m3_w1_w2.html"
+  },
+  "hashes_sha256": {
+    "outputs/gaps/m3_w1_w2/20260215/report.md": "135d056ac29b3f0126d32e16d54bae60d4abdc45213d0573915b95b3ecb87dd7",
+    "outputs/gaps/m3_w1_w2/20260215/sources_m3_w1_w2.json": "8445763398660a985f8799ce5ddf16290adba5453d2dac79020650469ffda05d",
+    "outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json": "5e390fdef598ce915d4a96627eb6d253247b259a219d7015626f70a969df2ae2",
+    "outputs/gaps/m3_w1_w2/20260215/curves/plots_m3_w1_w2.html": "379f6d1bffe295e6f74238dc87ce18e3a9243fe9e7c4d7eaeb7b3eeca7917b57",
+    "outputs/gaps/m3_w1_w2/20260215/evidence/python_runtime.txt": "a1545a265e9f50cd4c8942840e1f7e2c02e0acb47bd60574cbdc7514a8912ffa",
+    "outputs/gaps/m3_w1_w2/20260215/evidence/source_selection_notes.txt": "212fc7dbddf22cc13953ae14ce977caa0fbe4dcbc288b7fb52adfea781b538da",
+    "outputs/gaps/m3_w1_w2/20260215/evidence/spc_signal_availability.txt": "3ed91e29f3e7ff6b6ba292d80a910749472acd2378538fe7f1fd247828f57b5e"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_WORKTREE_CREATED_AND_CHECKED_OUT": "PASS",
+    "S3_VERIFY_SOURCES_IDENTIFIED_AND_HASHED": "PASS",
+    "S4_VERIFY_MINIMUM_METRICS_PRESENT": "PASS",
+    "S5_VERIFY_PLOTLY_CURVES_GENERATED": "PASS",
+    "S6_VERIFY_REPORT_HAS_TRACEABILITY": "PASS",
+    "S7_WRITE_MANIFEST_HASHES": "PASS",
+    "S8_VERIFY_WORKTREE_CLEAN": "PENDING"
+  },
+  "notes": {
+    "spc_signal_availability": "disponivel: 2 colunas agregadas"
+  }
+}
