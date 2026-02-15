@@ -39,3 +39,15 @@
 - S8_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `f42560b8a82dc5b9d3df2e5e79c617c0a3df1dc7`
+- branch: `main`
+- sync evidencias:
+  - `outputs/governanca/canonicalize_docs/20260215/evidence/sync_fetch.txt`
+  - `outputs/governanca/canonicalize_docs/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/canonicalize_docs/20260215/evidence/sync_push.txt`
+  - `outputs/governanca/canonicalize_docs/20260215/evidence/status_after_sync.txt`
+- gate S8 (worktree clean): PASS
+- OVERALL: **PASS**
