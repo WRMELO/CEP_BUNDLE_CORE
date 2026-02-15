@@ -47,3 +47,15 @@ Referencia cruzada adicionada no MasterPlan (uma linha):
 - S6_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `572add88e875ddada5f4dd9139df3c267cbaa3b9`
+- branch: `wt/bootstrap`
+- sync evidencias:
+  - `outputs/governanca/verify_cdi_cash/20260215/evidence/sync_fetch.txt`
+  - `outputs/governanca/verify_cdi_cash/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/verify_cdi_cash/20260215/evidence/sync_push.txt`
+  - `outputs/governanca/verify_cdi_cash/20260215/evidence/status_after_sync.txt`
+- gate S6 (worktree clean): PASS
+- OVERALL: **PASS**
