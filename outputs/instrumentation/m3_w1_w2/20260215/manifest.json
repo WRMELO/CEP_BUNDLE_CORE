@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_004_INSTRUMENTATION_W1W2_AND_COSTS_V1",
-  "generated_at_utc": "2026-02-15T19:38:51.942021+00:00",
+  "generated_at_utc": "2026-02-15T19:39:25.434604+00:00",
   "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
   "branch": "wt/analysis-gaps",
   "inputs": {
@@ -29,7 +29,7 @@
     "outputs/instrumentation/m3_w1_w2/20260215/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
     "outputs/instrumentation/m3_w1_w2/20260215/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json": "e9a6d3e7c5e2d82404316c71e0e6da5100814125a559737c00c8fdb765efae14",
-    "outputs/instrumentation/m3_w1_w2/20260215/report.md": "45eb4aab422007353be137ad10d8c3f83128a7be90006f4c25df6cc7b6c3d38c",
+    "outputs/instrumentation/m3_w1_w2/20260215/report.md": "26dc7beedfc712331b885adb3d0476f7712790892df4764789f433a2f8da26ae",
     "outputs/instrumentation/m3_w1_w2/20260215/turnover_costs_derivation.json": "0f592e349799aaa97ea1ce3566ebe2c832d60cdedfd90c97f33bb252f412276a",
     "outputs/instrumentation/m3_w1_w2/20260215/w1w2_segments.json": "bc4aa1f6a87d4f69659999ed1de7d869c436f821b5ce66f9447bece3c20eca8b"
   },
@@ -45,7 +45,7 @@
     "S9_VERIFY_WORKTREE_CLEAN": "PASS"
   },
   "git": {
-    "head": "c85793fa497ec5b7b586cdb414149e70116c8441",
+    "head": "c4583961ac1b306e5e734ef8dffb58fe95024840",
     "branch": "wt/analysis-gaps",
     "remote": "origin/wt/analysis-gaps"
   },

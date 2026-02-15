@@ -78,7 +78,7 @@ OVERALL (pre-commit): PASS
 
 ## Fechamento de sync e estado final
 
-- commit_head: `c85793fa497ec5b7b586cdb414149e70116c8441`
+- commit_head: `c4583961ac1b306e5e734ef8dffb58fe95024840`
 - branch: `wt/analysis-gaps`
 - sync evidencias:
   - `outputs/instrumentation/m3_w1_w2/20260215/evidence/sync_fetch.txt`
