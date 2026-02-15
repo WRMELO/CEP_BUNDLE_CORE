@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_003_CLOSE_GAPS_M3_W1_W2_QUANT_V1",
-  "generated_at_utc": "2026-02-15T19:27:32.005876+00:00",
+  "generated_at_utc": "2026-02-15T19:27:57.604923+00:00",
   "worktree_target": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
   "branch_target": "wt/analysis-gaps",
   "inputs": {
@@ -31,7 +31,7 @@
     "outputs/gaps/m3_w1_w2/20260215/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
     "outputs/gaps/m3_w1_w2/20260215/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json": "5e390fdef598ce915d4a96627eb6d253247b259a219d7015626f70a969df2ae2",
-    "outputs/gaps/m3_w1_w2/20260215/report.md": "4c4c70f6daf6179aa286da9ca01fc98c378892aca1d1b9ba22cd8d5e608f80d9",
+    "outputs/gaps/m3_w1_w2/20260215/report.md": "1941025e45e1ce62101d689758bfb2f176e94e9b774d24981189e94301dff3b3",
     "outputs/gaps/m3_w1_w2/20260215/sources_m3_w1_w2.json": "8445763398660a985f8799ce5ddf16290adba5453d2dac79020650469ffda05d"
   },
   "gates": {
@@ -48,7 +48,7 @@
     "spc_signal_availability": "disponivel: 2 colunas agregadas"
   },
   "git": {
-    "head": "7400c60ad543c43f7cb48333dd7c009449c579c3",
+    "head": "3d204c8616b517c7767e8452cf821d4d594f57f1",
     "branch": "wt/analysis-gaps",
     "remote": "origin/wt/analysis-gaps"
   },
