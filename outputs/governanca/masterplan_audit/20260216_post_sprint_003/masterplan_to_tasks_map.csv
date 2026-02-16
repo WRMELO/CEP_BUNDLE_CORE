@@ -1,0 +1,13 @@
+masterplan_id,masterplan_title,task_id,status,evidencias
+MP-001,Visao,TASK_CEP_BUNDLE_CORE_S3_002_MP001_VISAO_EXECUTIVA,PASS,docs/MP001_VISAO_EXECUTIVA.md; outputs/governanca/sprint_003/20260216/report.md
+MP-002,Objetivo real (anti-deriva e anti-bloqueio),TASK_CEP_BUNDLE_CORE_S3_003_MP002_OBJETIVO_REAL_SSOT,PASS,docs/MP002_OBJETIVO_REAL_SSOT.md; outputs/governanca/sprint_003/20260216/report.md
+MP-003,Baseline M3 (fixado para o bundle),TASK_CEP_BUNDLE_CORE_F1_002_MASTERPLAN_ANCHORED_IN_CORPUS_M3_CEP_V1,PASS,outputs/governanca/masterplan/20260215/report.md
+MP-004,"Metricas historicas (W1 e W2, incluindo ponto de ruptura)",TASK_CEP_BUNDLE_CORE_F1_003_CLOSE_GAPS_M3_W1_W2_QUANT_V1,PASS,outputs/gaps/m3_w1_w2/20260215/report.md
+MP-005,SPC/CEP como camada estruturante,TASK_CEP_BUNDLE_CORE_S2_003_MP005_MP006_SPCCEP_DECISION_POLICY,PASS,outputs/governanca/policy_spc_rl/20260216/report.md
+MP-006,Politica de decisao (onde RL entra),TASK_CEP_BUNDLE_CORE_S2_003_MP005_MP006_SPCCEP_DECISION_POLICY,PASS,outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json
+MP-007,Plano explicito anti-deriva W2,TASK_CEP_BUNDLE_CORE_S2_002_MP007_COMPLETE_ANTI_DERIVA_W2,PASS,outputs/controle/anti_deriva_w2/20260216/report.md
+MP-008,Plano de experimentos (ablation controlado),TASK_CEP_BUNDLE_CORE_F1_016_EXECUTE_E1_E5_ABLATION_MASTERPLAN_V1,PASS,outputs/experimentos/ablation_e1_e5/20260216/report.md
+MP-009,Plano de validacao,TASK_CEP_BUNDLE_CORE_F1_012_APPLY_CDI_SSOT_TO_METRICS_V5,PASS,outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md
+MP-010,"Governanca operacional (Agno, gates, manifests, Plotly)",TASK_CEP_BUNDLE_CORE_F0_015_RESTORE_LOCAL_EXECUTION_STRUCTURE_AND_NORMATIVE_V1,PASS,outputs/governanca/local_execution_structure/20260216/report.md
+MP-011,Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL),TASK_CEP_BUNDLE_CORE_S3_001_MP011_CLOSE_G1_G2_G3,PASS,outputs/gaps/g1_g3/20260216/g1_g3_closure.json
+MP-012,Diagrama de alto nivel,TASK_CEP_BUNDLE_CORE_S2_004_POST_SPRINT_002_AUDIT_REFRESH,PASS,outputs/governanca/masterplan_audit/20260216_post_sprint_002/report.md

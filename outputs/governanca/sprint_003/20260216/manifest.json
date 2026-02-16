@@ -1,0 +1,47 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F0_018_SPRINT_003_CLOSE_MP001_MP002_MP011_AND_REFRESH_V1",
+  "generated_at_utc": "2026-02-16T12:28:21.752527+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head_before_commit": "998ea28f5e0448c8095c6acd92327d2c819c58a6",
+  "outputs": {
+    "report_md": "outputs/governanca/sprint_003/20260216/report.md",
+    "manifest_json": "outputs/governanca/sprint_003/20260216/manifest.json",
+    "sprint_003_backlog_json": "outputs/governanca/sprint_003/20260216/sprint_003_backlog.json",
+    "generated_task_specs_dir": "planning/task_specs/sprint_003/",
+    "runs_index_json": "outputs/governanca/sprint_003/20260216/sprint_003_runs_index.json",
+    "mp001_visao_md": "docs/MP001_VISAO_EXECUTIVA.md",
+    "mp002_objetivo_real_md": "docs/MP002_OBJETIVO_REAL_SSOT.md",
+    "mp011_closure_update_json": "outputs/gaps/g1_g3/20260216/g1_g3_closure.json",
+    "post_sprint_003_audit_dir": "outputs/governanca/masterplan_audit/20260216_post_sprint_003/"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_POST_SPRINT_002_INPUTS_PRESENT": "PASS",
+    "S3_VERIFY_SPRINT_003_BACKLOG_EMITTED": "PASS",
+    "S4_VERIFY_TASK_SPECS_GENERATED": "PASS",
+    "S5_VERIFY_MP011_G1_G3_CLOSURE_UPDATED_WITH_EVIDENCE": "PASS",
+    "S6_VERIFY_MP001_AND_MP002_DOCS_WRITTEN_AND_TRACEABLE": "PASS",
+    "S7_VERIFY_POST_SPRINT_003_AUDIT_REFRESHED": "PASS",
+    "S8_WRITE_MANIFEST_HASHES": "PASS",
+    "S9_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+  },
+  "hashes_sha256": {
+    "outputs/governanca/sprint_003/20260216/report.md": "fe2f634414b1b1fbb65d681496d28ffb0a3094fd5529abe5ef4c9f1c8479d51f",
+    "outputs/governanca/sprint_003/20260216/sprint_003_backlog.json": "de74b904dc4cc59c695662c11e2a3ca45ff3f9a291e78d3057d840b49aab9a51",
+    "outputs/governanca/sprint_003/20260216/sprint_003_runs_index.json": "388c0c5139f668bbee6eca3f877c3d0a1845f1d25b12b6d6d0b1669f4bce392d",
+    "docs/MP001_VISAO_EXECUTIVA.md": "716e4391131193a60552e00478c96c2d0780ac544d23ef77a5bd338abf18a440",
+    "docs/MP002_OBJETIVO_REAL_SSOT.md": "e50124619a94a0524c89b446331a4e88e8e3225fb2a4ba89299ae60255a45219",
+    "outputs/gaps/g1_g3/20260216/g1_g3_closure.json": "310af35ab4c5072d4598d572d919af141ad8fc2b44bdd8bac7c9ae4c1c27e3c0",
+    "outputs/governanca/masterplan_audit/20260216_post_sprint_003/report.md": "4ac344a95bb5d877305fd54b35e33e44c79bcca9695b7dcee674e44a542806e1",
+    "outputs/governanca/masterplan_audit/20260216_post_sprint_003/masterplan_to_tasks_map.csv": "4ab86d5f7a4e4183719f69987992b3e20426fea4dd68cbb7e57b375a60acf9f4",
+    "outputs/governanca/masterplan_audit/20260216_post_sprint_003/gaps_and_backlog.json": "0a946247bb88fc11c0ca72587841f8fd29e8d45faaa75eae9bd2cf0d1c0c7158",
+    "outputs/governanca/masterplan_audit/20260216_post_sprint_003/evidence/compliance_refresh.json": "b178b2bca6b4632439f02bc9d4caa9edf14043cf10a576c7cfe7e160ab0c34e8",
+    "outputs/governanca/sprint_003/20260216/evidence/post_sprint_002_pending_items.json": "67b2ab5da5285de04a8c21daba31eba8eed709922723d208d431aac9d29c8ca3",
+    "outputs/governanca/sprint_003/20260216/evidence/g3_operational_subset_hashes.json": "9d0d6d9557af3abefccb5fb2a367bdf31ad330a427ee81124eb6f907f6abbe62",
+    "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_001_MP011_CLOSE_G1_G2_G3.json": "4d3d2860520226c61140a7ce24f569607a69527c116a40dc04a61594268eb156",
+    "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_002_MP001_VISAO_EXECUTIVA.json": "264296b0d652fd937b605a582141ecfffd6cbfc5fd2c289358d921550dd9b23a",
+    "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_003_MP002_OBJETIVO_REAL_SSOT.json": "8a8a349940bbb50d278d2496eece98372072eb17ff0765373f6a826bd1b4adc8",
+    "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_004_POST_SPRINT_003_AUDIT_REFRESH.json": "33ec1e6889eec2ceee16077cb18d4bc8ecee299180004f87716d432a380cf02d"
+  }
+}

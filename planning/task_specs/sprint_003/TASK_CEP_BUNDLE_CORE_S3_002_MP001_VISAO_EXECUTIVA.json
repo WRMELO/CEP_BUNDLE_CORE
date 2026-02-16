@@ -1,0 +1,18 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S3_002_MP001_VISAO_EXECUTIVA",
+  "masterplan_id": "MP-001",
+  "intent": "Publicar documento executivo canonico para Visao.",
+  "inputs": {
+    "masterplan": "docs/MASTERPLAN.md"
+  },
+  "outputs": {
+    "mp001_visao_md": "docs/MP001_VISAO_EXECUTIVA.md"
+  },
+  "gates": [
+    "S1_MASTERPLAN_PRESENT",
+    "S2_DOC_EMITTED"
+  ],
+  "acceptance": [
+    "Escopo/fora de escopo/governanca/outputs definidos"
+  ]
+}

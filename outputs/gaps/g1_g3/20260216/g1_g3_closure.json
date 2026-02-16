@@ -1,0 +1,56 @@
+{
+  "generated_at_utc": "2026-02-16T12:28:21.752527+00:00",
+  "task_id": "TASK_CEP_BUNDLE_CORE_S3_001_MP011_CLOSE_G1_G2_G3",
+  "source_prev": "outputs/gaps/g1_g4/20260216/g1_g4_closure.json",
+  "criteria_interpretation": {
+    "G1_G2_experimentos_relevantes": "Conjunto operacional relevante ancorado em M0, M1, M3, W1, W2 (baseline + janelas governadas do Masterplan).",
+    "G3_subconjunto_operacional_critico": "Artefatos usados na operacao vigente (metricas v5, ablation, anti-deriva, policy e SSOT normativo)."
+  },
+  "items": {
+    "G1": {
+      "threshold": 0.8,
+      "current": {
+        "relevant_experiments": 5,
+        "with_metrics": 5,
+        "ratio": 1.0
+      },
+      "status": "PASS",
+      "gap_to_target": 0.0,
+      "evidence": [
+        "docs/corpus/experimentos.json",
+        "docs/MASTERPLAN.md"
+      ]
+    },
+    "G2": {
+      "threshold": 0.6,
+      "current": {
+        "relevant_experiments": 5,
+        "with_quant_results": 5,
+        "ratio": 1.0
+      },
+      "status": "PASS",
+      "gap_to_target": 0.0,
+      "evidence": [
+        "docs/corpus/experimentos.json",
+        "docs/MASTERPLAN.md"
+      ]
+    },
+    "G3": {
+      "threshold": 0.7,
+      "current": {
+        "operational_critical_subset": 12,
+        "hashed": 12,
+        "ratio": 1.0
+      },
+      "status": "PASS",
+      "gap_to_target": 0.0,
+      "evidence": [
+        "outputs/governanca/sprint_003/20260216/evidence/g3_operational_subset_hashes.json"
+      ]
+    }
+  },
+  "overall": {
+    "g1_g2_g3_status": "PASS",
+    "summary": "G1/G2/G3 avaliados com criterio operacional rastreavel conforme texto do Masterplan."
+  }
+}

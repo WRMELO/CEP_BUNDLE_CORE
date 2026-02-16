@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "2026-02-16T12:28:21.752527+00:00",
+  "sprint": "Sprint 003",
+  "execution_mode": "LOCAL_ROOT",
+  "specs_dir": "planning/task_specs/sprint_003/",
+  "executed_subtasks": [
+    {
+      "subtask_id": "S3_001_MP011_CLOSE_G1_G2_G3",
+      "mapped_masterplan": "MP-011",
+      "status": "EXECUTED",
+      "outputs": [
+        "outputs/gaps/g1_g3/20260216/g1_g3_closure.json"
+      ]
+    },
+    {
+      "subtask_id": "S3_002_MP001_VISAO_EXECUTIVA",
+      "mapped_masterplan": "MP-001",
+      "status": "EXECUTED",
+      "outputs": [
+        "docs/MP001_VISAO_EXECUTIVA.md"
+      ]
+    },
+    {
+      "subtask_id": "S3_003_MP002_OBJETIVO_REAL_SSOT",
+      "mapped_masterplan": "MP-002",
+      "status": "EXECUTED",
+      "outputs": [
+        "docs/MP002_OBJETIVO_REAL_SSOT.md"
+      ]
+    },
+    {
+      "subtask_id": "S3_004_REFRESH_POST_SPRINT_003_AUDIT",
+      "mapped_masterplan": "ALL",
+      "status": "EXECUTED",
+      "outputs": [
+        "outputs/governanca/masterplan_audit/20260216_post_sprint_003/report.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "generated_at_utc": "2026-02-16T12:28:21.752527+00:00",
+  "source_post_sprint_002": {
+    "audit_dir": "outputs/governanca/masterplan_audit/20260216_post_sprint_002",
+    "map_csv": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/masterplan_to_tasks_map.csv",
+    "gaps_json": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/gaps_and_backlog.json",
+    "report_md": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/report.md"
+  },
+  "pending_masterplan_items": [
+    {
+      "masterplan_id": "MP-001",
+      "masterplan_title": "Visao",
+      "task_id": "TASK_CEP_BUNDLE_CORE_F0_017_SPRINT_002_PLAN_AND_EXECUTE_FROM_POST_SPRINT_AUDIT_V1",
+      "status": "PARCIAL",
+      "evidencias": "outputs/governanca/sprint_002/20260216/report.md"
+    },
+    {
+      "masterplan_id": "MP-002",
+      "masterplan_title": "Objetivo real (anti-deriva e anti-bloqueio)",
+      "task_id": "TASK_CEP_BUNDLE_CORE_F0_017_SPRINT_002_PLAN_AND_EXECUTE_FROM_POST_SPRINT_AUDIT_V1",
+      "status": "PARCIAL",
+      "evidencias": "outputs/governanca/sprint_002/20260216/sprint_002_backlog.json"
+    },
+    {
+      "masterplan_id": "MP-011",
+      "masterplan_title": "Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL)",
+      "task_id": "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1",
+      "status": "PARCIAL",
+      "evidencias": "outputs/gaps/g1_g4/20260216/report.md"
+    }
+  ],
+  "subtasks": [
+    {
+      "subtask_id": "S3_001_MP011_CLOSE_G1_G2_G3",
+      "maps_to_masterplan": "MP-011",
+      "depends_on": [
+        "outputs/gaps/g1_g4/20260216/g1_g4_closure.json"
+      ],
+      "definition_of_done": "Emitir g1_g3_closure.json com G1/G2/G3 em PASS no criterio operacional ou bloqueio residual objetivo com gap_to_target.",
+      "required_evidence": [
+        "docs/corpus/experimentos.json",
+        "outputs/gaps/g1_g3/20260216/g1_g3_closure.json",
+        "outputs/gaps/g1_g4/20260216/g1_g4_closure.json"
+      ]
+    },
+    {
+      "subtask_id": "S3_002_MP001_VISAO_EXECUTIVA",
+      "maps_to_masterplan": "MP-001",
+      "depends_on": [
+        "docs/MASTERPLAN.md"
+      ],
+      "definition_of_done": "Documento canonico da Visao executiva emitido com escopo/fora de escopo/governanca/outputs.",
+      "required_evidence": [
+        "docs/MASTERPLAN.md",
+        "docs/MP001_VISAO_EXECUTIVA.md"
+      ]
+    },
+    {
+      "subtask_id": "S3_003_MP002_OBJETIVO_REAL_SSOT",
+      "maps_to_masterplan": "MP-002",
+      "depends_on": [
+        "docs/MASTERPLAN.md",
+        "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+        "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json"
+      ],
+      "definition_of_done": "Documento SSOT de objetivo real emitido com funcao objetivo, prioridades, guardrails e metricas de sucesso.",
+      "required_evidence": [
+        "docs/MASTERPLAN.md",
+        "docs/MP002_OBJETIVO_REAL_SSOT.md"
+      ]
+    },
+    {
+      "subtask_id": "S3_004_REFRESH_POST_SPRINT_003_AUDIT",
+      "maps_to_masterplan": "ALL",
+      "depends_on": [
+        "S3_001_MP011_CLOSE_G1_G2_G3",
+        "S3_002_MP001_VISAO_EXECUTIVA",
+        "S3_003_MP002_OBJETIVO_REAL_SSOT"
+      ],
+      "definition_of_done": "Refresh de auditoria emitido com tentativa de 12/12 PASS.",
+      "required_evidence": [
+        "outputs/governanca/masterplan_audit/20260216_post_sprint_003/masterplan_to_tasks_map.csv"
+      ]
+    }
+  ]
+}

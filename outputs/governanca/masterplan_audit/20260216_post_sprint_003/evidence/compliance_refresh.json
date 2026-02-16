@@ -1,0 +1,15 @@
+{
+  "generated_at_utc": "2026-02-16T12:28:21.752527+00:00",
+  "normative_refs": [
+    "docs/CONSTITUICAO.md",
+    "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+    "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md"
+  ],
+  "status": "COMPLIANT",
+  "evidence": [
+    "docs/MP001_VISAO_EXECUTIVA.md",
+    "docs/MP002_OBJETIVO_REAL_SSOT.md",
+    "outputs/gaps/g1_g3/20260216/g1_g3_closure.json"
+  ]
+}

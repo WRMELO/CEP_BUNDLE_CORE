@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "path": "docs/MASTERPLAN.md",
+      "sha256": "dc236345b75d9665a9555813e2556a9941462ff9e7ff274879332304b5733ea4"
+    },
+    {
+      "path": "docs/CONSTITUICAO.md",
+      "sha256": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63"
+    },
+    {
+      "path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "sha256": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0"
+    },
+    {
+      "path": "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "sha256": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8"
+    },
+    {
+      "path": "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+      "sha256": "e7a099f3fca1c4249a0baa10c05d71c369f07c9da9fe6adb47e91755b36cf72e"
+    },
+    {
+      "path": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+      "sha256": "dfb746e733dd39c1c8f61ea37511656494f5da93608311501cc8a8219cf25dfd"
+    },
+    {
+      "path": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md",
+      "sha256": "951952286bf309c11dd195ccb216bfb1b9a1436da6bf233efae59a52a0f51c9b"
+    },
+    {
+      "path": "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json",
+      "sha256": "5f0000807fc1e20308160babdedc14e4cd482949d8dde5db9abac35cfaad4243"
+    },
+    {
+      "path": "outputs/experimentos/ablation_e1_e5/20260216/report.md",
+      "sha256": "d3c8a2e1571d4606915ab59c8deef8f7ec00322110fcc5bcb84653b637ff55d0"
+    },
+    {
+      "path": "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+      "sha256": "2cd7ca475fa188f5c32491bf307f9eed00a9716a0fc411599dde89f2c83c4a46"
+    },
+    {
+      "path": "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json",
+      "sha256": "e07941bf4301b5d6f59aa0ca279d1ac1e0e4970e85331bf0f8f512d1b623ce4b"
+    },
+    {
+      "path": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/masterplan_to_tasks_map.csv",
+      "sha256": "add4dc6e167671265f5a2624d99f2de78e93fabb357c7c4e34dc002885b8837e"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "masterplan_id": "MP-001",
+    "masterplan_title": "Visao",
+    "task_id": "TASK_CEP_BUNDLE_CORE_F0_017_SPRINT_002_PLAN_AND_EXECUTE_FROM_POST_SPRINT_AUDIT_V1",
+    "status": "PARCIAL",
+    "evidencias": "outputs/governanca/sprint_002/20260216/report.md"
+  },
+  {
+    "masterplan_id": "MP-002",
+    "masterplan_title": "Objetivo real (anti-deriva e anti-bloqueio)",
+    "task_id": "TASK_CEP_BUNDLE_CORE_F0_017_SPRINT_002_PLAN_AND_EXECUTE_FROM_POST_SPRINT_AUDIT_V1",
+    "status": "PARCIAL",
+    "evidencias": "outputs/governanca/sprint_002/20260216/sprint_002_backlog.json"
+  },
+  {
+    "masterplan_id": "MP-011",
+    "masterplan_title": "Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL)",
+    "task_id": "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1",
+    "status": "PARCIAL",
+    "evidencias": "outputs/gaps/g1_g4/20260216/report.md"
+  }
+]
