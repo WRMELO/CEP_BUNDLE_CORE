@@ -44,3 +44,15 @@ Foi identificado SSOT reutilizavel em legado/bundle e realizada canonizacao para
 - S7_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `c4a59e7b6f67757863058666228b9919dfb77355`
+- branch: `wt/analysis-gaps`
+- sync evidencias:
+  - `outputs/governanca/ssot_cdi/20260215/evidence/sync_fetch.txt`
+  - `outputs/governanca/ssot_cdi/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/ssot_cdi/20260215/evidence/sync_push.txt`
+  - `outputs/governanca/ssot_cdi/20260215/evidence/status_after_sync.txt`
+- gate S7 (worktree clean): PASS
+- OVERALL: **PASS**
