@@ -1,0 +1,5 @@
+- Fase E1: M3 baseline sem alteracao de regras de venda (controle).
+- Fase E2: M3 + limite de rotatividade por regime.
+- Fase E3: M3 + limite de rotatividade + histerese de regime.
+- Fase E4: M3 + filtros anti-reentrada em ativos estressados.
+- Fase E5: comparar cada camada incremental contra baseline M3 em janelas W1/W2/W3.

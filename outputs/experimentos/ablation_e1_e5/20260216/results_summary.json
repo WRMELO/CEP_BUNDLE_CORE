@@ -1,0 +1,261 @@
+{
+  "generated_at_utc": "2026-02-16T12:06:33.978579+00:00",
+  "masterplan_e1_e5_extracted": [
+    "- Fase E1: M3 baseline sem alteracao de regras de venda (controle).",
+    "- Fase E2: M3 + limite de rotatividade por regime.",
+    "- Fase E3: M3 + limite de rotatividade + histerese de regime.",
+    "- Fase E4: M3 + filtros anti-reentrada em ativos estressados.",
+    "- Fase E5: comparar cada camada incremental contra baseline M3 em janelas W1/W2/W3."
+  ],
+  "baseline_anchor_metrics_v5": "/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+  "experiments": {
+    "E1_BASELINE": {
+      "FULL": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 2.4702392157810658,
+        "multiple": 2.4702392157810653,
+        "return_pct": 1.4702392157810653,
+        "MDD": -0.6758760817142015,
+        "start_date": "2018-07-02",
+        "end_date": "2025-12-30",
+        "n_obs": 1864
+      },
+      "W1": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 5.384477260276984,
+        "multiple": 5.3844772602769835,
+        "return_pct": 4.3844772602769835,
+        "MDD": -0.1871708317645172,
+        "start_date": "2018-07-02",
+        "end_date": "2021-06-30",
+        "n_obs": 740
+      },
+      "W2": {
+        "equity_initial": 5.380742771450006,
+        "equity_final": 2.543033295269717,
+        "multiple": 0.47261751830303883,
+        "return_pct": -0.5273824816969612,
+        "MDD": -0.5938450386545916,
+        "start_date": "2021-07-01",
+        "end_date": "2022-12-29",
+        "n_obs": 375
+      },
+      "W3": {
+        "equity_initial": 2.781986973081376,
+        "equity_final": 2.25087269667158,
+        "multiple": 0.8090881511851492,
+        "return_pct": -0.1909118488148508,
+        "MDD": -0.30564543207016015,
+        "start_date": "2024-09-02",
+        "end_date": "2025-11-28",
+        "n_obs": 312
+      }
+    },
+    "E2_TURNOVER_CAP_BY_REGIME": {
+      "FULL": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 3.720063542904709,
+        "multiple": 3.720063542904708,
+        "return_pct": 2.720063542904708,
+        "MDD": -0.5619698379188391,
+        "start_date": "2018-07-02",
+        "end_date": "2025-12-30",
+        "n_obs": 1864
+      },
+      "W1": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 5.866331291191912,
+        "multiple": 5.866331291191911,
+        "return_pct": 4.866331291191911,
+        "MDD": -0.19014716600185821,
+        "start_date": "2018-07-02",
+        "end_date": "2021-06-30",
+        "n_obs": 740
+      },
+      "W2": {
+        "equity_initial": 5.862262604928914,
+        "equity_final": 3.4841420063206456,
+        "multiple": 0.5943340039716447,
+        "return_pct": -0.4056659960283553,
+        "MDD": -0.4792015129234578,
+        "start_date": "2021-07-01",
+        "end_date": "2022-12-29",
+        "n_obs": 375
+      },
+      "W3": {
+        "equity_initial": 3.901275708367036,
+        "equity_final": 3.3229033350237684,
+        "multiple": 0.8517478854153177,
+        "return_pct": -0.14825211458468235,
+        "MDD": -0.2737218101653671,
+        "start_date": "2024-09-02",
+        "end_date": "2025-11-28",
+        "n_obs": 312
+      }
+    },
+    "E3_ADD_REGIME_HYSTERESIS": {
+      "FULL": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 4.254614017588548,
+        "multiple": 4.254614017588547,
+        "return_pct": 3.2546140175885467,
+        "MDD": -0.4540315293736581,
+        "start_date": "2018-07-02",
+        "end_date": "2025-12-30",
+        "n_obs": 1864
+      },
+      "W1": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 5.866331291191912,
+        "multiple": 5.866331291191911,
+        "return_pct": 4.866331291191911,
+        "MDD": -0.19014716600185821,
+        "start_date": "2018-07-02",
+        "end_date": "2021-06-30",
+        "n_obs": 740
+      },
+      "W2": {
+        "equity_initial": 5.862262604928914,
+        "equity_final": 4.017815931262127,
+        "multiple": 0.685369489910602,
+        "return_pct": -0.314630510089398,
+        "MDD": -0.38879874989169116,
+        "start_date": "2021-07-01",
+        "end_date": "2022-12-29",
+        "n_obs": 375
+      },
+      "W3": {
+        "equity_initial": 4.362582831176653,
+        "equity_final": 3.9516358813238077,
+        "multiple": 0.9058019146556797,
+        "return_pct": -0.09419808534432028,
+        "MDD": -0.1840551911532302,
+        "start_date": "2024-09-02",
+        "end_date": "2025-11-28",
+        "n_obs": 312
+      }
+    },
+    "E4_ADD_ANTI_REENTRY_FILTER": {
+      "FULL": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 3.7835222249339298,
+        "multiple": 3.783522224933929,
+        "return_pct": 2.783522224933929,
+        "MDD": -0.4328689982049546,
+        "start_date": "2018-07-02",
+        "end_date": "2025-12-30",
+        "n_obs": 1864
+      },
+      "W1": {
+        "equity_initial": 1.0000000000000002,
+        "equity_final": 5.110982023308645,
+        "multiple": 5.110982023308644,
+        "return_pct": 4.110982023308644,
+        "MDD": -0.19669220524095898,
+        "start_date": "2018-07-02",
+        "end_date": "2021-06-30",
+        "n_obs": 740
+      },
+      "W2": {
+        "equity_initial": 5.10743722140155,
+        "equity_final": 3.6030993274164897,
+        "multiple": 0.7054613050001914,
+        "return_pct": -0.29453869499980856,
+        "MDD": -0.3643597311841561,
+        "start_date": "2021-07-01",
+        "end_date": "2022-12-29",
+        "n_obs": 375
+      },
+      "W3": {
+        "equity_initial": 3.9298958534284827,
+        "equity_final": 3.523495721029039,
+        "multiple": 0.8965875566282766,
+        "return_pct": -0.1034124433717234,
+        "MDD": -0.18125537162762162,
+        "start_date": "2024-09-02",
+        "end_date": "2025-11-28",
+        "n_obs": 312
+      }
+    }
+  },
+  "E5_COMPARATIVE": {
+    "E2_TURNOVER_CAP_BY_REGIME": {
+      "FULL": {
+        "delta_multiple": 1.2498243271236427,
+        "delta_MDD": 0.1139062437953624,
+        "baseline_multiple": 2.4702392157810653,
+        "experiment_multiple": 3.720063542904708
+      },
+      "W1": {
+        "delta_multiple": 0.48185403091492773,
+        "delta_MDD": -0.002976334237341005,
+        "baseline_multiple": 5.3844772602769835,
+        "experiment_multiple": 5.866331291191911
+      },
+      "W2": {
+        "delta_multiple": 0.12171648566860588,
+        "delta_MDD": 0.11464352573113379,
+        "baseline_multiple": 0.47261751830303883,
+        "experiment_multiple": 0.5943340039716447
+      },
+      "W3": {
+        "delta_multiple": 0.042659734230168445,
+        "delta_MDD": 0.03192362190479303,
+        "baseline_multiple": 0.8090881511851492,
+        "experiment_multiple": 0.8517478854153177
+      }
+    },
+    "E3_ADD_REGIME_HYSTERESIS": {
+      "FULL": {
+        "delta_multiple": 1.7843748018074814,
+        "delta_MDD": 0.22184455234054345,
+        "baseline_multiple": 2.4702392157810653,
+        "experiment_multiple": 4.254614017588547
+      },
+      "W1": {
+        "delta_multiple": 0.48185403091492773,
+        "delta_MDD": -0.002976334237341005,
+        "baseline_multiple": 5.3844772602769835,
+        "experiment_multiple": 5.866331291191911
+      },
+      "W2": {
+        "delta_multiple": 0.21275197160756315,
+        "delta_MDD": 0.20504628876290043,
+        "baseline_multiple": 0.47261751830303883,
+        "experiment_multiple": 0.685369489910602
+      },
+      "W3": {
+        "delta_multiple": 0.09671376347053051,
+        "delta_MDD": 0.12159024091692994,
+        "baseline_multiple": 0.8090881511851492,
+        "experiment_multiple": 0.9058019146556797
+      }
+    },
+    "E4_ADD_ANTI_REENTRY_FILTER": {
+      "FULL": {
+        "delta_multiple": 1.3132830091528636,
+        "delta_MDD": 0.24300708350924694,
+        "baseline_multiple": 2.4702392157810653,
+        "experiment_multiple": 3.783522224933929
+      },
+      "W1": {
+        "delta_multiple": -0.27349523696833966,
+        "delta_MDD": -0.009521373476441775,
+        "baseline_multiple": 5.3844772602769835,
+        "experiment_multiple": 5.110982023308644
+      },
+      "W2": {
+        "delta_multiple": 0.2328437866971526,
+        "delta_MDD": 0.2294853074704355,
+        "baseline_multiple": 0.47261751830303883,
+        "experiment_multiple": 0.7054613050001914
+      },
+      "W3": {
+        "delta_multiple": 0.0874994054431274,
+        "delta_MDD": 0.12439006044253853,
+        "baseline_multiple": 0.8090881511851492,
+        "experiment_multiple": 0.8965875566282766
+      }
+    }
+  }
+}

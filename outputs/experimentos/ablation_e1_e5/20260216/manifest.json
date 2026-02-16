@@ -1,0 +1,36 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_016_EXECUTE_E1_E5_ABLATION_MASTERPLAN_V1",
+  "generated_at_utc": "2026-02-16T12:06:34.000704+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head_before_commit": "40bdf8586b8d18b96020890acda4b633ca026310",
+  "outputs": {
+    "report_md": "outputs/experimentos/ablation_e1_e5/20260216/report.md",
+    "manifest_json": "outputs/experimentos/ablation_e1_e5/20260216/manifest.json",
+    "results_summary_json": "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json",
+    "evidence_dir": "outputs/experimentos/ablation_e1_e5/20260216/evidence/"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_MASTERPLAN_E1_E5_EXTRACTED": "PASS",
+    "S3_VERIFY_E1_E5_RESULTS_EMITTED": "PASS",
+    "S4_VERIFY_COMPARATIVE_MANIFESTS_PRESENT": "PASS",
+    "S5_VERIFY_REPORT_TRACEABLE": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS",
+    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+  },
+  "hashes_sha256": {
+    "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json": "5f0000807fc1e20308160babdedc14e4cd482949d8dde5db9abac35cfaad4243",
+    "outputs/experimentos/ablation_e1_e5/20260216/report.md": "1bf4809cc22da38cad1882d440a30da073a42d184d0906ae650ae496fbf0eb32",
+    "outputs/experimentos/ablation_e1_e5/20260216/evidence/masterplan_e1_e5_extract.txt": "7728ac9c4841fc8b1739003a7ca1be7dd27279a53a10cebd6dcc178cecaa5396",
+    "outputs/experimentos/ablation_e1_e5/20260216/evidence/daily_ablation_series.csv": "e215ca8098049994b4f5878350762476923eb7ac6802de05e8621379069bfd76",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E1_BASELINE.json": "f33069c293719688ea50d8d2c6a944ac88edb3632f9a760eb6ca6818658bd0ef",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E1_BASELINE.manifest.json": "54fc5adbb332e09fb1217fd93fbf82aa398680d3c957a4281231fc56adc60a08",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E2_TURNOVER_CAP_BY_REGIME.json": "c78781eb75c84e56a8c55203a9cb9fb392b735b3a8028a470b33615002c78cfb",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E2_TURNOVER_CAP_BY_REGIME.manifest.json": "a0774f4845587c42edafc5a0da2b37a95d4f3838c54d82254a5a6283ec52da91",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E3_ADD_REGIME_HYSTERESIS.json": "546b5099b7493ad94c9ad37c9ce042929c71a5ae93c335566f86c34a47164de4",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E3_ADD_REGIME_HYSTERESIS.manifest.json": "1aaf036f85aaa86841a82d06f47bc74953a8550d534cc93afa226f1fbad3d085",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E4_ADD_ANTI_REENTRY_FILTER.json": "8856fcc5b6afb0fcbe77c4ba2960303a5265ae45e3a83b9160869a962333de9c",
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E4_ADD_ANTI_REENTRY_FILTER.manifest.json": "ee9c4934f41761957a1668525119faf04425c650378cb58a0a744f4935a17b3e"
+  }
+}
