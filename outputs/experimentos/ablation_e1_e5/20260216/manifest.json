@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_016_EXECUTE_E1_E5_ABLATION_MASTERPLAN_V1",
-  "generated_at_utc": "2026-02-16T12:06:34.000704+00:00",
+  "generated_at_utc": "2026-02-16T12:09:17.111822+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "local/integrated-state-20260215",
   "head_before_commit": "40bdf8586b8d18b96020890acda4b633ca026310",
@@ -17,11 +17,11 @@
     "S4_VERIFY_COMPARATIVE_MANIFESTS_PRESENT": "PASS",
     "S5_VERIFY_REPORT_TRACEABLE": "PASS",
     "S6_WRITE_MANIFEST_HASHES": "PASS",
-    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "hashes_sha256": {
     "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json": "5f0000807fc1e20308160babdedc14e4cd482949d8dde5db9abac35cfaad4243",
-    "outputs/experimentos/ablation_e1_e5/20260216/report.md": "1bf4809cc22da38cad1882d440a30da073a42d184d0906ae650ae496fbf0eb32",
+    "outputs/experimentos/ablation_e1_e5/20260216/report.md": "d3c8a2e1571d4606915ab59c8deef8f7ec00322110fcc5bcb84653b637ff55d0",
     "outputs/experimentos/ablation_e1_e5/20260216/evidence/masterplan_e1_e5_extract.txt": "7728ac9c4841fc8b1739003a7ca1be7dd27279a53a10cebd6dcc178cecaa5396",
     "outputs/experimentos/ablation_e1_e5/20260216/evidence/daily_ablation_series.csv": "e215ca8098049994b4f5878350762476923eb7ac6802de05e8621379069bfd76",
     "outputs/experimentos/ablation_e1_e5/20260216/experiments/E1_BASELINE.json": "f33069c293719688ea50d8d2c6a944ac88edb3632f9a760eb6ca6818658bd0ef",
@@ -31,6 +31,17 @@
     "outputs/experimentos/ablation_e1_e5/20260216/experiments/E3_ADD_REGIME_HYSTERESIS.json": "546b5099b7493ad94c9ad37c9ce042929c71a5ae93c335566f86c34a47164de4",
     "outputs/experimentos/ablation_e1_e5/20260216/experiments/E3_ADD_REGIME_HYSTERESIS.manifest.json": "1aaf036f85aaa86841a82d06f47bc74953a8550d534cc93afa226f1fbad3d085",
     "outputs/experimentos/ablation_e1_e5/20260216/experiments/E4_ADD_ANTI_REENTRY_FILTER.json": "8856fcc5b6afb0fcbe77c4ba2960303a5265ae45e3a83b9160869a962333de9c",
-    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E4_ADD_ANTI_REENTRY_FILTER.manifest.json": "ee9c4934f41761957a1668525119faf04425c650378cb58a0a744f4935a17b3e"
+    "outputs/experimentos/ablation_e1_e5/20260216/experiments/E4_ADD_ANTI_REENTRY_FILTER.manifest.json": "ee9c4934f41761957a1668525119faf04425c650378cb58a0a744f4935a17b3e",
+    "outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/experimentos/ablation_e1_e5/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "head_after_sync": "f9935cf0af1d3ac338a1d2210ff963d225935866",
+  "sync_evidence": {
+    "fetch": "outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_push.txt",
+    "status_after_sync": "outputs/experimentos/ablation_e1_e5/20260216/evidence/status_after_sync.txt"
   }
 }

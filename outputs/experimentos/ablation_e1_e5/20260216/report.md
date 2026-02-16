@@ -43,4 +43,15 @@ Limitacoes explicitadas:
 - S4_VERIFY_COMPARATIVE_MANIFESTS_PRESENT: PASS
 - S5_VERIFY_REPORT_TRACEABLE: PASS
 - S6_WRITE_MANIFEST_HASHES: PASS
-- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PENDING (apos commit/sync)
+- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PASS
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `f9935cf0af1d3ac338a1d2210ff963d225935866`
+- evidencias:
+  - `outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_fetch.txt`
+  - `outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_pull_ff_only.txt`
+  - `outputs/experimentos/ablation_e1_e5/20260216/evidence/sync_push.txt`
+  - `outputs/experimentos/ablation_e1_e5/20260216/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
