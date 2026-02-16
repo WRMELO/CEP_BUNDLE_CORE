@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F0_015_RESTORE_LOCAL_EXECUTION_STRUCTURE_AND_NORMATIVE_V1",
-  "generated_at_utc": "2026-02-16T11:14:49.872292+00:00",
+  "generated_at_utc": "2026-02-16T11:15:17.877364+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "local/integrated-state-20260215",
   "head_before_commit": "0319b56190fe9708ecb18fdb7986ecc22d233092",
@@ -28,7 +28,7 @@
     "docs/LOCAL_DOCUMENT_INDEX.md": "be5274037fb6ef161cd7ed5f2f75da81b8332ec70eda58f10b9e5c3a1562ac56",
     "planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json": "663f93d8e43d7d01320d092b08b6c0d78ea82aa9dabc2b8ee1db11f5910bc56b",
     "outputs/governanca/local_execution_structure/20260216/smoke_run_output.json": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
-    "outputs/governanca/local_execution_structure/20260216/report.md": "8948f2d68e1241685388273af89b2ea8fdc53a4811722c886ea69e0fd1b53805",
+    "outputs/governanca/local_execution_structure/20260216/report.md": "97ab2efeba4733c566a587bf7f925bb28adfb4dfe2c217fd4c431c7e77631a55",
     "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_command.log": "bf01c5110d87df9aacf8fd06294387ed8b9c302122b41d29fb9268c096929ec5",
     "outputs/governanca/local_execution_structure/20260216/evidence/required_paths_check.json": "068991f3908310b0fce7dd0ff51fb308bf276de1ae205c06e885060acfb5abb3",
     "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_summary.json": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
@@ -39,7 +39,7 @@
     "outputs/governanca/local_execution_structure/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/governanca/local_execution_structure/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
-  "head_after_sync": "cddda4b35046b9d8ac433dc9e73aa9e15c01accb",
+  "head_after_sync": "9c16878033e73076711f4e705c01703af12e6af9",
   "sync_evidence": {
     "fetch": "outputs/governanca/local_execution_structure/20260216/evidence/sync_fetch.txt",
     "pull_ff_only": "outputs/governanca/local_execution_structure/20260216/evidence/sync_pull_ff_only.txt",

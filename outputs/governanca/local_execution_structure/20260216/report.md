@@ -53,7 +53,7 @@ Atualizado `docs/LOCAL_DOCUMENT_INDEX.md` para incluir:
 ## Fechamento de sync
 
 - branch: `local/integrated-state-20260215`
-- head_after_sync: `cddda4b35046b9d8ac433dc9e73aa9e15c01accb`
+- head_after_sync: `9c16878033e73076711f4e705c01703af12e6af9`
 - evidencias:
   - `outputs/governanca/local_execution_structure/20260216/evidence/sync_fetch.txt`
   - `outputs/governanca/local_execution_structure/20260216/evidence/sync_pull_ff_only.txt`
