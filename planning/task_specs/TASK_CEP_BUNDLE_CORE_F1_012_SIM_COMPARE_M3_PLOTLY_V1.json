@@ -1,0 +1,33 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_012_SIM_COMPARE_M3_PLOTLY_V1",
+  "intent": "Simular criterios vigentes e comparar com M3, gerando plots Plotly",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "baseline_m3_dir_readonly": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5",
+    "criteria_ssot_readonly": [
+      "docs/CONSTITUICAO.md",
+      "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+      "outputs/governanca/policy_spc_rl/20260216/report.md"
+    ],
+    "constraints": {
+      "no_modifications_to_baseline_m3_dir": true,
+      "no_recreation_of_rules_by_hand": true,
+      "fail_fast_if_entrypoints_or_artifacts_missing": true
+    }
+  },
+  "outputs": {
+    "run_dir": "outputs/simulacoes/compare_m3_plotly/20260216",
+    "deliverables_required": [
+      "series_new.parquet",
+      "metrics_new.json",
+      "metrics_compare.csv",
+      "equity_curve_compare.html",
+      "drawdown_compare.html",
+      "manifest.json",
+      "report.md",
+      "evidence/"
+    ]
+  }
+}

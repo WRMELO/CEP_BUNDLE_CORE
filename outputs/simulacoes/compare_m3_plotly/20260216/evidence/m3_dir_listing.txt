@@ -1,0 +1,12 @@
+DIR	evidence
+FILE	evidence/daily_replay_sample.csv
+FILE	evidence/inputs_hashes.json
+FILE	evidence/inputs_paths.txt
+FILE	evidence/ssot_alignment_summary.json
+FILE	evidence/status_after_sync.txt
+FILE	evidence/sync_fetch.txt
+FILE	evidence/sync_pull_ff_only.txt
+FILE	evidence/sync_push.txt
+FILE	manifest.json
+FILE	metrics_m3_w1_w2_v5.json
+FILE	report.md

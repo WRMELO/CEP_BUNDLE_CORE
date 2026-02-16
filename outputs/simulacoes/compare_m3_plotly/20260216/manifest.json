@@ -1,0 +1,73 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_012_SIM_COMPARE_M3_PLOTLY_V1",
+  "generated_at_utc": "2026-02-16T13:12:59.322577+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head_before": "e4d040302d28e2b24c28e45a2ff0d9e83328d35b",
+  "baseline_m3_dir_readonly": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5",
+  "consumed_files": [
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv",
+    "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+    "docs/CONSTITUICAO.md",
+    "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+    "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+    "outputs/governanca/policy_spc_rl/20260216/report.md"
+  ],
+  "gates": {
+    "S1_GATE_REPO_CLEAN": {
+      "branch_ok": true,
+      "status_clean_before": true
+    },
+    "S2_GATE_LOAD_M3_ARTIFACTS": {
+      "m3_metrics_found": true,
+      "m3_series_found": true,
+      "m3_listing": "outputs/simulacoes/compare_m3_plotly/20260216/evidence/m3_dir_listing.txt"
+    },
+    "S3_GATE_RUN_NEW_SIMULATION": {
+      "series_new_exists": true,
+      "metrics_new_exists": true,
+      "series_schema_minimum_ok": true
+    },
+    "S4_GATE_COMPARE_METRICS": {
+      "metrics_compare_exists": true,
+      "metric_keyset_exact_match": true
+    },
+    "S5_GATE_PLOTLY_HTML": {
+      "equity_html_exists": true,
+      "drawdown_html_exists": true,
+      "equity_has_trace_m3": true,
+      "equity_has_trace_new": true,
+      "drawdown_has_trace_m3": true,
+      "drawdown_has_trace_new": true,
+      "plotly_cdn_present": true
+    },
+    "S6_GATE_MANIFEST_AND_REPORT": {
+      "baseline_dir_unchanged": true
+    }
+  },
+  "hashes_sha256": {
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json": "dfb746e733dd39c1c8f61ea37511656494f5da93608311501cc8a8219cf25dfd",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv": "dec5cf430d3f9d1dc7ef514250bc4127b4da01649ed4bf32bfe1b4359b915bec",
+    "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json": "2cd7ca475fa188f5c32491bf307f9eed00a9716a0fc411599dde89f2c83c4a46",
+    "docs/CONSTITUICAO.md": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63",
+    "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+    "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8",
+    "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md": "e7a099f3fca1c4249a0baa10c05d71c369f07c9da9fe6adb47e91755b36cf72e",
+    "outputs/governanca/policy_spc_rl/20260216/report.md": "6517fbc47ca9d7c6b482e8bc699fa1a6a2abacdabcc1c690f24ac70acfa8db6c",
+    "outputs/simulacoes/compare_m3_plotly/20260216/series_new.parquet": "e59180db999e0013aa5a18188cc63c97960d262278070f8eec884ccaa1695610",
+    "outputs/simulacoes/compare_m3_plotly/20260216/metrics_new.json": "27bbc9a6bda103a98e0765cbf2f92e2d10aa20a40d7bd58c0682b45f051055b4",
+    "outputs/simulacoes/compare_m3_plotly/20260216/metrics_compare.csv": "1e7c3f438fdc7acb1857a9d5c9a910e8c6a4e868c2830ff9b8a2d14ae9e39010",
+    "outputs/simulacoes/compare_m3_plotly/20260216/equity_curve_compare.html": "da4ed61dec56bd06da119bc932cc00667b524ff18eb3caf3c7f6f29dd0c5bac2",
+    "outputs/simulacoes/compare_m3_plotly/20260216/drawdown_compare.html": "a7074e8c1b90ddfdca5a26fc2b166ec9ef61e335c33ff90cfdd117ab4c6db846",
+    "outputs/simulacoes/compare_m3_plotly/20260216/evidence/m3_dir_listing.txt": "db85921ca281ea199239ed1eeefa7fb01103ff3473a32b03368903e842733cc1",
+    "outputs/simulacoes/compare_m3_plotly/20260216/evidence/gate_checks.json": "87000171bd8ffeef24c16ae8633e8d19157c0d8a732f0ea249a70766e024918d",
+    "outputs/simulacoes/compare_m3_plotly/20260216/evidence/metrics_keyset_check.json": "4b0b3a0d48dcacbd1a30af8acdc9db2bf085cf7c1c9f9b410f334162e82d9b99",
+    "outputs/simulacoes/compare_m3_plotly/20260216/evidence/baseline_hashes_before.json": "3a8de0f04596bdf0032a37ee38f52ea0b28359f86436269d79ed73c04bf4dd28",
+    "outputs/simulacoes/compare_m3_plotly/20260216/evidence/baseline_hashes_after.json": "3a8de0f04596bdf0032a37ee38f52ea0b28359f86436269d79ed73c04bf4dd28",
+    "outputs/simulacoes/compare_m3_plotly/20260216/evidence/baseline_immutability_check.json": "42b8ed651fccda01a7970b8b90a7fceee4d843afddd99641528995f24ef54ef2",
+    "outputs/simulacoes/compare_m3_plotly/20260216/report.md": "78671497b78c62b68444b757f44d618aa784b90be7e00b8bc7e2281bc2cad8d6"
+  },
+  "overall_pass": true
+}

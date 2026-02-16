@@ -1,0 +1,32 @@
+{
+  "S1_GATE_REPO_CLEAN": {
+    "branch_ok": true,
+    "status_clean_before": true
+  },
+  "S2_GATE_LOAD_M3_ARTIFACTS": {
+    "m3_metrics_found": true,
+    "m3_series_found": true,
+    "m3_listing": "outputs/simulacoes/compare_m3_plotly/20260216/evidence/m3_dir_listing.txt"
+  },
+  "S3_GATE_RUN_NEW_SIMULATION": {
+    "series_new_exists": true,
+    "metrics_new_exists": true,
+    "series_schema_minimum_ok": true
+  },
+  "S4_GATE_COMPARE_METRICS": {
+    "metrics_compare_exists": true,
+    "metric_keyset_exact_match": true
+  },
+  "S5_GATE_PLOTLY_HTML": {
+    "equity_html_exists": true,
+    "drawdown_html_exists": true,
+    "equity_has_trace_m3": true,
+    "equity_has_trace_new": true,
+    "drawdown_has_trace_m3": true,
+    "drawdown_has_trace_new": true,
+    "plotly_cdn_present": true
+  },
+  "S6_GATE_MANIFEST_AND_REPORT": {
+    "baseline_dir_unchanged": true
+  }
+}
