@@ -1,0 +1,183 @@
+{
+  "project_identity": {
+    "name": "CEP_BUNDLE_CORE",
+    "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+    "mission": "Bundle orientado por evidencias com SPC/CEP como nucleo e M3 como baseline.",
+    "worktree_emission": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+    "branch": "wt/bootstrap",
+    "head": "2632ec7f838df93c25a5a397feab0929adf29c26"
+  },
+  "repos_and_worktrees": {
+    "main_repo": "/home/wilson/CEP_BUNDLE_CORE",
+    "worktrees": {
+      "bootstrap": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+      "analysis": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
+      "ssot": "/home/wilson/_wt/CEP_BUNDLE_CORE/ssot",
+      "experiments": "/home/wilson/_wt/CEP_BUNDLE_CORE/experiments"
+    },
+    "branches": {
+      "main": "main",
+      "bootstrap": "wt/bootstrap",
+      "analysis": "wt/analysis-gaps",
+      "ssot": "wt/ssot",
+      "experiments": "wt/experiments"
+    },
+    "remote_origin": "git@github.com:WRMELO/CEP_BUNDLE_CORE.git"
+  },
+  "constitution_status": {
+    "path": "docs/CONSTITUICAO.md",
+    "version": "V1",
+    "runtime_official": "/home/wilson/PortfolioZero/.venv/bin/python",
+    "canonical_format": "Parquet",
+    "rl_variant": "Variante 2",
+    "plot_standard": "Plotly"
+  },
+  "active_amendments": {
+    "cost_model": {
+      "path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "name": "ARB_COST_0_025PCT_MOVED",
+      "rate": 0.00025,
+      "base": "valor_movimentado_notional",
+      "status": "aprovada"
+    },
+    "cash_cdi": {
+      "path": "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "name": "CASH_REMUNERACAO_CDI_V1",
+      "status": "aprovada",
+      "requires_ssot": true
+    }
+  },
+  "masterplan_reference": {
+    "path": "docs/MASTERPLAN.md",
+    "baseline": "M3",
+    "core": "SPC/CEP em burners e carteira",
+    "gaps_phase_required": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ]
+  },
+  "corpus_reference": {
+    "dir": "docs/corpus/",
+    "corpus_master": "docs/corpus/CORPUS_MASTER.md",
+    "corpus_index": "docs/corpus/corpus_index.json",
+    "experimentos": "docs/corpus/experimentos.json",
+    "licoes": "docs/corpus/licoes_aprendidas.json",
+    "artefatos": "docs/corpus/artefatos_referenciados.json",
+    "stats": {
+      "files_scanned_count": 1180,
+      "experiments_count": 27,
+      "artifact_refs_count": 7130,
+      "artifacts_hashed_count": 400
+    }
+  },
+  "instrumentation_status": {
+    "v1": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json",
+    "v2": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json",
+    "v3": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+    "v4": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json",
+    "cash_cdi_derivation_v4": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/cash_cdi_derivation_v4.json"
+  },
+  "metrics_versions": {
+    "v1": {
+      "M3_full": {
+        "multiple": 2.3854396269425098,
+        "MDD": -0.6803348624996948
+      },
+      "W1": {
+        "multiple": 5.369645122088538,
+        "MDD": -0.18737225795599066
+      },
+      "W2": {
+        "multiple": 0.4673457809709631,
+        "MDD": -0.5981000548432676
+      }
+    },
+    "v2": {
+      "cost_status": "REGRA AUSENTE",
+      "turnover_model": "sum(abs(notional) por dia)/equity_do_dia"
+    },
+    "v3": {
+      "cost_model": "ARB_COST_0_025PCT_MOVED",
+      "cost_rate": 0.00025,
+      "M3_full_multiple_liquido": 2.2992081386503584
+    },
+    "v4": {
+      "cash_cdi_status": "SSOT AUSENTE",
+      "cash_cdi_applied": false
+    }
+  },
+  "cost_model_status": {
+    "emenda_path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "applied_in_v3": true,
+    "evidence_metric": {
+      "M3_full_cost_total": 0.08623148829215131,
+      "W1_cost_total": 0.03892186425373122,
+      "W2_cost_total": 0.02558437411396306
+    }
+  },
+  "cash_cdi_status": {
+    "emenda_path": "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+    "v4_status": "SSOT AUSENTE",
+    "v4_decision": "Nao aplicar accrual CDI por ausencia de SSOT confiavel no repo.",
+    "ssot_candidates_v4": [],
+    "new_ssot_created_after_v4": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/data/ssot/cdi/cdi_daily.parquet"
+  },
+  "ssot_registry": {
+    "existing": [
+      {
+        "name": "CDI_DAILY",
+        "path": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/data/ssot/cdi/cdi_daily.parquet",
+        "readme": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/data/ssot/cdi/README.md",
+        "source_report": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/governanca/ssot_cdi/20260215/report.md"
+      }
+    ],
+    "missing_or_pending": [
+      "Definir politica de espelhamento do SSOT CDI no bootstrap/main para consumo universal entre worktrees."
+    ]
+  },
+  "open_gaps": [
+    "Reprocessar pacote de metricas com CDI aplicado agora que SSOT CDI existe.",
+    "Avancar G1-G4 do Masterplan (cobertura de metricas, resultados quant, hashes, taxonomia W1/W2/W3).",
+    "Padronizar consumo de SSOT CDI entre worktrees."
+  ],
+  "next_tasks_recommended": [
+    {
+      "task_hint": "TASK_CEP_BUNDLE_CORE_F1_012_APPLY_CDI_SSOT_TO_METRICS_V5",
+      "goal": "Aplicar CDI daily SSOT ao pacote v3 e gerar v5 com gain de caixa por periodo.",
+      "depends_on": [
+        "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/data/ssot/cdi/cdi_daily.parquet",
+        "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json"
+      ]
+    },
+    {
+      "task_hint": "TASK_CEP_BUNDLE_CORE_F1_013_PROMOTE_CDI_SSOT_TO_BOOTSTRAP_MAIN",
+      "goal": "Canonizar SSOT CDI em local comum de leitura para todos os worktrees.",
+      "depends_on": [
+        "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis/data/ssot/cdi/cdi_daily.parquet"
+      ]
+    }
+  ],
+  "governance_rules": {
+    "required_artifacts": [
+      "report.md",
+      "manifest.json",
+      "evidence/"
+    ],
+    "hash_standard": "SHA-256",
+    "gate_policy": "OVERALL PASS somente com todos os gates PASS",
+    "sync_policy": "fetch + pull --ff-only + push com evidencias"
+  },
+  "chat_interaction_protocol": {
+    "language": "pt-BR",
+    "response_format": [
+      "nome da task",
+      "estado geral",
+      "gate a gate: objetivo e resultado",
+      "enderecos dos artefatos",
+      "comentarios finais"
+    ],
+    "failure_response_rule": "Quando falhar, explicitar gate, evidencia objetiva e proxima acao."
+  }
+}

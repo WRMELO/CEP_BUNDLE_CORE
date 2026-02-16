@@ -1,0 +1,8 @@
+{
+  "baseline_m3_in_md": true,
+  "baseline_m3_in_json": true,
+  "cost_rate_md_present": true,
+  "cost_rate_json_value": true,
+  "cash_cdi_status_md_present": true,
+  "cash_cdi_status_json_match": true
+}

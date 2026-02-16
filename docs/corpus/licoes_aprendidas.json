@@ -1,0 +1,839 @@
+{
+  "items": [
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA — Ponto de Situação (snapshot 2026-02-04).md",
+      "line": 155,
+      "excerpt": "9. 2023-03-10 — Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"FDIC Acts to Protect All Depositors of the former Silicon ...\"))"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA — Ponto de Situação (snapshot 2026-02-04).md",
+      "line": 169,
+      "excerpt": "O período de referência do CEP (baseline) será definido formalmente por regras determinísticas, aplicadas exclusivamente à série Master (IBOVESPA, em log-retorno). O baseline deve ser um intervalo contínuo de pregões, contido na janela de dados disponível (a partir de 2018-01-01)"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/templates/runner_xbarr_r_plotly_v1.usage.md",
+      "line": 19,
+      "excerpt": "- O `window_n` deve ser igual ao `N_master` do SSOT em `docs/ssot/master_calibration.json`."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/RETOMADA_PLANO_VS_EXECUCAO.md",
+      "line": 161,
+      "excerpt": "Planejador deve iniciar pela Fase I e usar Agno."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "line": 13,
+      "excerpt": "- bloquear risco quando houver evidência estatística de causa especial;"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "line": 89,
+      "excerpt": "Estas ferramentas fazem parte **formal** do projeto e devem continuar sendo usadas:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "line": 277,
+      "excerpt": "> O Planejador deve:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "line": 295,
+      "excerpt": "Tudo o que vier depois deve ser compatível com ele — ou explicitamente revisado."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 9,
+      "excerpt": "Este documento é a âncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que é permitido, o que é proibido e como o projeto deve evoluir com rastreabilidade, disciplina e auditabilidade. Qualquer mudança conceitual exige atualização formal desta Constituição antes"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 17,
+      "excerpt": "O foco do projeto não é previsão, não é narrativa de mercado e não é otimização prematura, mas sim operar somente quando o processo estiver sob controle, bloquear risco quando houver evidência estatística de causa especial, selecionar ativos com base em estabilidade e resultado ("
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 55,
+      "excerpt": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 72,
+      "excerpt": "Regra de governança do Obsidian: o vault do Obsidian não entra no git. Porém, toda decisão relevante deve ser replicada em documentos versionados no repositório (por exemplo, em docs/), para rastreabilidade e governança."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 146,
+      "excerpt": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, critérios, hash) e auditoria (contagens, duplicidades, chaves e campos críticos)."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 203,
+      "excerpt": "Nota de governança: o snapshot deve registrar os valores usados e qualquer desvio desses parâmetros."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 213,
+      "excerpt": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 221,
+      "excerpt": "**Emenda única (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A construção de subgrupos para Xbarra–R deve usar rolling_overlapping (stride=1, janela=N_burner), análogo ao Master. O período-base (baseline) do Queimador é definido e registr"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 228,
+      "excerpt": "Artefatos gerados devem incluir manifest.json com hashes."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 240,
+      "excerpt": "- Regra 3: 6 pontos consecutivos em tendência monotônica (subindo/caindo). Auxiliar/opcional (não deve ser gatilho único se não estiver explicitamente ativada)."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 283,
+      "excerpt": "A aplicação e validação deve cobrir:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 291,
+      "excerpt": "Justificativas por “eventos externos reconhecidos” são permitidas apenas como anotação ex post para auditoria e entendimento do comportamento do processo nos pontos fora de controle. Essas anotações não alteram o resultado CEP nem mudam parâmetros automaticamente. O registro deve"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 299,
+      "excerpt": "Toda revisão, quando autorizada pelo Owner, deve ser registrada como evento de governança e executada por task dedicada, preservando rastreabilidade completa do antes e do depois (baseline anterior e baseline revisado), sem apagamento de histórico."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 322,
+      "excerpt": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relatórios de calibração/validação/revisão) deve ser produzido por task Agno, com report e evidências. É proibido manter “scripts manuais” como fonte definitiva de estado."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 324,
+      "excerpt": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substituído por task equivalente antes de ser considerado parte do estado governado do projeto."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 328,
+      "excerpt": "As tasks devem seguir convenção de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 340,
+      "excerpt": "Quando houver erro na resposta (texto/decisão/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar causa, evidências necessárias e próximo passo único antes de prosseguir. O objetivo é evitar improviso e garantir correção g"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 346,
+      "excerpt": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constituição, começar pelo plano técnico de execução da Fase I e organizar o trabalho via Agno, priorizando clareza, rastreabilidade e controle estatístico."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "line": 348,
+      "excerpt": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json",
+      "line": 31,
+      "excerpt": "          \"Deve falhar se houver SyntaxError ou imports invalidos.\""
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv",
+      "line": 10,
+      "excerpt": "2023-03-10,\"Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"\"FDIC Acts to Protect All Depositors of the former Silicon ...\"\"))\""
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md",
+      "line": 10,
+      "excerpt": "## Recomendação"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/exp/20260208/baseline_scan_stability/report_baseline_scan_stability.md",
+      "line": 18,
+      "excerpt": "## Recomendação técnica"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/cal/20260208/decision_baseline_master/decision_package.md",
+      "line": 3,
+      "excerpt": "## Recomendação"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md",
+      "line": 27,
+      "excerpt": "| 8 | 2023-03-10 | Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"FDIC Acts to Protect All Depositors of the former Silicon ...\")) | True |"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv",
+      "line": 10,
+      "excerpt": "8,2023-03-10,\"Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"\"FDIC Acts to Protect All Depositors of the former Silicon ...\"\"))\",True,\"E_STRESS_I_62,E_TREND_RUN7_16,E_"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md",
+      "line": 24,
+      "excerpt": "- Prioridade entre estabilidade/controle e métricas financeiras deve ser reafirmada se o guardrail filtrar demais."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 9,
+      "excerpt": "Este documento é a âncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que é permitido, o que é proibido e como o projeto deve evoluir com rastreabilidade, disciplina e auditabilidade. Qualquer mudança conceitual exige atualização formal desta Constituição antes"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 17,
+      "excerpt": "O foco do projeto não é previsão, não é narrativa de mercado e não é otimização prematura, mas sim operar somente quando o processo estiver sob controle, bloquear risco quando houver evidência estatística de causa especial, selecionar ativos com base em estabilidade e resultado ("
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 55,
+      "excerpt": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 72,
+      "excerpt": "Regra de governança do Obsidian: o vault do Obsidian não entra no git. Porém, toda decisão relevante deve ser replicada em documentos versionados no repositório (por exemplo, em docs/), para rastreabilidade e governança."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 146,
+      "excerpt": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, critérios, hash) e auditoria (contagens, duplicidades, chaves e campos críticos)."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 203,
+      "excerpt": "Nota de governança: o snapshot deve registrar os valores usados e qualquer desvio desses parâmetros."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 213,
+      "excerpt": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 221,
+      "excerpt": "**Emenda única (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A construção de subgrupos para Xbarra–R deve usar rolling_overlapping (stride=1, janela=N_burner), análogo ao Master. O período-base (baseline) do Queimador é definido e registr"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 228,
+      "excerpt": "Artefatos gerados devem incluir manifest.json com hashes."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 240,
+      "excerpt": "- Regra 3: 6 pontos consecutivos em tendência monotônica (subindo/caindo). Auxiliar/opcional (não deve ser gatilho único se não estiver explicitamente ativada)."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 283,
+      "excerpt": "A aplicação e validação deve cobrir:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 291,
+      "excerpt": "Justificativas por “eventos externos reconhecidos” são permitidas apenas como anotação ex post para auditoria e entendimento do comportamento do processo nos pontos fora de controle. Essas anotações não alteram o resultado CEP nem mudam parâmetros automaticamente. O registro deve"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 299,
+      "excerpt": "Toda revisão, quando autorizada pelo Owner, deve ser registrada como evento de governança e executada por task dedicada, preservando rastreabilidade completa do antes e do depois (baseline anterior e baseline revisado), sem apagamento de histórico."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 322,
+      "excerpt": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relatórios de calibração/validação/revisão) deve ser produzido por task Agno, com report e evidências. É proibido manter “scripts manuais” como fonte definitiva de estado."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 324,
+      "excerpt": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substituído por task equivalente antes de ser considerado parte do estado governado do projeto."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 328,
+      "excerpt": "As tasks devem seguir convenção de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 340,
+      "excerpt": "Quando houver erro na resposta (texto/decisão/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar causa, evidências necessárias e próximo passo único antes de prosseguir. O objetivo é evitar improviso e garantir correção g"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 346,
+      "excerpt": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constituição, começar pelo plano técnico de execução da Fase I e organizar o trabalho via Agno, priorizando clareza, rastreabilidade e controle estatístico."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "line": 348,
+      "excerpt": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 15,
+      "excerpt": "Este documento é a âncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que é permitido, o que é proibido e como o projeto deve evoluir com rastreabilidade, disciplina e auditabilidade. Qualquer mudança conceitual exige atualização formal desta Constituição antes"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 23,
+      "excerpt": "O foco do projeto não é previsão, não é narrativa de mercado e não é otimização prematura, mas sim operar somente quando o processo estiver sob controle, bloquear risco quando houver evidência estatística de causa especial, selecionar ativos com base em estabilidade e resultado ("
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 61,
+      "excerpt": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 78,
+      "excerpt": "Regra de governança do Obsidian: o vault do Obsidian não entra no git. Porém, toda decisão relevante deve ser replicada em documentos versionados no repositório (por exemplo, em docs/), para rastreabilidade e governança."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 152,
+      "excerpt": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, critérios, hash) e auditoria (contagens, duplicidades, chaves e campos críticos)."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 209,
+      "excerpt": "Nota de governança: o snapshot deve registrar os valores usados e qualquer desvio desses parâmetros."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 219,
+      "excerpt": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 227,
+      "excerpt": "**Emenda única (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A construção de subgrupos para Xbarra–R deve usar rolling_overlapping (stride=1, janela=N_burner), análogo ao Master. O período-base (baseline) do Queimador é definido e registr"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 234,
+      "excerpt": "Artefatos gerados devem incluir manifest.json com hashes."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 246,
+      "excerpt": "- Regra 3: 6 pontos consecutivos em tendência monotônica (subindo/caindo). Auxiliar/opcional (não deve ser gatilho único se não estiver explicitamente ativada)."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 289,
+      "excerpt": "A aplicação e validação deve cobrir:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 297,
+      "excerpt": "Justificativas por “eventos externos reconhecidos” são permitidas apenas como anotação ex post para auditoria e entendimento do comportamento do processo nos pontos fora de controle. Essas anotações não alteram o resultado CEP nem mudam parâmetros automaticamente. O registro deve"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 305,
+      "excerpt": "Toda revisão, quando autorizada pelo Owner, deve ser registrada como evento de governança e executada por task dedicada, preservando rastreabilidade completa do antes e do depois (baseline anterior e baseline revisado), sem apagamento de histórico."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 328,
+      "excerpt": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relatórios de calibração/validação/revisão) deve ser produzido por task Agno, com report e evidências. É proibido manter “scripts manuais” como fonte definitiva de estado."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 330,
+      "excerpt": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substituído por task equivalente antes de ser considerado parte do estado governado do projeto."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 334,
+      "excerpt": "As tasks devem seguir convenção de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 346,
+      "excerpt": "Quando houver erro na resposta (texto/decisão/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar causa, evidências necessárias e próximo passo único antes de prosseguir. O objetivo é evitar improviso e garantir correção g"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 352,
+      "excerpt": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constituição, começar pelo plano técnico de execução da Fase I e organizar o trabalho via Agno, priorizando clareza, rastreabilidade e controle estatístico."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 354,
+      "excerpt": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 519,
+      "excerpt": "- Emenda na Constituição deve ser feita em passo separado."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 572,
+      "excerpt": "- Priorizar estabilidade CEP do portfólio e disciplina de risco."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 582,
+      "excerpt": "- Qual janela semanal de compra deve ser usada (1º pregão, último pregão ou parametrizável)?"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "line": 584,
+      "excerpt": "- As métricas devem priorizar estabilidade CEP ou incluir métricas financeiras como secundárias?"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+      "line": 41,
+      "excerpt": "- Priorizar estabilidade CEP do portfólio e disciplina de risco."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+      "line": 51,
+      "excerpt": "- Qual janela semanal de compra deve ser usada (1º pregão, último pregão ou parametrizável)?"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+      "line": 53,
+      "excerpt": "- As métricas devem priorizar estabilidade CEP ou incluir métricas financeiras como secundárias?"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/freeze_sizing_default_v2/decisao_freeze_sizing_default_v2.md",
+      "line": 27,
+      "excerpt": "- Emenda na Constituição deve ser feita em passo separado."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1/f1_probe_sdk/PROBE_SDK_BRAPI_QUOTE_LIST.md",
+      "line": 22,
+      "excerpt": "## Conclusão"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260208/baseline_scan_in_sample_nk/report_baseline_scan_in_sample_nk.md",
+      "line": 17,
+      "excerpt": "- Método in-sample pode favorecer K pequeno; risco registrado sem alterar critério."
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing_v2/sanity_summary.md",
+      "line": 11,
+      "excerpt": "## Conclusão"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing/sanity_summary.md",
+      "line": 10,
+      "excerpt": "## Conclusão"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_baseline_master_in_sample_nk/decision_package.md",
+      "line": 3,
+      "excerpt": "## Recomendação"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_master_backtest_replica_bvsp_kn/decision_package.md",
+      "line": 3,
+      "excerpt": "## Recomendação"
+    },
+    {
+      "path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260209/decision_package_sizing_v2/decision_package.md",
+      "line": 24,
+      "excerpt": "- Prioridade entre estabilidade/controle e métricas financeiras deve ser reafirmada se o guardrail filtrar demais."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "line": 34,
+      "excerpt": "3. Toda task deve ter critérios de PASS/FAIL e outputs verificáveis."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "line": 35,
+      "excerpt": "4. Em caso de ambiguidade, o executor deve parar e perguntar ao Owner."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "line": 72,
+      "excerpt": "- qualidade dos riscos e guardrails identificados."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "line": 98,
+      "excerpt": "- riscos/lacunas pendentes."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "line": 102,
+      "excerpt": "- toda mensagem operacional deve começar com identificação do LLM autor;"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_task_operacional.md",
+      "line": 4,
+      "excerpt": "> Regra: a primeira linha da comunicacao operacional deve identificar o LLM autor."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_task_operacional.md",
+      "line": 48,
+      "excerpt": "- Riscos/guardrails apontados:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_task_operacional.md",
+      "line": 53,
+      "excerpt": "- Riscos/guardrails apontados:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 27,
+      "excerpt": "Este projeto não altera a rotina diária de venda. A compra semanal deve encaixar com esse mecanismo e aceitar como dados:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 57,
+      "excerpt": "As regras anti-concentração já existem na Constituição e não devem ser reescritas aqui."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 77,
+      "excerpt": "A avaliação deve incluir penalização:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 86,
+      "excerpt": "A validação deve respeitar causalidade:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 92,
+      "excerpt": "Em todos os testes, a rotina diária de venda deve ser a mesma, para isolar o efeito do mecanismo de compra semanal."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 95,
+      "excerpt": "Este projeto deverá produzir artefatos reprodutíveis e auditáveis:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "line": 103,
+      "excerpt": "A integração futura deve preservar acoplamento mínimo:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/task_008_pos_task.md",
+      "line": 43,
+      "excerpt": "Conclusão evidencial: não houve caixa majoritário, nem bloqueio sistemático de compras, nem erro de rebase, nem erro contábil recorrente. O descolamento no intervalo detectado é de performance relativa com carteira investida e baixa volatilidade."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/0_Relatório de encerramento do ciclo M0…M6 (CEP_COMPRA v1).md",
+      "line": 52,
+      "excerpt": "- e alinhamento com a regra do Master: rompimento positivo (upside) não deve gerar SELL por si só."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/0_Relatório de encerramento do ciclo M0…M6 (CEP_COMPRA v1).md",
+      "line": 81,
+      "excerpt": "O M4 cumpriu o guardrail por construção, mas ficou “morto” (absorvente em HARD_PROTECTION) e com caixa que não rendia como deveria. Serviu como prova de conceito do controle, mas não como estratégia operável."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/0_Relatório de encerramento do ciclo M0…M6 (CEP_COMPRA v1).md",
+      "line": 125,
+      "excerpt": "4. Usar “seleção de baseline pelo menor R/MR no histórico inteiro” é hindsight e não representa CEP operacional. Baseline de limites deve ser governado e ex-ante; a detecção de estado pode ser rolling e variável."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/0_Relatório de encerramento do ciclo M0…M6 (CEP_COMPRA v1).md",
+      "line": 127,
+      "excerpt": "5. A conclusão conceitual do ciclo: Master não deve ser apenas um gate binário de compra; ele deve classificar regime (BULL/BEAR/TRANSIÇÃO), e cada regime deve ter política de carteira (níveis de liberdade de BUY), mantendo queimadores como critério individual por ativo para SELL"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/0_Relatório de encerramento do ciclo M0…M6 (CEP_COMPRA v1).md",
+      "line": 139,
+      "excerpt": "## 1.5 Conclusão do encerramento"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/task_006_pos_task.md",
+      "line": 35,
+      "excerpt": "- Conclusao:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/task_006_pre_execucao.md",
+      "line": 24,
+      "excerpt": "- conclusao: `equity_brl` ja inclui caixa; serie `carteira_total_brl` usara `equity_brl`."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/task_009_pos_task.md",
+      "line": 45,
+      "excerpt": "Conclusão evidencial sobre o plateau: não há suporte para explicar o plateau por SELL de UCL em Xbar; no recorte de ativos em carteira com dados completos não houve violações I/MR, e a explicação permanece ligada à combinação de regime Master + desempenho dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/task_012_smoke_sell_patch.md",
+      "line": 6,
+      "excerpt": "- SELL por rompimento positivo deve ser bloqueado quando `upside_extreme=True`."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 4,
+      "excerpt": "> Regra: a primeira linha da comunicacao operacional deve identificar o LLM autor."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 45,
+      "excerpt": "## 5. Riscos e lacunas pendentes"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 47,
+      "excerpt": "- Risco 1:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 50,
+      "excerpt": "- Risco 2:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 59,
+      "excerpt": "- Qualidade de riscos/guardrails:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 61,
+      "excerpt": "## 7. Recomendacao para proxima task"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md",
+      "line": 63,
+      "excerpt": "- Recomendacao:"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/docs/emendas/EMENDA_CEP_COMPRA_V1_3_REGRAS_COMPRA_VENDA.md",
+      "line": 44,
+      "excerpt": "- Setor ausente deve ser `UNKNOWN` e conta como setor para o cap."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/cycle2/20260213/master_regime_m3_cep_only_v3/revogacao_ssot_v1.md",
+      "line": 6,
+      "excerpt": "- impacto operacional: v1 não deve ser usado como regra vigente de regime Master."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/backtests/task_004/run_20260211_205125/manifest.json",
+      "line": 11,
+      "excerpt": "    \"Ranking gerado em modo informativo; criterio oficial de vencedor deve existir explicitamente na especificacao.\""
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md",
+      "line": 786,
+      "excerpt": "5. **O resultado de W3 para M1 é idiossincrático, não sistemático**: Depender de um único ticker para +80% é risco de concentração, não virtude do mecanismo."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md",
+      "line": 841,
+      "excerpt": "5. **Conclusão**: M3 melhora marginalmente M1 mas NÃO resolve o problema fundamental (giro alto em bear)."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md",
+      "line": 843,
+      "excerpt": "## 9. Conclusão e próximos passos possíveis"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_016/run_20260212_124143/pacote_evidencias_chat_m0_m1_m3.md",
+      "line": 345,
+      "excerpt": "## 5) Conclusão curta (com referência de tabela)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_016/run_20260212_124212/pacote_evidencias_chat_m0_m1_m3.md",
+      "line": 364,
+      "excerpt": "## 5) Conclusão curta (com referência de tabela)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 10,
+      "excerpt": "- M0 risco/execução: turnover=0.0584, cash_ratio=0.1161, n_positions=9.99, buys=295, sells=253"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 14,
+      "excerpt": "- M1 risco/execução: turnover=0.0902, cash_ratio=0.1703, n_positions=8.93, buys=493, sells=383"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 18,
+      "excerpt": "- M3 risco/execução: turnover=0.0971, cash_ratio=0.1741, n_positions=8.89, buys=489, sells=392"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 26,
+      "excerpt": "- M0 risco/execução: turnover=0.0227, cash_ratio=0.0339, n_positions=10.91, buys=65, sells=53"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 30,
+      "excerpt": "- M1 risco/execução: turnover=0.0722, cash_ratio=0.1267, n_positions=9.08, buys=184, sells=152"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 34,
+      "excerpt": "- M3 risco/execução: turnover=0.0754, cash_ratio=0.1299, n_positions=9.33, buys=191, sells=158"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 42,
+      "excerpt": "- M0 risco/execução: turnover=0.0164, cash_ratio=0.0228, n_positions=12.85, buys=44, sells=40"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 46,
+      "excerpt": "- M1 risco/execução: turnover=0.0761, cash_ratio=0.1231, n_positions=8.11, buys=150, sells=119"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 50,
+      "excerpt": "- M3 risco/execução: turnover=0.0568, cash_ratio=0.1051, n_positions=9.99, buys=122, sells=106"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 58,
+      "excerpt": "- M0 risco/execução: turnover=0.0712, cash_ratio=0.0897, n_positions=9.82, buys=10, sells=8"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 62,
+      "excerpt": "- M1 risco/execução: turnover=0.1320, cash_ratio=0.1480, n_positions=10.45, buys=19, sells=16"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 66,
+      "excerpt": "- M3 risco/execução: turnover=0.1152, cash_ratio=0.1515, n_positions=9.05, buys=16, sells=14"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 74,
+      "excerpt": "- M0 risco/execução: turnover=0.0143, cash_ratio=0.0751, n_positions=10.00, buys=3, sells=2"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 78,
+      "excerpt": "- M1 risco/execução: turnover=0.1050, cash_ratio=0.3580, n_positions=6.23, buys=15, sells=11"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 82,
+      "excerpt": "- M3 risco/execução: turnover=0.1216, cash_ratio=0.3503, n_positions=6.23, buys=19, sells=15"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 90,
+      "excerpt": "- M0 risco/execução: turnover=0.0000, cash_ratio=0.0432, n_positions=10.00, buys=0, sells=0"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 93,
+      "excerpt": "- M1 risco/execução: turnover=0.0000, cash_ratio=0.0000, n_positions=8.00, buys=0, sells=0"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "line": 96,
+      "excerpt": "- M3 risco/execução: turnover=0.0000, cash_ratio=0.0000, n_positions=9.00, buys=0, sells=0"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/ANALISE_COMPLETA_M0_M1_M3_PARA_CHAT.md",
+      "line": 209,
+      "excerpt": "### 2.4 Conclusão: nenhum dos 3 é ideal isoladamente"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105033/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 25,
+      "excerpt": "## Conclusão sobre o plateau (evidencial)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105033/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 27,
+      "excerpt": "- A explicação do plateau deve considerar a combinação de: regime Master (RISK_ON/OFF/PRESERVACAO), vendas por I/MR e performance dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105042/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 25,
+      "excerpt": "## Conclusão sobre o plateau (evidencial)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105042/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 27,
+      "excerpt": "- A explicação do plateau deve considerar a combinação de: regime Master (RISK_ON/OFF/PRESERVACAO), vendas por I/MR e performance dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105127/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 25,
+      "excerpt": "## Conclusão sobre o plateau (evidencial)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105127/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 27,
+      "excerpt": "- A explicação do plateau deve considerar a combinação de: regime Master (RISK_ON/OFF/PRESERVACAO), vendas por I/MR e performance dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105212/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 25,
+      "excerpt": "## Conclusão sobre o plateau (evidencial)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_105212/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 27,
+      "excerpt": "- A explicação do plateau deve considerar a combinação de: regime Master (RISK_ON/OFF/PRESERVACAO), vendas por I/MR e performance dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_104940/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 23,
+      "excerpt": "## Conclusão sobre o plateau (evidencial)"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/forensics/task_009/run_20260212_104940/relatorio_task_009_plato_e_rompimentos.md",
+      "line": 25,
+      "excerpt": "- A explicação do plateau deve considerar a combinação de: regime Master (RISK_ON/OFF/PRESERVACAO), vendas por I/MR e performance dos ativos mantidos."
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/monthly_regime_structured.json",
+      "line": 68,
+      "excerpt": "    \"motivos\": \"Selic em forte alta, inflação global, risco fiscal doméstico.\","
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/monthly_regime_structured.json",
+      "line": 82,
+      "excerpt": "    \"motivos\": \"Piora das expectativas econômicas, saída de investidores estrangeiros, aversão a risco.\","
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/report.md",
+      "line": 24,
+      "excerpt": "| 01/22–10/22           | Bear | 10 meses       | Queda acumulada até low ~90k | Selic em forte alta, inflação global, risco fiscal doméstico. |"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/report.md",
+      "line": 25,
+      "excerpt": "| 08/24–12/24           | Bear | 5 meses        | -10% no ano          | Piora das expectativas econômicas, saída de investidores estrangeiros, aversão a risco. |"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/report.md",
+      "line": 34,
+      "excerpt": "| 01/22–10/22 | Bear | BEAR | 1 | 2022 | 10 | 2022 | 10 meses | Queda acumulada até low ~90k | Selic em forte alta, inflação global, risco fiscal doméstico. | 2022-01-03 | 2022-10-31 |"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/report.md",
+      "line": 35,
+      "excerpt": "| 08/24–12/24 | Bear | BEAR | 8 | 2024 | 12 | 2024 | 5 meses | -10% no ano | Piora das expectativas econômicas, saída de investidores estrangeiros, aversão a risco. | 2024-08-01 | 2024-12-30 |"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/monthly_ssot_source.md",
+      "line": 7,
+      "excerpt": "| 01/22–10/22           | Bear | 10 meses       | Queda acumulada até low ~90k | Selic em forte alta, inflação global, risco fiscal doméstico. |"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_002A_master_regime_v4c/monthly_ssot_source.md",
+      "line": 8,
+      "excerpt": "| 08/24–12/24           | Bear | 5 meses        | -10% no ano          | Piora das expectativas econômicas, saída de investidores estrangeiros, aversão a risco. |"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_003C_master_buy_ssot_v8/flowchart_controle_rl_operacional.md",
+      "line": 22,
+      "excerpt": "    AEXE[\"Execução/fricção: liquidez relativa, risco de slippage (proxys), book em baixa liquidez\"]"
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_003C_master_buy_ssot_v8/flowchart_controle_rl_operacional.md",
+      "line": 47,
+      "excerpt": "    GR2[\"Limites de risco: MDD/underwater críticos, concentração, custos/turnover, quarentena\"]"
+    }
+  ]
+}

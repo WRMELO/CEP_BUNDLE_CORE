@@ -1,0 +1,44 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_009B_FIX_BOOTSTRAP_DIRTY_CONSTITUICAO_V1",
+  "generated_at_utc": "2026-02-16T00:21:13.764031+00:00",
+  "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+  "branch": "wt/bootstrap",
+  "head_before": "554e063286010cdafe6c2a9cd3ff50bcf8f05c8e",
+  "head_after": "3bb21f544dabb85d4518ac5022bad570dd2e9c12",
+  "outputs": {
+    "report_md": "outputs/governanca/fix_bootstrap_clean/20260215/report.md",
+    "manifest_json": "outputs/governanca/fix_bootstrap_clean/20260215/manifest.json",
+    "evidence_dir": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/",
+    "patch_file": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/CONSTITUICAO_dirty.patch",
+    "status_before": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_before.txt",
+    "status_after": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after.txt",
+    "head_before": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_before.txt",
+    "head_after": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_after.txt"
+  },
+  "hashes_sha256": {
+    "outputs/governanca/fix_bootstrap_clean/20260215/report.md": "cf13e014eeb1790e15c513f8aec7df3a64adf3fce57c13d378920017b52e7cce",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/CONSTITUICAO_dirty.patch": "947a8731d09eec42eac50ce80c535b012f6c058d024902bc9e555c7bc3a4f858",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_before.txt": "ae7e0bbca338efda74061fb5cd92bc7cf6897656cc435e5776d6373b688e0953",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_after.txt": "ae7e0bbca338efda74061fb5cd92bc7cf6897656cc435e5776d6373b688e0953",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_before.txt": "3244a36accc71fb18f71300be9271b4102df2e51c930e2710a3334fedf63e61e",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_WORKTREE_BOOTSTRAP": "PASS",
+    "S3_VERIFY_DIRTY_PATCH_CAPTURED": "PASS",
+    "S4_VERIFY_FILE_RESTORED_TO_HEAD": "PASS",
+    "S5_VERIFY_WORKTREE_CLEAN": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS"
+  },
+  "sync_evidence": {
+    "fetch": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_push.txt",
+    "status_after_sync": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after_sync.txt"
+  }
+}

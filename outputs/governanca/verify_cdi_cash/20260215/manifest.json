@@ -1,0 +1,47 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_008_VERIFY_CDI_CASH_REMUNERATION_DOCS_AND_EMEND_IF_MISSING_V1",
+  "generated_at_utc": "2026-02-15T21:20:32.380974+00:00",
+  "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+  "branch": "wt/bootstrap",
+  "head_before_commit": "989271dc4960c21db347bd8c12f06d859e35ad69",
+  "outputs": {
+    "report_md": "outputs/governanca/verify_cdi_cash/20260215/report.md",
+    "manifest_json": "outputs/governanca/verify_cdi_cash/20260215/manifest.json",
+    "evidence_dir": "outputs/governanca/verify_cdi_cash/20260215/evidence/",
+    "evidence_grep": "outputs/governanca/verify_cdi_cash/20260215/evidence/search_results.txt",
+    "emenda_if_missing": "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md"
+  },
+  "decision": "AUSENTE->EMENDA_CRIADA",
+  "hashes_sha256": {
+    "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8",
+    "docs/MASTERPLAN.md": "dc236345b75d9665a9555813e2556a9941462ff9e7ff274879332304b5733ea4",
+    "outputs/governanca/verify_cdi_cash/20260215/report.md": "049286e14fd2ec1fa65a23efd301b31b28c7aaf53c841ffb19cacd3ba26f1257",
+    "outputs/governanca/verify_cdi_cash/20260215/evidence/search_results.txt": "2452021b595d74b4f8b90de9bfab091dcd1f542aca81fdfaf85d02ed8ff975ae",
+    "outputs/governanca/verify_cdi_cash/20260215/evidence/status_before.txt": "f2d103b5439ad4cf2f1138c62b0323eef5d18952404ace099cbbeb3bc5281f1b",
+    "outputs/governanca/verify_cdi_cash/20260215/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/governanca/verify_cdi_cash/20260215/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/governanca/verify_cdi_cash/20260215/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/governanca/verify_cdi_cash/20260215/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_WORKTREE_BOOTSTRAP": "PASS",
+    "S3_VERIFY_SEARCH_EVIDENCE_WRITTEN": "PASS",
+    "S4_VERIFY_RULE_PRESENT_OR_EMENDA_CREATED": "PASS",
+    "S5_WRITE_MANIFEST_HASHES": "PASS",
+    "S6_VERIFY_WORKTREE_CLEAN": "PASS"
+  },
+  "head_after_commit": "572add88e875ddada5f4dd9139df3c267cbaa3b9",
+  "sync_evidence": {
+    "fetch": "outputs/governanca/verify_cdi_cash/20260215/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/governanca/verify_cdi_cash/20260215/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/governanca/verify_cdi_cash/20260215/evidence/sync_push.txt",
+    "status_after_sync": "outputs/governanca/verify_cdi_cash/20260215/evidence/status_after_sync.txt"
+  },
+  "acceptance": {
+    "OVERALL": "PASS",
+    "report_declara_presenca_ou_ausencia_com_evidencia": true,
+    "emenda_criada_se_ausente": true,
+    "sync_remoto_executado": true
+  }
+}
