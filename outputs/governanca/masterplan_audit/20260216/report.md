@@ -57,7 +57,7 @@ Sequencia proposta: aplicar CDI v5 -> executar E1/E2 -> fechar E3/E5 -> fechar G
 ## 8) Fechamento de sync
 
 - branch: `local/integrated-state-20260215`
-- head_after_sync: `0189421d3f204a2caf23923b8464cc2fe9a2b8d7`
+- head_after_sync: `ea1c69e07548eebe433852454de64620ce39eff0`
 - evidencias:
   - `outputs/governanca/masterplan_audit/20260216/evidence/sync_fetch.txt`
   - `outputs/governanca/masterplan_audit/20260216/evidence/sync_pull_ff_only.txt`
