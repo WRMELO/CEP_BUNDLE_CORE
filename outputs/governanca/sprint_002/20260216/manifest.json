@@ -21,10 +21,10 @@
     "S6_VERIFY_POST_SPRINT_002_AUDIT_REFRESHED": "PASS",
     "S7_VERIFY_REPORT_SELF_CONTAINED": "PASS",
     "S8_WRITE_MANIFEST_HASHES": "PASS",
-    "S9_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S9_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "hashes_sha256": {
-    "outputs/governanca/sprint_002/20260216/report.md": "7d3373675e4b558850aebc6802aa81a185a9a0d35f1bd58395c493e4be66ac2c",
+    "outputs/governanca/sprint_002/20260216/report.md": "0cbc08ebe72128daba60e0c57b20651773db51b09cd84c7062960f92593f1c52",
     "outputs/governanca/sprint_002/20260216/sprint_002_backlog.json": "4b9bccdcd91550571899ad89d3bf5f75ba59a32f1f94629cc9d69c5fbe8a65ef",
     "outputs/governanca/sprint_002/20260216/sprint_002_runs_index.json": "051d25d7de17cd4f7462b03d74e1c8a3e2b3f273e72d487739f1171a81dd4142",
     "outputs/governanca/masterplan_audit/20260216_post_sprint_002/report.md": "057f9faa34498e85c42c31c9f74a0c50cdce5fc5ab570303e541fde0aabc758c",
@@ -40,5 +40,7 @@
     "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_002_MP007_COMPLETE_ANTI_DERIVA_W2.json": "da9eb834b9113f63b690e13391effa1674224a6c96e38e34cd31ba89c2ff8d0e",
     "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_003_MP005_MP006_SPCCEP_DECISION_POLICY.json": "b636f370b0bfd91fd22325abfa223ac526820983b763633c4e157b1bdadf8be0",
     "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_004_POST_SPRINT_002_AUDIT_REFRESH.json": "167173565f2521ce10ab3f602e99ce8c909d8462022981545ce6daa4825828c6"
-  }
+  },
+  "updated_at_utc": "2026-02-16T12:22:13.646001+00:00",
+  "head_after_sync": "6cbc551b77035109a6ad3ca17fbcf36923dfd576"
 }
