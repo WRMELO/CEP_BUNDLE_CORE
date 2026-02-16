@@ -1,0 +1,34 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_009B_FIX_BOOTSTRAP_DIRTY_CONSTITUICAO_V1",
+  "generated_at_utc": "2026-02-16T00:20:32.578770+00:00",
+  "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+  "branch": "wt/bootstrap",
+  "head_before": "554e063286010cdafe6c2a9cd3ff50bcf8f05c8e",
+  "head_after": "554e063286010cdafe6c2a9cd3ff50bcf8f05c8e",
+  "outputs": {
+    "report_md": "outputs/governanca/fix_bootstrap_clean/20260215/report.md",
+    "manifest_json": "outputs/governanca/fix_bootstrap_clean/20260215/manifest.json",
+    "evidence_dir": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/",
+    "patch_file": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/CONSTITUICAO_dirty.patch",
+    "status_before": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_before.txt",
+    "status_after": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after.txt",
+    "head_before": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_before.txt",
+    "head_after": "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_after.txt"
+  },
+  "hashes_sha256": {
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/CONSTITUICAO_dirty.patch": "947a8731d09eec42eac50ce80c535b012f6c058d024902bc9e555c7bc3a4f858",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_before.txt": "3244a36accc71fb18f71300be9271b4102df2e51c930e2710a3334fedf63e61e",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_before.txt": "ae7e0bbca338efda74061fb5cd92bc7cf6897656cc435e5776d6373b688e0953",
+    "outputs/governanca/fix_bootstrap_clean/20260215/evidence/head_after.txt": "ae7e0bbca338efda74061fb5cd92bc7cf6897656cc435e5776d6373b688e0953",
+    "outputs/governanca/fix_bootstrap_clean/20260215/report.md": "9fc9022bf7e809411b0a8a4f30886afa7843380baed00d038f7937a5f523f4af"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_WORKTREE_BOOTSTRAP": "PASS",
+    "S3_VERIFY_DIRTY_PATCH_CAPTURED": "PASS",
+    "S4_VERIFY_FILE_RESTORED_TO_HEAD": "PASS",
+    "S5_VERIFY_WORKTREE_CLEAN": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS"
+  }
+}
