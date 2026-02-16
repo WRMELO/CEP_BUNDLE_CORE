@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_011_BUILD_SSOT_CDI_DAILY_SERIES_V1",
-  "generated_at_utc": "2026-02-16T00:24:55.920128+00:00",
+  "generated_at_utc": "2026-02-16T00:25:56.337766+00:00",
   "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
   "branch": "wt/analysis-gaps",
   "head_before_commit": "d1883a64c079e140695cf8aa68f1256421a89a70",
@@ -47,7 +47,7 @@
   "hashes_sha256": {
     "data/ssot/cdi/cdi_daily.parquet": "bee97e79e0654ed79f8846558ffab359087080bd84e70d502dd219fee4eab5da",
     "data/ssot/cdi/README.md": "de999f5c680a4c869949a8c890d31e0e126c3e65645c828bc0f62d2b62dcc6fc",
-    "outputs/governanca/ssot_cdi/20260215/report.md": "f377616c9e0944a403cd8fc74d8bd317cff14faf5d3ceaed868e14174201c2df",
+    "outputs/governanca/ssot_cdi/20260215/report.md": "2e4cc78f007824614a39a5cbc28dcfe84ff8461d5f04e0c5703ebd5b8cc60708",
     "outputs/governanca/ssot_cdi/20260215/evidence/search_results.txt": "c8e8b51afdc3d8ea5ece35432e94bcec955caf854f5804e5d049668eafbc70ce",
     "outputs/governanca/ssot_cdi/20260215/evidence/source_provenance.txt": "f2d5e3b7c030b273c0c91d2471bdbacb95c2bc6583877709ec83f708f76e076f",
     "outputs/governanca/ssot_cdi/20260215/evidence/status_before.txt": "b387bf13dcc2b24daa98d8a2b10d946b7bbb5d5dc6c263fa82e954a93ae30a77",
@@ -66,7 +66,7 @@
     "S7_VERIFY_WORKTREE_CLEAN": "PASS"
   },
   "git": {
-    "head": "c4a59e7b6f67757863058666228b9919dfb77355",
+    "head": "d7381d6bd89a449f8b0189e2e8defd3b7155f2a2",
     "branch": "wt/analysis-gaps",
     "remote": "origin/wt/analysis-gaps"
   },

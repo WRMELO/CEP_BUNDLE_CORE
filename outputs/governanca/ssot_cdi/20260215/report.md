@@ -47,7 +47,7 @@ OVERALL (pre-commit): PASS
 
 ## Fechamento de sync e estado final
 
-- head_after_commit: `c4a59e7b6f67757863058666228b9919dfb77355`
+- head_after_commit: `d7381d6bd89a449f8b0189e2e8defd3b7155f2a2`
 - branch: `wt/analysis-gaps`
 - sync evidencias:
   - `outputs/governanca/ssot_cdi/20260215/evidence/sync_fetch.txt`
