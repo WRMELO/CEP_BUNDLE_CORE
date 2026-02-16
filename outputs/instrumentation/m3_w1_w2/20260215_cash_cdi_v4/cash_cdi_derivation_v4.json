@@ -1,0 +1,34 @@
+{
+  "generated_at_utc": "2026-02-16T00:14:01.063466+00:00",
+  "extends": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/turnover_costs_derivation_v3.json",
+  "reference_emenda_cash_cdi": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+  "status": "SSOT AUSENTE",
+  "search_roots": [
+    "docs",
+    "docs/corpus",
+    "outputs",
+    "data",
+    "planning"
+  ],
+  "keywords": [
+    "CDI",
+    "cdi",
+    "taxa_cdi",
+    "serie_cdi",
+    "cdi_daily",
+    "cdi_diario"
+  ],
+  "ssot_candidates": [],
+  "decision": "Nao aplicar accrual CDI por ausencia de SSOT confiavel no repo.",
+  "periods": {
+    "M3_full": {
+      "cash_cdi_total_gain": null
+    },
+    "W1": {
+      "cash_cdi_total_gain": null
+    },
+    "W2": {
+      "cash_cdi_total_gain": null
+    }
+  }
+}

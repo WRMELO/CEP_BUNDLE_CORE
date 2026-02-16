@@ -1,0 +1,38 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_010_APPLY_CDI_CASH_ACCRUAL_TO_METRICS_V4_V1",
+  "generated_at_utc": "2026-02-16T00:14:01.070242+00:00",
+  "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
+  "branch": "wt/analysis-gaps",
+  "head_before_commit": "5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730",
+  "inputs": {
+    "instrumentation_v3_dir": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/",
+    "metrics_v3": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+    "turnover_costs_v3": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/turnover_costs_derivation_v3.json",
+    "sources_v3": "outputs/gaps/m3_w1_w2/20260215/sources_m3_w1_w2.json",
+    "emenda_cash_cdi": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md"
+  },
+  "outputs": {
+    "report_md": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md",
+    "manifest_json": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/manifest.json",
+    "evidence_dir": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/",
+    "metrics_v4": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json",
+    "cash_cdi_derivation_v4": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/cash_cdi_derivation_v4.json"
+  },
+  "status": "SSOT AUSENTE",
+  "hashes_sha256": {
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json": "e5e408e275c2ef46e92724455079471ed2bdd740c83c49c707820e91c59c85f5",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/cash_cdi_derivation_v4.json": "d1658b4b6e581ca4a48d71d04e1b4d3db280e82aa86338207929a5c162592d0f",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md": "d587ffcb819c188d814a3ba833efb30578b107aeb66573851a23bc963e386711",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/ssot_cdi_search.txt": "b0dd7c56fe8ab0b4eb3ce345e0461327e1410b05d24603c690d463b762ee0867",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_ANALYSIS_WORKTREE_AND_BRANCH": "PASS",
+    "S3_VERIFY_CDI_SSOT_SEARCH_EVIDENCE": "PASS",
+    "S4_VERIFY_METRICS_V4_CREATED": "PASS",
+    "S5_VERIFY_REPORT_TRACEABILITY": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS",
+    "S7_VERIFY_WORKTREE_CLEAN": "PENDING"
+  }
+}
