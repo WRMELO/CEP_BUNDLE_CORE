@@ -1,0 +1,13 @@
+/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json
+/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215_costs_v3/turnover_costs_derivation_v3.json
+/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/cdi_daily.parquet
+/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/README.md
+/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet
+/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet
+/home/wilson/CEP_BUNDLE_CORE/docs/CONSTITUICAO.md
+/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md
+/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md
+/home/wilson/CEP_BUNDLE_CORE/docs/MASTERPLAN.md
+/home/wilson/CEP_BUNDLE_CORE/outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json
+/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json
+/home/wilson/CEP_BUNDLE_CORE/outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md

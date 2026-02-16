@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_012_APPLY_CDI_SSOT_TO_METRICS_V5",
+  "generated_at_utc": "2026-02-16T12:05:29.850702+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head_before_commit": "40bdf8586b8d18b96020890acda4b633ca026310",
+  "outputs": {
+    "report_md": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md",
+    "manifest_json": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/manifest.json",
+    "metrics_v5_json": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+    "evidence_dir": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_SSOT_CDI_PRESENT": "PASS",
+    "S3_VERIFY_METRICS_V5_EMITTED": "PASS",
+    "S4_VERIFY_CASH_CDI_STATUS_CLOSED": "PASS",
+    "S5_VERIFY_REPORT_TRACEABLE": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS",
+    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+  },
+  "hashes_sha256": {
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json": "dfb746e733dd39c1c8f61ea37511656494f5da93608311501cc8a8219cf25dfd",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md": "9d3f00c42133c4ea27742deb16cb24246f4f80992f6261b0c91217fcf72d8ac3",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/inputs_paths.txt": "4e8db89abb58a1e4ff59df4a40a280d94368be7da23e0e433da52a7995bd2575",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/inputs_hashes.json": "fbd88e8294cfff1672ef336c8f99c1969ebc8dd009ea8259991f0f38e0895967",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/ssot_alignment_summary.json": "e4ab39b6f30389df249fecc4caa4915a9ae1058c412214bf74fd07bd5e1409bf",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv": "dec5cf430d3f9d1dc7ef514250bc4127b4da01649ed4bf32bfe1b4359b915bec"
+  }
+}

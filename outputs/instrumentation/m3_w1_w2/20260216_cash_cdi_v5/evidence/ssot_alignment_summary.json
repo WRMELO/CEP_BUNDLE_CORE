@@ -1,0 +1,9 @@
+{
+  "ssot_min_date": "2018-07-02",
+  "ssot_max_date": "2025-12-30",
+  "daily_min_date": "2018-07-02",
+  "daily_max_date": "2025-12-30",
+  "rows_daily": 1864,
+  "rows_ssot": 1864,
+  "null_cdi_after_merge": 0
+}

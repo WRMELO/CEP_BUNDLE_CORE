@@ -1,0 +1,13 @@
+{
+  "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json": "d4c3e59aaeec1520815099985ef43cc6e77d962e2abc5bc88ea5a6658f9948b9",
+  "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/turnover_costs_derivation_v3.json": "720251f4a569c6e3a08f2398c1b8be9fe5ba15e01e1ef56806365ea7ca931aea",
+  "data/ssot/cdi/cdi_daily.parquet": "bee97e79e0654ed79f8846558ffab359087080bd84e70d502dd219fee4eab5da",
+  "data/ssot/cdi/README.md": "de999f5c680a4c869949a8c890d31e0e126c3e65645c828bc0f62d2b62dcc6fc",
+  "docs/CONSTITUICAO.md": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63",
+  "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8",
+  "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+  "docs/MASTERPLAN.md": "dc236345b75d9665a9555813e2556a9941462ff9e7ff274879332304b5733ea4",
+  "outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json": "5e390fdef598ce915d4a96627eb6d253247b259a219d7015626f70a969df2ae2",
+  "outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json": "e9a6d3e7c5e2d82404316c71e0e6da5100814125a559737c00c8fdb765efae14",
+  "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md": "7403571304724b0f97aa38843dfa9e9cda95d7b993ee504c7aae45050d1794c2"
+}
