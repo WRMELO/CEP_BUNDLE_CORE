@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F0_999_SESSION_STATE_TRANSFER_PACKAGE_V1",
-  "generated_at_utc": "2026-02-16T00:31:11.707907+00:00",
+  "generated_at_utc": "2026-02-16T00:31:30.235321+00:00",
   "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
   "branch": "wt/bootstrap",
   "head_before_commit": "2632ec7f838df93c25a5a397feab0929adf29c26",
@@ -35,7 +35,7 @@
   "hashes_sha256": {
     "docs/SESSION_STATE_TRANSFER_PACKAGE.md": "2ae177bcbba7da4b5ed04bf28aba1490eda68ea1621ab5f97ba13e1d345103b5",
     "docs/SESSION_STATE_TRANSFER_PACKAGE.json": "713640c87adf23dc92f4d409d98a380da6c43e87e03f1a0cf4f87629799ac557",
-    "outputs/governanca/session_state_transfer/20260215/report.md": "6a8e2d2d76795f3ea545778e1da946622c451b85b5d06a67e01d6c59415a0264",
+    "outputs/governanca/session_state_transfer/20260215/report.md": "98c22ce82bf628606f133a4c8c5ac84581a60067dde70e437e93192b7ef32882",
     "outputs/governanca/session_state_transfer/20260215/evidence/scan_scopes_summary.txt": "04d51b0953ddeca7eae0b2591940616e189209e36eb9d765861dc46890b63c54",
     "outputs/governanca/session_state_transfer/20260215/evidence/scan_scopes_sample_paths.txt": "15942c79d3c09eb611817e7ebefcd2bb5dc80f60873ba584db83164bb5cf8ec1",
     "outputs/governanca/session_state_transfer/20260215/evidence/worktree_list.txt": "f61a28eb56e244b2cee7aa626162e85ec10a3770aba957a54472c987725d4622",
@@ -50,7 +50,7 @@
     "outputs/governanca/session_state_transfer/20260215/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/governanca/session_state_transfer/20260215/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
-  "head_after_sync": "9d43084a1f2155ffa3d4d5def8d7d22413db9064",
+  "head_after_sync": "e26b45a246891a26c3a060c907d002f498b2aa32",
   "sync_evidence": {
     "fetch": "outputs/governanca/session_state_transfer/20260215/evidence/sync_fetch.txt",
     "pull_ff_only": "outputs/governanca/session_state_transfer/20260215/evidence/sync_pull_ff_only.txt",

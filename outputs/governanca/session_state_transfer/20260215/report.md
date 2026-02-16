@@ -42,7 +42,7 @@ Pacote de transferencia de estado produzido com consolidacao de arquitetura, gov
 
 ## Fechamento de sync
 
-- head_after_sync: `9d43084a1f2155ffa3d4d5def8d7d22413db9064`
+- head_after_sync: `e26b45a246891a26c3a060c907d002f498b2aa32`
 - branch: `wt/bootstrap`
 - evidencias:
   - `outputs/governanca/session_state_transfer/20260215/evidence/sync_fetch.txt`
