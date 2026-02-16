@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1",
-  "generated_at_utc": "2026-02-16T12:07:56.061836+00:00",
+  "generated_at_utc": "2026-02-16T12:10:02.842256+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "local/integrated-state-20260215",
   "head_before_commit": "40bdf8586b8d18b96020890acda4b633ca026310",
@@ -17,12 +17,23 @@
     "S4_VERIFY_EVIDENCE_SUPPORTS_CLOSURE": "PASS",
     "S5_VERIFY_REPORT_TRACEABLE": "PASS",
     "S6_WRITE_MANIFEST_HASHES": "PASS",
-    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "hashes_sha256": {
     "outputs/gaps/g1_g4/20260216/g1_g4_closure.json": "5ba16fd692e1afd28021361adbc43739f79498d02a5420e46ff50635d99f32ff",
-    "outputs/gaps/g1_g4/20260216/report.md": "1094c0d23b5f4390197202b43d8ac4d64ed8ed8d64515b68c09477656db15366",
+    "outputs/gaps/g1_g4/20260216/report.md": "27d1514d2f484e2206e3a12972d0b438e29f1462bc48b3c58a6739ed71dd9f52",
     "outputs/gaps/g1_g4/20260216/evidence/masterplan_g1_g4_extract.txt": "92651152782a3b5abb1032cdae36aa10cc31118a21a4e8af99790f5ac5539c76",
-    "outputs/gaps/g1_g4/20260216/evidence/corpus_index_snapshot.json": "a5cb87e97a0db953d302e75a6b8785f58422270d7401fe44d6fb7aec21478bea"
+    "outputs/gaps/g1_g4/20260216/evidence/corpus_index_snapshot.json": "a5cb87e97a0db953d302e75a6b8785f58422270d7401fe44d6fb7aec21478bea",
+    "outputs/gaps/g1_g4/20260216/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/gaps/g1_g4/20260216/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/gaps/g1_g4/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/gaps/g1_g4/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "head_after_sync": "543de76f1a001f14378add3c03036f625ca59c7b",
+  "sync_evidence": {
+    "fetch": "outputs/gaps/g1_g4/20260216/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/gaps/g1_g4/20260216/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/gaps/g1_g4/20260216/evidence/sync_push.txt",
+    "status_after_sync": "outputs/gaps/g1_g4/20260216/evidence/status_after_sync.txt"
   }
 }

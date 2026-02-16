@@ -37,4 +37,15 @@ Conclusao objetiva: bloco G1..G4 **nao fecha integralmente** no estado atual; pe
 - S4_VERIFY_EVIDENCE_SUPPORTS_CLOSURE: PASS
 - S5_VERIFY_REPORT_TRACEABLE: PASS
 - S6_WRITE_MANIFEST_HASHES: PASS
-- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PENDING (apos commit/sync)
+- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PASS
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `543de76f1a001f14378add3c03036f625ca59c7b`
+- evidencias:
+  - `outputs/gaps/g1_g4/20260216/evidence/sync_fetch.txt`
+  - `outputs/gaps/g1_g4/20260216/evidence/sync_pull_ff_only.txt`
+  - `outputs/gaps/g1_g4/20260216/evidence/sync_push.txt`
+  - `outputs/gaps/g1_g4/20260216/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
