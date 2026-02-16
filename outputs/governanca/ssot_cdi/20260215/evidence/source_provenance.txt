@@ -1,0 +1,7 @@
+source_selected=/home/wilson/CEP_COMPRA/outputs/backtests/task_012/run_20260212_114129/consolidated/series_alinhadas_plot.parquet
+source_sha256=0f4bf81c90cb0d7e4bf9ded96ef3d6cf3e558ed07f8f123deb9277ed4175db7d
+selection_reason=serie CDI diaria por pregao ja existente no legado/bundle; canonizada sem reinvencao de fonte
+target_date_range=2018-07-01..2026-02-15
+actual_coverage=2018-07-02..2025-12-30
+coverage_start_ok=False
+coverage_end_ok=False

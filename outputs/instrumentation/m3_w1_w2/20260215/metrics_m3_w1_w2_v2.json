@@ -1,0 +1,108 @@
+{
+  "generated_at_utc": "2026-02-15T19:38:05.344808+00:00",
+  "extends": "outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json",
+  "segments": {
+    "w1_start": "2018-07-02",
+    "w1_end": "2021-06-30",
+    "w2_start": "2021-07-01",
+    "w2_end": "2022-12-30"
+  },
+  "metrics": {
+    "M3_full": {
+      "source_window": "M3_full",
+      "available": true,
+      "start_date": "2018-07-02",
+      "end_date": "2025-12-30",
+      "n_obs": 1864,
+      "equity_initial": 1.0000000000000002,
+      "equity_final": 2.38543962694251,
+      "multiple": 2.3854396269425098,
+      "return_pct": 1.3854396269425098,
+      "MDD": -0.6803348624996948,
+      "turnover": {
+        "mean_daily": 0.178215796366751,
+        "sum_daily": 135.6222210350975,
+        "model": "sum(abs(notional) por dia)/equity_do_dia"
+      },
+      "num_trades": 1705,
+      "cost_total": null,
+      "cost_model": null,
+      "cost_status": "REGRA AUSENTE",
+      "cost_justification": "Ledger sem coluna de custo e nenhuma regra SSOT de estimativa encontrada na Constituicao/corpus.",
+      "multiple_v1_reference": 2.3854396269425098,
+      "MDD_v1_reference": -0.6803348624996948
+    },
+    "W1": {
+      "source_window": "W1",
+      "available": true,
+      "start_date": "2018-07-02",
+      "end_date": "2021-06-30",
+      "n_obs": 740,
+      "equity_initial": 1.0000000000000002,
+      "equity_final": 5.369645122088539,
+      "multiple": 5.369645122088538,
+      "return_pct": 4.369645122088538,
+      "MDD": -0.18737225795599066,
+      "turnover": {
+        "mean_daily": 0.20053196133697393,
+        "sum_daily": 71.79044215863667,
+        "model": "sum(abs(notional) por dia)/equity_do_dia"
+      },
+      "num_trades": 881,
+      "cost_total": null,
+      "cost_model": null,
+      "cost_status": "REGRA AUSENTE",
+      "cost_justification": "Ledger sem coluna de custo e nenhuma regra SSOT de estimativa encontrada na Constituicao/corpus.",
+      "multiple_v1_reference": 5.369645122088538,
+      "MDD_v1_reference": -0.18737225795599066
+    },
+    "W2": {
+      "source_window": "W2",
+      "available": true,
+      "start_date": "2021-07-01",
+      "end_date": "2022-12-29",
+      "n_obs": 375,
+      "equity_initial": 5.365495617179715,
+      "equity_final": 2.507541739507133,
+      "multiple": 0.4673457809709631,
+      "return_pct": -0.5326542190290369,
+      "MDD": -0.5981000548432676,
+      "turnover": {
+        "mean_daily": 0.17142874533799043,
+        "sum_daily": 27.60002799941646,
+        "model": "sum(abs(notional) por dia)/equity_do_dia"
+      },
+      "num_trades": 349,
+      "cost_total": null,
+      "cost_model": null,
+      "cost_status": "REGRA AUSENTE",
+      "cost_justification": "Ledger sem coluna de custo e nenhuma regra SSOT de estimativa encontrada na Constituicao/corpus.",
+      "multiple_v1_reference": 0.4673457809709631,
+      "MDD_v1_reference": -0.5981000548432676
+    }
+  },
+  "source_windows_reference": {
+    "W1": {
+      "start": "2018-07-02",
+      "end": "2021-06-30",
+      "source": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md"
+    },
+    "W2": {
+      "start": "2021-07-01",
+      "end": "2022-12-30",
+      "source": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md"
+    }
+  },
+  "reported_from_task018": {
+    "W1_returns_pct_M0_M1_M3": [
+      "+168.10%",
+      "+408.02%",
+      "+436.96%"
+    ],
+    "W2_returns_pct_M0_M1_M3": [
+      "-8.08%",
+      "-60.74%",
+      "-53.27%"
+    ]
+  }
+}

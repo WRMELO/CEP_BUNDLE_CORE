@@ -1,0 +1,16 @@
+[docs/] EXISTS
+  NO_MATCH
+[docs/corpus/] MISSING_ROOT
+[outputs/] EXISTS
+  MATCH outputs/gaps/m3_w1_w2/20260215/curves/plots_m3_w1_w2.html
+  MATCH outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/cash_cdi_derivation_v4.json
+  MATCH outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md
+  MATCH outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/manifest.json
+  MATCH outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json
+  MATCH outputs/instrumentation/m3_w1_w2/20260215/curves/plots_m3_w1_w2.html
+[data/] EXISTS
+  NO_MATCH
+[planning/] MISSING_ROOT
+
+LEGACY/BUNDLE DISCOVERY:
+  SOURCE_CANDIDATE /home/wilson/CEP_COMPRA/outputs/backtests/task_012/run_20260212_114129/consolidated/series_alinhadas_plot.parquet EXISTS=True

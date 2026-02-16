@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-02-15T20:58:43.346399+00:00",
+  "extends": "outputs/instrumentation/m3_w1_w2/20260215/turnover_costs_derivation.json",
+  "cost_rule": {
+    "name": "ARB_COST_0_025PCT_MOVED",
+    "rate": 0.00025,
+    "base": "valor_movimentado_notional",
+    "formula": "cost_total_period = cost_rate * sum(abs(notional_movimentado))",
+    "reference_emenda": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md"
+  },
+  "inputs": {
+    "ledger_source": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet",
+    "daily_equity_source": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+  },
+  "periods": {
+    "M3_full": {
+      "start": "2018-07-02",
+      "end": "2025-12-30",
+      "valor_movimentado_notional": 344.92595316860525,
+      "num_trades": 1705,
+      "cost_rate": 0.00025,
+      "cost_total": 0.08623148829215131,
+      "method": "sum(abs(notional)) x cost_rate"
+    },
+    "W1": {
+      "start": "2018-07-02",
+      "end": "2021-06-30",
+      "valor_movimentado_notional": 155.68745701492486,
+      "num_trades": 881,
+      "cost_rate": 0.00025,
+      "cost_total": 0.03892186425373122,
+      "method": "sum(abs(notional)) x cost_rate"
+    },
+    "W2": {
+      "start": "2021-07-01",
+      "end": "2022-12-30",
+      "valor_movimentado_notional": 102.33749645585225,
+      "num_trades": 349,
+      "cost_rate": 0.00025,
+      "cost_total": 0.02558437411396306,
+      "method": "sum(abs(notional)) x cost_rate"
+    }
+  }
+}

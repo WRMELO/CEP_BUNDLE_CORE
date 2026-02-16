@@ -1,0 +1,9 @@
+date
+mechanism
+action
+ticker
+qty
+price
+notional
+reason
+master_state

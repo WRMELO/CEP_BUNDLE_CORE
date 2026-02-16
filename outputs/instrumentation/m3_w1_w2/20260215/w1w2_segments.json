@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-02-15T19:38:05.338707+00:00",
+  "segment_policy": {
+    "primary_rule": "Datas canonicas herdadas do SSOT do task_018 para manter comparabilidade historica.",
+    "objective_curve_validation": "Transicao validada por quebra sustentada de drawdown apos pico da curva M3 (dd <= -20% e >=20 observacoes consecutivas em drawdown)."
+  },
+  "source_reference": {
+    "table_windows_source": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md",
+    "equity_curve_source": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+  },
+  "W1": {
+    "start": "2018-07-02",
+    "end": "2021-06-30",
+    "criterion": "Regime de crescimento ate o fim da janela canonica pre-definida no SSOT task_018."
+  },
+  "W2": {
+    "start": "2021-07-01",
+    "end": "2022-12-30",
+    "criterion": "Regime de deriva negativa apos pico, seguindo janela canonica task_018 ate o vale da fase de queda."
+  },
+  "curve_checkpoints": {
+    "global_peak_date": "2021-06-11",
+    "global_peak_equity": 6.1244429662897675,
+    "valley_after_peak_date": "2025-11-17",
+    "valley_after_peak_equity": 1.9577709029317962,
+    "sustained_drawdown_break_date_after_W1": "2021-09-08"
+  }
+}

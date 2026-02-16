@@ -1,0 +1,59 @@
+{
+  "generated_at_utc": "2026-02-15T19:38:05.317770+00:00",
+  "sources_from_prev_package": [
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet",
+      "exists": true,
+      "sha256": "2b2f3e13ea3a40391779c9d47ac084b5097b9e0a323bfa8b187d3e666d0bdb85",
+      "size_bytes": 79503
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet",
+      "exists": true,
+      "sha256": "88e3b3dbcc1100a1a8a470216284be3c808b6cd1a26b2867b8d4589b803be547",
+      "size_bytes": 31163
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/holdings_weekly_m3.parquet",
+      "exists": true,
+      "sha256": "09affbef41506ee4aa36b3ecbc390b04335dec5723ea60dc8b22da9f1140a51e",
+      "size_bytes": 71573
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/master_state_daily.parquet",
+      "exists": true,
+      "sha256": "d0759b038d2a02be798c2c37d440c03755fb4ec8d9fc42aba67c4e13c92a6dd6",
+      "size_bytes": 37883
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/decomp_pnl_windows.parquet",
+      "exists": true,
+      "sha256": "a2888d681ae82981f403b7669142fec745d00e59213cdabcd61bd3f836b56683",
+      "size_bytes": 17091
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/pacote_forense_ampliado.md",
+      "exists": true,
+      "sha256": "8041b09d1bd73d5b33856a76ffbab1599c4c7a21d6c36bc97ee98b8b5c9a300d",
+      "size_bytes": 6927
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/hashes.json",
+      "exists": true,
+      "sha256": "80378bfab54f3ed67276df22f0e30af475867f420cb075486884aec5aaffdd43",
+      "size_bytes": 1873
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/reports/task_018/run_20260212_134037/analise_consolidada_fases_m0_m1_m3.md",
+      "exists": true,
+      "sha256": "6081289dd4e0b7603d3fc15019078608b3dfcf5457d030c525f2cf186cee4719",
+      "size_bytes": 34965
+    },
+    {
+      "path": "/home/wilson/CEP_COMPRA/outputs/cycle2/20260213/master_regime_m3_cep_only_v3/windows_m3_w1_w2.json",
+      "exists": true,
+      "sha256": "7c6832cbf98b1ef04ca8e0212bfbf4fefabda968559b9ae7790d94f439bde93a",
+      "size_bytes": 964
+    }
+  ]
+}
