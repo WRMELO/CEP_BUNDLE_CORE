@@ -38,3 +38,14 @@
 - S6_WRITE_MANIFEST_HASHES: PASS
 
 OVERALL: PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `3bb21f544dabb85d4518ac5022bad570dd2e9c12`
+- branch: `wt/bootstrap`
+- sync evidencias:
+  - `outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_fetch.txt`
+  - `outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/fix_bootstrap_clean/20260215/evidence/sync_push.txt`
+  - `outputs/governanca/fix_bootstrap_clean/20260215/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
