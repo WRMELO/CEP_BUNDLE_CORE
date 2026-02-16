@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_010_APPLY_CDI_CASH_ACCRUAL_TO_METRICS_V4_V1",
-  "generated_at_utc": "2026-02-16T00:14:01.070242+00:00",
+  "generated_at_utc": "2026-02-16T00:14:48.166977+00:00",
   "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
   "branch": "wt/analysis-gaps",
   "head_before_commit": "5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730",
@@ -20,11 +20,15 @@
   },
   "status": "SSOT AUSENTE",
   "hashes_sha256": {
-    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json": "e5e408e275c2ef46e92724455079471ed2bdd740c83c49c707820e91c59c85f5",
     "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/cash_cdi_derivation_v4.json": "d1658b4b6e581ca4a48d71d04e1b4d3db280e82aa86338207929a5c162592d0f",
-    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md": "d587ffcb819c188d814a3ba833efb30578b107aeb66573851a23bc963e386711",
     "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/ssot_cdi_search.txt": "b0dd7c56fe8ab0b4eb3ce345e0461327e1410b05d24603c690d463b762ee0867",
-    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json": "e5e408e275c2ef46e92724455079471ed2bdd740c83c49c707820e91c59c85f5",
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md": "f52559e6c23e358e0169ad0cf5696a8b87b0de706150fae27ab188badab9260a"
   },
   "gates": {
     "S1_GATE_ALLOWLIST": "PASS",
@@ -33,6 +37,24 @@
     "S4_VERIFY_METRICS_V4_CREATED": "PASS",
     "S5_VERIFY_REPORT_TRACEABILITY": "PASS",
     "S6_WRITE_MANIFEST_HASHES": "PASS",
-    "S7_VERIFY_WORKTREE_CLEAN": "PENDING"
+    "S7_VERIFY_WORKTREE_CLEAN": "PASS"
+  },
+  "git": {
+    "head": "af741b223a3d99cb854a2f6ca226d6bdd790c4ba",
+    "branch": "wt/analysis-gaps",
+    "remote": "origin/wt/analysis-gaps"
+  },
+  "sync_evidence": {
+    "fetch": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_push.txt",
+    "status_after_sync": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/status_after_sync.txt"
+  },
+  "acceptance": {
+    "OVERALL": "PASS",
+    "metrics_v4_criado": true,
+    "cash_cdi_derivation_v4_criado": true,
+    "report_manifest_hasheados": true,
+    "sync_remoto_executado": true
   }
 }

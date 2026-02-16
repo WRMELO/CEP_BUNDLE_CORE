@@ -38,3 +38,15 @@ Como SSOT CDI nao foi encontrado de forma confiavel no escopo definido, **nao fo
 - S7_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
 
 OVERALL (pre-commit): PASS
+
+## Fechamento de sync e estado final
+
+- head_after_commit: `af741b223a3d99cb854a2f6ca226d6bdd790c4ba`
+- branch: `wt/analysis-gaps`
+- sync evidencias:
+  - `outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_fetch.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_pull_ff_only.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_push.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/status_after_sync.txt`
+- gate S7 (worktree clean): PASS
+- OVERALL: **PASS**
