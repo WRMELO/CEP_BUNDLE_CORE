@@ -28,4 +28,11 @@
 - S5_VERIFY_PHASE_INVENTORY_PRESENT_AND_NONEMPTY: PASS
 - S6_VERIFY_REPORT_SELF_CONTAINED: PASS
 - S7_WRITE_MANIFEST_HASHES: PASS
-- S8_VERIFY_REPO_CLEAN_AND_SYNCED: PENDING (apos commit/sync)
+- S8_VERIFY_REPO_CLEAN_AND_SYNCED: PASS
+
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `baee068f3878bd9f68a66e6534f499d72900fd0c`
+- push: `origin/local/integrated-state-20260215`

@@ -20,16 +20,18 @@
     "S5_VERIFY_PHASE_INVENTORY_PRESENT_AND_NONEMPTY": "PASS",
     "S6_VERIFY_REPORT_SELF_CONTAINED": "PASS",
     "S7_WRITE_MANIFEST_HASHES": "PASS",
-    "S8_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S8_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "hashes_sha256": {
     "docs/SESSION_STATE_TRANSFER_PACKAGE_V2.md": "8e6da01bca21c53bde629a5aca89c5a9ef5d86c9a2c0c10fa5ac0527902e8e8b",
     "docs/SESSION_STATE_TRANSFER_PACKAGE_V2.json": "b692a8e767cd68823bfdd8289f8430cc364a1a848672f21ec01821221eb1853f",
     "docs/LOCAL_DOCUMENT_INDEX.md": "d9dc01418ef0870d74907c03b7eef641b37e2d048aa9b9b66294e9dbc2a42a5d",
     "outputs/governanca/phase_closeout/20260216/phase_inventory.csv": "00558c3d3dd81ad7d3033b11a1d0c4fadc7a2da3a7fbf3eae511eed6b92d55c6",
-    "outputs/governanca/phase_closeout/20260216/report.md": "c8fa9c5121f3a7406330e6cdd1c33fac02554cd5f43e4e553a72437abec81e71",
+    "outputs/governanca/phase_closeout/20260216/report.md": "ed260c368cfdacde5951b22566a8e302a363a2fe85a032aa4e73969d0feb199b",
     "outputs/governanca/phase_closeout/20260216/evidence/git_state.json": "007fa5630472ade2b862f915d9103c975fef8053e82c7c79d1014a6db9208f0b",
     "outputs/governanca/phase_closeout/20260216/evidence/masterplan_12of12_evidence.json": "58ddfd6ca0a61d7e0391a8299d072370d8d4bd2ce4ad21d1ca3fceab8fb69e89",
     "outputs/governanca/phase_closeout/20260216/evidence/inputs_presence_check.json": "03c639dff65b5bc7461774d66e402e895e9c9a91954f52e041c3ca9b7e9acfe8"
-  }
+  },
+  "updated_at_utc": "2026-02-16T12:40:29.133948+00:00",
+  "head_after_sync": "baee068f3878bd9f68a66e6534f499d72900fd0c"
 }
