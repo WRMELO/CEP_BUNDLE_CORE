@@ -47,4 +47,15 @@ Nao foi necessario alterar configuracao de runner/allowlist nesta task.
 - S6_VERIFY_HUMAN_INDEX_CREATED: PASS
 - S7_VERIFY_EXTERNAL_BUNDLE_AND_HASHES: PASS
 - S8_VERIFY_OPERATION_MODE_LOCAL_ROOT: PASS
-- S9_VERIFY_CLEAN_FINAL_STATE: PENDING (apos commit/sync)
+- S9_VERIFY_CLEAN_FINAL_STATE: PASS
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `e3140cdd0a4bc3e103695e2262ec8ed452914422`
+- evidencias:
+  - `outputs/governanca/local_migration/20260216/evidence/sync_fetch.txt`
+  - `outputs/governanca/local_migration/20260216/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/local_migration/20260216/evidence/sync_push.txt`
+  - `outputs/governanca/local_migration/20260216/evidence/status_after_sync.txt`
+- OVERALL: **PASS**

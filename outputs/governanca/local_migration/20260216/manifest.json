@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F0_013_MIGRATE_WORKTREES_TO_LOCAL_OPERATION_V1",
-  "generated_at_utc": "2026-02-16T09:55:29.428206+00:00",
+  "generated_at_utc": "2026-02-16T09:56:34.643374+00:00",
   "local_root": "/home/wilson/CEP_BUNDLE_CORE",
   "integration_branch": "local/integrated-state-20260215",
   "head_current": "0e5a122cfebe26feabc5d22f665e3645225e35fd",
@@ -14,7 +14,7 @@
     "S6_VERIFY_HUMAN_INDEX_CREATED": "PASS",
     "S7_VERIFY_EXTERNAL_BUNDLE_AND_HASHES": "PASS",
     "S8_VERIFY_OPERATION_MODE_LOCAL_ROOT": "PASS",
-    "S9_VERIFY_CLEAN_FINAL_STATE": "PENDING"
+    "S9_VERIFY_CLEAN_FINAL_STATE": "PASS"
   },
   "checks": {
     "required_artifacts": [
@@ -76,7 +76,7 @@
   },
   "hashes_sha256": {
     "docs/LOCAL_DOCUMENT_INDEX.md": "16d98ce1bcdb7f3729c2bbcb4e92229f9569860defe9ea4c9948a04d9c6cc499",
-    "outputs/governanca/local_migration/20260216/report.md": "bf6d871613e676ca1ae28dd6fe67d224ff004c9d43b1773ff8b1976384d68838",
+    "outputs/governanca/local_migration/20260216/report.md": "346e9607203764ca74eb6c3291434453d3a84bd8b7d207af8355d0268dcf6577",
     "outputs/governanca/local_migration/20260216/evidence/local_root_decision.json": "6223ca0dd54a804d50f455503b6a7f28e24fbcb29d21e0692c6ae0dcfa757eaf",
     "outputs/governanca/local_migration/20260216/evidence/remote_branches_check.json": "d5cc1cdc132097d6213424247e0f7465d4d67cb786c17af935e399f72e27f6c3",
     "outputs/governanca/local_migration/20260216/evidence/integration_branch_check.json": "161c3d2241aec3b7d134e55c1ff64f85bf8b78b430ee4cce26b79129fb8dc6e1",
@@ -86,7 +86,18 @@
     "outputs/governanca/local_migration/20260216/evidence/git_worktree_list.txt": "5e22b9a64239aaf2b94b8d8f16a30d608a69f2bc27b37081c811b782b0fe6deb",
     "outputs/governanca/local_migration/20260216/evidence/git_branch_all.txt": "2b411c4582e900d1fa0397b2c8a22276d2d600bc9d78f408483bfe547a897274",
     "outputs/governanca/local_migration/20260216/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/governanca/local_migration/20260216/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/governanca/local_migration/20260216/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/governanca/local_migration/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/governanca/local_migration/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "/home/wilson/CEP_BUNDLE_CORE_exports/20260216/bundle_manifest.json": "2a138f467524af9545739fa24f59c6767a68bc9afc3a878db9b4a876eb72887b",
     "/home/wilson/CEP_BUNDLE_CORE_exports/20260216/bundle_manifest.md": "82fa622c144964138b99ac9e3f49f7ec8dc5ebe57452c344d34ec45d7f58589a"
+  },
+  "head_after_sync": "e3140cdd0a4bc3e103695e2262ec8ed452914422",
+  "sync_evidence": {
+    "fetch": "outputs/governanca/local_migration/20260216/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/governanca/local_migration/20260216/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/governanca/local_migration/20260216/evidence/sync_push.txt",
+    "status_after_sync": "outputs/governanca/local_migration/20260216/evidence/status_after_sync.txt"
   }
 }
