@@ -41,7 +41,7 @@ OVERALL (pre-commit): PASS
 
 ## Fechamento de sync e estado final
 
-- head_after_commit: `af741b223a3d99cb854a2f6ca226d6bdd790c4ba`
+- head_after_commit: `c2fe94b71ca050d41e2e1c179f3af7a060aa3cad`
 - branch: `wt/analysis-gaps`
 - sync evidencias:
   - `outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_fetch.txt`

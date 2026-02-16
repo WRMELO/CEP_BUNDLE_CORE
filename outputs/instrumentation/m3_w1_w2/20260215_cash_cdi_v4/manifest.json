@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F1_010_APPLY_CDI_CASH_ACCRUAL_TO_METRICS_V4_V1",
-  "generated_at_utc": "2026-02-16T00:14:48.166977+00:00",
+  "generated_at_utc": "2026-02-16T00:15:20.462516+00:00",
   "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/analysis",
   "branch": "wt/analysis-gaps",
   "head_before_commit": "5cdd4c9efbc083436e3bc438e0ce6fce5a1ab730",
@@ -28,7 +28,7 @@
     "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
     "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/metrics_m3_w1_w2_v4.json": "e5e408e275c2ef46e92724455079471ed2bdd740c83c49c707820e91c59c85f5",
-    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md": "f52559e6c23e358e0169ad0cf5696a8b87b0de706150fae27ab188badab9260a"
+    "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md": "7403571304724b0f97aa38843dfa9e9cda95d7b993ee504c7aae45050d1794c2"
   },
   "gates": {
     "S1_GATE_ALLOWLIST": "PASS",
@@ -40,7 +40,7 @@
     "S7_VERIFY_WORKTREE_CLEAN": "PASS"
   },
   "git": {
-    "head": "af741b223a3d99cb854a2f6ca226d6bdd790c4ba",
+    "head": "c2fe94b71ca050d41e2e1c179f3af7a060aa3cad",
     "branch": "wt/analysis-gaps",
     "remote": "origin/wt/analysis-gaps"
   },
