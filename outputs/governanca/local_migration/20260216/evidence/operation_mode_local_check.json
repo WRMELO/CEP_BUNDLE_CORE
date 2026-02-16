@@ -1,0 +1,7 @@
+{
+  "recommended_repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "current_branch": "local/integrated-state-20260215",
+  "hard_requirement_to_use_wt_found_in_repo_config": false,
+  "minimal_adjustment_done": "docs/LOCAL_DOCUMENT_INDEX.md added with explicit LOCAL_ROOT operation guidance",
+  "note": "No runner config mutation required for this migration task."
+}

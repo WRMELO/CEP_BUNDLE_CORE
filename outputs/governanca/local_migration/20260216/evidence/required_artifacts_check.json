@@ -1,0 +1,38 @@
+[
+  {
+    "item": "docs/SESSION_STATE_TRANSFER_PACKAGE.md",
+    "exists": true,
+    "type": "file",
+    "abs_path": "/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.md"
+  },
+  {
+    "item": "docs/SESSION_STATE_TRANSFER_PACKAGE.json",
+    "exists": true,
+    "type": "file",
+    "abs_path": "/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.json"
+  },
+  {
+    "item": "data/ssot/cdi/cdi_daily.parquet",
+    "exists": true,
+    "type": "file",
+    "abs_path": "/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/cdi_daily.parquet"
+  },
+  {
+    "item": "data/ssot/cdi/README.md",
+    "exists": true,
+    "type": "file",
+    "abs_path": "/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/README.md"
+  },
+  {
+    "item": "outputs/governanca/session_state_transfer/20260215/",
+    "exists": true,
+    "type": "dir",
+    "abs_path": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/session_state_transfer/20260215"
+  },
+  {
+    "item": "outputs/governanca/ssot_cdi/20260215/",
+    "exists": true,
+    "type": "dir",
+    "abs_path": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/ssot_cdi/20260215"
+  }
+]

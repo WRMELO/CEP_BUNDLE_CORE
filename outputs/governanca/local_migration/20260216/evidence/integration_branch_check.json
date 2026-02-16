@@ -1,0 +1,6 @@
+{
+  "integration_branch_expected": "local/integrated-state-20260215",
+  "integration_branch_current": "local/integrated-state-20260215",
+  "integration_branch_ok": true,
+  "head": "0e5a122cfebe26feabc5d22f665e3645225e35fd"
+}

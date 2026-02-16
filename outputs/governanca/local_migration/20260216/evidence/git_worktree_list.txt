@@ -1,0 +1,5 @@
+/home/wilson/CEP_BUNDLE_CORE                  0e5a122 [local/integrated-state-20260215]
+/home/wilson/_wt/CEP_BUNDLE_CORE/analysis     ac25c3b [wt/analysis-gaps]
+/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap    bcc5832 [wt/bootstrap]
+/home/wilson/_wt/CEP_BUNDLE_CORE/experiments  4c84a02 [wt/experiments]
+/home/wilson/_wt/CEP_BUNDLE_CORE/ssot         4c84a02 [wt/ssot]

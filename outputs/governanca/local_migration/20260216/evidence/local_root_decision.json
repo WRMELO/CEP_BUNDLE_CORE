@@ -1,0 +1,8 @@
+{
+  "preferred_local_repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "selected_local_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "selection_rule_result": "existing_repo_outside_wt_detected",
+  "is_inside_wt": false,
+  "branch": "local/integrated-state-20260215",
+  "head": "0e5a122cfebe26feabc5d22f665e3645225e35fd"
+}

@@ -1,0 +1,2 @@
+origin	git@github.com:WRMELO/CEP_BUNDLE_CORE.git (fetch)
+origin	git@github.com:WRMELO/CEP_BUNDLE_CORE.git (push)
