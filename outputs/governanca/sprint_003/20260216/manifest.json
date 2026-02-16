@@ -24,10 +24,10 @@
     "S6_VERIFY_MP001_AND_MP002_DOCS_WRITTEN_AND_TRACEABLE": "PASS",
     "S7_VERIFY_POST_SPRINT_003_AUDIT_REFRESHED": "PASS",
     "S8_WRITE_MANIFEST_HASHES": "PASS",
-    "S9_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S9_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "hashes_sha256": {
-    "outputs/governanca/sprint_003/20260216/report.md": "fe2f634414b1b1fbb65d681496d28ffb0a3094fd5529abe5ef4c9f1c8479d51f",
+    "outputs/governanca/sprint_003/20260216/report.md": "a138114de3f54e7d4f2b1f8603a721039d22535489c3e86e356b833786f2b3c7",
     "outputs/governanca/sprint_003/20260216/sprint_003_backlog.json": "de74b904dc4cc59c695662c11e2a3ca45ff3f9a291e78d3057d840b49aab9a51",
     "outputs/governanca/sprint_003/20260216/sprint_003_runs_index.json": "388c0c5139f668bbee6eca3f877c3d0a1845f1d25b12b6d6d0b1669f4bce392d",
     "docs/MP001_VISAO_EXECUTIVA.md": "716e4391131193a60552e00478c96c2d0780ac544d23ef77a5bd338abf18a440",
@@ -43,5 +43,7 @@
     "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_002_MP001_VISAO_EXECUTIVA.json": "264296b0d652fd937b605a582141ecfffd6cbfc5fd2c289358d921550dd9b23a",
     "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_003_MP002_OBJETIVO_REAL_SSOT.json": "8a8a349940bbb50d278d2496eece98372072eb17ff0765373f6a826bd1b4adc8",
     "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_004_POST_SPRINT_003_AUDIT_REFRESH.json": "33ec1e6889eec2ceee16077cb18d4bc8ecee299180004f87716d432a380cf02d"
-  }
+  },
+  "updated_at_utc": "2026-02-16T12:28:51.867137+00:00",
+  "head_after_sync": "9eaca5419d8d590a74e6b76e8c77f38205f17559"
 }
