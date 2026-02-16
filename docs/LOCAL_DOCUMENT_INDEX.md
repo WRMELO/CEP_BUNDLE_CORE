@@ -1,37 +1,41 @@
 # LOCAL DOCUMENT INDEX - CEP_BUNDLE_CORE
 
-- atualizado_em_utc: `2026-02-16T09:55:29.424164+00:00`
+- atualizado_em_utc: `2026-02-16T12:39:57.348897+00:00`
 - local_root_rel: `.`
 - local_root_abs: `/home/wilson/CEP_BUNDLE_CORE`
 - branch_integracao: `local/integrated-state-20260215`
-- head_integracao: `0e5a122cfebe26feabc5d22f665e3645225e35fd`
+- head_integracao: `5ccda0ec24599e0dfa6512344ad1b5e76fc3bdfe`
 
-## Documentos-chave (entrada humana)
+## Ordem recomendada de leitura (fase fechada)
 
-| Documento | Path relativo | Path absoluto | Descricao |
+| Ordem | Bloco | Path relativo | Descricao |
 |---|---|---|---|
-| Constituicao vigente | `docs/CONSTITUICAO.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/CONSTITUICAO.md` | Regra normativa principal do bundle e governanca. |
-| Masterplan | `docs/MASTERPLAN.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/MASTERPLAN.md` | Plano estrategico com baseline M3, SPC/CEP e gaps G1-G4. |
-| Emenda de custos | `docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md` | Regra formal de custo 0.025% por notional movimentado. |
-| Emenda CDI caixa | `docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md` | Regra de remuneracao de caixa por CDI. |
-| Pacote de transferencia de sessao (MD) | `docs/SESSION_STATE_TRANSFER_PACKAGE.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.md` | Resumo completo para continuidade em novo chat. |
-| Pacote de transferencia de sessao (JSON) | `docs/SESSION_STATE_TRANSFER_PACKAGE.json` | `/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.json` | Estrutura machine-readable do estado operacional. |
-| SSOT CDI README | `data/ssot/cdi/README.md` | `/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/README.md` | Proveniencia, schema e cobertura da serie CDI diaria. |
-| SSOT CDI Parquet | `data/ssot/cdi/cdi_daily.parquet` | `/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/cdi_daily.parquet` | Serie CDI diaria canonizada em Parquet. |
-| Governanca session transfer report | `outputs/governanca/session_state_transfer/20260215/report.md` | `/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/session_state_transfer/20260215/report.md` | Evidencia da consolidacao de estado de sessao. |
-| Governanca SSOT CDI report | `outputs/governanca/ssot_cdi/20260215/report.md` | `/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/ssot_cdi/20260215/report.md` | Evidencia de criacao/canonizacao do SSOT CDI. |
-| Estrutura de execucao local | `docs/EXECUTION_STRUCTURE_LOCAL.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/EXECUTION_STRUCTURE_LOCAL.md` | Guia operacional do fluxo local com planning/task_specs e planning/runs. |
-| Emenda operacao local | `docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md` | Norma formalizando modo LOCAL_ROOT_ONLY e estrutura planning/*. |
-| Governanca local migration report | `outputs/governanca/local_migration/20260216/report.md` | `/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/local_migration/20260216/report.md` | Evidencia desta migracao para operacao local unica. |
+| 1 | Normas | `docs/CONSTITUICAO.md` | Constituicao (SSOT normativo base). |
+| 2 | Normas | `docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md` | Emenda de custo operacional 0.025%. |
+| 3 | Normas | `docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md` | Emenda de remuneracao CDI para caixa. |
+| 4 | Normas | `docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md` | Emenda de operacao local (LOCAL_ROOT_ONLY). |
+| 5 | Plano | `docs/MASTERPLAN.md` | Plano diretor do bundle. |
+| 6 | Plano executivo | `docs/MP001_VISAO_EXECUTIVA.md` | Visao executiva canonica. |
+| 7 | Plano executivo | `docs/MP002_OBJETIVO_REAL_SSOT.md` | Objetivo real SSOT operacional. |
+| 8 | Controle | `outputs/controle/anti_deriva_w2/20260216/report.md` | Pacote anti-deriva W2. |
+| 9 | Controle | `outputs/governanca/policy_spc_rl/20260216/report.md` | Politica SPC/CEP e RL subordinado. |
+| 10 | Metricas | `outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md` | Metricas v5 com CDI SSOT. |
+| 11 | Experimentos | `outputs/experimentos/ablation_e1_e5/20260216/report.md` | Ablation E1..E5. |
+| 12 | Auditoria | `outputs/governanca/masterplan_audit/20260216_post_sprint_003/report.md` | Prova de 12/12 PASS. |
 
-## Rastreabilidade de linhas consolidadas (contexto historico)
+## Pacote de transferencia V2
 
-- linha bootstrap (contexto): `bcc58322691f94a9057ced8df3ed44592caca2c5`
-- linha analysis (contexto): `ac25c3b0f1dcf66306dba44780dd51bc99bc0d75`
-- estado integrado local atual: branch `local/integrated-state-20260215` no HEAD acima.
+- `docs/SESSION_STATE_TRANSFER_PACKAGE_V2.md`
+- `docs/SESSION_STATE_TRANSFER_PACKAGE_V2.json`
+- `outputs/governanca/phase_closeout/20260216/phase_inventory.csv`
 
-## Modo operacional padrao (LOCAL_ROOT)
+## Referencias de prova 12/12 PASS
 
-- Proximas tasks devem usar `repo_root=/home/wilson/CEP_BUNDLE_CORE`.
-- Nao depender de paths em `/home/wilson/_wt/*` para leitura de artefatos minimos.
-- Worktrees permanecem apenas como contexto historico/backup nesta fase.
+- `outputs/governanca/masterplan_audit/20260216_post_sprint_003/masterplan_to_tasks_map.csv`
+- `outputs/governanca/masterplan_audit/20260216_post_sprint_003/gaps_and_backlog.json`
+- `outputs/governanca/masterplan_audit/20260216_post_sprint_003/report.md`
+
+## Modo operacional padrao
+
+- `LOCAL_ROOT_ONLY` com `planning/task_specs/` e `planning/runs/`.
+- Nao depender de `/home/wilson/_wt/*` para operacao normal.

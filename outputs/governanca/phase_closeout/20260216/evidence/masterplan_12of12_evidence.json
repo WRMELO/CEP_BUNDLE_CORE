@@ -1,0 +1,8 @@
+{
+  "post_sprint_003_map": "outputs/governanca/masterplan_audit/20260216_post_sprint_003/masterplan_to_tasks_map.csv",
+  "post_sprint_003_gaps": "outputs/governanca/masterplan_audit/20260216_post_sprint_003/gaps_and_backlog.json",
+  "closed_items_count": 12,
+  "pending_items_count": 0,
+  "target_12_of_12_pass": true,
+  "map_rows_count": 12
+}
