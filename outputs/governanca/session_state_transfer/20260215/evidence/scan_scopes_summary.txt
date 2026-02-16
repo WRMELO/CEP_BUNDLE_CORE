@@ -1,0 +1,6 @@
+[docs/] EXISTS files=11
+[docs/corpus/] EXISTS files=5
+[docs/emendas/] EXISTS files=4
+[outputs/] EXISTS files=64
+[data/] MISSING
+[planning/] MISSING

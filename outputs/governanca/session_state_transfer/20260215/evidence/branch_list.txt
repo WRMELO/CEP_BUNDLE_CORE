@@ -1,0 +1,10 @@
+* main                            196936810b609e366f8012336037d758a5fe378f chore: align canonicalization metadata with latest main head
+  master                          4c84a020fa947401f26f5fd98c551e5f4ae7d59c chore: ignore obsidian workspace state
++ wt/analysis-gaps                ac25c3b0f1dcf66306dba44780dd51bc99bc0d75 chore: align ssot cdi package with final task head
++ wt/bootstrap                    2632ec7f838df93c25a5a397feab0929adf29c26 chore: finalize bootstrap clean-fix sync evidence and hashes
++ wt/experiments                  4c84a020fa947401f26f5fd98c551e5f4ae7d59c chore: ignore obsidian workspace state
++ wt/ssot                         4c84a020fa947401f26f5fd98c551e5f4ae7d59c chore: ignore obsidian workspace state
+  remotes/origin/HEAD             -> origin/main
+  remotes/origin/main             196936810b609e366f8012336037d758a5fe378f chore: align canonicalization metadata with latest main head
+  remotes/origin/wt/analysis-gaps ac25c3b0f1dcf66306dba44780dd51bc99bc0d75 chore: align ssot cdi package with final task head
+  remotes/origin/wt/bootstrap     2632ec7f838df93c25a5a397feab0929adf29c26 chore: finalize bootstrap clean-fix sync evidence and hashes

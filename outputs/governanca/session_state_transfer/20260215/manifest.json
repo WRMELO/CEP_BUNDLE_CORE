@@ -1,0 +1,49 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F0_999_SESSION_STATE_TRANSFER_PACKAGE_V1",
+  "generated_at_utc": "2026-02-16T00:30:19.276393+00:00",
+  "worktree": "/home/wilson/_wt/CEP_BUNDLE_CORE/bootstrap",
+  "branch": "wt/bootstrap",
+  "head_before_commit": "2632ec7f838df93c25a5a397feab0929adf29c26",
+  "outputs": {
+    "md_document": "docs/SESSION_STATE_TRANSFER_PACKAGE.md",
+    "json_document": "docs/SESSION_STATE_TRANSFER_PACKAGE.json",
+    "report_md": "outputs/governanca/session_state_transfer/20260215/report.md",
+    "manifest_json": "outputs/governanca/session_state_transfer/20260215/manifest.json",
+    "evidence_dir": "outputs/governanca/session_state_transfer/20260215/evidence/"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_WORKTREE_BOOTSTRAP": "PASS",
+    "S3_VERIFY_ALL_REQUIRED_SECTIONS_IN_MD": "PASS",
+    "S4_VERIFY_ALL_REQUIRED_KEYS_IN_JSON": "PASS",
+    "S5_VERIFY_CROSS_REFERENCE_CONSISTENCY_MD_JSON": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS",
+    "S7_VERIFY_WORKTREE_CLEAN": "PENDING"
+  },
+  "validation": {
+    "missing_sections": [],
+    "missing_keys": [],
+    "cross_checks": {
+      "baseline_m3_in_md": true,
+      "baseline_m3_in_json": true,
+      "cost_rate_md_present": true,
+      "cost_rate_json_value": true,
+      "cash_cdi_status_md_present": true,
+      "cash_cdi_status_json_match": true
+    }
+  },
+  "hashes_sha256": {
+    "docs/SESSION_STATE_TRANSFER_PACKAGE.md": "2ae177bcbba7da4b5ed04bf28aba1490eda68ea1621ab5f97ba13e1d345103b5",
+    "docs/SESSION_STATE_TRANSFER_PACKAGE.json": "713640c87adf23dc92f4d409d98a380da6c43e87e03f1a0cf4f87629799ac557",
+    "outputs/governanca/session_state_transfer/20260215/report.md": "fc52204fbe9c5451704fd42964e34652fa2850f28c49c0952e708850d5877338",
+    "outputs/governanca/session_state_transfer/20260215/evidence/scan_scopes_summary.txt": "04d51b0953ddeca7eae0b2591940616e189209e36eb9d765861dc46890b63c54",
+    "outputs/governanca/session_state_transfer/20260215/evidence/scan_scopes_sample_paths.txt": "15942c79d3c09eb611817e7ebefcd2bb5dc80f60873ba584db83164bb5cf8ec1",
+    "outputs/governanca/session_state_transfer/20260215/evidence/worktree_list.txt": "f61a28eb56e244b2cee7aa626162e85ec10a3770aba957a54472c987725d4622",
+    "outputs/governanca/session_state_transfer/20260215/evidence/branch_list.txt": "ca3da3c3b71f8d49deadb2fefd6206f5b931be5faf4c763620a5881e397e8a48",
+    "outputs/governanca/session_state_transfer/20260215/evidence/remote_v.txt": "8819e7e729aa7d51af61b702c854c3a1be798285954d26a5747f3bc59e2b2725",
+    "outputs/governanca/session_state_transfer/20260215/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/governanca/session_state_transfer/20260215/evidence/required_sections_check.txt": "045916c814b758513e55df2f86962ac4fde92c83cc6d5e3f00c0e52f1bd3f62b",
+    "outputs/governanca/session_state_transfer/20260215/evidence/required_keys_check.txt": "7860f9dd8b093733e2f90d6d12be742c8ebfe27b61396feb956fdec15b098a01",
+    "outputs/governanca/session_state_transfer/20260215/evidence/cross_reference_checks.json": "2e946fdffa036065f856320d0395a3410a1e046c9e1a8d7e8a7bbe36992f6007"
+  }
+}
