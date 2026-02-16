@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "2026-02-16T12:21:36.077600+00:00",
+  "normative_refs": [
+    "docs/CONSTITUICAO.md",
+    "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+    "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md"
+  ],
+  "rules": [
+    {
+      "rule": "Constituicao vigente aplicada",
+      "status": "COMPLIANT",
+      "evidence": [
+        "docs/CONSTITUICAO.md"
+      ]
+    },
+    {
+      "rule": "Emenda custo aplicada",
+      "status": "COMPLIANT",
+      "evidence": [
+        "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json"
+      ]
+    },
+    {
+      "rule": "Emenda cash CDI aplicada",
+      "status": "COMPLIANT",
+      "evidence": [
+        "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md"
+      ]
+    },
+    {
+      "rule": "Emenda operacao local aplicada",
+      "status": "COMPLIANT",
+      "evidence": [
+        "planning/task_specs/sprint_002/",
+        "planning/runs/"
+      ]
+    }
+  ]
+}

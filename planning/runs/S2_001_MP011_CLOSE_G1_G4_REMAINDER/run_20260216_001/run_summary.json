@@ -1,0 +1,9 @@
+{
+  "subtask_id": "S2_001_MP011_CLOSE_G1_G4_REMAINDER",
+  "mapped_masterplan": "MP-011",
+  "status": "EXECUTED",
+  "outputs": [
+    "outputs/gaps/g1_g4/20260216/g1_g4_closure.json",
+    "outputs/gaps/g1_g4/20260216/report.md"
+  ]
+}

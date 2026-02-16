@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-02-16T12:21:36.077104+00:00",
+  "sprint": "Sprint 002",
+  "execution_mode": "LOCAL_ROOT",
+  "specs_dir": "planning/task_specs/sprint_002/",
+  "executed_subtasks": [
+    {
+      "subtask_id": "S2_001_MP011_CLOSE_G1_G4_REMAINDER",
+      "mapped_masterplan": "MP-011",
+      "status": "EXECUTED",
+      "outputs": [
+        "outputs/gaps/g1_g4/20260216/g1_g4_closure.json",
+        "outputs/gaps/g1_g4/20260216/report.md"
+      ]
+    },
+    {
+      "subtask_id": "S2_002_MP007_COMPLETE_ANTI_DERIVA_W2",
+      "mapped_masterplan": "MP-007",
+      "status": "EXECUTED",
+      "outputs": [
+        "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+        "outputs/controle/anti_deriva_w2/20260216/report.md"
+      ]
+    },
+    {
+      "subtask_id": "S2_003_MP005_MP006_REDUCE_NAO_EXECUTADA",
+      "mapped_masterplan": "MP-005,MP-006",
+      "status": "EXECUTED",
+      "outputs": [
+        "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json",
+        "outputs/governanca/policy_spc_rl/20260216/report.md"
+      ]
+    },
+    {
+      "subtask_id": "S2_004_REFRESH_POST_SPRINT_002_AUDIT",
+      "mapped_masterplan": "ALL_PENDING",
+      "status": "EXECUTED",
+      "outputs": [
+        "outputs/governanca/masterplan_audit/20260216_post_sprint_002/report.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "generated_at_utc": "2026-02-16T12:21:36.068211+00:00",
+  "source_audit": {
+    "map_csv": "outputs/governanca/masterplan_audit/20260216_post_sprint_001/masterplan_to_tasks_map.csv",
+    "gaps_json": "outputs/governanca/masterplan_audit/20260216_post_sprint_001/gaps_and_backlog.json",
+    "report_md": "outputs/governanca/masterplan_audit/20260216_post_sprint_001/report.md"
+  },
+  "priorities": [
+    {
+      "priority": 1,
+      "subtask_id": "S2_001_MP011_CLOSE_G1_G4_REMAINDER",
+      "maps_to_masterplan": "MP-011",
+      "depends_on": [
+        "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1"
+      ],
+      "definition_of_done": "Emitir closure revisado com estado objetivo por G1..G4 e justificativas de bloqueio quando aplicavel.",
+      "required_evidence": [
+        "outputs/gaps/g1_g4/20260216/g1_g4_closure.json",
+        "outputs/gaps/g1_g4/20260216/report.md"
+      ]
+    },
+    {
+      "priority": 2,
+      "subtask_id": "S2_002_MP007_COMPLETE_ANTI_DERIVA_W2",
+      "maps_to_masterplan": "MP-007",
+      "depends_on": [
+        "TASK_CEP_BUNDLE_CORE_F1_016_EXECUTE_E1_E5_ABLATION_MASTERPLAN_V1",
+        "TASK_CEP_BUNDLE_CORE_F1_012_APPLY_CDI_SSOT_TO_METRICS_V5"
+      ],
+      "definition_of_done": "Pacote anti-deriva W2 completo com guardrails, thresholds e evidencia de impacto W2.",
+      "required_evidence": [
+        "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json",
+        "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json"
+      ]
+    },
+    {
+      "priority": 3,
+      "subtask_id": "S2_003_MP005_MP006_REDUCE_NAO_EXECUTADA",
+      "maps_to_masterplan": "MP-005,MP-006",
+      "depends_on": [
+        "S2_002_MP007_COMPLETE_ANTI_DERIVA_W2"
+      ],
+      "definition_of_done": "Emitir subtasks canonicas com outputs objetivos para camada SPC/CEP e politica de decisao RL subordinada.",
+      "required_evidence": [
+        "docs/MASTERPLAN.md",
+        "outputs/experimentos/ablation_e1_e5/20260216/report.md"
+      ]
+    },
+    {
+      "priority": 4,
+      "subtask_id": "S2_004_REFRESH_POST_SPRINT_002_AUDIT",
+      "maps_to_masterplan": "ALL_PENDING",
+      "depends_on": [
+        "S2_001_MP011_CLOSE_G1_G4_REMAINDER",
+        "S2_002_MP007_COMPLETE_ANTI_DERIVA_W2",
+        "S2_003_MP005_MP006_REDUCE_NAO_EXECUTADA"
+      ],
+      "definition_of_done": "Map/gaps/compliance pos-sprint 002 publicados e rastreaveis.",
+      "required_evidence": [
+        "outputs/governanca/masterplan_audit/20260216_post_sprint_002/masterplan_to_tasks_map.csv"
+      ]
+    }
+  ],
+  "pending_masterplan_items_from_post_sprint_001": [
+    {
+      "masterplan_id": "MP-011",
+      "masterplan_title": "Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL)",
+      "task_id": "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1",
+      "status": "PARCIAL",
+      "evidencias": "outputs/gaps/g1_g4/20260216/report.md; outputs/gaps/g1_g4/20260216/g1_g4_closure.json"
+    },
+    {
+      "masterplan_id": "MP-001",
+      "masterplan_title": "Visao",
+      "task_id": "SEM_TASK_MAPEADA",
+      "status": "NAO_EXECUTADA",
+      "evidencias": "docs/MASTERPLAN.md"
+    },
+    {
+      "masterplan_id": "MP-002",
+      "masterplan_title": "Objetivo real (anti-deriva e anti-bloqueio)",
+      "task_id": "SEM_TASK_MAPEADA",
+      "status": "NAO_EXECUTADA",
+      "evidencias": "docs/MASTERPLAN.md"
+    },
+    {
+      "masterplan_id": "MP-005",
+      "masterplan_title": "SPC/CEP como camada estruturante",
+      "task_id": "SEM_TASK_MAPEADA",
+      "status": "NAO_EXECUTADA",
+      "evidencias": "docs/MASTERPLAN.md"
+    },
+    {
+      "masterplan_id": "MP-006",
+      "masterplan_title": "Politica de decisao (onde RL entra)",
+      "task_id": "SEM_TASK_MAPEADA",
+      "status": "NAO_EXECUTADA",
+      "evidencias": "docs/MASTERPLAN.md"
+    },
+    {
+      "masterplan_id": "MP-007",
+      "masterplan_title": "Plano explicito anti-deriva W2",
+      "task_id": "SEM_TASK_MAPEADA",
+      "status": "NAO_EXECUTADA",
+      "evidencias": "docs/MASTERPLAN.md"
+    },
+    {
+      "masterplan_id": "MP-012",
+      "masterplan_title": "Diagrama de alto nivel",
+      "task_id": "SEM_TASK_MAPEADA",
+      "status": "NAO_EXECUTADA",
+      "evidencias": "docs/MASTERPLAN.md"
+    }
+  ],
+  "constraints": {
+    "no_inference_without_evidence": true,
+    "all_subtasks_must_map_to_masterplan_item": true,
+    "use_planning_task_specs_and_runs": true
+  }
+}

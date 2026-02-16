@@ -1,0 +1,9 @@
+{
+  "subtask_id": "S2_002_MP007_COMPLETE_ANTI_DERIVA_W2",
+  "mapped_masterplan": "MP-007",
+  "status": "EXECUTED",
+  "outputs": [
+    "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+    "outputs/controle/anti_deriva_w2/20260216/report.md"
+  ]
+}

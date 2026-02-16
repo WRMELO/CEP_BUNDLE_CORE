@@ -1,0 +1,19 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S2_004_POST_SPRINT_002_AUDIT_REFRESH",
+  "masterplan_id": "ALL",
+  "intent": "Atualizar mapeamento e gaps apos sprint 002.",
+  "inputs": {
+    "prior_map": "outputs/governanca/masterplan_audit/20260216_post_sprint_001/masterplan_to_tasks_map.csv"
+  },
+  "outputs": {
+    "post_audit": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/"
+  },
+  "gates": [
+    "S1_MAP_REFRESHED",
+    "S2_GAPS_REFRESHED"
+  ],
+  "acceptance": [
+    "Novo map emitido",
+    "Novo gaps emitido"
+  ]
+}

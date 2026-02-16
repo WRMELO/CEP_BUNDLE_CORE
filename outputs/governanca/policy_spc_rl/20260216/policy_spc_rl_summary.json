@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-02-16T12:21:36.068946+00:00",
+  "masterplan_items": [
+    "MP-005",
+    "MP-006"
+  ],
+  "policy": {
+    "spc_cep_layer_role": "Define regime e permissao de operacao em burners e carteira.",
+    "rl_role": "Priorizacao intra-regime, subordinada a SPC/CEP.",
+    "rejection_rule": "Qualquer ganho RL que degrade robustez W2 deve ser rejeitado.",
+    "required_outputs_per_run": [
+      "report.md",
+      "manifest.json",
+      "evidence/"
+    ]
+  },
+  "references": [
+    "docs/MASTERPLAN.md",
+    "docs/CONSTITUICAO.md",
+    "outputs/controle/anti_deriva_w2/20260216/report.md"
+  ]
+}

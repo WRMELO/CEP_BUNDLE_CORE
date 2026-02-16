@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S2_003_MP005_MP006_SPCCEP_DECISION_POLICY",
+  "masterplan_id": "MP-005,MP-006",
+  "intent": "Reduzir NAO_EXECUTADA com pacote canonico de SPC/CEP e politica RL subordinada.",
+  "inputs": {
+    "masterplan": "docs/MASTERPLAN.md",
+    "anti_deriva_report": "outputs/controle/anti_deriva_w2/20260216/report.md"
+  },
+  "outputs": {
+    "policy_pkg": "outputs/governanca/policy_spc_rl/20260216/"
+  },
+  "gates": [
+    "S1_REFERENCES_PRESENT",
+    "S2_POLICY_OUTPUT_EMITTED"
+  ],
+  "acceptance": [
+    "Politica SPC/CEP vs RL emitida",
+    "Rastreabilidade para Masterplan presente"
+  ]
+}

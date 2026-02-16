@@ -1,0 +1,9 @@
+{
+  "subtask_id": "S2_003_MP005_MP006_REDUCE_NAO_EXECUTADA",
+  "mapped_masterplan": "MP-005,MP-006",
+  "status": "EXECUTED",
+  "outputs": [
+    "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json",
+    "outputs/governanca/policy_spc_rl/20260216/report.md"
+  ]
+}

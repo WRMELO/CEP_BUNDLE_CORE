@@ -1,0 +1,42 @@
+{
+  "generated_at_utc": "2026-02-16T12:21:36.068794+00:00",
+  "objective": "Completar anti-deriva W2 com escolha objetiva da camada incremental com melhor ganho em W2.",
+  "candidates_w2": [
+    {
+      "experiment": "E4_ADD_ANTI_REENTRY_FILTER",
+      "delta_multiple_w2": 0.2328437866971526,
+      "delta_mdd_w2": 0.2294853074704355
+    },
+    {
+      "experiment": "E3_ADD_REGIME_HYSTERESIS",
+      "delta_multiple_w2": 0.21275197160756315,
+      "delta_mdd_w2": 0.20504628876290043
+    },
+    {
+      "experiment": "E2_TURNOVER_CAP_BY_REGIME",
+      "delta_multiple_w2": 0.12171648566860588,
+      "delta_mdd_w2": 0.11464352573113379
+    }
+  ],
+  "selected": {
+    "experiment": "E4_ADD_ANTI_REENTRY_FILTER",
+    "delta_multiple_w2": 0.2328437866971526,
+    "delta_mdd_w2": 0.2294853074704355
+  },
+  "guardrails": {
+    "regime_hysteresis_dd_on": -0.2,
+    "regime_hysteresis_dd_off": -0.1,
+    "turnover_cap_by_regime": {
+      "W1": 0.22,
+      "W2": 0.12,
+      "W3": 0.15,
+      "OTHER": 0.16
+    },
+    "anti_reentry_stress_multiplier": 0.8,
+    "fallback_rule": "Se drawdown W2-like cruzar limiar critico, manter modo conservador ate janela de recuperacao."
+  },
+  "evidence": [
+    "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json"
+  ]
+}

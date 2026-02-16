@@ -1,0 +1,51 @@
+[
+  {
+    "masterplan_id": "MP-011",
+    "masterplan_title": "Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL)",
+    "task_id": "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1",
+    "status": "PARCIAL",
+    "evidencias": "outputs/gaps/g1_g4/20260216/report.md; outputs/gaps/g1_g4/20260216/g1_g4_closure.json"
+  },
+  {
+    "masterplan_id": "MP-001",
+    "masterplan_title": "Visao",
+    "task_id": "SEM_TASK_MAPEADA",
+    "status": "NAO_EXECUTADA",
+    "evidencias": "docs/MASTERPLAN.md"
+  },
+  {
+    "masterplan_id": "MP-002",
+    "masterplan_title": "Objetivo real (anti-deriva e anti-bloqueio)",
+    "task_id": "SEM_TASK_MAPEADA",
+    "status": "NAO_EXECUTADA",
+    "evidencias": "docs/MASTERPLAN.md"
+  },
+  {
+    "masterplan_id": "MP-005",
+    "masterplan_title": "SPC/CEP como camada estruturante",
+    "task_id": "SEM_TASK_MAPEADA",
+    "status": "NAO_EXECUTADA",
+    "evidencias": "docs/MASTERPLAN.md"
+  },
+  {
+    "masterplan_id": "MP-006",
+    "masterplan_title": "Politica de decisao (onde RL entra)",
+    "task_id": "SEM_TASK_MAPEADA",
+    "status": "NAO_EXECUTADA",
+    "evidencias": "docs/MASTERPLAN.md"
+  },
+  {
+    "masterplan_id": "MP-007",
+    "masterplan_title": "Plano explicito anti-deriva W2",
+    "task_id": "SEM_TASK_MAPEADA",
+    "status": "NAO_EXECUTADA",
+    "evidencias": "docs/MASTERPLAN.md"
+  },
+  {
+    "masterplan_id": "MP-012",
+    "masterplan_title": "Diagrama de alto nivel",
+    "task_id": "SEM_TASK_MAPEADA",
+    "status": "NAO_EXECUTADA",
+    "evidencias": "docs/MASTERPLAN.md"
+  }
+]

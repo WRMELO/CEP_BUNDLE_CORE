@@ -1,0 +1,19 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S2_001_MP011_CLOSE_G1_G4_REMAINDER",
+  "masterplan_id": "MP-011",
+  "intent": "Consolidar estado remanescente de G1..G4 com bloqueios objetivos e evidencias.",
+  "inputs": {
+    "source": "outputs/gaps/g1_g4/20260216/g1_g4_closure.json"
+  },
+  "outputs": {
+    "closure_refresh": "outputs/gaps/g1_g4/20260216/g1_g4_closure.json"
+  },
+  "gates": [
+    "S1_INPUT_PRESENT",
+    "S2_OUTPUT_VALID"
+  ],
+  "acceptance": [
+    "Status por G1..G4 presente",
+    "Bloqueios objetivos quando houver"
+  ]
+}
