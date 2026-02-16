@@ -1,0 +1,37 @@
+{
+  "generated_at_utc": "2026-02-16T12:10:45.541797+00:00",
+  "rules": [
+    {
+      "rule": "Constituicao v1 canônica presente",
+      "status": "COMPLIANT",
+      "evidence": [
+        "docs/CONSTITUICAO.md"
+      ]
+    },
+    {
+      "rule": "Emenda custo ativa aplicada em metricas",
+      "status": "COMPLIANT",
+      "evidence": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json"
+      ]
+    },
+    {
+      "rule": "Emenda cash CDI ativa aplicada em v5",
+      "status": "COMPLIANT",
+      "evidence": [
+        "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+        "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md"
+      ]
+    },
+    {
+      "rule": "Emenda operacao local ativa",
+      "status": "COMPLIANT",
+      "evidence": [
+        "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+        "docs/EXECUTION_STRUCTURE_LOCAL.md",
+        "planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json"
+      ]
+    }
+  ]
+}

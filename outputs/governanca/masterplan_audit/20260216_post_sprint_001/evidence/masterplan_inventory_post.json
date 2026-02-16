@@ -1,0 +1,50 @@
+[
+  {
+    "id": "MP-001",
+    "title": "Visao"
+  },
+  {
+    "id": "MP-002",
+    "title": "Objetivo real (anti-deriva e anti-bloqueio)"
+  },
+  {
+    "id": "MP-003",
+    "title": "Baseline M3 (fixado para o bundle)"
+  },
+  {
+    "id": "MP-004",
+    "title": "Metricas historicas (W1 e W2, incluindo ponto de ruptura)"
+  },
+  {
+    "id": "MP-005",
+    "title": "SPC/CEP como camada estruturante"
+  },
+  {
+    "id": "MP-006",
+    "title": "Politica de decisao (onde RL entra)"
+  },
+  {
+    "id": "MP-007",
+    "title": "Plano explicito anti-deriva W2"
+  },
+  {
+    "id": "MP-008",
+    "title": "Plano de experimentos (ablation controlado)"
+  },
+  {
+    "id": "MP-009",
+    "title": "Plano de validacao"
+  },
+  {
+    "id": "MP-010",
+    "title": "Governanca operacional (Agno, gates, manifests, Plotly)"
+  },
+  {
+    "id": "MP-011",
+    "title": "Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL)"
+  },
+  {
+    "id": "MP-012",
+    "title": "Diagrama de alto nivel"
+  }
+]
