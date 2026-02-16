@@ -52,7 +52,7 @@ Nao foi necessario alterar configuracao de runner/allowlist nesta task.
 ## Fechamento de sync
 
 - branch: `local/integrated-state-20260215`
-- head_after_sync: `e3140cdd0a4bc3e103695e2262ec8ed452914422`
+- head_after_sync: `a8742bd8390bc3a25522e96597a7cc6e3a832b1f`
 - evidencias:
   - `outputs/governanca/local_migration/20260216/evidence/sync_fetch.txt`
   - `outputs/governanca/local_migration/20260216/evidence/sync_pull_ff_only.txt`
