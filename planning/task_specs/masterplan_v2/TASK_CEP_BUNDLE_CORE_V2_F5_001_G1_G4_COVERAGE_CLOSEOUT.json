@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V2_F5_001_G1_G4_COVERAGE_CLOSEOUT",
+  "mode": "generate_only",
+  "phase": "Fase 5",
+  "intent": "Fechar cobertura G1..G4 do corpus e consolidar taxonomia de janelas/regimes.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "depends_on": [
+    "TASK_CEP_BUNDLE_CORE_V2_F4_002_W2_REJECTION_RULE_VALIDATION"
+  ],
+  "inputs": {
+    "ssot_required": [
+      "docs/MASTERPLAN_V2.md",
+      "docs/CONSTITUICAO.md",
+      "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md"
+    ],
+    "policy": {
+      "do_not_execute": true,
+      "do_not_modify_existing_ssot_without_dedicated_change_task": true
+    }
+  },
+  "outputs": {
+    "required": [
+      "report.md",
+      "manifest.json",
+      "evidence/"
+    ],
+    "phase_outputs": [
+      "outputs/masterplan_v2/f5_001/gaps_closure.json",
+      "outputs/masterplan_v2/f5_001/report.md",
+      "outputs/masterplan_v2/f5_001/manifest.json"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN_DISABLED_GENERATE_ONLY",
+    "S4_VERIFY_OUTPUTS",
+    "S5_VERIFY_HASHES"
+  ],
+  "acceptance_criteria": [
+    "Especificação completa e auditável da task no escopo da fase.",
+    "Outputs planejados definidos com paths explícitos.",
+    "Dependências e critérios de fail declarados.",
+    "Sem execução neste ciclo (generate_only)."
+  ],
+  "in_case_of_error": [
+    "Identificar requisito não atendido (arquivo/seção).",
+    "Registrar evidência objetiva e corrigir spec/documento correspondente."
+  ]
+}
