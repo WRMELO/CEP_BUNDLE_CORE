@@ -42,5 +42,5 @@
 ## Fechamento de sync
 
 - branch: `local/integrated-state-20260215`
-- head_after_sync: `9eaca5419d8d590a74e6b76e8c77f38205f17559`
+- head_after_sync: `6c09e68650b059af8ed25eaca60ac6850b60a00b`
 - push: `origin/local/integrated-state-20260215`
