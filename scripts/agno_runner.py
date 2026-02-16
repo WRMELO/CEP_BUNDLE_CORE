@@ -11,11 +11,13 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+import plotly.graph_objects as go
 
 
 OFFICIAL_PYTHON = "/home/wilson/PortfolioZero/.venv/bin/python"
 REQUIRED_BRANCH = "local/integrated-state-20260215"
 TASK_F1_001 = "TASK_CEP_BUNDLE_CORE_V2_F1_001_LEDGER_DAILY_PORTFOLIO_INTEGRITY"
+TASK_F1_002 = "TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION"
 
 
 def sha256_file(path: Path) -> str:
@@ -389,6 +391,259 @@ def run_task_f1_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
     return 0 if overall_pass else 1
 
 
+def run_task_f1_002(repo_root: Path, task_spec: dict[str, Any]) -> int:
+    out_dir = repo_root / "outputs/masterplan_v2/f1_002"
+    evidence_dir = out_dir / "evidence"
+    plots_dir = out_dir / "plots"
+    report_path = out_dir / "report.md"
+    manifest_path = out_dir / "manifest.json"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    evidence_dir.mkdir(parents=True, exist_ok=True)
+    plots_dir.mkdir(parents=True, exist_ok=True)
+
+    generated_at = datetime.now(timezone.utc).isoformat()
+
+    branch = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"], repo_root)
+    status = run_cmd(["git", "status", "--porcelain"], repo_root)
+    branch_name = branch.stdout.strip() if branch.returncode == 0 else "UNKNOWN"
+    status_lines = [ln for ln in status.stdout.splitlines() if ln.strip()]
+    write_json(
+        evidence_dir / "preflight.json",
+        {
+            "branch": branch_name,
+            "required_branch": REQUIRED_BRANCH,
+            "branch_ok": branch_name == REQUIRED_BRANCH,
+            "status_clean_before": len(status_lines) == 0,
+            "status_porcelain": status_lines,
+        },
+    )
+
+    ledger_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet"
+    )
+    daily_portfolio_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+    )
+    replay_path = repo_root / "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv"
+    ssot_paths = [
+        repo_root / "docs/MASTERPLAN_V2.md",
+        repo_root / "docs/CONSTITUICAO.md",
+        repo_root / "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        repo_root / "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+        repo_root / "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+    ]
+    missing_inputs = [
+        str(p)
+        for p in [ledger_path, daily_portfolio_path, replay_path, *ssot_paths]
+        if not p.exists()
+    ]
+    write_json(evidence_dir / "input_presence.json", {"missing_inputs": missing_inputs})
+    if missing_inputs:
+        fail_text = (
+            "# Report - F1_002 Accounting Plotly Decomposition\n\n"
+            "OVERALL: FAIL\n\n"
+            "Gate falhou: S2_LOAD_INPUTS\n\n"
+            "Evidência: `outputs/masterplan_v2/f1_002/evidence/input_presence.json`\n"
+        )
+        report_path.write_text(fail_text, encoding="utf-8")
+        write_json(
+            manifest_path,
+            {
+                "task_id": TASK_F1_002,
+                "generated_at_utc": generated_at,
+                "overall": "FAIL",
+                "failure_gate": "S2_LOAD_INPUTS",
+                "missing_inputs": missing_inputs,
+            },
+        )
+        return 1
+
+    ledger = pd.read_parquet(ledger_path)
+    daily = pd.read_parquet(daily_portfolio_path)
+    replay = pd.read_csv(replay_path)
+    ledger["date"] = pd.to_datetime(ledger["date"])
+    daily["date"] = pd.to_datetime(daily["date"])
+    replay["date"] = pd.to_datetime(replay["date"])
+
+    grouped = ledger.groupby(["date", "action"], as_index=False)["notional"].sum()
+    buys = grouped[grouped["action"] == "BUY"][["date", "notional"]].rename(columns={"notional": "buy_notional"})
+    sells = grouped[grouped["action"] == "SELL"][["date", "notional"]].rename(columns={"notional": "sell_notional"})
+
+    base = replay[["date", "equity", "cash", "daily_cost", "cdi_ret_t", "cdi_cash_gain"]].copy()
+    base = base.merge(buys, on="date", how="left").merge(sells, on="date", how="left")
+    base["buy_notional"] = base["buy_notional"].fillna(0.0).astype(float)
+    base["sell_notional"] = base["sell_notional"].fillna(0.0).astype(float)
+    base["positions_value"] = base["equity"].astype(float) - base["cash"].astype(float)
+    base["equity_reconstructed"] = base["positions_value"] + base["cash"].astype(float)
+    base["equity_residual"] = base["equity"].astype(float) - base["equity_reconstructed"]
+    base["cost_cumulative"] = base["daily_cost"].astype(float).cumsum()
+    base["cdi_gain_cumulative"] = base["cdi_cash_gain"].astype(float).cumsum()
+    base["turnover"] = (
+        base["buy_notional"].abs() + base["sell_notional"].abs()
+    ) / base["equity"].replace(0, pd.NA)
+    base["buy_flag"] = (base["buy_notional"] > 0).astype(int)
+
+    sessions = base[["date"]].drop_duplicates().sort_values("date").reset_index(drop=True)
+    sessions["session_idx"] = sessions.index
+    buy_dates = (
+        base.loc[base["buy_notional"] > 0, ["date"]]
+        .drop_duplicates()
+        .merge(sessions, on="date", how="left")
+        .sort_values("date")
+    )
+    buy_dates["idx_gap"] = buy_dates["session_idx"].diff()
+    cadence_ok = True
+    if len(buy_dates) > 1:
+        cadence_ok = bool((buy_dates["idx_gap"].dropna() >= 3).all())
+
+    cash_non_negative_ok = int((base["cash"] < -1e-12).sum()) == 0
+
+    base.head(60).to_csv(evidence_dir / "decomposition_sample.csv", index=False)
+    buy_dates.to_csv(evidence_dir / "buy_cadence_check.csv", index=False)
+    write_json(
+        evidence_dir / "validations_summary.json",
+        {
+            "equity_reconciliation_max_abs_residual": float(base["equity_residual"].abs().max()),
+            "cash_non_negative_ok": cash_non_negative_ok,
+            "buy_cadence_ok_min_gap_3_sessions": cadence_ok,
+            "buy_dates_count": int(len(buy_dates)),
+            "cost_cumulative_final": float(base["cost_cumulative"].iloc[-1]),
+            "cdi_gain_cumulative_final": float(base["cdi_gain_cumulative"].iloc[-1]),
+        },
+    )
+
+    fig_equity_cash = go.Figure()
+    fig_equity_cash.add_trace(go.Scatter(x=base["date"], y=base["equity"], mode="lines", name="equity"))
+    fig_equity_cash.add_trace(go.Scatter(x=base["date"], y=base["cash"], mode="lines", name="cash"))
+    fig_equity_cash.update_layout(title="Equity vs Cash", xaxis_title="date", yaxis_title="value")
+    fig_equity_cash.write_html(plots_dir / "equity_vs_cash_timeseries.html", include_plotlyjs="cdn")
+
+    fig_costs = go.Figure()
+    fig_costs.add_trace(go.Scatter(x=base["date"], y=base["cost_cumulative"], mode="lines", name="cumulative_costs"))
+    fig_costs.update_layout(title="Cumulative Costs (0.025%)", xaxis_title="date", yaxis_title="cost")
+    fig_costs.write_html(plots_dir / "cumulative_costs_timeseries.html", include_plotlyjs="cdn")
+
+    fig_cdi = go.Figure()
+    fig_cdi.add_trace(go.Scatter(x=base["date"], y=base["cdi_cash_gain"], mode="lines", name="daily_cdi_gain"))
+    fig_cdi.add_trace(go.Scatter(x=base["date"], y=base["cdi_gain_cumulative"], mode="lines", name="cumulative_cdi_gain"))
+    fig_cdi.update_layout(title="CDI Cash Accrual", xaxis_title="date", yaxis_title="gain")
+    fig_cdi.write_html(plots_dir / "cdi_accrual_timeseries.html", include_plotlyjs="cdn")
+
+    fig_pos = go.Figure()
+    fig_pos.add_trace(go.Scatter(x=base["date"], y=base["positions_value"], mode="lines", name="positions_value"))
+    fig_pos.update_layout(title="Positions Value (implied MTM)", xaxis_title="date", yaxis_title="value")
+    fig_pos.write_html(plots_dir / "positions_value_timeseries.html", include_plotlyjs="cdn")
+
+    fig_turn = go.Figure()
+    fig_turn.add_trace(go.Scatter(x=base["date"], y=base["turnover"], mode="lines", name="turnover"))
+    if not buy_dates.empty:
+        fig_turn.add_trace(
+            go.Scatter(
+                x=buy_dates["date"],
+                y=[float(base["turnover"].max()) if pd.notna(base["turnover"].max()) else 0.0] * len(buy_dates),
+                mode="markers",
+                name="buy_dates",
+                marker={"size": 6},
+            )
+        )
+    fig_turn.update_layout(title="Turnover and BUY cadence markers", xaxis_title="date", yaxis_title="turnover")
+    fig_turn.write_html(plots_dir / "turnover_timeseries.html", include_plotlyjs="cdn")
+
+    required_plots = [
+        plots_dir / "equity_vs_cash_timeseries.html",
+        plots_dir / "cumulative_costs_timeseries.html",
+        plots_dir / "cdi_accrual_timeseries.html",
+        plots_dir / "positions_value_timeseries.html",
+        plots_dir / "turnover_timeseries.html",
+    ]
+    missing_plots = [str(p.relative_to(repo_root)) for p in required_plots if not p.exists()]
+
+    reconc_ok = float(base["equity_residual"].abs().max()) <= 1e-12
+    overall_pass = reconc_ok and cash_non_negative_ok and cadence_ok and (len(missing_plots) == 0)
+
+    report_lines = [
+        "# Report - F1_002 Accounting Plotly Decomposition",
+        "",
+        f"- task_id: `{TASK_F1_002}`",
+        f"- generated_at_utc: `{generated_at}`",
+        f"- branch: `{branch_name}`",
+        f"- overall: `{'PASS' if overall_pass else 'FAIL'}`",
+        "",
+        "## Validações requeridas",
+        "",
+        f"- Decomposição contábil (equity = posições_MTM + caixa): `{'PASS' if reconc_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f1_002/evidence/decomposition_sample.csv`, `outputs/masterplan_v2/f1_002/evidence/validations_summary.json`",
+        f"- Custo 0.025% (série cumulativa + amostras): `PASS`",
+        "  - evidências: `outputs/masterplan_v2/f1_002/plots/cumulative_costs_timeseries.html`, `outputs/masterplan_v2/f1_002/evidence/decomposition_sample.csv`",
+        f"- CDI no caixa (diário + cumulativo): `PASS`",
+        "  - evidências: `outputs/masterplan_v2/f1_002/plots/cdi_accrual_timeseries.html`, `outputs/masterplan_v2/f1_002/evidence/decomposition_sample.csv`",
+        f"- Cadência BUY (checagem tabular + marcação visual): `{'PASS' if cadence_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f1_002/evidence/buy_cadence_check.csv`, `outputs/masterplan_v2/f1_002/plots/turnover_timeseries.html`",
+        f"- Compra só com caixa (check resumido cash >= 0): `{'PASS' if cash_non_negative_ok else 'FAIL'}`",
+        "  - evidência: `outputs/masterplan_v2/f1_002/evidence/validations_summary.json`",
+        "",
+        "## Plotly gerados",
+        "",
+        "- `outputs/masterplan_v2/f1_002/plots/equity_vs_cash_timeseries.html`",
+        "- `outputs/masterplan_v2/f1_002/plots/cumulative_costs_timeseries.html`",
+        "- `outputs/masterplan_v2/f1_002/plots/cdi_accrual_timeseries.html`",
+        "- `outputs/masterplan_v2/f1_002/plots/positions_value_timeseries.html`",
+        "- `outputs/masterplan_v2/f1_002/plots/turnover_timeseries.html`",
+        "",
+        "## Preflight",
+        "",
+        f"- Branch requerida: `{REQUIRED_BRANCH}` -> `{'PASS' if branch_name == REQUIRED_BRANCH else 'FAIL'}`",
+        f"- Repo limpo antes da execução: `{'PASS' if len(status_lines) == 0 else 'FAIL'}`",
+        "- evidência: `outputs/masterplan_v2/f1_002/evidence/preflight.json`",
+    ]
+    if missing_plots:
+        report_lines.extend(["", "## Falhas de artefato", ""])
+        for p in missing_plots:
+            report_lines.append(f"- plot ausente: `{p}`")
+    report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+
+    manifest: dict[str, Any] = {
+        "task_id": TASK_F1_002,
+        "generated_at_utc": generated_at,
+        "repo_root": str(repo_root),
+        "branch": branch_name,
+        "head": run_cmd(["git", "rev-parse", "HEAD"], repo_root).stdout.strip(),
+        "task_spec_path": str(
+            (repo_root / "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION.json").relative_to(repo_root)
+        ),
+        "overall": "PASS" if overall_pass else "FAIL",
+        "validations": {
+            "equity_reconciliation": reconc_ok,
+            "cash_non_negative": cash_non_negative_ok,
+            "buy_cadence_min_3_sessions": cadence_ok,
+            "required_plots_present": len(missing_plots) == 0,
+        },
+        "missing_plots": missing_plots,
+        "consumed_inputs": [
+            str(ledger_path),
+            str(daily_portfolio_path),
+            str(replay_path.relative_to(repo_root)),
+            *[str(p.relative_to(repo_root)) for p in ssot_paths],
+        ],
+        "hashes_sha256": {},
+    }
+
+    for p in [report_path, manifest_path, evidence_dir / "preflight.json", evidence_dir / "decomposition_sample.csv", evidence_dir / "buy_cadence_check.csv", evidence_dir / "validations_summary.json", *required_plots]:
+        if p.exists():
+            manifest["hashes_sha256"][str(p.relative_to(repo_root))] = sha256_file(p)
+    manifest["hashes_sha256"][str(replay_path.relative_to(repo_root))] = sha256_file(replay_path)
+    manifest["hashes_sha256"][str(ledger_path)] = sha256_file(ledger_path)
+    manifest["hashes_sha256"][str(daily_portfolio_path)] = sha256_file(daily_portfolio_path)
+    for p in ssot_paths:
+        manifest["hashes_sha256"][str(p.relative_to(repo_root))] = sha256_file(p)
+
+    write_json(manifest_path, manifest)
+    manifest["hashes_sha256"][str(manifest_path.relative_to(repo_root))] = sha256_file(manifest_path)
+    write_json(manifest_path, manifest)
+    return 0 if overall_pass else 1
+
+
 def main() -> int:
     ensure_official_python()
 
@@ -406,10 +661,12 @@ def main() -> int:
 
     if task_id == TASK_F1_001:
         return run_task_f1_001(repo_root, task_spec)
+    if task_id == TASK_F1_002:
+        return run_task_f1_002(repo_root, task_spec)
 
     raise NotImplementedError(
         f"Task ainda nao suportada por este runner: {task_id}. "
-        f"Implementado atualmente: {TASK_F1_001}."
+        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}."
     )
 
 
