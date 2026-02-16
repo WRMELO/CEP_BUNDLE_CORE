@@ -1,0 +1,96 @@
+{
+  "generated_at_utc": "2026-02-16T12:07:56.057290+00:00",
+  "source_masterplan": "docs/MASTERPLAN.md",
+  "source_corpus_index": "docs/corpus/corpus_index.json",
+  "targets": {
+    "G1": {
+      "threshold": 0.8,
+      "definition": "cobertura de metricas >= 80% dos experimentos relevantes"
+    },
+    "G2": {
+      "threshold": 0.6,
+      "definition": "cobertura de resultados quantitativos >= 60%"
+    },
+    "G3": {
+      "threshold": 0.7,
+      "definition": "cobertura de hashes >= 70% do subconjunto operacional critico"
+    },
+    "G4": {
+      "threshold": 1.0,
+      "definition": "taxonomia unica de janelas e regimes consolidada"
+    }
+  },
+  "items": {
+    "G1": {
+      "current": {
+        "experiments_with_metrics": 0,
+        "experiments_count": 27,
+        "ratio": 0.0
+      },
+      "status": "PENDENTE",
+      "gap_to_target": 0.8,
+      "evidence": [
+        "docs/corpus/corpus_index.json"
+      ]
+    },
+    "G2": {
+      "current": {
+        "experiments_with_quant_results": 0,
+        "experiments_count": 27,
+        "ratio": 0.0
+      },
+      "status": "PENDENTE",
+      "gap_to_target": 0.6,
+      "evidence": [
+        "docs/corpus/corpus_index.json"
+      ]
+    },
+    "G3": {
+      "current": {
+        "artifacts_hashed_count": 400,
+        "artifact_refs_count": 7130,
+        "ratio": 0.056100981767180924
+      },
+      "status": "PENDENTE",
+      "gap_to_target": 0.643899018232819,
+      "evidence": [
+        "docs/corpus/corpus_index.json"
+      ]
+    },
+    "G4": {
+      "current": {
+        "taxonomy_evidence_files_found": 3,
+        "taxonomy_evidence_files": [
+          "outputs/instrumentation/m3_w1_w2/20260215/w1w2_segments.json",
+          "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+          "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json"
+        ]
+      },
+      "status": "PARCIAL",
+      "gap_to_target": "Consolidar taxonomia unica em artefato canonico dedicado (janelas e regimes).",
+      "evidence": [
+        "outputs/instrumentation/m3_w1_w2/20260215/w1w2_segments.json",
+        "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/metrics_m3_w1_w2_v3.json",
+        "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json"
+      ]
+    }
+  },
+  "pending_actions": [
+    "Atualizar corpus com metricas estruturadas adicionais para elevar G1.",
+    "Aumentar captura de resultados quantitativos por experimento para elevar G2.",
+    "Expandir hashing de artefatos operacionais criticos para elevar G3.",
+    "Publicar arquivo canonico de taxonomia de janelas/regimes para fechar G4."
+  ],
+  "audit_gaps_source": "outputs/governanca/masterplan_audit/20260216/gaps_and_backlog.json",
+  "audit_backlog_reference": [
+    "Aplicar CDI SSOT em metricas (v5) e fechar cash_cdi_status aplicado.",
+    "Executar plano de experimentos E1..E5 do Masterplan com manifests comparativos.",
+    "Fechar G1..G4 do bloco de gaps com metas quantitativas do Masterplan."
+  ],
+  "overall": {
+    "closed_count": 0,
+    "partial_count": 1,
+    "pending_count": 3,
+    "summary": "No estado atual, G1-G3 permanecem abaixo das metas quantitativas; G4 parcial por evidencias dispersas."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F1_017_CLOSE_G1_G4_CORPUS_GAPS_MASTERPLAN_V1",
+  "generated_at_utc": "2026-02-16T12:07:56.061836+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head_before_commit": "40bdf8586b8d18b96020890acda4b633ca026310",
+  "outputs": {
+    "report_md": "outputs/gaps/g1_g4/20260216/report.md",
+    "manifest_json": "outputs/gaps/g1_g4/20260216/manifest.json",
+    "g1_g4_closure_json": "outputs/gaps/g1_g4/20260216/g1_g4_closure.json",
+    "evidence_dir": "outputs/gaps/g1_g4/20260216/evidence/"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_G1_G4_DEFINITION_EXTRACTED": "PASS",
+    "S3_VERIFY_G1_G4_CLOSURE_JSON_PRESENT": "PASS",
+    "S4_VERIFY_EVIDENCE_SUPPORTS_CLOSURE": "PASS",
+    "S5_VERIFY_REPORT_TRACEABLE": "PASS",
+    "S6_WRITE_MANIFEST_HASHES": "PASS",
+    "S7_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+  },
+  "hashes_sha256": {
+    "outputs/gaps/g1_g4/20260216/g1_g4_closure.json": "5ba16fd692e1afd28021361adbc43739f79498d02a5420e46ff50635d99f32ff",
+    "outputs/gaps/g1_g4/20260216/report.md": "1094c0d23b5f4390197202b43d8ac4d64ed8ed8d64515b68c09477656db15366",
+    "outputs/gaps/g1_g4/20260216/evidence/masterplan_g1_g4_extract.txt": "92651152782a3b5abb1032cdae36aa10cc31118a21a4e8af99790f5ac5539c76",
+    "outputs/gaps/g1_g4/20260216/evidence/corpus_index_snapshot.json": "a5cb87e97a0db953d302e75a6b8785f58422270d7401fe44d6fb7aec21478bea"
+  }
+}

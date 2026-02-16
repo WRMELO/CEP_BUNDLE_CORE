@@ -1,0 +1,4 @@
+- G1: elevar cobertura de metricas para >= 80% dos experimentos relevantes.
+- G2: elevar cobertura de resultados quantitativos para >= 60%.
+- G3: elevar cobertura de hashes em artefatos criticos para >= 70% do subconjunto operacional.
+- G4: consolidar taxonomia unica de janelas e regimes (W1/W2/W3 + extensoes).
