@@ -46,4 +46,15 @@
 - S4_VERIFY_CASH_CDI_STATUS_CLOSED: PASS
 - S5_VERIFY_REPORT_TRACEABLE: PASS
 - S6_WRITE_MANIFEST_HASHES: PASS
-- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PENDING (apos commit/sync)
+- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PASS
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `3c5908a7930d48c50888b2c943049504631bf0bb`
+- evidencias:
+  - `outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/sync_fetch.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/sync_pull_ff_only.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/sync_push.txt`
+  - `outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
