@@ -27,7 +27,7 @@ Pacote de transferencia de estado produzido com consolidacao de arquitetura, gov
 - S4_VERIFY_ALL_REQUIRED_KEYS_IN_JSON: PASS
 - S5_VERIFY_CROSS_REFERENCE_CONSISTENCY_MD_JSON: PASS
 - S6_WRITE_MANIFEST_HASHES: PASS
-- S7_VERIFY_WORKTREE_CLEAN: PENDING (apos commit/sync)
+- S7_VERIFY_WORKTREE_CLEAN: PASS
 
 ## Evidencias
 
@@ -39,3 +39,14 @@ Pacote de transferencia de estado produzido com consolidacao de arquitetura, gov
 - `evidence/required_sections_check.txt`
 - `evidence/required_keys_check.txt`
 - `evidence/cross_reference_checks.json`
+
+## Fechamento de sync
+
+- head_after_sync: `9d43084a1f2155ffa3d4d5def8d7d22413db9064`
+- branch: `wt/bootstrap`
+- evidencias:
+  - `outputs/governanca/session_state_transfer/20260215/evidence/sync_fetch.txt`
+  - `outputs/governanca/session_state_transfer/20260215/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/session_state_transfer/20260215/evidence/sync_push.txt`
+  - `outputs/governanca/session_state_transfer/20260215/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
