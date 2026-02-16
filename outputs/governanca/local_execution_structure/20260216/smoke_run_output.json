@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216",
+  "run_id": "run_20260216_111355",
+  "generated_at_utc": "2026-02-16T11:13:55.175635+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "spec_path": "/home/wilson/CEP_BUNDLE_CORE/planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json",
+  "run_dir": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216/run_20260216_111355",
+  "proof": {
+    "task_spec_read": true,
+    "planning_runs_generated": true,
+    "governance_output_generated": true
+  }
+}

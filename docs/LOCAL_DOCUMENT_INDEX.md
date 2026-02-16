@@ -20,6 +20,8 @@
 | SSOT CDI Parquet | `data/ssot/cdi/cdi_daily.parquet` | `/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/cdi_daily.parquet` | Serie CDI diaria canonizada em Parquet. |
 | Governanca session transfer report | `outputs/governanca/session_state_transfer/20260215/report.md` | `/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/session_state_transfer/20260215/report.md` | Evidencia da consolidacao de estado de sessao. |
 | Governanca SSOT CDI report | `outputs/governanca/ssot_cdi/20260215/report.md` | `/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/ssot_cdi/20260215/report.md` | Evidencia de criacao/canonizacao do SSOT CDI. |
+| Estrutura de execucao local | `docs/EXECUTION_STRUCTURE_LOCAL.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/EXECUTION_STRUCTURE_LOCAL.md` | Guia operacional do fluxo local com planning/task_specs e planning/runs. |
+| Emenda operacao local | `docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md` | `/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md` | Norma formalizando modo LOCAL_ROOT_ONLY e estrutura planning/*. |
 | Governanca local migration report | `outputs/governanca/local_migration/20260216/report.md` | `/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/local_migration/20260216/report.md` | Evidencia desta migracao para operacao local unica. |
 
 ## Rastreabilidade de linhas consolidadas (contexto historico)

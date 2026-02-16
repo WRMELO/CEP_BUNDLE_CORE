@@ -1,0 +1,7 @@
+{
+  "planning/task_specs": true,
+  "planning/runs": true,
+  "docs/EXECUTION_STRUCTURE_LOCAL.md": true,
+  "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md": true,
+  "outputs/governanca/local_execution_structure/20260216/smoke_run_output.json": true
+}

@@ -1,0 +1,6 @@
+SMOKE_TASK_ID=TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216
+SMOKE_RUN_ID=run_20260216_111355
+SMOKE_RUN_DIR=/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216/run_20260216_111355
+SMOKE_OUTPUT=/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/local_execution_structure/20260216/smoke_run_output.json
+SMOKE_PROOF={'task_spec_read': True, 'planning_runs_generated': True, 'governance_output_generated': True}
+EXIT_CODE:0

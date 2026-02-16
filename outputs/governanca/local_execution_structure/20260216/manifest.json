@@ -1,0 +1,38 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F0_015_RESTORE_LOCAL_EXECUTION_STRUCTURE_AND_NORMATIVE_V1",
+  "generated_at_utc": "2026-02-16T11:14:10.033381+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head_before_commit": "0319b56190fe9708ecb18fdb7986ecc22d233092",
+  "outputs": {
+    "planning_task_specs_dir": "planning/task_specs/",
+    "planning_runs_dir": "planning/runs/",
+    "local_execution_readme": "docs/EXECUTION_STRUCTURE_LOCAL.md",
+    "emenda_local_mode": "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+    "report_md": "outputs/governanca/local_execution_structure/20260216/report.md",
+    "manifest_json": "outputs/governanca/local_execution_structure/20260216/manifest.json"
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_LOCAL_ROOT_AND_BRANCH": "PASS",
+    "S3_VERIFY_PLANNING_DIRS_PRESENT": "PASS",
+    "S4_VERIFY_EMENDA_LOCAL_MODE_PRESENT_AND_REFERENCES_CONSTITUTION": "PASS",
+    "S5_VERIFY_SMOKE_RUN_PROVES_PLANNING_RUNS_GENERATED": "PASS",
+    "S6_VERIFY_REPORT_TRACEABLE_AND_SELF_CONTAINED": "PASS",
+    "S7_WRITE_MANIFEST_HASHES": "PASS",
+    "S8_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+  },
+  "hashes_sha256": {
+    "docs/EXECUTION_STRUCTURE_LOCAL.md": "f6fa7f1f7d530a466ac5d7256b0676be3c106566f229d6f759c560a952aa97c7",
+    "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md": "e7a099f3fca1c4249a0baa10c05d71c369f07c9da9fe6adb47e91755b36cf72e",
+    "docs/LOCAL_DOCUMENT_INDEX.md": "be5274037fb6ef161cd7ed5f2f75da81b8332ec70eda58f10b9e5c3a1562ac56",
+    "planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json": "663f93d8e43d7d01320d092b08b6c0d78ea82aa9dabc2b8ee1db11f5910bc56b",
+    "outputs/governanca/local_execution_structure/20260216/smoke_run_output.json": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
+    "outputs/governanca/local_execution_structure/20260216/report.md": "7cd03a5a5a874cedeb7221c738824b48b065bf02eaba3d5cac1f3ec328780118",
+    "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_command.log": "bf01c5110d87df9aacf8fd06294387ed8b9c302122b41d29fb9268c096929ec5",
+    "outputs/governanca/local_execution_structure/20260216/evidence/required_paths_check.json": "068991f3908310b0fce7dd0ff51fb308bf276de1ae205c06e885060acfb5abb3",
+    "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_summary.json": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
+    "outputs/governanca/local_execution_structure/20260216/evidence/constitution_emenda_conflict_check.json": "4320b93b11b7c44fc2f33d4e05bf4531492798673e1bb5d0bcc5e88cac22097f",
+    "outputs/governanca/local_execution_structure/20260216/evidence/git_state_before.txt": "ab287e6cdaaa4e4698f66ada83c823108973e4cd396b8bac76dba1a1e7d24f34"
+  }
+}

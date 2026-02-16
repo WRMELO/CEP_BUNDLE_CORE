@@ -1,0 +1,6 @@
+branch=local/integrated-state-20260215
+head=0319b56190fe9708ecb18fdb7986ecc22d233092
+ M docs/LOCAL_DOCUMENT_INDEX.md
+?? docs/EXECUTION_STRUCTURE_LOCAL.md
+?? docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md
+?? planning/

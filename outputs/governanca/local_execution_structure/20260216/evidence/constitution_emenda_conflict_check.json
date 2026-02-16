@@ -1,0 +1,6 @@
+{
+  "constitution_ref": "docs/CONSTITUICAO.md#3.7,#4,#5",
+  "emenda_ref": "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+  "conflict_detected": false,
+  "analysis": "Emenda complementa politica de worktrees com modo padrao LOCAL_ROOT_ONLY sem remover possibilidade de worktrees de apoio; preserva governanca por emenda e evidencias obrigatorias."
+}

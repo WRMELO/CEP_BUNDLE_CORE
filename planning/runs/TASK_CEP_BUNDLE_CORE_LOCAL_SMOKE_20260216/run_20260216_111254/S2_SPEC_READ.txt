@@ -1,0 +1,1 @@
+spec_path=/home/wilson/CEP_BUNDLE_CORE/planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json

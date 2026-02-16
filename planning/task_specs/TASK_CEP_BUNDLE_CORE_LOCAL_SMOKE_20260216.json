@@ -1,0 +1,17 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216",
+  "intent": "Provar estrutura de execucao local em planning/* e outputs/governanca",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "mode": "LOCAL_ROOT_ONLY",
+    "required_paths": [
+      "planning/task_specs/",
+      "planning/runs/",
+      "outputs/governanca/local_execution_structure/20260216/"
+    ]
+  },
+  "outputs": {
+    "run_dir": "planning/runs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216/",
+    "proof_file": "outputs/governanca/local_execution_structure/20260216/smoke_run_output.json"
+  }
+}
