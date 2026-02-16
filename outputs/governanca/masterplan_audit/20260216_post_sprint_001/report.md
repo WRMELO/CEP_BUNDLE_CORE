@@ -37,4 +37,15 @@ Evidencias em `outputs/governanca/masterplan_audit/20260216_post_sprint_001/evid
 - S4_VERIFY_GAPS_REFRESHED: PASS
 - S5_VERIFY_COMPLIANCE_REFRESHED: PASS
 - S6_WRITE_MANIFEST_HASHES: PASS
-- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PENDING (apos commit/sync)
+- S7_VERIFY_REPO_CLEAN_AND_SYNCED: PASS
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `a9ed004709b379f3e805275d1cfcd7fb1744db62`
+- evidencias:
+  - `outputs/governanca/masterplan_audit/20260216_post_sprint_001/evidence/sync_fetch.txt`
+  - `outputs/governanca/masterplan_audit/20260216_post_sprint_001/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/masterplan_audit/20260216_post_sprint_001/evidence/sync_push.txt`
+  - `outputs/governanca/masterplan_audit/20260216_post_sprint_001/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
