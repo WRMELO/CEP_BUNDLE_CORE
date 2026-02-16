@@ -1,9 +1,9 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F0_014_MASTERPLAN_AUDIT_AND_CONSTITUTION_COMPLIANCE_V1",
-  "generated_at_utc": "2026-02-16T10:44:35.538063+00:00",
+  "generated_at_utc": "2026-02-16T10:44:55.985606+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "local/integrated-state-20260215",
-  "head": "02b2593f84ee7679291472823ac4548dabfd332a",
+  "head": "bfe587e8cee00dcac5c94f5e5250edcb05354233",
   "canonical_docs": {
     "masterplan": {
       "path": "/home/wilson/CEP_BUNDLE_CORE/docs/MASTERPLAN.md",
@@ -47,7 +47,7 @@
     "recommend_next_subtasks_md": "outputs/governanca/masterplan_audit/20260216/recommend_next_subtasks.md"
   },
   "hashes_sha256": {
-    "outputs/governanca/masterplan_audit/20260216/report.md": "1dc3453e6df1f09abd956cbe3972953a8e15659ab60e19b1248f5fd401b864db",
+    "outputs/governanca/masterplan_audit/20260216/report.md": "e4a38684b2ca9c22bfa8f7139256985459753c3150ebdd99de732a8e288027bb",
     "outputs/governanca/masterplan_audit/20260216/masterplan_inventory.json": "0c4e0a98cce5af9d0ebaca8ce79c4f1221095762b1cf330eb14149078e7fcb83",
     "outputs/governanca/masterplan_audit/20260216/masterplan_to_tasks_map.csv": "970c76b54936ffb369d7397db9c98b775c153b301209448830f1ed6de468438c",
     "outputs/governanca/masterplan_audit/20260216/gaps_and_backlog.json": "6575d7b1f15c055670bab5a645bfa33d650f1a46897e21da0e50c213fe405b00",
@@ -64,7 +64,7 @@
     "outputs/governanca/masterplan_audit/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
     "outputs/governanca/masterplan_audit/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
-  "head_after_sync": "ea1c69e07548eebe433852454de64620ce39eff0",
+  "head_after_sync": "bfe587e8cee00dcac5c94f5e5250edcb05354233",
   "sync_evidence": {
     "fetch": "outputs/governanca/masterplan_audit/20260216/evidence/sync_fetch.txt",
     "pull_ff_only": "outputs/governanca/masterplan_audit/20260216/evidence/sync_pull_ff_only.txt",

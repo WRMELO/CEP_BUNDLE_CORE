@@ -4,7 +4,7 @@
 - generated_at_utc: `2026-02-16T10:43:30.584286+00:00`
 - repo_root: `/home/wilson/CEP_BUNDLE_CORE`
 - branch: `local/integrated-state-20260215`
-- head: `02b2593f84ee7679291472823ac4548dabfd332a`
+- head: `bfe587e8cee00dcac5c94f5e5250edcb05354233`
 
 ## 1) SSOT documental usado na auditoria
 
@@ -57,7 +57,7 @@ Sequencia proposta: aplicar CDI v5 -> executar E1/E2 -> fechar E3/E5 -> fechar G
 ## 8) Fechamento de sync
 
 - branch: `local/integrated-state-20260215`
-- head_after_sync: `ea1c69e07548eebe433852454de64620ce39eff0`
+- head_after_sync: `bfe587e8cee00dcac5c94f5e5250edcb05354233`
 - evidencias:
   - `outputs/governanca/masterplan_audit/20260216/evidence/sync_fetch.txt`
   - `outputs/governanca/masterplan_audit/20260216/evidence/sync_pull_ff_only.txt`
