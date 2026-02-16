@@ -1,0 +1,49 @@
+{
+  "execution_philosophy_audit": {
+    "statement": "Validar se cada item do Masterplan gera (sub)tasks executadas ate o necessario antes de avancar.",
+    "assessment": "PARCIALMENTE_SEGUIDA",
+    "evidence": [
+      "outputs/governanca/masterplan/20260215/report.md",
+      "outputs/gaps/m3_w1_w2/20260215/report.md",
+      "outputs/instrumentation/m3_w1_w2/20260215/report.md",
+      "docs/MASTERPLAN.md"
+    ]
+  },
+  "skipped_items": [
+    {
+      "masterplan_item": "Plano de experimentos (ablation controlado) - fases E1..E5",
+      "type": "ITEM_PULADO",
+      "evidence": [
+        "docs/MASTERPLAN.md",
+        "outputs/governanca/masterplan/20260215/report.md"
+      ],
+      "reason": "Nao ha artefatos de task explicitamente nomeados para E1..E5 no repo local."
+    },
+    {
+      "masterplan_item": "Plano explicito anti-deriva W2 (itens 1..5)",
+      "type": "PARCIAL",
+      "evidence": [
+        "outputs/instrumentation/m3_w1_w2/20260215/report.md",
+        "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md"
+      ],
+      "reason": "Instrumentacao avancou, mas nao ha pacote final de controlador/guardrails completos com fechamento de todas as camadas."
+    }
+  ],
+  "execution_jumps": [
+    {
+      "description": "Aplicacoes normativas de custo/CDI (emendas e metricas v3/v4) executadas antes do fechamento integral do plano E1..E5.",
+      "classification": "SALTO_DE_EXECUCAO_CONTROLADO",
+      "evidence": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+        "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/report.md",
+        "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md"
+      ]
+    }
+  ],
+  "backlog_priorizado": [
+    "Aplicar CDI SSOT em metricas (v5) e fechar cash_cdi_status aplicado.",
+    "Executar plano de experimentos E1..E5 do Masterplan com manifests comparativos.",
+    "Fechar G1..G4 do bloco de gaps com metas quantitativas do Masterplan."
+  ]
+}

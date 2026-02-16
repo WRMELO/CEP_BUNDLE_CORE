@@ -1,0 +1,80 @@
+{
+  "orphan_count": 15,
+  "items": [
+    {
+      "path": "outputs/governanca/session_state_transfer/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/ssot_cdi/20260215/manifest.json",
+      "classification": "legado/indeterminado",
+      "justification": "Nao classificado por padrao de path."
+    },
+    {
+      "path": "outputs/governanca/git_init/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/git_ssh_verify/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/emendas/20260215_cost_model/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Normativo basilar de suporte ao Masterplan."
+    },
+    {
+      "path": "outputs/governanca/canonicalize_docs/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/fix_bootstrap_clean/20260215/manifest.json",
+      "classification": "legado/indeterminado",
+      "justification": "Nao classificado por padrao de path."
+    },
+    {
+      "path": "outputs/governanca/constituicao_forense/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Normativo basilar de suporte ao Masterplan."
+    },
+    {
+      "path": "outputs/governanca/git_sync/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/git_ssh_fix/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/worktrees/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/local_migration/20260216/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    },
+    {
+      "path": "outputs/governanca/bootstrap_repo/20260215/manifest.json",
+      "classification": "legado/indeterminado",
+      "justification": "Nao classificado por padrao de path."
+    },
+    {
+      "path": "outputs/governanca/verify_cdi_cash/20260215/manifest.json",
+      "classification": "legado/indeterminado",
+      "justification": "Nao classificado por padrao de path."
+    },
+    {
+      "path": "outputs/governanca/git_init_fix/20260215/manifest.json",
+      "classification": "utilitario/governanca",
+      "justification": "Infra de operacao, sync, ou organizacao documental; nao implementa item tecnico direto do Masterplan."
+    }
+  ]
+}

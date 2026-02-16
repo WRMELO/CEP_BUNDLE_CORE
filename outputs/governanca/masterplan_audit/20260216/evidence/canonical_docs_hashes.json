@@ -1,0 +1,20 @@
+{
+  "masterplan": {
+    "path": "/home/wilson/CEP_BUNDLE_CORE/docs/MASTERPLAN.md",
+    "sha256": "dc236345b75d9665a9555813e2556a9941462ff9e7ff274879332304b5733ea4"
+  },
+  "constitution": {
+    "path": "/home/wilson/CEP_BUNDLE_CORE/docs/CONSTITUICAO.md",
+    "sha256": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63"
+  },
+  "amendments": [
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "sha256": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0"
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "sha256": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8"
+    }
+  ]
+}

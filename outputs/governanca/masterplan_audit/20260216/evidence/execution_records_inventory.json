@@ -1,0 +1,42 @@
+{
+  "task_specs_root_exists": false,
+  "task_specs_count": 0,
+  "runs_root_exists": false,
+  "runs_json_count": 0,
+  "governance_manifest_count": 15,
+  "governance_report_count": 15,
+  "sample_manifests": [
+    "outputs/governanca/bootstrap_repo/20260215/manifest.json",
+    "outputs/governanca/canonicalize_docs/20260215/manifest.json",
+    "outputs/governanca/constituicao_forense/20260215/manifest.json",
+    "outputs/governanca/emendas/20260215_cost_model/manifest.json",
+    "outputs/governanca/fix_bootstrap_clean/20260215/manifest.json",
+    "outputs/governanca/git_init/20260215/manifest.json",
+    "outputs/governanca/git_init_fix/20260215/manifest.json",
+    "outputs/governanca/git_ssh_fix/20260215/manifest.json",
+    "outputs/governanca/git_ssh_verify/20260215/manifest.json",
+    "outputs/governanca/git_sync/20260215/manifest.json",
+    "outputs/governanca/local_migration/20260216/manifest.json",
+    "outputs/governanca/session_state_transfer/20260215/manifest.json",
+    "outputs/governanca/ssot_cdi/20260215/manifest.json",
+    "outputs/governanca/verify_cdi_cash/20260215/manifest.json",
+    "outputs/governanca/worktrees/20260215/manifest.json"
+  ],
+  "sample_reports": [
+    "outputs/governanca/bootstrap_repo/20260215/report.md",
+    "outputs/governanca/canonicalize_docs/20260215/report.md",
+    "outputs/governanca/constituicao_forense/20260215/report.md",
+    "outputs/governanca/emendas/20260215_cost_model/report.md",
+    "outputs/governanca/fix_bootstrap_clean/20260215/report.md",
+    "outputs/governanca/git_init/20260215/report.md",
+    "outputs/governanca/git_init_fix/20260215/report.md",
+    "outputs/governanca/git_ssh_fix/20260215/report.md",
+    "outputs/governanca/git_ssh_verify/20260215/report.md",
+    "outputs/governanca/git_sync/20260215/report.md",
+    "outputs/governanca/local_migration/20260216/report.md",
+    "outputs/governanca/session_state_transfer/20260215/report.md",
+    "outputs/governanca/ssot_cdi/20260215/report.md",
+    "outputs/governanca/verify_cdi_cash/20260215/report.md",
+    "outputs/governanca/worktrees/20260215/report.md"
+  ]
+}

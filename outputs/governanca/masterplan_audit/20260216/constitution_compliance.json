@@ -1,0 +1,62 @@
+{
+  "policy_note": "Nenhuma violacao e inferida sem evidencia textual/artefactual.",
+  "rules": [
+    {
+      "regra": "Runtime oficial deve ser /home/wilson/PortfolioZero/.venv/bin/python",
+      "source": "docs/CONSTITUICAO.md#3.1",
+      "status": "COMPLIANT",
+      "evidencias": [
+        "outputs/governanca/ssot_cdi/20260215/report.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE.md"
+      ]
+    },
+    {
+      "regra": "Formato canonico tabular: Parquet",
+      "source": "docs/CONSTITUICAO.md#3.2",
+      "status": "COMPLIANT",
+      "evidencias": [
+        "data/ssot/cdi/cdi_daily.parquet",
+        "outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json",
+        "outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json"
+      ]
+    },
+    {
+      "regra": "Execucoes devem ter gates verificaveis e OVERALL PASS condicionado",
+      "source": "docs/CONSTITUICAO.md#3.5",
+      "status": "COMPLIANT",
+      "evidencias": [
+        "outputs/governanca/local_migration/20260216/report.md",
+        "outputs/governanca/session_state_transfer/20260215/report.md"
+      ]
+    },
+    {
+      "regra": "Toda governanca deve gerar report.md, manifest.json e evidence/",
+      "source": "docs/CONSTITUICAO.md#4",
+      "status": "COMPLIANT",
+      "evidencias": [
+        "outputs/governanca/masterplan/20260215/report.md",
+        "outputs/governanca/masterplan/20260215/manifest.json",
+        "outputs/governanca/masterplan/20260215/evidence/"
+      ]
+    },
+    {
+      "regra": "Mudancas estruturais devem ser por emendas formais",
+      "source": "docs/CONSTITUICAO.md#5",
+      "status": "COMPLIANT",
+      "evidencias": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md"
+      ]
+    },
+    {
+      "regra": "Worktrees dedicados por fase quando definidos pela governanca",
+      "source": "docs/CONSTITUICAO.md#3.7",
+      "status": "NO_EVIDENCE",
+      "evidencias": [
+        "outputs/governanca/local_migration/20260216/report.md",
+        "docs/LOCAL_DOCUMENT_INDEX.md"
+      ],
+      "nota": "Modo operacional migrou para LOCAL_ROOT; sem texto de emenda explicita ainda para atualizar esta politica."
+    }
+  ]
+}

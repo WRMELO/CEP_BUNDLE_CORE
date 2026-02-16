@@ -1,0 +1,15 @@
+masterplan_id,masterplan_title,task_id,status,evidencias
+MP-003,Baseline M3 (fixado para o bundle),TASK_CEP_BUNDLE_CORE_F1_002_MASTERPLAN_ANCHORED_IN_CORPUS_M3_CEP_V1,PASS,docs/MASTERPLAN.md; outputs/governanca/masterplan/20260215/report.md; outputs/governanca/masterplan/20260215/manifest.json
+MP-004,"Metricas historicas (W1 e W2, incluindo ponto de ruptura)",TASK_CEP_BUNDLE_CORE_F1_003_CLOSE_GAPS_M3_W1_W2_QUANT_V1,PASS,outputs/gaps/m3_w1_w2/20260215/metrics_m3_w1_w2.json; outputs/gaps/m3_w1_w2/20260215/report.md
+MP-009,Plano de validacao,TASK_CEP_BUNDLE_CORE_F1_004_INSTRUMENTATION_W1W2_AND_COSTS_V1,PASS,outputs/instrumentation/m3_w1_w2/20260215/metrics_m3_w1_w2_v2.json; outputs/instrumentation/m3_w1_w2/20260215/report.md
+MP-010,"Governanca operacional (Agno, gates, manifests, Plotly)",TASK_CEP_BUNDLE_CORE_F0_999_SESSION_STATE_TRANSFER_PACKAGE_V1,PASS,docs/SESSION_STATE_TRANSFER_PACKAGE.md; outputs/governanca/session_state_transfer/20260215/report.md
+MP-010,"Governanca operacional (Agno, gates, manifests, Plotly)",TASK_CEP_BUNDLE_CORE_F0_013_MIGRATE_WORKTREES_TO_LOCAL_OPERATION_V1,PASS,docs/LOCAL_DOCUMENT_INDEX.md; outputs/governanca/local_migration/20260216/report.md
+MP-011,Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL),TASK_CEP_BUNDLE_CORE_F1_001_BUILD_CORPUS_FROM_LEGACY_V1,PASS,docs/corpus/corpus_index.json; outputs/governanca/corpus_build/20260215/report.md
+MP-011,Gaps do corpus a fechar (fase obrigatoria antes de evoluir M3/RL),TASK_CEP_BUNDLE_CORE_F1_003_CLOSE_GAPS_M3_W1_W2_QUANT_V1,PARCIAL,outputs/gaps/m3_w1_w2/20260215/report.md; outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md
+MP-005,SPC/CEP como camada estruturante,TASK_CEP_BUNDLE_CORE_F1_012_APPLY_CDI_SSOT_TO_METRICS_V5,NAO_EXECUTADA,docs/MASTERPLAN.md; docs/SESSION_STATE_TRANSFER_PACKAGE.md
+MP-008,Plano de experimentos (ablation controlado),TASKS_E1_E5_ABLATION,NAO_EXECUTADA,docs/MASTERPLAN.md
+MP-007,Plano explicito anti-deriva W2,TASKS_ANTI_DERIVA_IMPLEMENTACAO_CONTROLADOR,NAO_EXECUTADA,docs/MASTERPLAN.md; outputs/instrumentation/m3_w1_w2/20260215/report.md
+MP-001,Visao,SEM_TASK_MAPEADA,NAO_EXECUTADA,docs/MASTERPLAN.md
+MP-002,Objetivo real (anti-deriva e anti-bloqueio),SEM_TASK_MAPEADA,NAO_EXECUTADA,docs/MASTERPLAN.md
+MP-006,Politica de decisao (onde RL entra),SEM_TASK_MAPEADA,NAO_EXECUTADA,docs/MASTERPLAN.md
+MP-012,Diagrama de alto nivel,SEM_TASK_MAPEADA,NAO_EXECUTADA,docs/MASTERPLAN.md

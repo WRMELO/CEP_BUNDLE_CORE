@@ -1,0 +1,63 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_F0_014_MASTERPLAN_AUDIT_AND_CONSTITUTION_COMPLIANCE_V1",
+  "generated_at_utc": "2026-02-16T10:43:30.598420+00:00",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch": "local/integrated-state-20260215",
+  "head": "02b2593f84ee7679291472823ac4548dabfd332a",
+  "canonical_docs": {
+    "masterplan": {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/docs/MASTERPLAN.md",
+      "sha256": "dc236345b75d9665a9555813e2556a9941462ff9e7ff274879332304b5733ea4"
+    },
+    "constitution": {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/docs/CONSTITUICAO.md",
+      "sha256": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63"
+    },
+    "amendments": [
+      {
+        "path": "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "sha256": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0"
+      },
+      {
+        "path": "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+        "sha256": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8"
+      }
+    ]
+  },
+  "gates": {
+    "S1_GATE_ALLOWLIST": "PASS",
+    "S2_VERIFY_MASTERPLAN_FOUND_AND_CANONICAL": "PASS",
+    "S3_VERIFY_CONSTITUTION_AND_AMENDMENTS_FOUND_AND_CANONICAL": "PASS",
+    "S4_VERIFY_MASTERPLAN_INVENTORY_NONEMPTY": "PASS",
+    "S5_VERIFY_MASTERPLAN_TO_TASKS_MAP_CREATED": "PASS",
+    "S6_VERIFY_GAPS_AND_ORPHANS_EMITTED_WITH_EVIDENCE": "PASS",
+    "S7_VERIFY_CONSTITUTION_COMPLIANCE_EMITTED": "PASS",
+    "S8_VERIFY_REPORT_TRACEABLE_AND_SELF_CONTAINED": "PASS",
+    "S9_WRITE_MANIFEST_HASHES": "PASS",
+    "S10_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+  },
+  "outputs": {
+    "report_md": "outputs/governanca/masterplan_audit/20260216/report.md",
+    "manifest_json": "outputs/governanca/masterplan_audit/20260216/manifest.json",
+    "masterplan_inventory_json": "outputs/governanca/masterplan_audit/20260216/masterplan_inventory.json",
+    "masterplan_to_tasks_map_csv": "outputs/governanca/masterplan_audit/20260216/masterplan_to_tasks_map.csv",
+    "gaps_and_backlog_json": "outputs/governanca/masterplan_audit/20260216/gaps_and_backlog.json",
+    "constitution_compliance_json": "outputs/governanca/masterplan_audit/20260216/constitution_compliance.json",
+    "orphan_tasks_json": "outputs/governanca/masterplan_audit/20260216/orphan_tasks.json",
+    "recommend_next_subtasks_md": "outputs/governanca/masterplan_audit/20260216/recommend_next_subtasks.md"
+  },
+  "hashes_sha256": {
+    "outputs/governanca/masterplan_audit/20260216/report.md": "547fb01ba40b9d35320e8bacfe891fb89581e061e7fab597995f4cc941b5a1bc",
+    "outputs/governanca/masterplan_audit/20260216/masterplan_inventory.json": "0c4e0a98cce5af9d0ebaca8ce79c4f1221095762b1cf330eb14149078e7fcb83",
+    "outputs/governanca/masterplan_audit/20260216/masterplan_to_tasks_map.csv": "970c76b54936ffb369d7397db9c98b775c153b301209448830f1ed6de468438c",
+    "outputs/governanca/masterplan_audit/20260216/gaps_and_backlog.json": "6575d7b1f15c055670bab5a645bfa33d650f1a46897e21da0e50c213fe405b00",
+    "outputs/governanca/masterplan_audit/20260216/constitution_compliance.json": "1c703ecbe4973ba1f3eb2840e3f92b376fdc75eecaea793fbc2134adb536acee",
+    "outputs/governanca/masterplan_audit/20260216/orphan_tasks.json": "adbdee647b205ea22029672cbeb633a56c1cb20165412e023faa5ba889909b1b",
+    "outputs/governanca/masterplan_audit/20260216/recommend_next_subtasks.md": "d08655ab033305601461cac3d30fe8c4f6b43f6f28d491a824dced6afae9be1d",
+    "outputs/governanca/masterplan_audit/20260216/evidence/discovery_candidates.json": "3b3435ad93df847d2a75ce3194cf74c0934bc6a7385628be226f17d7240b3552",
+    "outputs/governanca/masterplan_audit/20260216/evidence/canonical_docs_hashes.json": "f85b3b7f79a488b4b74705802854128a52dc62516d5dcb6bbe152742d6bc4721",
+    "outputs/governanca/masterplan_audit/20260216/evidence/execution_records_inventory.json": "5ead24667cd3fbe379bd630aa84a9db5819a49aa0e24c28a9ba9dde31c7d1591",
+    "outputs/governanca/masterplan_audit/20260216/evidence/git_state.txt": "ed798698dd64d0370e1f6dd3d501ec7320704fe62f41229511d1213cdf69f34a",
+    "outputs/governanca/masterplan_audit/20260216/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "masterplan": [
+    "/home/wilson/CEP_BUNDLE_CORE/docs/MASTERPLAN.md",
+    "/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.md"
+  ],
+  "constitution": [
+    "/home/wilson/CEP_BUNDLE_CORE/docs/CONSTITUICAO.md",
+    "/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.md"
+  ],
+  "amendments": [
+    "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+    "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+    "/home/wilson/CEP_BUNDLE_CORE/docs/emendas/EMENDA_TEMPLATE.md",
+    "/home/wilson/CEP_BUNDLE_CORE/docs/SESSION_STATE_TRANSFER_PACKAGE.md"
+  ]
+}
