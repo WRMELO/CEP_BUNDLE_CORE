@@ -53,3 +53,14 @@ Sequencia proposta: aplicar CDI v5 -> executar E1/E2 -> fechar E3/E5 -> fechar G
 - `evidence/execution_records_inventory.json`
 - `evidence/git_state.txt`
 - `evidence/status_before.txt`
+
+## 8) Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `0189421d3f204a2caf23923b8464cc2fe9a2b8d7`
+- evidencias:
+  - `outputs/governanca/masterplan_audit/20260216/evidence/sync_fetch.txt`
+  - `outputs/governanca/masterplan_audit/20260216/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/masterplan_audit/20260216/evidence/sync_push.txt`
+  - `outputs/governanca/masterplan_audit/20260216/evidence/status_after_sync.txt`
+- OVERALL: **PASS**

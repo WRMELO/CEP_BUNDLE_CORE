@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F0_014_MASTERPLAN_AUDIT_AND_CONSTITUTION_COMPLIANCE_V1",
-  "generated_at_utc": "2026-02-16T10:43:30.598420+00:00",
+  "generated_at_utc": "2026-02-16T10:44:19.097345+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "local/integrated-state-20260215",
   "head": "02b2593f84ee7679291472823ac4548dabfd332a",
@@ -34,7 +34,7 @@
     "S7_VERIFY_CONSTITUTION_COMPLIANCE_EMITTED": "PASS",
     "S8_VERIFY_REPORT_TRACEABLE_AND_SELF_CONTAINED": "PASS",
     "S9_WRITE_MANIFEST_HASHES": "PASS",
-    "S10_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S10_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "outputs": {
     "report_md": "outputs/governanca/masterplan_audit/20260216/report.md",
@@ -47,7 +47,7 @@
     "recommend_next_subtasks_md": "outputs/governanca/masterplan_audit/20260216/recommend_next_subtasks.md"
   },
   "hashes_sha256": {
-    "outputs/governanca/masterplan_audit/20260216/report.md": "547fb01ba40b9d35320e8bacfe891fb89581e061e7fab597995f4cc941b5a1bc",
+    "outputs/governanca/masterplan_audit/20260216/report.md": "11ad5133ba6b98ea12ef88af1ba1191c14397471a1ad195c1cfe0c42f5d61261",
     "outputs/governanca/masterplan_audit/20260216/masterplan_inventory.json": "0c4e0a98cce5af9d0ebaca8ce79c4f1221095762b1cf330eb14149078e7fcb83",
     "outputs/governanca/masterplan_audit/20260216/masterplan_to_tasks_map.csv": "970c76b54936ffb369d7397db9c98b775c153b301209448830f1ed6de468438c",
     "outputs/governanca/masterplan_audit/20260216/gaps_and_backlog.json": "6575d7b1f15c055670bab5a645bfa33d650f1a46897e21da0e50c213fe405b00",
@@ -58,6 +58,17 @@
     "outputs/governanca/masterplan_audit/20260216/evidence/canonical_docs_hashes.json": "f85b3b7f79a488b4b74705802854128a52dc62516d5dcb6bbe152742d6bc4721",
     "outputs/governanca/masterplan_audit/20260216/evidence/execution_records_inventory.json": "5ead24667cd3fbe379bd630aa84a9db5819a49aa0e24c28a9ba9dde31c7d1591",
     "outputs/governanca/masterplan_audit/20260216/evidence/git_state.txt": "ed798698dd64d0370e1f6dd3d501ec7320704fe62f41229511d1213cdf69f34a",
-    "outputs/governanca/masterplan_audit/20260216/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "outputs/governanca/masterplan_audit/20260216/evidence/status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/governanca/masterplan_audit/20260216/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/governanca/masterplan_audit/20260216/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/governanca/masterplan_audit/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/governanca/masterplan_audit/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "head_after_sync": "0189421d3f204a2caf23923b8464cc2fe9a2b8d7",
+  "sync_evidence": {
+    "fetch": "outputs/governanca/masterplan_audit/20260216/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/governanca/masterplan_audit/20260216/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/governanca/masterplan_audit/20260216/evidence/sync_push.txt",
+    "status_after_sync": "outputs/governanca/masterplan_audit/20260216/evidence/status_after_sync.txt"
   }
 }
