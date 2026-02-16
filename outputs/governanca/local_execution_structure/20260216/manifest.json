@@ -1,6 +1,6 @@
 {
   "task_id": "TASK_CEP_BUNDLE_CORE_F0_015_RESTORE_LOCAL_EXECUTION_STRUCTURE_AND_NORMATIVE_V1",
-  "generated_at_utc": "2026-02-16T11:14:10.033381+00:00",
+  "generated_at_utc": "2026-02-16T11:14:49.872292+00:00",
   "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
   "branch": "local/integrated-state-20260215",
   "head_before_commit": "0319b56190fe9708ecb18fdb7986ecc22d233092",
@@ -20,7 +20,7 @@
     "S5_VERIFY_SMOKE_RUN_PROVES_PLANNING_RUNS_GENERATED": "PASS",
     "S6_VERIFY_REPORT_TRACEABLE_AND_SELF_CONTAINED": "PASS",
     "S7_WRITE_MANIFEST_HASHES": "PASS",
-    "S8_VERIFY_REPO_CLEAN_AND_SYNCED": "PENDING"
+    "S8_VERIFY_REPO_CLEAN_AND_SYNCED": "PASS"
   },
   "hashes_sha256": {
     "docs/EXECUTION_STRUCTURE_LOCAL.md": "f6fa7f1f7d530a466ac5d7256b0676be3c106566f229d6f759c560a952aa97c7",
@@ -28,11 +28,22 @@
     "docs/LOCAL_DOCUMENT_INDEX.md": "be5274037fb6ef161cd7ed5f2f75da81b8332ec70eda58f10b9e5c3a1562ac56",
     "planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json": "663f93d8e43d7d01320d092b08b6c0d78ea82aa9dabc2b8ee1db11f5910bc56b",
     "outputs/governanca/local_execution_structure/20260216/smoke_run_output.json": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
-    "outputs/governanca/local_execution_structure/20260216/report.md": "7cd03a5a5a874cedeb7221c738824b48b065bf02eaba3d5cac1f3ec328780118",
+    "outputs/governanca/local_execution_structure/20260216/report.md": "8948f2d68e1241685388273af89b2ea8fdc53a4811722c886ea69e0fd1b53805",
     "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_command.log": "bf01c5110d87df9aacf8fd06294387ed8b9c302122b41d29fb9268c096929ec5",
     "outputs/governanca/local_execution_structure/20260216/evidence/required_paths_check.json": "068991f3908310b0fce7dd0ff51fb308bf276de1ae205c06e885060acfb5abb3",
     "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_summary.json": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
     "outputs/governanca/local_execution_structure/20260216/evidence/constitution_emenda_conflict_check.json": "4320b93b11b7c44fc2f33d4e05bf4531492798673e1bb5d0bcc5e88cac22097f",
-    "outputs/governanca/local_execution_structure/20260216/evidence/git_state_before.txt": "ab287e6cdaaa4e4698f66ada83c823108973e4cd396b8bac76dba1a1e7d24f34"
+    "outputs/governanca/local_execution_structure/20260216/evidence/git_state_before.txt": "ab287e6cdaaa4e4698f66ada83c823108973e4cd396b8bac76dba1a1e7d24f34",
+    "outputs/governanca/local_execution_structure/20260216/evidence/sync_fetch.txt": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+    "outputs/governanca/local_execution_structure/20260216/evidence/sync_pull_ff_only.txt": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+    "outputs/governanca/local_execution_structure/20260216/evidence/sync_push.txt": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+    "outputs/governanca/local_execution_structure/20260216/evidence/status_after_sync.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "head_after_sync": "cddda4b35046b9d8ac433dc9e73aa9e15c01accb",
+  "sync_evidence": {
+    "fetch": "outputs/governanca/local_execution_structure/20260216/evidence/sync_fetch.txt",
+    "pull_ff_only": "outputs/governanca/local_execution_structure/20260216/evidence/sync_pull_ff_only.txt",
+    "push": "outputs/governanca/local_execution_structure/20260216/evidence/sync_push.txt",
+    "status_after_sync": "outputs/governanca/local_execution_structure/20260216/evidence/status_after_sync.txt"
   }
 }

@@ -48,4 +48,15 @@ Atualizado `docs/LOCAL_DOCUMENT_INDEX.md` para incluir:
 - S5_VERIFY_SMOKE_RUN_PROVES_PLANNING_RUNS_GENERATED: PASS
 - S6_VERIFY_REPORT_TRACEABLE_AND_SELF_CONTAINED: PASS
 - S7_WRITE_MANIFEST_HASHES: PASS
-- S8_VERIFY_REPO_CLEAN_AND_SYNCED: PENDING (apos commit/sync)
+- S8_VERIFY_REPO_CLEAN_AND_SYNCED: PASS
+
+## Fechamento de sync
+
+- branch: `local/integrated-state-20260215`
+- head_after_sync: `cddda4b35046b9d8ac433dc9e73aa9e15c01accb`
+- evidencias:
+  - `outputs/governanca/local_execution_structure/20260216/evidence/sync_fetch.txt`
+  - `outputs/governanca/local_execution_structure/20260216/evidence/sync_pull_ff_only.txt`
+  - `outputs/governanca/local_execution_structure/20260216/evidence/sync_push.txt`
+  - `outputs/governanca/local_execution_structure/20260216/evidence/status_after_sync.txt`
+- OVERALL: **PASS**
