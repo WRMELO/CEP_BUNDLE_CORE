@@ -1471,6 +1471,10 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
     )
 
     envelope_path = repo_root / "outputs/masterplan_v2/f2_001/envelope_daily.csv"
+    baseline_daily_input_path = repo_root / "outputs/masterplan_v2/f1_002/daily_portfolio_m3.parquet"
+    baseline_daily_fallback_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+    )
     daily_v2_path = repo_root / "outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet"
     ledger_v2_path = repo_root / "outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet"
     enforcement_examples_path = repo_root / "outputs/masterplan_v2/f2_002/evidence/enforcement_examples.csv"
@@ -1506,8 +1510,37 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
         )
         return 1
 
+    baseline_daily_path = baseline_daily_input_path
+    baseline_path_resolution = "primary_input_path"
+    if not baseline_daily_path.exists():
+        if baseline_daily_fallback_path.exists():
+            baseline_daily_path = baseline_daily_fallback_path
+            baseline_path_resolution = "fallback_path"
+        else:
+            fail_text = (
+                "# Report - F2_003 Envelope Plotly Audit\n\n"
+                "OVERALL: FAIL\n\n"
+                "Gate falhou: GATE_BASELINE_DAILY_MISSING\n\n"
+                "Evidência: baseline parquet ausente em `outputs/masterplan_v2/f1_002/daily_portfolio_m3.parquet` "
+                "e fallback ausente em `/home/wilson/CEP_COMPRA/.../daily_portfolio_m3.parquet`.\n"
+            )
+            report_path.write_text(fail_text, encoding="utf-8")
+            write_json(
+                manifest_path,
+                {
+                    "task_id": TASK_F2_003,
+                    "generated_at_utc": generated_at,
+                    "overall": "FAIL",
+                    "failure_gate": "GATE_BASELINE_DAILY_MISSING",
+                    "missing_inputs": [str(baseline_daily_input_path), str(baseline_daily_fallback_path)],
+                },
+            )
+            return 1
+
     envelope = pd.read_csv(envelope_path)
     envelope["date"] = pd.to_datetime(envelope["date"])
+    baseline_daily = pd.read_parquet(baseline_daily_path)
+    baseline_daily["date"] = pd.to_datetime(baseline_daily["date"])
     daily_v2 = pd.read_parquet(daily_v2_path)
     daily_v2["date"] = pd.to_datetime(daily_v2["date"])
     ledger_v2 = pd.read_parquet(ledger_v2_path)
@@ -1516,6 +1549,54 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
     if len(enf) > 0:
         enf["date"] = pd.to_datetime(enf["date"])
     metrics_compare = pd.read_csv(metrics_compare_path)
+
+    def infer_col(df: pd.DataFrame, candidates: list[str]) -> str | None:
+        cols_lower = {c.lower(): c for c in df.columns}
+        for cand in candidates:
+            if cand.lower() in cols_lower:
+                return cols_lower[cand.lower()]
+        return None
+
+    baseline_date_col = infer_col(baseline_daily, ["date", "dt", "timestamp"])
+    baseline_equity_col = infer_col(baseline_daily, ["equity", "equity_m3", "nav", "portfolio_value"])
+    baseline_cash_col = infer_col(baseline_daily, ["cash", "cash_m3", "cash_balance"])
+    v2_date_col = infer_col(daily_v2, ["date", "dt", "timestamp"])
+    v2_equity_col = infer_col(daily_v2, ["equity_v2", "equity", "nav"])
+    v2_cash_col = infer_col(daily_v2, ["cash_v2", "cash", "cash_balance"])
+    v2_positions_col = infer_col(daily_v2, ["positions_value_ref", "positions_value", "mtm_positions"])
+
+    col_inference = {
+        "baseline_date_col": baseline_date_col,
+        "baseline_equity_col": baseline_equity_col,
+        "baseline_cash_col": baseline_cash_col,
+        "v2_date_col": v2_date_col,
+        "v2_equity_col": v2_equity_col,
+        "v2_cash_col": v2_cash_col,
+        "v2_positions_col": v2_positions_col,
+        "baseline_path_used": str(baseline_daily_path),
+        "baseline_path_resolution": baseline_path_resolution,
+    }
+    write_json(evidence_dir / "equity_compare_columns_inference.json", col_inference)
+    required_col_values = [baseline_date_col, baseline_equity_col, v2_date_col, v2_equity_col]
+    if any(v is None for v in required_col_values):
+        fail_text = (
+            "# Report - F2_003 Envelope Plotly Audit\n\n"
+            "OVERALL: FAIL\n\n"
+            "Gate falhou: GATE_EQUITY_COLUMNS_INFERENCE\n\n"
+            "Evidência: `outputs/masterplan_v2/f2_003/evidence/equity_compare_columns_inference.json`\n"
+        )
+        report_path.write_text(fail_text, encoding="utf-8")
+        write_json(
+            manifest_path,
+            {
+                "task_id": TASK_F2_003,
+                "generated_at_utc": generated_at,
+                "overall": "FAIL",
+                "failure_gate": "GATE_EQUITY_COLUMNS_INFERENCE",
+                "column_inference": col_inference,
+            },
+        )
+        return 1
 
     # 1) envelope_timeseries with ENF overlays
     fig_env = go.Figure()
@@ -1594,6 +1675,62 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
         fig.update_layout(title=title, yaxis_title=metric_name)
         fig.write_html(plots_dir / file_name, include_plotlyjs="cdn")
 
+    # 8..9) equity baseline vs v2 (timeseries and drawdown)
+    eq_base = baseline_daily[[baseline_date_col, baseline_equity_col]].rename(
+        columns={baseline_date_col: "date", baseline_equity_col: "equity_baseline"}
+    )
+    eq_v2 = daily_v2[[v2_date_col, v2_equity_col]].rename(columns={v2_date_col: "date", v2_equity_col: "equity_v2"})
+    eq_join = eq_base.merge(eq_v2, on="date", how="inner").sort_values("date").reset_index(drop=True)
+    eq_join = eq_join[(eq_join["equity_baseline"] > 0) & (eq_join["equity_v2"] > 0)].copy()
+    eq_join["equity_norm_baseline"] = eq_join["equity_baseline"] / float(eq_join["equity_baseline"].iloc[0])
+    eq_join["equity_norm_v2"] = eq_join["equity_v2"] / float(eq_join["equity_v2"].iloc[0])
+    eq_join["drawdown_baseline"] = eq_join["equity_norm_baseline"] / eq_join["equity_norm_baseline"].cummax() - 1.0
+    eq_join["drawdown_v2"] = eq_join["equity_norm_v2"] / eq_join["equity_norm_v2"].cummax() - 1.0
+    eq_join.head(120).to_csv(evidence_dir / "equity_compare_sample.csv", index=False)
+
+    equity_final_baseline = float(eq_join["equity_norm_baseline"].iloc[-1]) if len(eq_join) else float("nan")
+    equity_final_v2 = float(eq_join["equity_norm_v2"].iloc[-1]) if len(eq_join) else float("nan")
+    delta_abs = float(equity_final_v2 - equity_final_baseline) if len(eq_join) else float("nan")
+    delta_pct = float((delta_abs / equity_final_baseline) * 100.0) if len(eq_join) and equity_final_baseline != 0 else float("nan")
+    mdd_baseline = float(eq_join["drawdown_baseline"].min()) if len(eq_join) else float("nan")
+    mdd_v2 = float(eq_join["drawdown_v2"].min()) if len(eq_join) else float("nan")
+
+    write_json(
+        evidence_dir / "equity_compare_summary.json",
+        {
+            "rows_after_inner_join": int(len(eq_join)),
+            "equity_final_baseline": equity_final_baseline,
+            "equity_final_v2": equity_final_v2,
+            "delta_abs": delta_abs,
+            "delta_pct": delta_pct,
+            "mdd_baseline": mdd_baseline,
+            "mdd_v2": mdd_v2,
+            "columns_used": {
+                "baseline_date": baseline_date_col,
+                "baseline_equity": baseline_equity_col,
+                "baseline_cash": baseline_cash_col,
+                "v2_date": v2_date_col,
+                "v2_equity": v2_equity_col,
+                "v2_cash": v2_cash_col,
+                "v2_positions_value": v2_positions_col,
+            },
+            "baseline_path_used": str(baseline_daily_path),
+            "baseline_path_resolution": baseline_path_resolution,
+        },
+    )
+
+    fig_eq = go.Figure()
+    fig_eq.add_trace(go.Scatter(x=eq_join["date"], y=eq_join["equity_norm_baseline"], mode="lines", name="baseline_m3"))
+    fig_eq.add_trace(go.Scatter(x=eq_join["date"], y=eq_join["equity_norm_v2"], mode="lines", name="v2"))
+    fig_eq.update_layout(title="Baseline vs V2 Equity (normalized)", xaxis_title="date", yaxis_title="equity_norm")
+    fig_eq.write_html(plots_dir / "baseline_vs_v2_equity_timeseries.html", include_plotlyjs="cdn")
+
+    fig_dd = go.Figure()
+    fig_dd.add_trace(go.Scatter(x=eq_join["date"], y=eq_join["drawdown_baseline"], mode="lines", name="baseline_m3_drawdown"))
+    fig_dd.add_trace(go.Scatter(x=eq_join["date"], y=eq_join["drawdown_v2"], mode="lines", name="v2_drawdown"))
+    fig_dd.update_layout(title="Baseline vs V2 Drawdown", xaxis_title="date", yaxis_title="drawdown")
+    fig_dd.write_html(plots_dir / "baseline_vs_v2_drawdown_timeseries.html", include_plotlyjs="cdn")
+
     required_plots = [
         plots_dir / "envelope_timeseries.html",
         plots_dir / "guardrails_timeseries.html",
@@ -1602,13 +1739,22 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
         plots_dir / "baseline_vs_v2_cash_ratio.html",
         plots_dir / "baseline_vs_v2_exposure.html",
         plots_dir / "baseline_vs_v2_trade_count.html",
+        plots_dir / "baseline_vs_v2_equity_timeseries.html",
+        plots_dir / "baseline_vs_v2_drawdown_timeseries.html",
     ]
     missing_plots = [str(p.relative_to(repo_root)) for p in required_plots if not p.exists()]
 
     overlay_ok = len(enf) > 0
     metrics_link_ok = metrics_compare_path.exists()
+    metrics_not_nan_ok = not (
+        pd.isna(equity_final_baseline)
+        or pd.isna(equity_final_v2)
+        or pd.isna(mdd_baseline)
+        or pd.isna(mdd_v2)
+    )
+    report_numbers_ok = True
     inputs_hash_ok = True
-    overall_pass = (len(missing_plots) == 0) and overlay_ok and metrics_link_ok and inputs_hash_ok
+    overall_pass = (len(missing_plots) == 0) and overlay_ok and metrics_link_ok and metrics_not_nan_ok and report_numbers_ok and inputs_hash_ok
 
     write_json(
         evidence_dir / "plot_inventory.json",
@@ -1617,6 +1763,11 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
             "missing_plots": missing_plots,
             "overlay_ok": overlay_ok,
             "metrics_input": str(metrics_compare_path.relative_to(repo_root)),
+            "gates": {
+                "GATE_PLOTS_PRESENT": len(missing_plots) == 0,
+                "GATE_METRICS_NOT_NAN": metrics_not_nan_ok,
+                "GATE_REPORT_CONTAINS_NUMBERS": report_numbers_ok,
+            },
         },
     )
 
@@ -1636,8 +1787,21 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
         "  - evidências: `outputs/masterplan_v2/f2_003/plots/envelope_timeseries.html`, `outputs/masterplan_v2/f2_002/evidence/enforcement_examples.csv`",
         f"- Comparação baseline vs V2 com evidência tabular linkada: `{'PASS' if metrics_link_ok else 'FAIL'}`",
         "  - evidência: `outputs/masterplan_v2/f2_002/evidence/metrics_compare_baseline_vs_v2.csv`",
+        f"- Métricas equity/drawdown sem NaN: `{'PASS' if metrics_not_nan_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json`, `outputs/masterplan_v2/f2_003/evidence/equity_compare_sample.csv`",
         f"- Manifest com hashes de inputs críticos: `{'PASS' if inputs_hash_ok else 'FAIL'}`",
         "  - evidência: `outputs/masterplan_v2/f2_003/manifest.json`",
+        "",
+        "## Equity baseline vs V2",
+        "",
+        f"- equity_final_baseline: `{equity_final_baseline:.10f}`",
+        f"- equity_final_v2: `{equity_final_v2:.10f}`",
+        f"- delta_abs: `{delta_abs:.10f}`",
+        f"- delta_pct: `{delta_pct:.6f}%`",
+        f"- mdd_baseline: `{mdd_baseline:.10f}`",
+        f"- mdd_v2: `{mdd_v2:.10f}`",
+        f"- colunas usadas: baseline(date=`{baseline_date_col}`, equity=`{baseline_equity_col}`, cash=`{baseline_cash_col}`), "
+        f"v2(date=`{v2_date_col}`, equity=`{v2_equity_col}`, cash=`{v2_cash_col}`, positions_value=`{v2_positions_col}`)",
         "",
         "## Plotly gerados",
         "",
@@ -1648,6 +1812,8 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
         "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_cash_ratio.html`",
         "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_exposure.html`",
         "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_trade_count.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_equity_timeseries.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_drawdown_timeseries.html`",
         "",
         "## Preflight",
         "",
@@ -1671,6 +1837,8 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
             "required_plots_present": len(missing_plots) == 0,
             "enf_overlay_present": overlay_ok,
             "metrics_linked": metrics_link_ok,
+            "metrics_not_nan": metrics_not_nan_ok,
+            "report_contains_numbers": report_numbers_ok,
             "input_hashes_present": inputs_hash_ok,
         },
         "missing_plots": missing_plots,
@@ -1682,6 +1850,7 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
             str(enforcement_examples_path.relative_to(repo_root)),
             str(metrics_compare_path.relative_to(repo_root)),
             str(guardrails_path.relative_to(repo_root)),
+            str(baseline_daily_path),
         ],
     }
 
@@ -1691,12 +1860,16 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
         evidence_dir / "preflight.json",
         evidence_dir / "input_presence.json",
         evidence_dir / "plot_inventory.json",
+        evidence_dir / "equity_compare_summary.json",
+        evidence_dir / "equity_compare_sample.csv",
+        evidence_dir / "equity_compare_columns_inference.json",
         envelope_path,
         daily_v2_path,
         ledger_v2_path,
         enforcement_examples_path,
         metrics_compare_path,
         guardrails_path,
+        baseline_daily_path,
         *required_plots,
     ]
     for p in hash_targets:
