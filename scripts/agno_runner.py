@@ -1326,7 +1326,8 @@ def run_task_f2_002(repo_root: Path, task_spec: dict[str, Any]) -> int:
         },
     )
 
-    outputs_exist_ok = all(p.exists() for p in [report_path, manifest_path, evidence_dir, daily_v2_path, ledger_v2_path])
+    # manifest_path is generated after gate computation; check required artifacts except manifest here.
+    outputs_exist_ok = all(p.exists() for p in [report_path, evidence_dir, daily_v2_path, ledger_v2_path])
     invariants_ok = all(
         bool(invariant_summary[k])
         for k in [
