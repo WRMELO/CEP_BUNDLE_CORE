@@ -20,6 +20,7 @@ TASK_F1_001 = "TASK_CEP_BUNDLE_CORE_V2_F1_001_LEDGER_DAILY_PORTFOLIO_INTEGRITY"
 TASK_F1_002 = "TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION"
 TASK_F2_001 = "TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION"
 TASK_F2_002 = "TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT"
+TASK_F2_003 = "TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT"
 
 
 def sha256_file(path: Path) -> str:
@@ -1442,6 +1443,272 @@ def run_task_f2_002(repo_root: Path, task_spec: dict[str, Any]) -> int:
     return 0 if overall_pass else 1
 
 
+def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
+    out_dir = repo_root / "outputs/masterplan_v2/f2_003"
+    evidence_dir = out_dir / "evidence"
+    plots_dir = out_dir / "plots"
+    report_path = out_dir / "report.md"
+    manifest_path = out_dir / "manifest.json"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    evidence_dir.mkdir(parents=True, exist_ok=True)
+    plots_dir.mkdir(parents=True, exist_ok=True)
+
+    generated_at = datetime.now(timezone.utc).isoformat()
+    branch = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"], repo_root)
+    status = run_cmd(["git", "status", "--porcelain"], repo_root)
+    branch_name = branch.stdout.strip() if branch.returncode == 0 else "UNKNOWN"
+    status_lines = [ln for ln in status.stdout.splitlines() if ln.strip()]
+    write_json(
+        evidence_dir / "preflight.json",
+        {
+            "branch": branch_name,
+            "required_branch": REQUIRED_BRANCH,
+            "branch_ok": branch_name == REQUIRED_BRANCH,
+            "status_clean_before": len(status_lines) == 0,
+            "status_porcelain": status_lines,
+        },
+    )
+
+    envelope_path = repo_root / "outputs/masterplan_v2/f2_001/envelope_daily.csv"
+    daily_v2_path = repo_root / "outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet"
+    ledger_v2_path = repo_root / "outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet"
+    enforcement_examples_path = repo_root / "outputs/masterplan_v2/f2_002/evidence/enforcement_examples.csv"
+    metrics_compare_path = repo_root / "outputs/masterplan_v2/f2_002/evidence/metrics_compare_baseline_vs_v2.csv"
+    guardrails_path = repo_root / "outputs/masterplan_v2/f2_001/evidence/guardrails_parameters.json"
+    required_inputs = [
+        envelope_path,
+        daily_v2_path,
+        ledger_v2_path,
+        enforcement_examples_path,
+        metrics_compare_path,
+        guardrails_path,
+    ]
+    missing_inputs = [str(p) for p in required_inputs if not p.exists()]
+    write_json(evidence_dir / "input_presence.json", {"missing_inputs": missing_inputs})
+    if missing_inputs:
+        fail_text = (
+            "# Report - F2_003 Envelope Plotly Audit\n\n"
+            "OVERALL: FAIL\n\n"
+            "Gate falhou: S2_LOAD_INPUTS\n\n"
+            "Evidência: `outputs/masterplan_v2/f2_003/evidence/input_presence.json`\n"
+        )
+        report_path.write_text(fail_text, encoding="utf-8")
+        write_json(
+            manifest_path,
+            {
+                "task_id": TASK_F2_003,
+                "generated_at_utc": generated_at,
+                "overall": "FAIL",
+                "failure_gate": "S2_LOAD_INPUTS",
+                "missing_inputs": missing_inputs,
+            },
+        )
+        return 1
+
+    envelope = pd.read_csv(envelope_path)
+    envelope["date"] = pd.to_datetime(envelope["date"])
+    daily_v2 = pd.read_parquet(daily_v2_path)
+    daily_v2["date"] = pd.to_datetime(daily_v2["date"])
+    ledger_v2 = pd.read_parquet(ledger_v2_path)
+    ledger_v2["date"] = pd.to_datetime(ledger_v2["date"])
+    enf = pd.read_csv(enforcement_examples_path)
+    if len(enf) > 0:
+        enf["date"] = pd.to_datetime(enf["date"])
+    metrics_compare = pd.read_csv(metrics_compare_path)
+
+    # 1) envelope_timeseries with ENF overlays
+    fig_env = go.Figure()
+    fig_env.add_trace(go.Scatter(x=envelope["date"], y=envelope["envelope_value"], mode="lines", name="envelope_value"))
+    if len(enf) > 0:
+        env_for_enf = envelope[["date", "envelope_value"]].merge(
+            enf[["date", "example_id", "reasons"]], on="date", how="inner"
+        )
+        fig_env.add_trace(
+            go.Scatter(
+                x=env_for_enf["date"],
+                y=env_for_enf["envelope_value"],
+                mode="markers+text",
+                text=env_for_enf["example_id"],
+                textposition="top center",
+                name="ENF examples",
+                customdata=env_for_enf["reasons"],
+                hovertemplate="date=%{x}<br>envelope=%{y:.4f}<br>reason=%{customdata}<extra></extra>",
+            )
+        )
+    fig_env.update_layout(title="Envelope Timeseries with ENF Overlay", xaxis_title="date", yaxis_title="envelope")
+    fig_env.write_html(plots_dir / "envelope_timeseries.html", include_plotlyjs="cdn")
+
+    # 2) guardrails_timeseries
+    fig_guard = go.Figure()
+    fig_guard.add_trace(go.Scatter(x=envelope["date"], y=envelope["turnover"], mode="lines", name="turnover"))
+    fig_guard.add_trace(go.Scatter(x=envelope["date"], y=envelope["turnover_cap"], mode="lines", name="turnover_cap"))
+    fig_guard.add_trace(go.Scatter(x=envelope["date"], y=envelope["hysteresis_active"], mode="lines", name="hysteresis_active"))
+    fig_guard.add_trace(go.Scatter(x=envelope["date"], y=envelope["anti_reentry_active"], mode="lines", name="anti_reentry_active"))
+    fig_guard.add_trace(go.Scatter(x=envelope["date"], y=envelope["fallback_active"], mode="lines", name="fallback_active"))
+    fig_guard.update_layout(title="Guardrails Timeseries", xaxis_title="date", yaxis_title="value")
+    fig_guard.write_html(plots_dir / "guardrails_timeseries.html", include_plotlyjs="cdn")
+
+    # 3) enforcement_events_timeline
+    fig_enf = go.Figure()
+    if len(enf) > 0:
+        fig_enf.add_trace(
+            go.Scatter(
+                x=enf["date"],
+                y=enf["enforcement_delta"],
+                mode="markers+text",
+                text=enf["example_id"],
+                textposition="top center",
+                name="enforcement_delta",
+                customdata=enf["reasons"],
+                hovertemplate="date=%{x}<br>delta=%{y:.6f}<br>reasons=%{customdata}<extra></extra>",
+            )
+        )
+    fig_enf.update_layout(title="Enforcement Events Timeline", xaxis_title="date", yaxis_title="enforcement_delta")
+    fig_enf.write_html(plots_dir / "enforcement_events_timeline.html", include_plotlyjs="cdn")
+
+    # 4..7) baseline vs v2 plots
+    def metric_row(name: str) -> tuple[float, float]:
+        row = metrics_compare.loc[metrics_compare["metric"] == name]
+        if len(row) == 0:
+            return 0.0, 0.0
+        return float(row["baseline_m3_f1002"].iloc[0]), float(row["v2_f2002"].iloc[0])
+
+    for metric_name, file_name, title in [
+        ("turnover_mean", "baseline_vs_v2_turnover.html", "Baseline vs V2 - Turnover Mean"),
+        ("cash_ratio_mean", "baseline_vs_v2_cash_ratio.html", "Baseline vs V2 - Cash Ratio Mean"),
+        ("exposure_mean", "baseline_vs_v2_exposure.html", "Baseline vs V2 - Exposure Mean"),
+        ("trade_count", "baseline_vs_v2_trade_count.html", "Baseline vs V2 - Trade Count"),
+    ]:
+        baseline_value, v2_value = metric_row(metric_name)
+        fig = go.Figure(
+            data=[
+                go.Bar(
+                    x=["baseline_m3_f1002", "v2_f2002"],
+                    y=[baseline_value, v2_value],
+                    text=[f"{baseline_value:.6f}", f"{v2_value:.6f}"],
+                    textposition="auto",
+                )
+            ]
+        )
+        fig.update_layout(title=title, yaxis_title=metric_name)
+        fig.write_html(plots_dir / file_name, include_plotlyjs="cdn")
+
+    required_plots = [
+        plots_dir / "envelope_timeseries.html",
+        plots_dir / "guardrails_timeseries.html",
+        plots_dir / "enforcement_events_timeline.html",
+        plots_dir / "baseline_vs_v2_turnover.html",
+        plots_dir / "baseline_vs_v2_cash_ratio.html",
+        plots_dir / "baseline_vs_v2_exposure.html",
+        plots_dir / "baseline_vs_v2_trade_count.html",
+    ]
+    missing_plots = [str(p.relative_to(repo_root)) for p in required_plots if not p.exists()]
+
+    overlay_ok = len(enf) > 0
+    metrics_link_ok = metrics_compare_path.exists()
+    inputs_hash_ok = True
+    overall_pass = (len(missing_plots) == 0) and overlay_ok and metrics_link_ok and inputs_hash_ok
+
+    write_json(
+        evidence_dir / "plot_inventory.json",
+        {
+            "required_plots": [str(p.relative_to(repo_root)) for p in required_plots],
+            "missing_plots": missing_plots,
+            "overlay_ok": overlay_ok,
+            "metrics_input": str(metrics_compare_path.relative_to(repo_root)),
+        },
+    )
+
+    report_lines = [
+        "# Report - F2_003 Envelope Plotly Audit",
+        "",
+        f"- task_id: `{TASK_F2_003}`",
+        f"- generated_at_utc: `{generated_at}`",
+        f"- branch: `{branch_name}`",
+        f"- overall: `{'PASS' if overall_pass else 'FAIL'}`",
+        "",
+        "## Validações requeridas",
+        "",
+        f"- Plots Plotly mínimos gerados e referenciados: `{'PASS' if len(missing_plots) == 0 else 'FAIL'}`",
+        f"  - evidência: `outputs/masterplan_v2/f2_003/evidence/plot_inventory.json`",
+        f"- Sobreposição ENF-xxx em gráfico temporal: `{'PASS' if overlay_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_003/plots/envelope_timeseries.html`, `outputs/masterplan_v2/f2_002/evidence/enforcement_examples.csv`",
+        f"- Comparação baseline vs V2 com evidência tabular linkada: `{'PASS' if metrics_link_ok else 'FAIL'}`",
+        "  - evidência: `outputs/masterplan_v2/f2_002/evidence/metrics_compare_baseline_vs_v2.csv`",
+        f"- Manifest com hashes de inputs críticos: `{'PASS' if inputs_hash_ok else 'FAIL'}`",
+        "  - evidência: `outputs/masterplan_v2/f2_003/manifest.json`",
+        "",
+        "## Plotly gerados",
+        "",
+        "- `outputs/masterplan_v2/f2_003/plots/envelope_timeseries.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/guardrails_timeseries.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/enforcement_events_timeline.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_turnover.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_cash_ratio.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_exposure.html`",
+        "- `outputs/masterplan_v2/f2_003/plots/baseline_vs_v2_trade_count.html`",
+        "",
+        "## Preflight",
+        "",
+        f"- Branch requerida: `{REQUIRED_BRANCH}` -> `{'PASS' if branch_name == REQUIRED_BRANCH else 'FAIL'}`",
+        f"- Repo limpo antes da execução: `{'PASS' if len(status_lines) == 0 else 'FAIL'}`",
+        "- evidência: `outputs/masterplan_v2/f2_003/evidence/preflight.json`",
+    ]
+    report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+
+    manifest: dict[str, Any] = {
+        "task_id": TASK_F2_003,
+        "generated_at_utc": generated_at,
+        "repo_root": str(repo_root),
+        "branch": branch_name,
+        "head": run_cmd(["git", "rev-parse", "HEAD"], repo_root).stdout.strip(),
+        "task_spec_path": str(
+            (repo_root / "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT.json").relative_to(repo_root)
+        ),
+        "overall": "PASS" if overall_pass else "FAIL",
+        "validations": {
+            "required_plots_present": len(missing_plots) == 0,
+            "enf_overlay_present": overlay_ok,
+            "metrics_linked": metrics_link_ok,
+            "input_hashes_present": inputs_hash_ok,
+        },
+        "missing_plots": missing_plots,
+        "hashes_sha256": {},
+        "consumed_inputs": [
+            str(envelope_path.relative_to(repo_root)),
+            str(daily_v2_path.relative_to(repo_root)),
+            str(ledger_v2_path.relative_to(repo_root)),
+            str(enforcement_examples_path.relative_to(repo_root)),
+            str(metrics_compare_path.relative_to(repo_root)),
+            str(guardrails_path.relative_to(repo_root)),
+        ],
+    }
+
+    hash_targets = [
+        report_path,
+        manifest_path,
+        evidence_dir / "preflight.json",
+        evidence_dir / "input_presence.json",
+        evidence_dir / "plot_inventory.json",
+        envelope_path,
+        daily_v2_path,
+        ledger_v2_path,
+        enforcement_examples_path,
+        metrics_compare_path,
+        guardrails_path,
+        *required_plots,
+    ]
+    for p in hash_targets:
+        if p.exists():
+            manifest["hashes_sha256"][str(p.relative_to(repo_root))] = sha256_file(p)
+
+    write_json(manifest_path, manifest)
+    manifest["hashes_sha256"][str(manifest_path.relative_to(repo_root))] = sha256_file(manifest_path)
+    write_json(manifest_path, manifest)
+    return 0 if overall_pass else 1
+
+
 def main() -> int:
     ensure_official_python()
 
@@ -1465,10 +1732,12 @@ def main() -> int:
         return run_task_f2_001(repo_root, task_spec)
     if task_id == TASK_F2_002:
         return run_task_f2_002(repo_root, task_spec)
+    if task_id == TASK_F2_003:
+        return run_task_f2_003(repo_root, task_spec)
 
     raise NotImplementedError(
         f"Task ainda nao suportada por este runner: {task_id}. "
-        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}, {TASK_F2_002}."
+        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}, {TASK_F2_002}, {TASK_F2_003}."
     )
 
 
