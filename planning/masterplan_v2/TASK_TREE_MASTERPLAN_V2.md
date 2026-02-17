@@ -229,6 +229,40 @@
   - dependência não satisfeita
   - tentativa de alterar SSOT existente sem task dedicada de mudança normativa
 
+### TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE
+
+- **Objetivo:** Executar gate de sanidade numérica de CDI/equity/cashflow e bloquear avanço para F3/F4 em caso de falha.
+- **Entradas (SSOT):**
+  - `docs/MASTERPLAN_V2.md`
+  - `docs/CONSTITUICAO.md`
+  - `docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md`
+  - `docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md`
+  - `docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md`
+- **Saídas:**
+  - `outputs/masterplan_v2/f2_004/report.md`
+  - `outputs/masterplan_v2/f2_004/manifest.json`
+  - `outputs/masterplan_v2/f2_004/evidence/`
+  - `outputs/masterplan_v2/f2_004/plots/`
+- **Dependências:**
+  - `TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT`
+- **Gates de aceite:**
+  - `S1_GATE_ALLOWLIST`
+  - `S2_CHECK_COMPILE` (quando houver código)
+  - `S3_RUN` habilitado neste gate (bloqueante para F3/F4)
+  - `S4_VERIFY_OUTPUTS` (report/manifest/evidence/plots)
+  - `S5_VERIFY_HASHES` (sha256 de SSOTs e inputs críticos)
+- **Evidência mínima:**
+  - `report.md`
+  - `manifest.json`
+  - `evidence/`
+  - `plots_plotly_html`
+- **Critérios de FAIL:**
+  - CDI diário fora de ordem de grandeza plausível
+  - benchmark cash-only em patamar incompatível com CDI diário
+  - reconciliação cashflow/equity acima da tolerância
+  - normalização de equity inconsistente (primeiro ponto != 1 dentro de eps)
+  - ausência de qualquer output obrigatório
+
 ## Fase 3
 
 ### TASK_CEP_BUNDLE_CORE_V2_F3_001_REVALIDATE_ABLATION_E1_E5
@@ -245,7 +279,7 @@
   - `outputs/masterplan_v2/f3_001/report.md`
   - `outputs/masterplan_v2/f3_001/manifest.json`
 - **Dependências:**
-  - `TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT`
+  - `TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE`
 - **Gates de aceite:**
   - `S1_GATE_ALLOWLIST`
   - `S2_CHECK_COMPILE` (quando houver código)

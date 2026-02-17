@@ -21,6 +21,7 @@ TASK_F1_002 = "TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION"
 TASK_F2_001 = "TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION"
 TASK_F2_002 = "TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT"
 TASK_F2_003 = "TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT"
+TASK_F2_004 = "TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE"
 
 
 def sha256_file(path: Path) -> str:
@@ -1886,6 +1887,282 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
     return 0 if overall_pass else 1
 
 
+def run_task_f2_004(repo_root: Path, task_spec: dict[str, Any]) -> int:
+    out_dir = repo_root / "outputs/masterplan_v2/f2_004"
+    evidence_dir = out_dir / "evidence"
+    plots_dir = out_dir / "plots"
+    report_path = out_dir / "report.md"
+    manifest_path = out_dir / "manifest.json"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    evidence_dir.mkdir(parents=True, exist_ok=True)
+    plots_dir.mkdir(parents=True, exist_ok=True)
+
+    generated_at = datetime.now(timezone.utc).isoformat()
+    eps = 1e-9
+    tol_cash = 1e-8
+    tol_equity = 1e-12
+
+    branch = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"], repo_root)
+    status = run_cmd(["git", "status", "--porcelain"], repo_root)
+    branch_name = branch.stdout.strip() if branch.returncode == 0 else "UNKNOWN"
+    status_lines = [ln for ln in status.stdout.splitlines() if ln.strip()]
+    write_json(
+        evidence_dir / "preflight.json",
+        {
+            "branch": branch_name,
+            "required_branch": REQUIRED_BRANCH,
+            "branch_ok": branch_name == REQUIRED_BRANCH,
+            "status_clean_before": len(status_lines) == 0,
+            "status_porcelain": status_lines,
+        },
+    )
+
+    daily_v2_path = repo_root / "outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet"
+    ledger_v2_path = repo_root / "outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet"
+    equity_summary_path = repo_root / "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json"
+    cdi_ssot_path = repo_root / "data/ssot/cdi/cdi_daily.parquet"
+    baseline_daily_fallback_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+    )
+
+    required_inputs = [daily_v2_path, ledger_v2_path, equity_summary_path, cdi_ssot_path, baseline_daily_fallback_path]
+    missing_inputs = [str(p) for p in required_inputs if not p.exists()]
+    write_json(evidence_dir / "input_presence.json", {"missing_inputs": missing_inputs})
+    if missing_inputs:
+        fail_text = (
+            "# Report - F2_004 Equity CDI Sanity and Reconciliation Gate\n\n"
+            "OVERALL: FAIL\n\n"
+            "Gate falhou: S2_VERIFY_INPUTS_PRESENT\n\n"
+            "Evidência: `outputs/masterplan_v2/f2_004/evidence/input_presence.json`\n"
+        )
+        report_path.write_text(fail_text, encoding="utf-8")
+        write_json(
+            manifest_path,
+            {
+                "task_id": TASK_F2_004,
+                "generated_at_utc": generated_at,
+                "overall": "FAIL",
+                "failure_gate": "S2_VERIFY_INPUTS_PRESENT",
+                "missing_inputs": missing_inputs,
+            },
+        )
+        return 1
+
+    daily_v2 = pd.read_parquet(daily_v2_path).sort_values("date").reset_index(drop=True)
+    daily_v2["date"] = pd.to_datetime(daily_v2["date"])
+    ledger_v2 = pd.read_parquet(ledger_v2_path)
+    ledger_v2["date"] = pd.to_datetime(ledger_v2["date"])
+    equity_summary = json.loads(equity_summary_path.read_text(encoding="utf-8"))
+    cdi_ssot = pd.read_parquet(cdi_ssot_path)
+    baseline_daily = pd.read_parquet(baseline_daily_fallback_path).sort_values("date").reset_index(drop=True)
+    baseline_daily["date"] = pd.to_datetime(baseline_daily["date"])
+
+    # 1) CDI stats plausibility
+    cdi_cols = [c for c in cdi_ssot.columns if "cdi" in c.lower() or "taxa" in c.lower() or "rate" in c.lower()]
+    cdi_rate_col = cdi_cols[0] if cdi_cols else None
+    if cdi_rate_col is None:
+        cdi_daily = daily_v2["cdi_cash_gain_v2"].shift(0) * 0.0
+        cdi_rate_col = "UNAVAILABLE"
+    else:
+        cdi_daily = pd.to_numeric(cdi_ssot[cdi_rate_col], errors="coerce")
+    cdi_stats = {
+        "rate_col_used": cdi_rate_col,
+        "min": float(cdi_daily.min(skipna=True)),
+        "median": float(cdi_daily.median(skipna=True)),
+        "max": float(cdi_daily.max(skipna=True)),
+    }
+    write_json(evidence_dir / "cdi_daily_stats.json", cdi_stats)
+    cdi_plausible = (abs(cdi_stats["median"]) < 0.02) and (abs(cdi_stats["max"]) < 0.2)
+
+    # 2) cash-only benchmark
+    bench = daily_v2[["date", "cdi_cash_gain_v2"]].copy()
+    cash_prev = daily_v2["cash_v2"].shift(1)
+    with pd.option_context("mode.use_inf_as_na", True):
+        bench["implied_cdi_rate"] = (daily_v2["cdi_cash_gain_v2"] / cash_prev.replace(0, pd.NA)).fillna(0.0)
+    bench["cash_only_equity"] = (1.0 + bench["implied_cdi_rate"]).cumprod()
+    bench.to_csv(evidence_dir / "cash_only_benchmark.csv", index=False)
+    cash_only_growth_final = float(bench["cash_only_equity"].iloc[-1])
+    v2_equity_final = float(equity_summary.get("equity_final_v2", float("nan")))
+    cash_only_plausible = (cash_only_growth_final < 20.0) and (
+        pd.isna(v2_equity_final) or cash_only_growth_final < (v2_equity_final / 5.0)
+    )
+    write_json(
+        evidence_dir / "cash_only_benchmark_summary.json",
+        {
+            "cash_only_growth_final": cash_only_growth_final,
+            "equity_final_v2_from_f2003": v2_equity_final,
+            "plausible_vs_v2": bool(cash_only_plausible),
+        },
+    )
+
+    # 3) cash flow reconciliation (>=50 lines sample)
+    buy_day = ledger_v2[ledger_v2["action"] == "BUY"].groupby("date", as_index=False)["notional"].sum().rename(columns={"notional": "buy"})
+    sell_day = ledger_v2[ledger_v2["action"] == "SELL"].groupby("date", as_index=False)["notional"].sum().rename(columns={"notional": "sell"})
+    daily = daily_v2.merge(buy_day, on="date", how="left").merge(sell_day, on="date", how="left")
+    daily["buy"] = daily["buy"].fillna(0.0)
+    daily["sell"] = daily["sell"].fillna(0.0)
+    daily["cash_prev"] = daily["cash_v2"].shift(1).fillna(daily["cash_v2"])
+    daily["cash_expected"] = (
+        daily["cash_prev"]
+        + daily["sell"]
+        - daily["buy"]
+        - daily["daily_cost_v2"]
+        + daily["cdi_cash_gain_v2"]
+    )
+    daily["cash_error"] = daily["cash_v2"] - daily["cash_expected"]
+    daily.head(120).to_csv(evidence_dir / "cash_flow_reconciliation_sample.csv", index=False)
+    cash_max_abs_error = float(daily["cash_error"].iloc[1:].abs().max())
+    cash_recon_ok = cash_max_abs_error <= tol_cash
+    write_json(
+        evidence_dir / "cash_flow_reconciliation_summary.json",
+        {
+            "max_abs_error_excluding_first_row": cash_max_abs_error,
+            "tolerance": tol_cash,
+            "ok": bool(cash_recon_ok),
+        },
+    )
+
+    # 4) equity reconciliation
+    daily["equity_expected"] = daily["positions_value_ref"] + daily["cash_v2"]
+    daily["equity_error"] = daily["equity_v2"] - daily["equity_expected"]
+    daily.head(120).to_csv(evidence_dir / "equity_reconciliation_sample.csv", index=False)
+    equity_max_abs_error = float(daily["equity_error"].abs().max())
+    equity_recon_ok = equity_max_abs_error <= tol_equity
+    write_json(
+        evidence_dir / "equity_reconciliation_summary.json",
+        {
+            "max_abs_error": equity_max_abs_error,
+            "tolerance": tol_equity,
+            "ok": bool(equity_recon_ok),
+        },
+    )
+
+    # 5) equity normalization + recomputed sanity replot
+    eq = baseline_daily[["date", "equity"]].merge(daily_v2[["date", "equity_v2"]], on="date", how="inner").sort_values("date")
+    eq["equity_norm_baseline"] = eq["equity"] / float(eq["equity"].iloc[0])
+    eq["equity_norm_v2"] = eq["equity_v2"] / float(eq["equity_v2"].iloc[0])
+    norm_ok = abs(float(eq["equity_norm_baseline"].iloc[0]) - 1.0) <= eps and abs(float(eq["equity_norm_v2"].iloc[0]) - 1.0) <= eps
+    write_json(
+        evidence_dir / "equity_normalization_summary.json",
+        {
+            "baseline_first_norm": float(eq["equity_norm_baseline"].iloc[0]),
+            "v2_first_norm": float(eq["equity_norm_v2"].iloc[0]),
+            "eps": eps,
+            "ok": bool(norm_ok),
+        },
+    )
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=eq["date"], y=eq["equity_norm_baseline"], mode="lines", name="baseline_m3_recomputed"))
+    fig.add_trace(go.Scatter(x=eq["date"], y=eq["equity_norm_v2"], mode="lines", name="v2_recomputed"))
+    fig.update_layout(title="Baseline vs V2 Equity Recomputed (sanity)", xaxis_title="date", yaxis_title="equity_norm")
+    fig.write_html(plots_dir / "baseline_vs_v2_equity_timeseries_recomputed.html", include_plotlyjs="cdn")
+
+    # Gate decisions
+    plots_present = (plots_dir / "baseline_vs_v2_equity_timeseries_recomputed.html").exists() and (
+        (plots_dir / "baseline_vs_v2_equity_timeseries_recomputed.html").stat().st_size > 0
+    )
+    sanity_ok = cdi_plausible and cash_only_plausible and norm_ok
+    recon_ok = cash_recon_ok and equity_recon_ok
+    overall_pass = plots_present and sanity_ok and recon_ok
+
+    report_lines = [
+        "# Report - F2_004 Equity CDI Sanity and Reconciliation Gate",
+        "",
+        f"- task_id: `{TASK_F2_004}`",
+        f"- generated_at_utc: `{generated_at}`",
+        f"- branch: `{branch_name}`",
+        f"- overall: `{'PASS' if overall_pass else 'FAIL'}`",
+        "",
+        "## Gates",
+        "",
+        f"- `GATE_CDI_PLAUSIBILITY`: `{'PASS' if cdi_plausible else 'FAIL'}`",
+        "  - evidência: `outputs/masterplan_v2/f2_004/evidence/cdi_daily_stats.json`",
+        f"- `GATE_CASH_ONLY_BENCHMARK`: `{'PASS' if cash_only_plausible else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_004/evidence/cash_only_benchmark.csv`, `outputs/masterplan_v2/f2_004/evidence/cash_only_benchmark_summary.json`",
+        f"- `GATE_CASH_FLOW_RECONCILIATION`: `{'PASS' if cash_recon_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_004/evidence/cash_flow_reconciliation_sample.csv`, `outputs/masterplan_v2/f2_004/evidence/cash_flow_reconciliation_summary.json`",
+        f"- `GATE_EQUITY_RECONCILIATION`: `{'PASS' if equity_recon_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_004/evidence/equity_reconciliation_sample.csv`, `outputs/masterplan_v2/f2_004/evidence/equity_reconciliation_summary.json`",
+        f"- `GATE_EQUITY_NORMALIZATION`: `{'PASS' if norm_ok else 'FAIL'}`",
+        "  - evidência: `outputs/masterplan_v2/f2_004/evidence/equity_normalization_summary.json`",
+        f"- `GATE_PLOTS_PRESENT`: `{'PASS' if plots_present else 'FAIL'}`",
+        "  - evidência: `outputs/masterplan_v2/f2_004/plots/baseline_vs_v2_equity_timeseries_recomputed.html`",
+        "",
+        "## Decisão de bloqueio",
+        "",
+        f"- `block_f3_f4`: `{'false' if overall_pass else 'true'}`",
+        "",
+        "## Preflight",
+        "",
+        f"- Branch requerida: `{REQUIRED_BRANCH}` -> `{'PASS' if branch_name == REQUIRED_BRANCH else 'FAIL'}`",
+        f"- Repo limpo antes da execução: `{'PASS' if len(status_lines) == 0 else 'FAIL'}`",
+    ]
+    report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+
+    manifest: dict[str, Any] = {
+        "task_id": TASK_F2_004,
+        "generated_at_utc": generated_at,
+        "repo_root": str(repo_root),
+        "branch": branch_name,
+        "head": run_cmd(["git", "rev-parse", "HEAD"], repo_root).stdout.strip(),
+        "overall": "PASS" if overall_pass else "FAIL",
+        "task_spec_path": str(
+            (repo_root / "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE.json").relative_to(repo_root)
+        ),
+        "validations": {
+            "cdi_plausibility": bool(cdi_plausible),
+            "cash_only_benchmark_plausible": bool(cash_only_plausible),
+            "cash_flow_reconciliation_ok": bool(cash_recon_ok),
+            "equity_reconciliation_ok": bool(equity_recon_ok),
+            "equity_normalization_ok": bool(norm_ok),
+            "plot_present": bool(plots_present),
+        },
+        "block_f3_f4": not overall_pass,
+        "consumed_inputs": [
+            str(daily_v2_path.relative_to(repo_root)),
+            str(ledger_v2_path.relative_to(repo_root)),
+            str(equity_summary_path.relative_to(repo_root)),
+            str(cdi_ssot_path.relative_to(repo_root)),
+            str(baseline_daily_fallback_path),
+        ],
+        "hashes_sha256": {},
+    }
+
+    hash_targets = [
+        report_path,
+        manifest_path,
+        evidence_dir / "preflight.json",
+        evidence_dir / "input_presence.json",
+        evidence_dir / "cdi_daily_stats.json",
+        evidence_dir / "cash_only_benchmark.csv",
+        evidence_dir / "cash_only_benchmark_summary.json",
+        evidence_dir / "cash_flow_reconciliation_sample.csv",
+        evidence_dir / "cash_flow_reconciliation_summary.json",
+        evidence_dir / "equity_reconciliation_sample.csv",
+        evidence_dir / "equity_reconciliation_summary.json",
+        evidence_dir / "equity_normalization_summary.json",
+        plots_dir / "baseline_vs_v2_equity_timeseries_recomputed.html",
+        daily_v2_path,
+        ledger_v2_path,
+        equity_summary_path,
+        cdi_ssot_path,
+        baseline_daily_fallback_path,
+    ]
+    for p in hash_targets:
+        if p.exists():
+            if str(p).startswith(str(repo_root)):
+                rel = str(p.relative_to(repo_root))
+            else:
+                rel = str(p)
+            manifest["hashes_sha256"][rel] = sha256_file(p)
+
+    write_json(manifest_path, manifest)
+    manifest["hashes_sha256"][str(manifest_path.relative_to(repo_root))] = sha256_file(manifest_path)
+    write_json(manifest_path, manifest)
+    return 0 if overall_pass else 1
+
+
 def main() -> int:
     ensure_official_python()
 
@@ -1911,10 +2188,12 @@ def main() -> int:
         return run_task_f2_002(repo_root, task_spec)
     if task_id == TASK_F2_003:
         return run_task_f2_003(repo_root, task_spec)
+    if task_id == TASK_F2_004:
+        return run_task_f2_004(repo_root, task_spec)
 
     raise NotImplementedError(
         f"Task ainda nao suportada por este runner: {task_id}. "
-        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}, {TASK_F2_002}, {TASK_F2_003}."
+        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}, {TASK_F2_002}, {TASK_F2_003}, {TASK_F2_004}."
     )
 
 
