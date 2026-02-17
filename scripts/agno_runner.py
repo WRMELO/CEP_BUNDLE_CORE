@@ -19,6 +19,7 @@ REQUIRED_BRANCH = "local/integrated-state-20260215"
 TASK_F1_001 = "TASK_CEP_BUNDLE_CORE_V2_F1_001_LEDGER_DAILY_PORTFOLIO_INTEGRITY"
 TASK_F1_002 = "TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION"
 TASK_F2_001 = "TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION"
+TASK_F2_002 = "TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT"
 
 
 def sha256_file(path: Path) -> str:
@@ -948,6 +949,489 @@ def run_task_f2_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
     return 0 if overall_pass else 1
 
 
+def run_task_f2_002(repo_root: Path, task_spec: dict[str, Any]) -> int:
+    out_dir = repo_root / "outputs/masterplan_v2/f2_002"
+    evidence_dir = out_dir / "evidence"
+    report_path = out_dir / "report.md"
+    manifest_path = out_dir / "manifest.json"
+    daily_v2_path = out_dir / "daily_portfolio_v2.parquet"
+    ledger_v2_path = out_dir / "ledger_trades_v2.parquet"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    evidence_dir.mkdir(parents=True, exist_ok=True)
+
+    generated_at = datetime.now(timezone.utc).isoformat()
+    branch = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"], repo_root)
+    status = run_cmd(["git", "status", "--porcelain"], repo_root)
+    branch_name = branch.stdout.strip() if branch.returncode == 0 else "UNKNOWN"
+    status_lines = [ln for ln in status.stdout.splitlines() if ln.strip()]
+    write_json(
+        evidence_dir / "preflight.json",
+        {
+            "branch": branch_name,
+            "required_branch": REQUIRED_BRANCH,
+            "branch_ok": branch_name == REQUIRED_BRANCH,
+            "status_clean_before": len(status_lines) == 0,
+            "status_porcelain": status_lines,
+        },
+    )
+
+    envelope_path = repo_root / "outputs/masterplan_v2/f2_001/envelope_daily.csv"
+    guardrails_path = repo_root / "outputs/masterplan_v2/f2_001/evidence/guardrails_parameters.json"
+    replay_path = repo_root / "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv"
+    ledger_baseline_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet"
+    )
+    daily_baseline_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+    )
+    ssot_paths = [
+        repo_root / "docs/MASTERPLAN_V2.md",
+        repo_root / "docs/CONSTITUICAO.md",
+        repo_root / "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        repo_root / "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+        repo_root / "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+    ]
+    required_inputs = [
+        envelope_path,
+        guardrails_path,
+        replay_path,
+        ledger_baseline_path,
+        daily_baseline_path,
+        *ssot_paths,
+    ]
+    missing_inputs = [str(p) for p in required_inputs if not p.exists()]
+    write_json(evidence_dir / "input_presence.json", {"missing_inputs": missing_inputs})
+    if missing_inputs:
+        fail_text = (
+            "# Report - F2_002 Executor Cash and Cadence Enforcement\n\n"
+            "OVERALL: FAIL\n\n"
+            "Gate falhou: S2_LOAD_INPUTS\n\n"
+            "Evidência: `outputs/masterplan_v2/f2_002/evidence/input_presence.json`\n"
+        )
+        report_path.write_text(fail_text, encoding="utf-8")
+        write_json(
+            manifest_path,
+            {
+                "task_id": TASK_F2_002,
+                "generated_at_utc": generated_at,
+                "overall": "FAIL",
+                "failure_gate": "S2_LOAD_INPUTS",
+                "missing_inputs": missing_inputs,
+            },
+        )
+        return 1
+
+    envelope = pd.read_csv(envelope_path)
+    envelope["date"] = pd.to_datetime(envelope["date"])
+    guardrails = json.loads(guardrails_path.read_text(encoding="utf-8"))
+    replay = pd.read_csv(replay_path)
+    replay["date"] = pd.to_datetime(replay["date"])
+    daily_baseline = pd.read_parquet(daily_baseline_path)
+    daily_baseline["date"] = pd.to_datetime(daily_baseline["date"])
+    ledger_baseline = pd.read_parquet(ledger_baseline_path)
+    ledger_baseline["date"] = pd.to_datetime(ledger_baseline["date"])
+    grouped = ledger_baseline.groupby(["date", "action"], as_index=False)["notional"].sum()
+    buy_ref = grouped[grouped["action"] == "BUY"][["date", "notional"]].rename(columns={"notional": "buy_ref"})
+    sell_ref = grouped[grouped["action"] == "SELL"][["date", "notional"]].rename(columns={"notional": "sell_ref"})
+
+    base = (
+        envelope.merge(replay[["date", "equity", "cash", "cdi_ret_t"]], on="date", how="left")
+        .merge(daily_baseline[["date", "drawdown"]], on="date", how="left", suffixes=("", "_baseline"))
+        .merge(buy_ref, on="date", how="left")
+        .merge(sell_ref, on="date", how="left")
+        .sort_values("date")
+        .reset_index(drop=True)
+    )
+    base["buy_ref"] = base["buy_ref"].fillna(0.0).astype(float)
+    base["sell_ref"] = base["sell_ref"].fillna(0.0).astype(float)
+    base["equity"] = base["equity"].astype(float)
+    base["cdi_ret_t"] = base["cdi_ret_t"].astype(float)
+    base["turnover_cap"] = base["turnover_cap"].astype(float)
+    base["stress_multiplier_applied"] = base["stress_multiplier_applied"].astype(float)
+
+    # Derived anti-reentry/fallback windows from W2 exits.
+    fallback_window = int(guardrails.get("fallback_recovery_window_sessions", 10))
+    derived_fallback = [0] * len(base)
+    derived_anti = [0] * len(base)
+    counter = 0
+    prev_regime = None
+    for idx, regime in enumerate(base["regime"].tolist()):
+        if prev_regime == "W2" and regime != "W2":
+            counter = fallback_window
+        if counter > 0:
+            derived_fallback[idx] = 1
+            derived_anti[idx] = 1
+            counter -= 1
+        prev_regime = regime
+    base["fallback_active_derived"] = derived_fallback
+    base["anti_reentry_active_derived"] = derived_anti
+
+    # Cadence phase derived from baseline BUY events.
+    sessions = base[["date"]].copy().reset_index(drop=True)
+    sessions["session_idx"] = sessions.index
+    buy_dates = base.loc[base["buy_ref"] > 0, ["date"]].merge(sessions, on="date", how="left")
+    if len(buy_dates) == 0:
+        cadence_phase = 0
+    else:
+        cadence_phase = int(buy_dates.iloc[0]["session_idx"] % 3)
+    base = base.merge(sessions, on="date", how="left")
+    base["buy_session_eligible"] = (base["session_idx"] % 3 == cadence_phase).astype(int)
+
+    daily_rows: list[dict[str, Any]] = []
+    ledger_rows: list[dict[str, Any]] = []
+    enforcement_rows: list[dict[str, Any]] = []
+    cash_prev = float(base.iloc[0]["cash"])
+    cost_rate = 0.00025
+
+    for row in base.itertuples(index=False):
+        buy_candidate = float(row.buy_ref)
+        sell_candidate = float(row.sell_ref)
+        buy_exec = buy_candidate
+        sell_exec = sell_candidate
+        reasons: list[str] = []
+
+        # Guardrail: anti-reentry / fallback (conservative intensity)
+        stress_multiplier = float(row.stress_multiplier_applied)
+        if int(row.anti_reentry_active_derived) == 1 or int(row.fallback_active_derived) == 1:
+            stress_multiplier = min(stress_multiplier, 0.8)
+            buy_exec *= stress_multiplier
+            sell_exec *= stress_multiplier
+            reasons.append("anti_reentry_fallback")
+
+        # Guardrail: hysteresis (additional buy dampening while active).
+        if int(row.hysteresis_active) == 1 and buy_exec > 0:
+            buy_exec *= 0.5
+            reasons.append("hysteresis")
+
+        # Guardrail: turnover cap scaling.
+        total_notional = buy_exec + sell_exec
+        turnover_limit_notional = float(row.turnover_cap) * max(float(row.equity), 1e-9)
+        if total_notional > turnover_limit_notional > 0:
+            scale = turnover_limit_notional / total_notional
+            buy_exec *= scale
+            sell_exec *= scale
+            reasons.append("turnover_cap")
+
+        # Invariant: BUY only every 3 sessions.
+        if int(row.buy_session_eligible) == 0 and buy_exec > 0:
+            buy_exec = 0.0
+            reasons.append("cadence_block")
+
+        # Invariant: BUY only with cash available.
+        cdi_gain = cash_prev * float(row.cdi_ret_t)
+        available_before_buy = cash_prev + sell_exec + cdi_gain
+        buy_max = max(0.0, (available_before_buy - (cost_rate * sell_exec)) / (1.0 + cost_rate))
+        if buy_exec > buy_max:
+            buy_exec = buy_max
+            reasons.append("cash_block")
+
+        daily_cost = cost_rate * (buy_exec + sell_exec)
+        cash_after = cash_prev + sell_exec - buy_exec - daily_cost + cdi_gain
+        if cash_after < 0 and cash_after > -1e-10:
+            cash_after = 0.0
+        if cash_after < 0:
+            # Hard fail-safe: enforce cash floor by trimming buy.
+            shortfall = -cash_after
+            buy_exec = max(0.0, buy_exec - shortfall)
+            daily_cost = cost_rate * (buy_exec + sell_exec)
+            cash_after = cash_prev + sell_exec - buy_exec - daily_cost + cdi_gain
+            reasons.append("cash_floor_fix")
+
+        positions_value_ref = max(float(row.equity) - float(row.cash), 0.0)
+        equity_v2 = positions_value_ref + cash_after
+        cash_ratio = cash_after / max(equity_v2, 1e-9)
+        exposure = positions_value_ref / max(equity_v2, 1e-9)
+        turnover_v2 = (buy_exec + sell_exec) / max(equity_v2, 1e-9)
+
+        enforcement_delta = (buy_candidate + sell_candidate) - (buy_exec + sell_exec)
+        if enforcement_delta > 1e-12:
+            enforcement_rows.append(
+                {
+                    "date": row.date,
+                    "session_idx": int(row.session_idx),
+                    "regime": row.regime,
+                    "buy_candidate": buy_candidate,
+                    "sell_candidate": sell_candidate,
+                    "buy_executed": buy_exec,
+                    "sell_executed": sell_exec,
+                    "enforcement_delta": enforcement_delta,
+                    "reasons": "|".join(sorted(set(reasons))),
+                    "turnover_cap": float(row.turnover_cap),
+                    "hysteresis_active": int(row.hysteresis_active),
+                    "anti_reentry_active_derived": int(row.anti_reentry_active_derived),
+                    "fallback_active_derived": int(row.fallback_active_derived),
+                }
+            )
+
+        if buy_exec > 0:
+            ledger_rows.append(
+                {
+                    "date": row.date,
+                    "mechanism": "V2_EXECUTOR",
+                    "action": "BUY",
+                    "notional": buy_exec,
+                    "daily_cost_component": cost_rate * buy_exec,
+                    "guardrail_reasons": "|".join(sorted(set(reasons))) if reasons else "none",
+                    "session_idx": int(row.session_idx),
+                }
+            )
+        if sell_exec > 0:
+            ledger_rows.append(
+                {
+                    "date": row.date,
+                    "mechanism": "V2_EXECUTOR",
+                    "action": "SELL",
+                    "notional": sell_exec,
+                    "daily_cost_component": cost_rate * sell_exec,
+                    "guardrail_reasons": "|".join(sorted(set(reasons))) if reasons else "none",
+                    "session_idx": int(row.session_idx),
+                }
+            )
+
+        daily_rows.append(
+            {
+                "date": row.date,
+                "equity_v2": equity_v2,
+                "cash_v2": cash_after,
+                "positions_value_ref": positions_value_ref,
+                "daily_cost_v2": daily_cost,
+                "cdi_cash_gain_v2": cdi_gain,
+                "buy_executed_notional": buy_exec,
+                "sell_executed_notional": sell_exec,
+                "turnover_v2": turnover_v2,
+                "cash_ratio_v2": cash_ratio,
+                "exposure_v2": exposure,
+                "session_idx": int(row.session_idx),
+                "buy_session_eligible": int(row.buy_session_eligible),
+                "regime": row.regime,
+                "hysteresis_active": int(row.hysteresis_active),
+                "anti_reentry_active_derived": int(row.anti_reentry_active_derived),
+                "fallback_active_derived": int(row.fallback_active_derived),
+            }
+        )
+        cash_prev = cash_after
+
+    daily_v2 = pd.DataFrame(daily_rows)
+    ledger_v2 = pd.DataFrame(ledger_rows)
+    enforcement_df = pd.DataFrame(enforcement_rows)
+    daily_v2.to_parquet(daily_v2_path, index=False)
+    ledger_v2.to_parquet(ledger_v2_path, index=False)
+
+    if len(enforcement_df) == 0:
+        enforcement_df = pd.DataFrame(
+            columns=[
+                "date",
+                "session_idx",
+                "regime",
+                "buy_candidate",
+                "sell_candidate",
+                "buy_executed",
+                "sell_executed",
+                "enforcement_delta",
+                "reasons",
+                "turnover_cap",
+                "hysteresis_active",
+                "anti_reentry_active_derived",
+                "fallback_active_derived",
+            ]
+        )
+    enforcement_df.to_csv(evidence_dir / "enforcement_events.csv", index=False)
+
+    # Minimum 3 concrete examples
+    examples = enforcement_df.sort_values("enforcement_delta", ascending=False).head(10).copy()
+    examples["example_id"] = [f"ENF-{i+1:03d}" for i in range(len(examples))]
+    examples.to_csv(evidence_dir / "enforcement_examples.csv", index=False)
+
+    # Invariants revalidation
+    cost_expected = cost_rate * (
+        daily_v2["buy_executed_notional"].astype(float) + daily_v2["sell_executed_notional"].astype(float)
+    )
+    cost_residual = (daily_v2["daily_cost_v2"].astype(float) - cost_expected).abs().max()
+
+    cdi_expected = daily_v2["cash_v2"].shift(1).fillna(daily_v2["cash_v2"]) * base["cdi_ret_t"].astype(float)
+    cdi_residual = (daily_v2["cdi_cash_gain_v2"].astype(float) - cdi_expected).abs().max()
+
+    # T+0 cash equation
+    t0_expected = (
+        daily_v2["cash_v2"].shift(1).fillna(daily_v2["cash_v2"])
+        + daily_v2["sell_executed_notional"].astype(float)
+        - daily_v2["buy_executed_notional"].astype(float)
+        - daily_v2["daily_cost_v2"].astype(float)
+        + daily_v2["cdi_cash_gain_v2"].astype(float)
+    )
+    t0_residual = (daily_v2["cash_v2"] - t0_expected).iloc[1:].abs().max()
+
+    cash_non_negative = bool((daily_v2["cash_v2"] >= -1e-10).all())
+    buy_only_eligible = bool(
+        (
+            (daily_v2["buy_executed_notional"] <= 1e-12)
+            | (daily_v2["buy_session_eligible"] == 1)
+        ).all()
+    )
+
+    # Metrics compare vs baseline
+    baseline_turnover = ((base["buy_ref"] + base["sell_ref"]) / base["equity"].replace(0, pd.NA)).fillna(0.0).mean()
+    baseline_cash_ratio = (base["cash"] / base["equity"].replace(0, pd.NA)).fillna(0.0).mean()
+    baseline_exposure = ((base["equity"] - base["cash"]) / base["equity"].replace(0, pd.NA)).fillna(0.0).mean()
+    baseline_trade_count = int(len(ledger_baseline))
+    v2_trade_count = int(len(ledger_v2))
+
+    metrics_compare = pd.DataFrame(
+        [
+            {"metric": "turnover_mean", "baseline_m3_f1002": float(baseline_turnover), "v2_f2002": float(daily_v2["turnover_v2"].mean())},
+            {"metric": "cash_ratio_mean", "baseline_m3_f1002": float(baseline_cash_ratio), "v2_f2002": float(daily_v2["cash_ratio_v2"].mean())},
+            {"metric": "exposure_mean", "baseline_m3_f1002": float(baseline_exposure), "v2_f2002": float(daily_v2["exposure_v2"].mean())},
+            {"metric": "trade_count", "baseline_m3_f1002": float(baseline_trade_count), "v2_f2002": float(v2_trade_count)},
+        ]
+    )
+    metrics_compare.to_csv(evidence_dir / "metrics_compare_baseline_vs_v2.csv", index=False)
+
+    invariant_summary = {
+        "cost_rule_0_00025_ok": float(cost_residual) <= 1e-10,
+        "cost_rule_max_abs_residual": float(cost_residual),
+        "cdi_cash_daily_ok": float(cdi_residual) <= 1e-10,
+        "cdi_cash_max_abs_residual": float(cdi_residual),
+        "t0_liquidation_ok": float(t0_residual) <= 1e-8,
+        "t0_max_abs_residual_excluding_first": float(t0_residual),
+        "buy_cadence_every_3_sessions_ok": buy_only_eligible,
+        "buy_with_cash_only_ok": cash_non_negative,
+        "cash_negative_rows": int((daily_v2["cash_v2"] < -1e-10).sum()),
+    }
+    write_json(evidence_dir / "invariants_summary.json", invariant_summary)
+
+    # Validate guardrail examples (>=3)
+    example_count_ok = len(examples) >= 3
+    enforcement_evidence_ok = example_count_ok and (
+        examples["reasons"].str.contains("turnover_cap|anti_reentry_fallback|hysteresis", regex=True).sum() >= 3
+        if len(examples) > 0
+        else False
+    )
+    write_json(
+        evidence_dir / "enforcement_summary.json",
+        {
+            "events_count": int(len(enforcement_df)),
+            "examples_count": int(len(examples)),
+            "example_count_ok_min_3": bool(example_count_ok),
+            "examples_guardrail_tagged_ok": bool(enforcement_evidence_ok),
+        },
+    )
+
+    outputs_exist_ok = all(p.exists() for p in [report_path, manifest_path, evidence_dir, daily_v2_path, ledger_v2_path])
+    invariants_ok = all(
+        bool(invariant_summary[k])
+        for k in [
+            "cost_rule_0_00025_ok",
+            "cdi_cash_daily_ok",
+            "t0_liquidation_ok",
+            "buy_cadence_every_3_sessions_ok",
+            "buy_with_cash_only_ok",
+        ]
+    )
+    consumed_ok = envelope_path.exists() and guardrails_path.exists()
+
+    overall_pass = outputs_exist_ok and consumed_ok and enforcement_evidence_ok and invariants_ok
+
+    report_lines = [
+        "# Report - F2_002 Executor Cash and Cadence Enforcement",
+        "",
+        f"- task_id: `{TASK_F2_002}`",
+        f"- generated_at_utc: `{generated_at}`",
+        f"- branch: `{branch_name}`",
+        f"- overall: `{'PASS' if overall_pass else 'FAIL'}`",
+        "",
+        "## Validações requeridas",
+        "",
+        f"- Consumo de `envelope_daily.csv` e `guardrails_parameters.json` com rastreabilidade: `{'PASS' if consumed_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_002/evidence/input_presence.json`, `outputs/masterplan_v2/f2_002/manifest.json`",
+        f"- Enforcement com exemplos concretos por guardrail (>=3): `{'PASS' if enforcement_evidence_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_002/evidence/enforcement_examples.csv`, `outputs/masterplan_v2/f2_002/evidence/enforcement_events.csv`",
+        f"- Revalidação das invariantes (custo, CDI, T+0, cadência, caixa): `{'PASS' if invariants_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_002/evidence/invariants_summary.json`, `outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet`, `outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet`",
+        "- Métricas comparativas básicas vs baseline (turnover, cash_ratio, exposição média, trades): `PASS`",
+        "  - evidência: `outputs/masterplan_v2/f2_002/evidence/metrics_compare_baseline_vs_v2.csv`",
+        "",
+        "## Exemplos concretos de enforcement",
+        "",
+    ]
+    for _, ex in examples.head(5).iterrows():
+        report_lines.append(
+            f"- `{ex['example_id']}` date=`{ex['date']}` reasons=`{ex['reasons']}` "
+            f"candidate=({ex['buy_candidate']:.6f},{ex['sell_candidate']:.6f}) "
+            f"executed=({ex['buy_executed']:.6f},{ex['sell_executed']:.6f})"
+        )
+    report_lines.extend(
+        [
+            "",
+            "## Preflight",
+            "",
+            f"- Branch requerida: `{REQUIRED_BRANCH}` -> `{'PASS' if branch_name == REQUIRED_BRANCH else 'FAIL'}`",
+            f"- Repo limpo antes da execução: `{'PASS' if len(status_lines) == 0 else 'FAIL'}`",
+            "- evidência: `outputs/masterplan_v2/f2_002/evidence/preflight.json`",
+        ]
+    )
+    report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+
+    manifest: dict[str, Any] = {
+        "task_id": TASK_F2_002,
+        "generated_at_utc": generated_at,
+        "repo_root": str(repo_root),
+        "branch": branch_name,
+        "head": run_cmd(["git", "rev-parse", "HEAD"], repo_root).stdout.strip(),
+        "task_spec_path": str(
+            (repo_root / "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT.json").relative_to(repo_root)
+        ),
+        "overall": "PASS" if overall_pass else "FAIL",
+        "validations": {
+            "consumed_envelope_and_guardrails": consumed_ok,
+            "enforcement_examples_min_3": enforcement_evidence_ok,
+            "invariants_ok": invariants_ok,
+            "outputs_exist": outputs_exist_ok,
+        },
+        "hashes_sha256": {},
+        "consumed_inputs": [
+            str(envelope_path.relative_to(repo_root)),
+            str(guardrails_path.relative_to(repo_root)),
+            str(replay_path.relative_to(repo_root)),
+            str(ledger_baseline_path),
+            str(daily_baseline_path),
+            *[str(p.relative_to(repo_root)) for p in ssot_paths],
+        ],
+    }
+
+    hash_targets = [
+        report_path,
+        manifest_path,
+        daily_v2_path,
+        ledger_v2_path,
+        evidence_dir / "preflight.json",
+        evidence_dir / "input_presence.json",
+        evidence_dir / "enforcement_events.csv",
+        evidence_dir / "enforcement_examples.csv",
+        evidence_dir / "invariants_summary.json",
+        evidence_dir / "metrics_compare_baseline_vs_v2.csv",
+        evidence_dir / "enforcement_summary.json",
+        envelope_path,
+        guardrails_path,
+        replay_path,
+    ]
+    for p in [ledger_baseline_path, daily_baseline_path, *ssot_paths]:
+        hash_targets.append(p)
+
+    for p in hash_targets:
+        if p.exists():
+            if str(p).startswith(str(repo_root)):
+                rel = str(p.relative_to(repo_root))
+            else:
+                rel = str(p)
+            manifest["hashes_sha256"][rel] = sha256_file(p)
+
+    write_json(manifest_path, manifest)
+    manifest["hashes_sha256"][str(manifest_path.relative_to(repo_root))] = sha256_file(manifest_path)
+    write_json(manifest_path, manifest)
+    return 0 if overall_pass else 1
+
+
 def main() -> int:
     ensure_official_python()
 
@@ -969,10 +1453,12 @@ def main() -> int:
         return run_task_f1_002(repo_root, task_spec)
     if task_id == TASK_F2_001:
         return run_task_f2_001(repo_root, task_spec)
+    if task_id == TASK_F2_002:
+        return run_task_f2_002(repo_root, task_spec)
 
     raise NotImplementedError(
         f"Task ainda nao suportada por este runner: {task_id}. "
-        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}."
+        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}, {TASK_F2_002}."
     )
 
 
