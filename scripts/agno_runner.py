@@ -1959,13 +1959,18 @@ def run_task_f2_004(repo_root: Path, task_spec: dict[str, Any]) -> int:
     baseline_daily["date"] = pd.to_datetime(baseline_daily["date"])
 
     # 1) CDI stats plausibility
-    cdi_cols = [c for c in cdi_ssot.columns if "cdi" in c.lower() or "taxa" in c.lower() or "rate" in c.lower()]
+    cdi_cols = [c for c in cdi_ssot.columns if "cdi" in c.lower() or "taxa" in c.lower() or "rate" in c.lower() or "index" in c.lower()]
     cdi_rate_col = cdi_cols[0] if cdi_cols else None
     if cdi_rate_col is None:
         cdi_daily = daily_v2["cdi_cash_gain_v2"].shift(0) * 0.0
         cdi_rate_col = "UNAVAILABLE"
     else:
-        cdi_daily = pd.to_numeric(cdi_ssot[cdi_rate_col], errors="coerce")
+        raw_series = pd.to_numeric(cdi_ssot[cdi_rate_col], errors="coerce")
+        # If SSOT stores normalized index levels, convert to daily returns.
+        if ("index" in cdi_rate_col.lower()) or (float(raw_series.median(skipna=True)) > 0.5):
+            cdi_daily = raw_series.pct_change().fillna(0.0)
+        else:
+            cdi_daily = raw_series
     cdi_stats = {
         "rate_col_used": cdi_rate_col,
         "min": float(cdi_daily.min(skipna=True)),
@@ -1978,8 +1983,7 @@ def run_task_f2_004(repo_root: Path, task_spec: dict[str, Any]) -> int:
     # 2) cash-only benchmark
     bench = daily_v2[["date", "cdi_cash_gain_v2"]].copy()
     cash_prev = daily_v2["cash_v2"].shift(1)
-    with pd.option_context("mode.use_inf_as_na", True):
-        bench["implied_cdi_rate"] = (daily_v2["cdi_cash_gain_v2"] / cash_prev.replace(0, pd.NA)).fillna(0.0)
+    bench["implied_cdi_rate"] = (daily_v2["cdi_cash_gain_v2"] / cash_prev.replace(0, pd.NA)).fillna(0.0)
     bench["cash_only_equity"] = (1.0 + bench["implied_cdi_rate"]).cumprod()
     bench.to_csv(evidence_dir / "cash_only_benchmark.csv", index=False)
     cash_only_growth_final = float(bench["cash_only_equity"].iloc[-1])
