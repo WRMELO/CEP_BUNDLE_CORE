@@ -1,0 +1,107 @@
+{
+  "project": "CEP_BUNDLE_CORE",
+  "generated_at_utc": "2026-02-17T00:00:00Z",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_expected": "local/integrated-state-20260215",
+  "state_summary": {
+    "f1_001": {
+      "status": "PASS",
+      "report": "outputs/masterplan_v2/f1_001/report.md",
+      "manifest": "outputs/masterplan_v2/f1_001/manifest.json"
+    },
+    "f1_002": {
+      "status": "PASS",
+      "report": "outputs/masterplan_v2/f1_002/report.md",
+      "manifest": "outputs/masterplan_v2/f1_002/manifest.json"
+    },
+    "f2_001": {
+      "status": "PASS",
+      "report": "outputs/masterplan_v2/f2_001/report.md",
+      "manifest": "outputs/masterplan_v2/f2_001/manifest.json"
+    },
+    "f2_002": {
+      "status": "PASS",
+      "report": "outputs/masterplan_v2/f2_002/report.md",
+      "manifest": "outputs/masterplan_v2/f2_002/manifest.json"
+    },
+    "f2_003": {
+      "status": "PASS_CONTESTADO",
+      "report": "outputs/masterplan_v2/f2_003/report.md",
+      "manifest": "outputs/masterplan_v2/f2_003/manifest.json"
+    },
+    "f2_004": {
+      "status": "PASS_CONTESTADO",
+      "report": "outputs/masterplan_v2/f2_004/report.md",
+      "manifest": "outputs/masterplan_v2/f2_004/manifest.json",
+      "gate_block_f3_f4_current": false,
+      "recommended_operational_block": true
+    }
+  },
+  "critical_paths": {
+    "envelope_daily": "outputs/masterplan_v2/f2_001/envelope_daily.csv",
+    "guardrails_parameters": "outputs/masterplan_v2/f2_001/evidence/guardrails_parameters.json",
+    "daily_portfolio_v2": "outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet",
+    "ledger_trades_v2": "outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet",
+    "enforcement_examples": "outputs/masterplan_v2/f2_002/evidence/enforcement_examples.csv",
+    "metrics_compare": "outputs/masterplan_v2/f2_002/evidence/metrics_compare_baseline_vs_v2.csv",
+    "equity_compare_summary": "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json",
+    "equity_recomputed_plot": "outputs/masterplan_v2/f2_004/plots/baseline_vs_v2_equity_timeseries_recomputed.html"
+  },
+  "open_issue": {
+    "title": "Equity V2 implausibly high vs baseline",
+    "evidence": {
+      "equity_final_baseline": 2.3854396269425098,
+      "equity_final_v2": 183.19744460342292,
+      "delta_pct": 7579.818953885353,
+      "source_summary": "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json",
+      "source_plot": "outputs/masterplan_v2/f2_004/plots/baseline_vs_v2_equity_timeseries_recomputed.html"
+    },
+    "interpretation_rule": "Do not infer intent. Treat as technical governance gap until corrected."
+  },
+  "governance_rule_for_next_chat": {
+    "block_f3_f4_until_resolved": true,
+    "required_before_f3": [
+      "Reinforce sanity gate with explicit economic bounds",
+      "Validate implied daily return and annualization plausibility",
+      "Prove no CDI double counting in equity composition",
+      "Rerun F2_004 and only then allow F3/F4"
+    ]
+  },
+  "reproduction_commands": [
+    "/home/wilson/PortfolioZero/.venv/bin/python scripts/agno_runner.py --task planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE.json",
+    "/home/wilson/PortfolioZero/.venv/bin/python scripts/agno_runner.py --task planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT.json",
+    "/home/wilson/PortfolioZero/.venv/bin/python scripts/agno_runner.py --task planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT.json"
+  ],
+  "recent_commits_with_reason": [
+    {
+      "sha": "24d5b6a",
+      "message": "fix(gate): derive daily CDI return from index-like SSOT series in F2_004",
+      "why": "Correct CDI plausibility gate calculation"
+    },
+    {
+      "sha": "97abf54",
+      "message": "feat(gate): add and execute F2_004 equity CDI sanity reconciliation blocker",
+      "why": "Insert and run blocking gate before F3"
+    },
+    {
+      "sha": "a85cf1e",
+      "message": "fix(runner): hash external baseline path safely in F2_003 manifest",
+      "why": "Avoid manifest crash with external path"
+    },
+    {
+      "sha": "1d7eb88",
+      "message": "feat(runner): add baseline vs v2 equity and drawdown audit in F2_003",
+      "why": "Add requested equity and drawdown comparison"
+    },
+    {
+      "sha": "592c118",
+      "message": "feat(runner): add F2_003 envelope plotly audit support",
+      "why": "Enable F2_003 execution"
+    }
+  ],
+  "collection_evidence": [
+    "outputs/masterplan_v2/_transfer/evidence_outputs_tree.txt",
+    "outputs/masterplan_v2/_transfer/evidence_reports_head.txt",
+    "outputs/masterplan_v2/_transfer/evidence_git_log_40.txt"
+  ]
+}

@@ -29,6 +29,11 @@
 - `docs/SESSION_STATE_TRANSFER_PACKAGE_V2.json`
 - `outputs/governanca/phase_closeout/20260216/phase_inventory.csv`
 
+## Pacote de transferencia V3
+
+- `docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md`
+- `docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json`
+
 ## Referencias de prova 12/12 PASS
 
 - `outputs/governanca/masterplan_audit/20260216_post_sprint_003/masterplan_to_tasks_map.csv`
