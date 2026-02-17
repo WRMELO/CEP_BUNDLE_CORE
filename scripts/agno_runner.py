@@ -674,6 +674,9 @@ def run_task_f2_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
     policy_path = repo_root / "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json"
     policy_spc_rl_path = repo_root / "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json"
     replay_path = repo_root / "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv"
+    ledger_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/ledger_trades_m3.parquet"
+    )
     daily_portfolio_path = Path(
         "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
     )
@@ -684,7 +687,7 @@ def run_task_f2_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
         repo_root / "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
         repo_root / "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
     ]
-    required_inputs = [policy_path, policy_spc_rl_path, replay_path, daily_portfolio_path, *ssot_paths]
+    required_inputs = [policy_path, policy_spc_rl_path, replay_path, ledger_path, daily_portfolio_path, *ssot_paths]
     missing_inputs = [str(p) for p in required_inputs if not p.exists()]
     write_json(evidence_dir / "input_presence.json", {"missing_inputs": missing_inputs})
     if missing_inputs:
@@ -718,12 +721,18 @@ def run_task_f2_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
 
     replay = pd.read_csv(replay_path)
     replay["date"] = pd.to_datetime(replay["date"])
+    ledger = pd.read_parquet(ledger_path)
+    ledger["date"] = pd.to_datetime(ledger["date"])
+    grouped = ledger.groupby(["date", "action"], as_index=False)["notional"].sum()
+    buys = grouped[grouped["action"] == "BUY"][["date", "notional"]].rename(columns={"notional": "buy_notional"})
+    sells = grouped[grouped["action"] == "SELL"][["date", "notional"]].rename(columns={"notional": "sell_notional"})
     daily = pd.read_parquet(daily_portfolio_path)
     daily["date"] = pd.to_datetime(daily["date"])
     base = replay.merge(daily[["date", "drawdown"]], on="date", how="left")
+    base = base.merge(buys, on="date", how="left").merge(sells, on="date", how="left")
     base["drawdown"] = base["drawdown"].astype(float)
-    base["buy_notional"] = base["buy_notional"].astype(float)
-    base["sell_notional"] = base["sell_notional"].astype(float)
+    base["buy_notional"] = base["buy_notional"].fillna(0.0).astype(float)
+    base["sell_notional"] = base["sell_notional"].fillna(0.0).astype(float)
     base["equity"] = base["equity"].astype(float)
     base = base.sort_values("date").reset_index(drop=True)
     base["turnover"] = (base["buy_notional"].abs() + base["sell_notional"].abs()) / base["equity"].replace(0, pd.NA)
@@ -918,6 +927,7 @@ def run_task_f2_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
         evidence_dir / "envelope_daily_sample.csv",
         evidence_dir / "envelope_validations_summary.json",
         replay_path,
+        ledger_path,
         policy_path,
         policy_spc_rl_path,
     ]
