@@ -43,8 +43,17 @@ def ensure_official_python() -> None:
 
 
 def write_json(path: Path, payload: Any) -> None:
+    def _default_json(value: Any) -> Any:
+        if hasattr(value, "item"):
+            return value.item()
+        if isinstance(value, datetime):
+            return value.isoformat()
+        if isinstance(value, pd.Timestamp):
+            return value.isoformat()
+        return str(value)
+
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=_default_json) + "\n", encoding="utf-8")
 
 
 def run_task_f1_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
