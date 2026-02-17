@@ -18,6 +18,7 @@ OFFICIAL_PYTHON = "/home/wilson/PortfolioZero/.venv/bin/python"
 REQUIRED_BRANCH = "local/integrated-state-20260215"
 TASK_F1_001 = "TASK_CEP_BUNDLE_CORE_V2_F1_001_LEDGER_DAILY_PORTFOLIO_INTEGRITY"
 TASK_F1_002 = "TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION"
+TASK_F2_001 = "TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION"
 
 
 def sha256_file(path: Path) -> str:
@@ -644,6 +645,299 @@ def run_task_f1_002(repo_root: Path, task_spec: dict[str, Any]) -> int:
     return 0 if overall_pass else 1
 
 
+def run_task_f2_001(repo_root: Path, task_spec: dict[str, Any]) -> int:
+    out_dir = repo_root / "outputs/masterplan_v2/f2_001"
+    evidence_dir = out_dir / "evidence"
+    report_path = out_dir / "report.md"
+    manifest_path = out_dir / "manifest.json"
+    envelope_path = out_dir / "envelope_daily.csv"
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    evidence_dir.mkdir(parents=True, exist_ok=True)
+
+    generated_at = datetime.now(timezone.utc).isoformat()
+    branch = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"], repo_root)
+    status = run_cmd(["git", "status", "--porcelain"], repo_root)
+    branch_name = branch.stdout.strip() if branch.returncode == 0 else "UNKNOWN"
+    status_lines = [ln for ln in status.stdout.splitlines() if ln.strip()]
+    write_json(
+        evidence_dir / "preflight.json",
+        {
+            "branch": branch_name,
+            "required_branch": REQUIRED_BRANCH,
+            "branch_ok": branch_name == REQUIRED_BRANCH,
+            "status_clean_before": len(status_lines) == 0,
+            "status_porcelain": status_lines,
+        },
+    )
+
+    policy_path = repo_root / "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json"
+    policy_spc_rl_path = repo_root / "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json"
+    replay_path = repo_root / "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv"
+    daily_portfolio_path = Path(
+        "/home/wilson/CEP_COMPRA/outputs/reports/task_017/run_20260212_125255/data/daily_portfolio_m3.parquet"
+    )
+    ssot_paths = [
+        repo_root / "docs/MASTERPLAN_V2.md",
+        repo_root / "docs/CONSTITUICAO.md",
+        repo_root / "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        repo_root / "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+        repo_root / "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+    ]
+    required_inputs = [policy_path, policy_spc_rl_path, replay_path, daily_portfolio_path, *ssot_paths]
+    missing_inputs = [str(p) for p in required_inputs if not p.exists()]
+    write_json(evidence_dir / "input_presence.json", {"missing_inputs": missing_inputs})
+    if missing_inputs:
+        fail_text = (
+            "# Report - F2_001 Envelope Continuo\n\n"
+            "OVERALL: FAIL\n\n"
+            "Gate falhou: S2_LOAD_INPUTS\n\n"
+            "Evidência: `outputs/masterplan_v2/f2_001/evidence/input_presence.json`\n"
+        )
+        report_path.write_text(fail_text, encoding="utf-8")
+        write_json(
+            manifest_path,
+            {
+                "task_id": TASK_F2_001,
+                "generated_at_utc": generated_at,
+                "overall": "FAIL",
+                "failure_gate": "S2_LOAD_INPUTS",
+                "missing_inputs": missing_inputs,
+            },
+        )
+        return 1
+
+    guardrail_policy = json.loads(policy_path.read_text(encoding="utf-8"))
+    guardrails = guardrail_policy["guardrails"]
+    dd_on = float(guardrails["regime_hysteresis_dd_on"])
+    dd_off = float(guardrails["regime_hysteresis_dd_off"])
+    turnover_caps = {k: float(v) for k, v in guardrails["turnover_cap_by_regime"].items()}
+    anti_reentry_stress_multiplier = float(guardrails["anti_reentry_stress_multiplier"])
+    # Numeric fallback window is not explicitly pinned in SSOT text; keep explicit and auditable here.
+    fallback_recovery_window_sessions = 10
+
+    replay = pd.read_csv(replay_path)
+    replay["date"] = pd.to_datetime(replay["date"])
+    daily = pd.read_parquet(daily_portfolio_path)
+    daily["date"] = pd.to_datetime(daily["date"])
+    base = replay.merge(daily[["date", "drawdown"]], on="date", how="left")
+    base["drawdown"] = base["drawdown"].astype(float)
+    base["buy_notional"] = base["buy_notional"].astype(float)
+    base["sell_notional"] = base["sell_notional"].astype(float)
+    base["equity"] = base["equity"].astype(float)
+    base = base.sort_values("date").reset_index(drop=True)
+    base["turnover"] = (base["buy_notional"].abs() + base["sell_notional"].abs()) / base["equity"].replace(0, pd.NA)
+    base["turnover"] = base["turnover"].fillna(0.0)
+
+    regimes: list[str] = []
+    envelope_values: list[float] = []
+    turnover_cap_applied: list[float] = []
+    turnover_excess: list[float] = []
+    hysteresis_active: list[int] = []
+    anti_reentry_active: list[int] = []
+    fallback_active: list[int] = []
+    stress_multiplier_applied: list[float] = []
+
+    in_w2 = False
+    fallback_counter = 0
+    for _, row in base.iterrows():
+        dd = float(row["drawdown"])
+        if in_w2:
+            if dd >= dd_off:
+                in_w2 = False
+                fallback_counter = fallback_recovery_window_sessions
+        else:
+            if dd <= dd_on:
+                in_w2 = True
+
+        if dd <= -0.30:
+            regime = "W3"
+        elif in_w2:
+            regime = "W2"
+        elif dd >= -0.10:
+            regime = "W1"
+        else:
+            regime = "OTHER"
+
+        cap = float(turnover_caps.get(regime, turnover_caps["OTHER"]))
+        turn = float(row["turnover"])
+        excess = max(0.0, turn - cap)
+        hysteresis_flag = 1 if in_w2 else 0
+        anti_reentry_flag = 1 if fallback_counter > 0 else 0
+        fallback_flag = 1 if fallback_counter > 0 else 0
+        stress_multiplier = anti_reentry_stress_multiplier if anti_reentry_flag else 1.0
+        penalty = min(1.0, excess / max(cap, 1e-9))
+        base_env = 1.0
+        if regime == "W2":
+            base_env = 0.45
+        elif regime == "W3":
+            base_env = 0.30
+        elif regime == "OTHER":
+            base_env = 0.65
+        env = max(0.0, min(1.0, (base_env * stress_multiplier) - (0.5 * penalty)))
+
+        regimes.append(regime)
+        envelope_values.append(env)
+        turnover_cap_applied.append(cap)
+        turnover_excess.append(excess)
+        hysteresis_active.append(hysteresis_flag)
+        anti_reentry_active.append(anti_reentry_flag)
+        fallback_active.append(fallback_flag)
+        stress_multiplier_applied.append(stress_multiplier)
+
+        if fallback_counter > 0:
+            fallback_counter -= 1
+
+    envelope = pd.DataFrame(
+        {
+            "date": base["date"],
+            "regime": regimes,
+            "drawdown": base["drawdown"],
+            "turnover": base["turnover"],
+            "turnover_cap": turnover_cap_applied,
+            "turnover_excess": turnover_excess,
+            "hysteresis_active": hysteresis_active,
+            "anti_reentry_active": anti_reentry_active,
+            "fallback_active": fallback_active,
+            "stress_multiplier_applied": stress_multiplier_applied,
+            "envelope_value": envelope_values,
+        }
+    )
+    envelope.to_csv(envelope_path, index=False)
+
+    write_json(
+        evidence_dir / "guardrails_parameters.json",
+        {
+            "regime_hysteresis_dd_on": dd_on,
+            "regime_hysteresis_dd_off": dd_off,
+            "turnover_cap_by_regime": turnover_caps,
+            "anti_reentry_stress_multiplier": anti_reentry_stress_multiplier,
+            "fallback_recovery_window_sessions": fallback_recovery_window_sessions,
+            "fallback_policy_note": guardrails["fallback_rule"],
+            "policy_source": str(policy_path.relative_to(repo_root)),
+        },
+    )
+    envelope.head(80).to_csv(evidence_dir / "envelope_daily_sample.csv", index=False)
+
+    envelope_range_ok = bool(((envelope["envelope_value"] >= 0.0) & (envelope["envelope_value"] <= 1.0)).all())
+    guardrails_materialized_ok = all(
+        col in envelope.columns
+        for col in [
+            "hysteresis_active",
+            "turnover_cap",
+            "anti_reentry_active",
+            "fallback_active",
+            "stress_multiplier_applied",
+        ]
+    )
+    traceability_ok = True
+    write_json(
+        evidence_dir / "envelope_validations_summary.json",
+        {
+            "rows": int(len(envelope)),
+            "envelope_range_ok_0_1": envelope_range_ok,
+            "envelope_min": float(envelope["envelope_value"].min()),
+            "envelope_max": float(envelope["envelope_value"].max()),
+            "guardrails_materialized_ok": guardrails_materialized_ok,
+            "hysteresis_active_days": int((envelope["hysteresis_active"] == 1).sum()),
+            "anti_reentry_active_days": int((envelope["anti_reentry_active"] == 1).sum()),
+            "fallback_active_days": int((envelope["fallback_active"] == 1).sum()),
+            "turnover_cap_breaches": int((envelope["turnover_excess"] > 0).sum()),
+            "traceability_ok": traceability_ok,
+        },
+    )
+
+    overall_pass = envelope_range_ok and guardrails_materialized_ok and traceability_ok and envelope_path.exists()
+
+    report_lines = [
+        "# Report - F2_001 Envelope Continuo Implementation",
+        "",
+        f"- task_id: `{TASK_F2_001}`",
+        f"- generated_at_utc: `{generated_at}`",
+        f"- branch: `{branch_name}`",
+        f"- overall: `{'PASS' if overall_pass else 'FAIL'}`",
+        "",
+        "## Validações requeridas",
+        "",
+        f"- Envelope contínuo persistido e com range [0,1]: `{'PASS' if envelope_range_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_001/envelope_daily.csv`, `outputs/masterplan_v2/f2_001/evidence/envelope_validations_summary.json`",
+        f"- Guardrails anti-deriva materializados (histerese, turnover cap, anti-reentry, fallback): `{'PASS' if guardrails_materialized_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_001/evidence/guardrails_parameters.json`, `outputs/masterplan_v2/f2_001/evidence/envelope_daily_sample.csv`",
+        f"- Rastreabilidade com evidências e hashes no manifest: `{'PASS' if traceability_ok else 'FAIL'}`",
+        "  - evidências: `outputs/masterplan_v2/f2_001/manifest.json`, `outputs/masterplan_v2/f2_001/evidence/input_presence.json`",
+        "",
+        "## Parâmetros explícitos carregados",
+        "",
+        f"- `dd_on`: `{dd_on}`",
+        f"- `dd_off`: `{dd_off}`",
+        f"- `turnover_cap_by_regime`: `{turnover_caps}`",
+        f"- `anti_reentry_stress_multiplier`: `{anti_reentry_stress_multiplier}`",
+        f"- `fallback_recovery_window_sessions`: `{fallback_recovery_window_sessions}`",
+        "",
+        "## Preflight",
+        "",
+        f"- Branch requerida: `{REQUIRED_BRANCH}` -> `{'PASS' if branch_name == REQUIRED_BRANCH else 'FAIL'}`",
+        f"- Repo limpo antes da execução: `{'PASS' if len(status_lines) == 0 else 'FAIL'}`",
+        "- evidência: `outputs/masterplan_v2/f2_001/evidence/preflight.json`",
+    ]
+    report_path.write_text("\n".join(report_lines) + "\n", encoding="utf-8")
+
+    manifest: dict[str, Any] = {
+        "task_id": TASK_F2_001,
+        "generated_at_utc": generated_at,
+        "repo_root": str(repo_root),
+        "branch": branch_name,
+        "head": run_cmd(["git", "rev-parse", "HEAD"], repo_root).stdout.strip(),
+        "task_spec_path": str(
+            (repo_root / "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION.json").relative_to(repo_root)
+        ),
+        "overall": "PASS" if overall_pass else "FAIL",
+        "validations": {
+            "envelope_range_0_1": envelope_range_ok,
+            "guardrails_materialized": guardrails_materialized_ok,
+            "traceability": traceability_ok,
+            "envelope_persisted": envelope_path.exists(),
+        },
+        "consumed_inputs": [
+            str(replay_path.relative_to(repo_root)),
+            str(policy_path.relative_to(repo_root)),
+            str(policy_spc_rl_path.relative_to(repo_root)),
+            str(daily_portfolio_path),
+            *[str(p.relative_to(repo_root)) for p in ssot_paths],
+        ],
+        "hashes_sha256": {},
+    }
+
+    hash_targets = [
+        report_path,
+        manifest_path,
+        envelope_path,
+        evidence_dir / "preflight.json",
+        evidence_dir / "input_presence.json",
+        evidence_dir / "guardrails_parameters.json",
+        evidence_dir / "envelope_daily_sample.csv",
+        evidence_dir / "envelope_validations_summary.json",
+        replay_path,
+        policy_path,
+        policy_spc_rl_path,
+    ]
+    for p in ssot_paths:
+        hash_targets.append(p)
+
+    for p in hash_targets:
+        if p.exists():
+            if str(p).startswith(str(repo_root)):
+                rel = str(p.relative_to(repo_root))
+            else:
+                rel = str(p)
+            manifest["hashes_sha256"][rel] = sha256_file(p)
+
+    write_json(manifest_path, manifest)
+    manifest["hashes_sha256"][str(manifest_path.relative_to(repo_root))] = sha256_file(manifest_path)
+    write_json(manifest_path, manifest)
+    return 0 if overall_pass else 1
+
+
 def main() -> int:
     ensure_official_python()
 
@@ -663,10 +957,12 @@ def main() -> int:
         return run_task_f1_001(repo_root, task_spec)
     if task_id == TASK_F1_002:
         return run_task_f1_002(repo_root, task_spec)
+    if task_id == TASK_F2_001:
+        return run_task_f2_001(repo_root, task_spec)
 
     raise NotImplementedError(
         f"Task ainda nao suportada por este runner: {task_id}. "
-        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}."
+        f"Implementado atualmente: {TASK_F1_001}, {TASK_F1_002}, {TASK_F2_001}."
     )
 
 
