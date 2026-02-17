@@ -1874,7 +1874,11 @@ def run_task_f2_003(repo_root: Path, task_spec: dict[str, Any]) -> int:
     ]
     for p in hash_targets:
         if p.exists():
-            manifest["hashes_sha256"][str(p.relative_to(repo_root))] = sha256_file(p)
+            if str(p).startswith(str(repo_root)):
+                rel = str(p.relative_to(repo_root))
+            else:
+                rel = str(p)
+            manifest["hashes_sha256"][rel] = sha256_file(p)
 
     write_json(manifest_path, manifest)
     manifest["hashes_sha256"][str(manifest_path.relative_to(repo_root))] = sha256_file(manifest_path)
