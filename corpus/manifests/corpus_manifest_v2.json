@@ -1,0 +1,1379 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_003_APPEND_DELTA_SINCE_V3_AND_REINDEX_V1",
+  "generated_at_utc": "2026-02-20T19:56:32.250245+00:00",
+  "source_root": "corpus/source",
+  "num_files": 274,
+  "total_bytes": 1970545,
+  "files": [
+    {
+      "relpath": "delta_since_v3/.obsidian/app.json",
+      "sha256": "78ad335f03cbad40fe5cb6e468c4c045b458dffd466ea7bd3e99a55c624a38db",
+      "bytes": 34
+    },
+    {
+      "relpath": "delta_since_v3/.obsidian/appearance.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    {
+      "relpath": "delta_since_v3/.obsidian/core-plugins.json",
+      "sha256": "763cf20a921fd9955735b278006820b90b207b2fc04d9e79ca648279c7c14276",
+      "bytes": 696
+    },
+    {
+      "relpath": "delta_since_v3/.obsidian/workspace.json",
+      "sha256": "59f9042684365d6949e79b04620fdeb0472a662504ce78bfe7ce12c1b0da8866",
+      "bytes": 7503
+    },
+    {
+      "relpath": "delta_since_v3/docs/LOCAL_DOCUMENT_INDEX.md",
+      "sha256": "3e4552ba5d4f98a52ae648889e84b240d696bb98c0e601f95aa16a2ce3dda39b",
+      "bytes": 2355
+    },
+    {
+      "relpath": "delta_since_v3/docs/MASTERPLAN_V2.md",
+      "sha256": "dc75c7f54666dc9006095186c7925dff8ffe03ee60b5a80c09d951fba3b376e2",
+      "bytes": 11977
+    },
+    {
+      "relpath": "delta_since_v3/docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+      "sha256": "b741588f8021bc253e155b6caf985af80a3c3d1e24f3e85c7ac0e301ba52123f",
+      "bytes": 4728
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/attempt_dir_tree_after_create.txt",
+      "sha256": "e6dfc1debef9a040ea0d320ff3f12d14fec942adb335bac6c0b97d76facdeef5",
+      "bytes": 307
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/dest_emendas_file_list.txt",
+      "sha256": "51c2c9781bbdc0c34287d8f28b7463da224164df4e41141fc0509fe4128734db",
+      "bytes": 135
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/done_marker.txt",
+      "sha256": "0f7897626396cfde98ac75bd414987752d2d88fead924c502a2f560e0032497e",
+      "bytes": 87
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/manifest_validation.json",
+      "sha256": "b2a479ed352cc7bc4f24fcb2e852903b0fc1b81d46bd4332e72935a8bedb57b1",
+      "bytes": 164
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/optional_copy_status.json",
+      "sha256": "52ffde2a526659a9a97115d447a54b89a379cfcf0b46c1c51cc6f57a039136ef",
+      "bytes": 183
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/precheck_target_not_exists.txt",
+      "sha256": "506f03526649532a1d4a7fb5ab972b969ee7a41e0b8a566a824934e7b19936ef",
+      "bytes": 100
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/readme_head.txt",
+      "sha256": "35ccc089fa81ab4db227bfa1a0474668b3d6ac2a39914c6eca3fa004943fc061",
+      "bytes": 504
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/repo_root_resolved.txt",
+      "sha256": "361a2b7cf67bee4fb9f1dca4611820e730e2090b87e9b9864157c3abf678db3e",
+      "bytes": 29
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/required_ssots_presence_check.json",
+      "sha256": "7a82a3717e69ca522b2e91f12dc37d25d92c56a5699fb282c3d2abb339225aff",
+      "bytes": 674
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/snapshot_tree.txt",
+      "sha256": "3cc79d9247f6fef38d91bfe59dc2e86365e90fbde7417da2f68e02c04c3b2fe7",
+      "bytes": 392
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/evidence/source_emendas_file_list.txt",
+      "sha256": "51c2c9781bbdc0c34287d8f28b7463da224164df4e41141fc0509fe4128734db",
+      "bytes": 135
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/att2_ssot_snapshot/20260220/report.json",
+      "sha256": "a38b05623235d84726f48454c85793aad9a67e33d37b6158acc0d234639e1d84",
+      "bytes": 6119
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/constituicao_forense/20260215/evidence/found_paths.txt",
+      "sha256": "a54e80c19e42f3a937c86e11b4aea29b5bd7b270c83819ac51fe6222a683cb87",
+      "bytes": 921
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/constituicao_forense/20260215/evidence/hashes.txt",
+      "sha256": "adeb3f18cc80c04b8a2351c7b7ebdd2543c019431f3e3d705ca8c8075ede08b1",
+      "bytes": 1005
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/constituicao_forense/20260215/extract_constituicao_trechos.md",
+      "sha256": "fb2095c863c9fcfd6122e80394464de48dc62fb729a928ccf26836a9f79d12e3",
+      "bytes": 1502
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/constituicao_forense/20260215/legacy_alignment_map.md",
+      "sha256": "25cdd9e157ec7408bbfc6ec54c0542474e34f4decd7d681e7562aa5a1f24af2c",
+      "bytes": 2474
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/constituicao_forense/20260215/manifest.json",
+      "sha256": "7825dcde36c400125953382c8268dc73394774e49ef9126cde990f7461126055",
+      "bytes": 3251
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/constituicao_forense/20260215/report.md",
+      "sha256": "018b6f531dec1d8a469a93e0e7d93d09c8e8668e7f34dc290a0d9275f4b361ef",
+      "bytes": 2238
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_init_fix/20260215/evidence/commits_involved.txt",
+      "sha256": "958d67ad1735fef2024e4d6fa9d9385f69f918deb05f0e94f4d0d275749e4560",
+      "bytes": 126
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_init_fix/20260215/evidence/gitignore_diff.patch",
+      "sha256": "34389c1c65428b309a90d2dd175659b1eb07097017c3c921295f6fa0416ee7cc",
+      "bytes": 230
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_init_fix/20260215/evidence/status_after.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_init_fix/20260215/evidence/status_before.txt",
+      "sha256": "c3f3900be28e318339cf84eccc2d6d6307640713e04753a69cb10d1a8f5a5aa3",
+      "bytes": 28
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_init_fix/20260215/manifest.json",
+      "sha256": "9557dd48ea1221769dd04fa9a11a64c17db48dd069741b37eaae48ac7d677e9b",
+      "bytes": 2601
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_init_fix/20260215/report.md",
+      "sha256": "98a04c9f076bfa7dd48dd2a2e4a0358c34da923f6edc8fc4a5a26e84f0d936cd",
+      "bytes": 2159
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_ssh_fix/20260215/manifest.json",
+      "sha256": "31cbc734a2bba68ea652ee8eae84e605f5cc668bad6a9781f123064dca4ce77f",
+      "bytes": 3540
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_ssh_fix/20260215/report.md",
+      "sha256": "0b11e96669d90a9744144b841dd7435a4255382a18028dfdc609ece7eeebab7b",
+      "bytes": 2153
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_ssh_verify/20260215/manifest.json",
+      "sha256": "cf72e2a4afe6664d7d0077f54caebc21a50f424053a3c03ceec3ef3bbcc52f8a",
+      "bytes": 3737
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_ssh_verify/20260215/report.md",
+      "sha256": "a19afaa4f975a53573bf0c0ca40483d2f8ab11f934e2cf1751b8117e8013dd95",
+      "bytes": 1763
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/branch_vv_after.txt",
+      "sha256": "718c3ef92050c2026e55b8006975df4a7e556f60fcef2a817a0fa82025febb0b",
+      "bytes": 452
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/branch_vv_before.txt",
+      "sha256": "a9600cc76b5b7cbc7a9b8b5af856334c9fc7793a708b8048b187af0d3fa5e544",
+      "bytes": 388
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/fetch.txt",
+      "sha256": "ec4a2f68a7ddf04c55cae9c2ffe596c5c73f5db7a7945e72476874357c4b25d8",
+      "bytes": 222
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/ls_remote.txt",
+      "sha256": "84f752881cb29298e7a4fdc78cb41b1abe088f422fb18b8cae4c6faa3291d753",
+      "bytes": 234
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/pull_ff_only.txt",
+      "sha256": "0da39f89335f53d61a6afdb96d4ce0206859ac79e96de3f1b97e5025b8551638",
+      "bytes": 222
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/push.txt",
+      "sha256": "59120cb791085b4ebfe9991bf86baa01e856f1ad45ad40c9859a23189d0a190d",
+      "bytes": 165
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/push_dry_run.txt",
+      "sha256": "f1b73a650c109c2db1c4b970961eafaec57861853e5baf752524f6a7600a5d92",
+      "bytes": 236
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/remote_v.txt",
+      "sha256": "8819e7e729aa7d51af61b702c854c3a1be798285954d26a5747f3bc59e2b2725",
+      "bytes": 113
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/status_after.txt",
+      "sha256": "cee6276572a434dd52302463f6857604202c096e77b6d376f1f349e8170bb6e2",
+      "bytes": 16
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/status_before.txt",
+      "sha256": "cee6276572a434dd52302463f6857604202c096e77b6d376f1f349e8170bb6e2",
+      "bytes": 16
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/evidence/worktree_list.txt",
+      "sha256": "a5570ca5eaee5a472dcbc22411ed74adfa74a80a91d730a1791c79aab73daeaa",
+      "bytes": 265
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/manifest.json",
+      "sha256": "aed0289d566625bda9d0854c4c17c09e7cee2203312ebd8e23047d3e8dd24ab0",
+      "bytes": 4924
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/git_sync/20260215/report.md",
+      "sha256": "3820717973f21d82d023fcf10e170a9564bb047e9ff5e70f0322aee7750a8868",
+      "bytes": 2021
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/corpus_discovery/evidence/discovery_stats.json",
+      "sha256": "df888de621a6f2b7eb5b2a63a7676ddbc2439618ffe1a2e0ab33be0643971d03",
+      "bytes": 135
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/corpus_discovery/evidence/required_copy_check.json",
+      "sha256": "abc25a750b7fc52eacad556a91d279f8feb160ee65896af41c623a15198989a6",
+      "bytes": 800
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/corpus_discovery/report.json",
+      "sha256": "c45eb1a815f1528fe93712933dedc9d0d076b43fb8acb0bcb93e37c00004446d",
+      "bytes": 1421
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/delta_since_v3/evidence/delta_detection_method.json",
+      "sha256": "181b8cb6881281b3dca634e95b6278ae799c8b9c5bb1c6905ba45f5230dc0b89",
+      "bytes": 135
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/delta_since_v3/evidence/reindex_smoke_results.json",
+      "sha256": "12170c69dc8c5e2e3620c6b0e6f4e6561a23ee79e197540bf45b69897df9291d",
+      "bytes": 3801
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/delta_since_v3/report.json",
+      "sha256": "28d296b2b4bccdb9557bf59f31711420309b8299c754cb02c748258a49538401",
+      "bytes": 1820
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/rag_build/evidence/index_stats.json",
+      "sha256": "d79542ec50c29a6f8474a49bcbc3236ad376cb75b0ffcc43f74b7849cda2851c",
+      "bytes": 115
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/rag_build/evidence/smoke_query_results.json",
+      "sha256": "12534557a10338d15bb65854eb187b0f99f62ff588e3aafaa1742c8585dc299e",
+      "bytes": 4040
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/rag/20260220/rag_build/report.json",
+      "sha256": "8126051bfede22eb95c5647c7c133d16b16aa3421a5f165a86ed0e8af83fe6ec",
+      "bytes": 1407
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/evidence/branch_list.txt",
+      "sha256": "28cea227d89040505b01f9b16ea16fbcf8f9d314ff2cee5c3f9c7621a2c133a2",
+      "bytes": 51
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/evidence/python_official.txt",
+      "sha256": "e68d032cffa6848c4ff90d8fe8a63d60e6e2456baf93e5d4df83682ab9938407",
+      "bytes": 59
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/evidence/repo_state.txt",
+      "sha256": "7856135e2e52e7e7e58f7ea749fe726319c7ea7b871082dad6c5efd74c28da2d",
+      "bytes": 96
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/evidence/status_repo_root.txt",
+      "sha256": "cee6276572a434dd52302463f6857604202c096e77b6d376f1f349e8170bb6e2",
+      "bytes": 16
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/evidence/worktree_list.txt",
+      "sha256": "adf89952fd23702dff52786ad43be31ea5fb79074fbded0335a34a4421dcffdc",
+      "bytes": 267
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/manifest.json",
+      "sha256": "dffc24a6d7b8ca455a8c1fe530029bde028d943314e6a1f68222168968a4fa06",
+      "bytes": 3099
+    },
+    {
+      "relpath": "delta_since_v3/outputs/governanca/worktrees/20260215/report.md",
+      "sha256": "739438e4177e71ed408e9185288b212b0d56f942e6d4da735de4490683fbc3f9",
+      "bytes": 2175
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cash_equity_reconciliation_sample.csv",
+      "sha256": "91ccafc441a6d2b0928dfd4dfaa978b7cc02a5fd6b5a8b091db9075ee6b9439c",
+      "bytes": 51165
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cash_equity_reconciliation_summary.json",
+      "sha256": "018d6ed16d9a5f24e38498d974b01e4032f7d8a5198212b08f6a174d9cc0c6ba",
+      "bytes": 184
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cdi_cash_application_sample.csv",
+      "sha256": "de7fbc362b458acd360d7ec733e84e8c523446fc99ef0cec8f5ed57446399abd",
+      "bytes": 11291
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cdi_cash_application_summary.json",
+      "sha256": "003d21d1b398b079cd40ae220fab503c263620791a8c093ce9ff414ec467d064",
+      "bytes": 147
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cdi_scale_and_usage_check.json",
+      "sha256": "e7054d9cad7a36828aa5aed974776b207461513307666766e530d22be0013335",
+      "bytes": 578
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/economic_plausibility_diagnostics.json",
+      "sha256": "df1e8ed88a8dabfd4bbeb287f239e4ea15504de28c9ff56026afe0701d62e5c5",
+      "bytes": 805
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/findings.json",
+      "sha256": "c7531f650ba50006e8d887aa36f470f11bcdd26b2ed3675bd9780e3be2d1a575",
+      "bytes": 2388
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/git_state.json",
+      "sha256": "3de5b5b46740c714b77d869d970d393d12ab9d4d3acabe2192d5e3182edee65e",
+      "bytes": 277
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/inputs_presence.json",
+      "sha256": "29cac6548234e3049533bf5c8330966873c85c5f3d3b4406db63842fee73c48d",
+      "bytes": 27
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/recommendations.json",
+      "sha256": "e8dcdcb3ab309aa96b77275b1623f5a84a8a3dd23a4c12af6f4e24dbc3df2949",
+      "bytes": 400
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/reported_status_matrix.csv",
+      "sha256": "ca1eb9b80edcd9b5cfe642f9a6a72d1a0405a63181eeead9bf5ff933da680402",
+      "bytes": 346
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/task_specs_inventory_audit.csv",
+      "sha256": "76c7286b073a475899f009fd4bb0d47c8e4cb66f6a68c748e97b9370d00184ab",
+      "bytes": 2382
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/manifest.json",
+      "sha256": "ff18e1100728c7c829c9d7fb11deb5a5710add483215d8e191fa2e8c767ed1ec",
+      "bytes": 4016
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/plots/audit_cash_vs_positions_v2.html",
+      "sha256": "b3816c57e397752dc03a60931c95fa09ca4d986cdefa6e9549bb93c28fc5d157",
+      "bytes": 171429
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/plots/audit_cumulative_buy_sell_v2.html",
+      "sha256": "fe37c0d8f92c696e1877def540fee6dc0d2c4ab37434cd1a9fde6c173b8b7e5b",
+      "bytes": 250404
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/plots/audit_equity_baseline_vs_v2.html",
+      "sha256": "013b21257752a7aa41eb92a7b162f925b3511748f2705c9dd7bc62a40167b2de",
+      "bytes": 170776
+    },
+    {
+      "relpath": "delta_since_v3/outputs/masterplan_v2/auditoria_tecnica_completa/20260217/report.md",
+      "sha256": "8df1db3f9a707ea97dea5f9a675bad886731798fb1e445a54c638e71b9dbabb5",
+      "bytes": 3755
+    },
+    {
+      "relpath": "delta_since_v3/planning/runs/TASK_CEP_BUNDLE_CORE_RAG_001_DISCOVER_AND_PIN_CORPUS_V1/run_20260220_165609/run_summary.json",
+      "sha256": "c45eb1a815f1528fe93712933dedc9d0d076b43fb8acb0bcb93e37c00004446d",
+      "bytes": 1421
+    },
+    {
+      "relpath": "delta_since_v3/planning/runs/TASK_CEP_BUNDLE_CORE_RAG_002_BUILD_LOCAL_VECTOR_INDEX_V1/run_20260220_165610/run_summary.json",
+      "sha256": "8126051bfede22eb95c5647c7c133d16b16aa3421a5f165a86ed0e8af83fe6ec",
+      "bytes": 1407
+    },
+    {
+      "relpath": "delta_since_v3/planning/runs/TASK_CEP_BUNDLE_CORE_RAG_003_APPEND_DELTA_SINCE_V3_AND_REINDEX_V1/run_20260220_165610/run_summary.json",
+      "sha256": "28d296b2b4bccdb9557bf59f31711420309b8299c754cb02c748258a49538401",
+      "bytes": 1820
+    },
+    {
+      "relpath": "delta_since_v3/planning/task_specs/TASK_CEP_BUNDLE_CORE_RAG_001_DISCOVER_AND_PIN_CORPUS_V1.json",
+      "sha256": "f3c71fb598b16c6fadda31e9877de9681ff5c6ff0be4f970b2024a6482f82b94",
+      "bytes": 1370
+    },
+    {
+      "relpath": "delta_since_v3/planning/task_specs/TASK_CEP_BUNDLE_CORE_RAG_002_BUILD_LOCAL_VECTOR_INDEX_V1.json",
+      "sha256": "c0ff51f4f56d483cbc6d2d7d4b14f1d71b5221b3ec14db09e2769fd22c897ead",
+      "bytes": 1182
+    },
+    {
+      "relpath": "delta_since_v3/planning/task_specs/TASK_CEP_BUNDLE_CORE_RAG_003_APPEND_DELTA_SINCE_V3_AND_REINDEX_V1.json",
+      "sha256": "5ed2b8de02600b32da07e1a8ee71a5915e434e2cc9c6fc6927a82a627a8fd128",
+      "bytes": 1364
+    },
+    {
+      "relpath": "delta_since_v3/planning/task_specs/TASK_CEP_TRANSFERENCIA_CEP_DEFINITIVO_V1.json",
+      "sha256": "fdd7fce3f51d5b24287632754cd778523504d732d78c6f110c0b2e2ca6a5deab",
+      "bytes": 1986
+    },
+    {
+      "relpath": "delta_since_v3/planning/task_specs/TASK_CEP_TRANSFERENCIA_CEP_DEFINITIVO_V2.json",
+      "sha256": "1b06bc915f63c3d4bf94bf66b94d5154501eced109a6be86356189b675b358bb",
+      "bytes": 2304
+    },
+    {
+      "relpath": "delta_since_v3/planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_AUDITORIA_TECNICA_COMPLETA_CDI_E_EQUITY_V1.json",
+      "sha256": "0b206ec416994bfe7013604ebf14101fabfb84fc774bc5b908ebaec45d438b61",
+      "bytes": 2078
+    },
+    {
+      "relpath": "delta_since_v3/scripts/agno_rag_runner.py",
+      "sha256": "acf630218174d7d27bfd0b0d294087d64c5f15a5022e6b05274b6367e56cc7b8",
+      "bytes": 33143
+    },
+    {
+      "relpath": "delta_since_v3/tools/rag/build_index.py",
+      "sha256": "320cc50c9ffe3ebe8e5f42f588864e29d6eba7a29174312989ca1c879286fd54",
+      "bytes": 444
+    },
+    {
+      "relpath": "delta_since_v3/tools/rag/query.py",
+      "sha256": "b8fcf9e0b3a76ca8359e16ce55db85ec113e37bb598f355a7a6a9cd923614cc8",
+      "bytes": 1652
+    },
+    {
+      "relpath": "docs/CONSTITUICAO.md",
+      "sha256": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63",
+      "bytes": 2840
+    },
+    {
+      "relpath": "docs/EXECUTION_STRUCTURE_LOCAL.md",
+      "sha256": "f6fa7f1f7d530a466ac5d7256b0676be3c106566f229d6f759c560a952aa97c7",
+      "bytes": 1070
+    },
+    {
+      "relpath": "docs/LOCAL_DOCUMENT_INDEX.md",
+      "sha256": "3e4552ba5d4f98a52ae648889e84b240d696bb98c0e601f95aa16a2ce3dda39b",
+      "bytes": 2355
+    },
+    {
+      "relpath": "docs/MASTERPLAN.md",
+      "sha256": "dc236345b75d9665a9555813e2556a9941462ff9e7ff274879332304b5733ea4",
+      "bytes": 6247
+    },
+    {
+      "relpath": "docs/MASTERPLAN_V2.md",
+      "sha256": "dc75c7f54666dc9006095186c7925dff8ffe03ee60b5a80c09d951fba3b376e2",
+      "bytes": 11977
+    },
+    {
+      "relpath": "docs/MP001_VISAO_EXECUTIVA.md",
+      "sha256": "716e4391131193a60552e00478c96c2d0780ac544d23ef77a5bd338abf18a440",
+      "bytes": 1465
+    },
+    {
+      "relpath": "docs/MP002_OBJETIVO_REAL_SSOT.md",
+      "sha256": "e50124619a94a0524c89b446331a4e88e8e3225fb2a4ba89299ae60255a45219",
+      "bytes": 1464
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE.json",
+      "sha256": "713640c87adf23dc92f4d409d98a380da6c43e87e03f1a0cf4f87629799ac557",
+      "bytes": 6607
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE.md",
+      "sha256": "2ae177bcbba7da4b5ed04bf28aba1490eda68ea1621ab5f97ba13e1d345103b5",
+      "bytes": 5982
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE_V2.json",
+      "sha256": "b692a8e767cd68823bfdd8289f8430cc364a1a848672f21ec01821221eb1853f",
+      "bytes": 4583
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE_V2.md",
+      "sha256": "8e6da01bca21c53bde629a5aca89c5a9ef5d86c9a2c0c10fa5ac0527902e8e8b",
+      "bytes": 3944
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+      "sha256": "b741588f8021bc253e155b6caf985af80a3c3d1e24f3e85c7ac0e301ba52123f",
+      "bytes": 4728
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "sha256": "4d8462a603fe2b650019109609585e56cf3d65f171e44b5a2344107beb53ff31",
+      "bytes": 5841
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/INDEX.md",
+      "sha256": "c8c8133a3fa435b2e71ac40ca4be239cc6b35bf7d4415364b81147558f56f9a5",
+      "bytes": 5342
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "sha256": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+      "bytes": 3367
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/affected_artifacts_hashes.txt",
+      "sha256": "4d875744429c4cccf1291c79002b3b14890a610646cd5166beae0f2985e812e2",
+      "bytes": 356
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/status_after_sync.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/status_before.txt",
+      "sha256": "15a383d6174eba835f5da875ed8d3d57eaae0cc596f064fcc7ce742382f54e7b",
+      "bytes": 52
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_fetch.txt",
+      "sha256": "b1ed75e26c0b0164a3e4308fc4c7bf7576c22288a848d4fa76fd185a94b7d397",
+      "bytes": 12
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_pull_ff_only.txt",
+      "sha256": "cae7fb3d4c19462ebc5c44dad8d44597a4941cbb8dc88285903ea2bcdfd13c2d",
+      "bytes": 32
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/evidence/sync_push.txt",
+      "sha256": "163702909c97c6e05fb92d2c172b4293a7d54c2992faf8c90453571188050875",
+      "bytes": 34
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/manifest.json",
+      "sha256": "b5712473c9b252d6290a0555381a5db9599bfc0f83d9c9854f485b904ca4b16d",
+      "bytes": 2983
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/cost_model_emenda/report.md",
+      "sha256": "43913f7543f718516457e99e2fb204a7e3b7db271da9898e21e74f4caeb9d94d",
+      "bytes": 2274
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/index.json",
+      "sha256": "f177d812a902a7574d1a3bc5d671621fb26595011c1be7f736f6341825802ea2",
+      "bytes": 11811
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/manifest.json",
+      "sha256": "48d016a690058f06d9e9da0f2ca9ce64f1be5d00c1a27cb9156693dbd3533734",
+      "bytes": 3542
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/metrics_m3_w1_w2_v3.json",
+      "sha256": "d4c3e59aaeec1520815099985ef43cc6e77d962e2abc5bc88ea5a6658f9948b9",
+      "bytes": 4603
+    },
+    {
+      "relpath": "docs/_evidencias/20260215_support_docs/instrumentation_costs_v3/report.md",
+      "sha256": "f14657d06488358deb0cda280257a21375e048fd8a5e514404e7f2d07ebc8ce1",
+      "bytes": 2740
+    },
+    {
+      "relpath": "docs/corpus/CORPUS_MASTER.md",
+      "sha256": "a97ee684e59b41703d581484010b737ecfd2d4a66f7be9f0b87af8ec0ce6d764",
+      "bytes": 3543
+    },
+    {
+      "relpath": "docs/corpus/corpus_index.json",
+      "sha256": "69719dec805ded419f61b435179e7ef3ab4a14960c7163f5e4cd37546c206d22",
+      "bytes": 24308
+    },
+    {
+      "relpath": "docs/corpus/experimentos.json",
+      "sha256": "b6d1499e199ec608722a7855df9c409a92289d443c00f2d32d4d946d8e6fa33c",
+      "bytes": 686725
+    },
+    {
+      "relpath": "docs/corpus/licoes_aprendidas.json",
+      "sha256": "5f93f48194b5b31540f23e1d9f8e6e23423a688b6b0025e702e1eb1572a4c429",
+      "bytes": 49097
+    },
+    {
+      "relpath": "docs/emendas/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "sha256": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8",
+      "bytes": 3255
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "sha256": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+      "bytes": 3367
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+      "sha256": "e7a099f3fca1c4249a0baa10c05d71c369f07c9da9fe6adb47e91755b36cf72e",
+      "bytes": 2574
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_TEMPLATE.md",
+      "sha256": "4bd612761cfd008cad37bfa6c42a2014496bf486a34b450bf4780812bf4a6ab5",
+      "bytes": 1017
+    },
+    {
+      "relpath": "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+      "sha256": "2cd7ca475fa188f5c32491bf307f9eed00a9716a0fc411599dde89f2c83c4a46",
+      "bytes": 1353
+    },
+    {
+      "relpath": "outputs/controle/anti_deriva_w2/20260216/report.md",
+      "sha256": "3cb48b385515f03fd23202e3f4a04333ee54f5e52ac834cf7d016915e46c1dc8",
+      "bytes": 663
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/experiments/E1_BASELINE.manifest.json",
+      "sha256": "54fc5adbb332e09fb1217fd93fbf82aa398680d3c957a4281231fc56adc60a08",
+      "bytes": 206
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/experiments/E2_TURNOVER_CAP_BY_REGIME.manifest.json",
+      "sha256": "a0774f4845587c42edafc5a0da2b37a95d4f3838c54d82254a5a6283ec52da91",
+      "bytes": 234
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/experiments/E3_ADD_REGIME_HYSTERESIS.manifest.json",
+      "sha256": "1aaf036f85aaa86841a82d06f47bc74953a8550d534cc93afa226f1fbad3d085",
+      "bytes": 232
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/experiments/E4_ADD_ANTI_REENTRY_FILTER.manifest.json",
+      "sha256": "ee9c4934f41761957a1668525119faf04425c650378cb58a0a744f4935a17b3e",
+      "bytes": 236
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/manifest.json",
+      "sha256": "188e150345bbdfdbe7082b522a5c82b93e0a56559888e8a57008d29cdadb2b14",
+      "bytes": 3960
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/report.md",
+      "sha256": "d3c8a2e1571d4606915ab59c8deef8f7ec00322110fcc5bcb84653b637ff55d0",
+      "bytes": 2392
+    },
+    {
+      "relpath": "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json",
+      "sha256": "5f0000807fc1e20308160babdedc14e4cd482949d8dde5db9abac35cfaad4243",
+      "bytes": 8611
+    },
+    {
+      "relpath": "outputs/gaps/g1_g4/20260216/manifest.json",
+      "sha256": "5f5ed8d0e9441a1d406dc67494031479f2f878e1318c3ef601858825a0dce206",
+      "bytes": 2373
+    },
+    {
+      "relpath": "outputs/gaps/g1_g4/20260216/report.md",
+      "sha256": "27d1514d2f484e2206e3a12972d0b438e29f1462bc48b3c58a6739ed71dd9f52",
+      "bytes": 1976
+    },
+    {
+      "relpath": "outputs/gaps/m3_w1_w2/20260215/manifest.json",
+      "sha256": "fd0aebe1a99f37f2f0b529c8ae9feff3d33131f88da80d766a35a8e3f983a55f",
+      "bytes": 4064
+    },
+    {
+      "relpath": "outputs/gaps/m3_w1_w2/20260215/report.md",
+      "sha256": "1941025e45e1ce62101d689758bfb2f176e94e9b774d24981189e94301dff3b3",
+      "bytes": 3008
+    },
+    {
+      "relpath": "outputs/governanca/att2_ssot_snapshot/20260220/evidence/manifest_validation.json",
+      "sha256": "b2a479ed352cc7bc4f24fcb2e852903b0fc1b81d46bd4332e72935a8bedb57b1",
+      "bytes": 164
+    },
+    {
+      "relpath": "outputs/governanca/att2_ssot_snapshot/20260220/report.json",
+      "sha256": "a38b05623235d84726f48454c85793aad9a67e33d37b6158acc0d234639e1d84",
+      "bytes": 6119
+    },
+    {
+      "relpath": "outputs/governanca/bootstrap_repo/20260215/manifest.json",
+      "sha256": "01b10bd23e3dd21a77ea293ab8349225b931b28aaba47ff0b537140629643898",
+      "bytes": 2177
+    },
+    {
+      "relpath": "outputs/governanca/bootstrap_repo/20260215/report.md",
+      "sha256": "9d48591a1a62fc9047b69abd21300edcde21e083d0f76a4434cac63430e6d728",
+      "bytes": 1641
+    },
+    {
+      "relpath": "outputs/governanca/canonicalize_docs/20260215/manifest.json",
+      "sha256": "bb31191afa1c90da37c86c2d4358c0abe2358f5766e6265781ffd7ba98cda541",
+      "bytes": 5289
+    },
+    {
+      "relpath": "outputs/governanca/canonicalize_docs/20260215/report.md",
+      "sha256": "a80923262ca54d74427aef2d8e0b8348b999935b7d9e02f651d8d57c576f871c",
+      "bytes": 1928
+    },
+    {
+      "relpath": "outputs/governanca/constituicao_forense/20260215/manifest.json",
+      "sha256": "7825dcde36c400125953382c8268dc73394774e49ef9126cde990f7461126055",
+      "bytes": 3251
+    },
+    {
+      "relpath": "outputs/governanca/constituicao_forense/20260215/report.md",
+      "sha256": "018b6f531dec1d8a469a93e0e7d93d09c8e8668e7f34dc290a0d9275f4b361ef",
+      "bytes": 2238
+    },
+    {
+      "relpath": "outputs/governanca/emendas/20260215_cost_model/manifest.json",
+      "sha256": "b5712473c9b252d6290a0555381a5db9599bfc0f83d9c9854f485b904ca4b16d",
+      "bytes": 2983
+    },
+    {
+      "relpath": "outputs/governanca/emendas/20260215_cost_model/report.md",
+      "sha256": "43913f7543f718516457e99e2fb204a7e3b7db271da9898e21e74f4caeb9d94d",
+      "bytes": 2274
+    },
+    {
+      "relpath": "outputs/governanca/fix_bootstrap_clean/20260215/manifest.json",
+      "sha256": "aeaf3d0fb39bdd4ae6f401b0aa5ea3fd9b6f18807220de49b64a5beb72ae31d5",
+      "bytes": 3287
+    },
+    {
+      "relpath": "outputs/governanca/fix_bootstrap_clean/20260215/report.md",
+      "sha256": "cf13e014eeb1790e15c513f8aec7df3a64adf3fce57c13d378920017b52e7cce",
+      "bytes": 1981
+    },
+    {
+      "relpath": "outputs/governanca/git_init/20260215/manifest.json",
+      "sha256": "23a0ebaf816ae412d254154252a290e01ecfd6b8faddd244f3b92691ee437d19",
+      "bytes": 2028
+    },
+    {
+      "relpath": "outputs/governanca/git_init/20260215/report.md",
+      "sha256": "6f3ac703a9b43aa1a5393640186844ba50b4f95c969d48f4e952b3d4e114a122",
+      "bytes": 863
+    },
+    {
+      "relpath": "outputs/governanca/git_init_fix/20260215/manifest.json",
+      "sha256": "9557dd48ea1221769dd04fa9a11a64c17db48dd069741b37eaae48ac7d677e9b",
+      "bytes": 2601
+    },
+    {
+      "relpath": "outputs/governanca/git_init_fix/20260215/report.md",
+      "sha256": "98a04c9f076bfa7dd48dd2a2e4a0358c34da923f6edc8fc4a5a26e84f0d936cd",
+      "bytes": 2159
+    },
+    {
+      "relpath": "outputs/governanca/git_ssh_fix/20260215/manifest.json",
+      "sha256": "31cbc734a2bba68ea652ee8eae84e605f5cc668bad6a9781f123064dca4ce77f",
+      "bytes": 3540
+    },
+    {
+      "relpath": "outputs/governanca/git_ssh_fix/20260215/report.md",
+      "sha256": "0b11e96669d90a9744144b841dd7435a4255382a18028dfdc609ece7eeebab7b",
+      "bytes": 2153
+    },
+    {
+      "relpath": "outputs/governanca/git_ssh_verify/20260215/manifest.json",
+      "sha256": "cf72e2a4afe6664d7d0077f54caebc21a50f424053a3c03ceec3ef3bbcc52f8a",
+      "bytes": 3737
+    },
+    {
+      "relpath": "outputs/governanca/git_ssh_verify/20260215/report.md",
+      "sha256": "a19afaa4f975a53573bf0c0ca40483d2f8ab11f934e2cf1751b8117e8013dd95",
+      "bytes": 1763
+    },
+    {
+      "relpath": "outputs/governanca/git_sync/20260215/manifest.json",
+      "sha256": "aed0289d566625bda9d0854c4c17c09e7cee2203312ebd8e23047d3e8dd24ab0",
+      "bytes": 4924
+    },
+    {
+      "relpath": "outputs/governanca/git_sync/20260215/report.md",
+      "sha256": "3820717973f21d82d023fcf10e170a9564bb047e9ff5e70f0322aee7750a8868",
+      "bytes": 2021
+    },
+    {
+      "relpath": "outputs/governanca/local_execution_structure/20260216/evidence/smoke_run_summary.json",
+      "sha256": "3736e52be86655d9f4139633b2588b069492e377ec4d6905ba67df1111022e86",
+      "bytes": 559
+    },
+    {
+      "relpath": "outputs/governanca/local_execution_structure/20260216/manifest.json",
+      "sha256": "2d4401aaaa1eb4c344d86257857e08b02ef3a8aac2d0b3847a4c0f933564c5b7",
+      "bytes": 3932
+    },
+    {
+      "relpath": "outputs/governanca/local_execution_structure/20260216/report.md",
+      "sha256": "97ab2efeba4733c566a587bf7f925bb28adfb4dfe2c217fd4c431c7e77631a55",
+      "bytes": 2467
+    },
+    {
+      "relpath": "outputs/governanca/local_migration/20260216/manifest.json",
+      "sha256": "5c79e2a4705ce939a2040b6d94e1f234835ab0c41cbe571fa39f181a86e5862e",
+      "bytes": 6061
+    },
+    {
+      "relpath": "outputs/governanca/local_migration/20260216/report.md",
+      "sha256": "658bcb55ca3f89f96d70b7460a1b5504c733feb7ea99a6c919a58529bff181a2",
+      "bytes": 2198
+    },
+    {
+      "relpath": "outputs/governanca/masterplan_audit/20260216/manifest.json",
+      "sha256": "21404160661b6f594cd2b1a38350a0cf49c428ac8a4247a4f20d2a66c3a3a4c5",
+      "bytes": 5309
+    },
+    {
+      "relpath": "outputs/governanca/masterplan_audit/20260216/report.md",
+      "sha256": "e4a38684b2ca9c22bfa8f7139256985459753c3150ebdd99de732a8e288027bb",
+      "bytes": 2984
+    },
+    {
+      "relpath": "outputs/governanca/masterplan_audit/20260216_post_sprint_001/manifest.json",
+      "sha256": "789da276aa8b9f14143ea5a4d16846003825ffc27408a9d472ab44357ce7cd37",
+      "bytes": 3086
+    },
+    {
+      "relpath": "outputs/governanca/masterplan_audit/20260216_post_sprint_001/report.md",
+      "sha256": "9aae746da46ee45aaef00d2143f92d5756e8fbd51adb285d5bb0f71c454b500b",
+      "bytes": 1755
+    },
+    {
+      "relpath": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/report.md",
+      "sha256": "057f9faa34498e85c42c31c9f74a0c50cdce5fc5ab570303e541fde0aabc758c",
+      "bytes": 773
+    },
+    {
+      "relpath": "outputs/governanca/masterplan_audit/20260216_post_sprint_003/report.md",
+      "sha256": "4ac344a95bb5d877305fd54b35e33e44c79bcca9695b7dcee674e44a542806e1",
+      "bytes": 496
+    },
+    {
+      "relpath": "outputs/governanca/phase_closeout/20260216/manifest.json",
+      "sha256": "22843a3e316eaa758be629d34e0a1e6246d5074900c83d27b483add456f07606",
+      "bytes": 2397
+    },
+    {
+      "relpath": "outputs/governanca/phase_closeout/20260216/phase_inventory.csv",
+      "sha256": "00558c3d3dd81ad7d3033b11a1d0c4fadc7a2da3a7fbf3eae511eed6b92d55c6",
+      "bytes": 4264
+    },
+    {
+      "relpath": "outputs/governanca/phase_closeout/20260216/report.md",
+      "sha256": "c2cfb132958ede67a8fd882cbd25846a719c4f9e488796290480aa2fe2c8650a",
+      "bytes": 1425
+    },
+    {
+      "relpath": "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json",
+      "sha256": "e07941bf4301b5d6f59aa0ca279d1ac1e0e4970e85331bf0f8f512d1b623ce4b",
+      "bytes": 614
+    },
+    {
+      "relpath": "outputs/governanca/policy_spc_rl/20260216/report.md",
+      "sha256": "6517fbc47ca9d7c6b482e8bc699fa1a6a2abacdabcc1c690f24ac70acfa8db6c",
+      "bytes": 405
+    },
+    {
+      "relpath": "outputs/governanca/session_state_transfer/20260215/manifest.json",
+      "sha256": "4a6b0a23999d0806c6e6e9f802a03fd2d771b18e8249cbecc2d7bbe48d7e52d0",
+      "bytes": 4261
+    },
+    {
+      "relpath": "outputs/governanca/session_state_transfer/20260215/report.md",
+      "sha256": "98c22ce82bf628606f133a4c8c5ac84581a60067dde70e437e93192b7ef32882",
+      "bytes": 1985
+    },
+    {
+      "relpath": "outputs/governanca/sprint_002/20260216/manifest.json",
+      "sha256": "e60314cf40582da699e36ad211b3d51a40d08fc3fbfb5f181353086f3cf69016",
+      "bytes": 3884
+    },
+    {
+      "relpath": "outputs/governanca/sprint_002/20260216/report.md",
+      "sha256": "0cbc08ebe72128daba60e0c57b20651773db51b09cd84c7062960f92593f1c52",
+      "bytes": 1932
+    },
+    {
+      "relpath": "outputs/governanca/sprint_003/20260216/manifest.json",
+      "sha256": "b4ed4480d3c0794b4e2bc707bc37ee48c6e72cfd31efd02de60efc3865442207",
+      "bytes": 4013
+    },
+    {
+      "relpath": "outputs/governanca/sprint_003/20260216/report.md",
+      "sha256": "fd17654a150bda4023049c7d02d42f43a0f12c7d7bff5f6c60bb2b99dc159d4f",
+      "bytes": 1668
+    },
+    {
+      "relpath": "outputs/governanca/ssot_cdi/20260215/manifest.json",
+      "sha256": "3820d181a1ab5c2cb101b250baa87b7f326a1fe164788959787637fdfe39048a",
+      "bytes": 3958
+    },
+    {
+      "relpath": "outputs/governanca/ssot_cdi/20260215/report.md",
+      "sha256": "2e4cc78f007824614a39a5cbc28dcfe84ff8461d5f04e0c5703ebd5b8cc60708",
+      "bytes": 2058
+    },
+    {
+      "relpath": "outputs/governanca/verify_cdi_cash/20260215/manifest.json",
+      "sha256": "17f7968e485e9859f24f45714c88475561adc598dc0961c2ba14105ebf51e02f",
+      "bytes": 2949
+    },
+    {
+      "relpath": "outputs/governanca/verify_cdi_cash/20260215/report.md",
+      "sha256": "049286e14fd2ec1fa65a23efd301b31b28c7aaf53c841ffb19cacd3ba26f1257",
+      "bytes": 1854
+    },
+    {
+      "relpath": "outputs/governanca/worktrees/20260215/manifest.json",
+      "sha256": "dffc24a6d7b8ca455a8c1fe530029bde028d943314e6a1f68222168968a4fa06",
+      "bytes": 3099
+    },
+    {
+      "relpath": "outputs/governanca/worktrees/20260215/report.md",
+      "sha256": "739438e4177e71ed408e9185288b212b0d56f942e6d4da735de4490683fbc3f9",
+      "bytes": 2175
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260215/manifest.json",
+      "sha256": "41b0d763a5ed9b517525c3bfaeedc242ef2d16061467f626d72031e68175b656",
+      "bytes": 4226
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260215/report.md",
+      "sha256": "26dc7beedfc712331b885adb3d0476f7712790892df4764789f433a2f8da26ae",
+      "bytes": 3125
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/manifest.json",
+      "sha256": "e59383eda93d0722b6d0a6adc92dc657edc7435d3c09ef413edc8e7d71cca50a",
+      "bytes": 3840
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260215_cash_cdi_v4/report.md",
+      "sha256": "7403571304724b0f97aa38843dfa9e9cda95d7b993ee504c7aae45050d1794c2",
+      "bytes": 2164
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/manifest.json",
+      "sha256": "48d016a690058f06d9e9da0f2ca9ce64f1be5d00c1a27cb9156693dbd3533734",
+      "bytes": 3542
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260215_costs_v3/report.md",
+      "sha256": "f14657d06488358deb0cda280257a21375e048fd8a5e514404e7f2d07ebc8ce1",
+      "bytes": 2740
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/ssot_alignment_summary.json",
+      "sha256": "e4ab39b6f30389df249fecc4caa4915a9ae1058c412214bf74fd07bd5e1409bf",
+      "bytes": 209
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/manifest.json",
+      "sha256": "2d2dcfa8bd945da04a861d447d6bebb7bcaaab1f95d6bd6a79c14e022bfc1a0c",
+      "bytes": 3076
+    },
+    {
+      "relpath": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/report.md",
+      "sha256": "951952286bf309c11dd195ccb216bfb1b9a1436da6bf233efae59a52a0f51c9b",
+      "bytes": 2313
+    },
+    {
+      "relpath": "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cash_equity_reconciliation_summary.json",
+      "sha256": "018d6ed16d9a5f24e38498d974b01e4032f7d8a5198212b08f6a174d9cc0c6ba",
+      "bytes": 184
+    },
+    {
+      "relpath": "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/cdi_cash_application_summary.json",
+      "sha256": "003d21d1b398b079cd40ae220fab503c263620791a8c093ce9ff414ec467d064",
+      "bytes": 147
+    },
+    {
+      "relpath": "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/task_specs_inventory_audit.csv",
+      "sha256": "76c7286b073a475899f009fd4bb0d47c8e4cb66f6a68c748e97b9370d00184ab",
+      "bytes": 2382
+    },
+    {
+      "relpath": "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/manifest.json",
+      "sha256": "ff18e1100728c7c829c9d7fb11deb5a5710add483215d8e191fa2e8c767ed1ec",
+      "bytes": 4016
+    },
+    {
+      "relpath": "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/report.md",
+      "sha256": "8df1db3f9a707ea97dea5f9a675bad886731798fb1e445a54c638e71b9dbabb5",
+      "bytes": 3755
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/evidence/buy_cadence_summary.json",
+      "sha256": "69009add27425c387f4f9778858293bec6e49ff66f6c581512c741852ea4f147",
+      "bytes": 190
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/evidence/cash_constraint_summary.json",
+      "sha256": "13b3514cd35470c5bb13c0f25ee4d96db79cf59c6e798e6604c6df35a8b1ba42",
+      "bytes": 148
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/evidence/cdi_validation_summary.json",
+      "sha256": "09f2fba3d02d3fe68b8c7f17c641eaa5cd33f1efd5db165f22e3f90f52876c42",
+      "bytes": 125
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/evidence/cost_validation_summary.json",
+      "sha256": "848b790a30c100974858ed1498bbfbf63e81dc27cfda8ae59b0d177a0d659014",
+      "bytes": 123
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/evidence/equity_reconciliation_summary.json",
+      "sha256": "968b6bc3ba4a18e7d302eca55dee1af14c9693a755de5eaf1ad668dd1d10ec52",
+      "bytes": 205
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/evidence/t0_liquidity_summary.json",
+      "sha256": "7019ec15d6871faa69317dad3dd525abb334addb04f803265e8f448d49c6013b",
+      "bytes": 200
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/manifest.json",
+      "sha256": "fe3db3a78ed6d01a87fc2c16cdfeb5759e327463adc3fc80c6a86c10567d37ae",
+      "bytes": 5273
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/report.md",
+      "sha256": "cdb6e1454c94e2c57dabddb79c23670629e0f0b488bd68377752aa0c5cf8da35",
+      "bytes": 1985
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_001/validation_report.md",
+      "sha256": "cdb6e1454c94e2c57dabddb79c23670629e0f0b488bd68377752aa0c5cf8da35",
+      "bytes": 1985
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_002/evidence/validations_summary.json",
+      "sha256": "4d0c1e802d9afc740b93239a6bccefec2e368db84c01648b11ab306082353bd3",
+      "bytes": 272
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_002/manifest.json",
+      "sha256": "e3748998772cd799af642fac90d8252ccb1afba28f2b354138e91cacb0e70d37",
+      "bytes": 3752
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f1_002/report.md",
+      "sha256": "f4c49007b2a10e52839bc23d72dc07f37629985876f40b74457358dc1e40450a",
+      "bytes": 1788
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_001/evidence/envelope_validations_summary.json",
+      "sha256": "3d21cd2f476918d4540e6893af340f1998019bb0f364fbd3b7645a245c23b2f7",
+      "bytes": 291
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_001/manifest.json",
+      "sha256": "e3412de77a20b4d3b741b8cadf42abd1a4bf52a9cd39a2ebcfa2d2f44763989b",
+      "bytes": 3446
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_001/report.md",
+      "sha256": "309d2c6bd50e7707f751cedee32e4dcdd3f5d6b7a94cf661131109657c7e0582",
+      "bytes": 1344
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_002/evidence/enforcement_summary.json",
+      "sha256": "d3765600fca7310010874a3d0940d9a6f9704eb5e56f99979cebd52fd0af5610",
+      "bytes": 124
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_002/evidence/invariants_summary.json",
+      "sha256": "5b83746d131ec68397c5343f4eced2aedcc5d354223194f36beef9a898ebf565",
+      "bytes": 315
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_002/manifest.json",
+      "sha256": "0cca3d46e314c683ee2fe83fa7763bc9f7bde28372938cc9b20abc0b4331453e",
+      "bytes": 4109
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_002/report.md",
+      "sha256": "c19dedf9679581a3f79062db6bcb14ed76c2a30de889f1f15848fbeb7a2bd8fd",
+      "bytes": 2042
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json",
+      "sha256": "523bf86e1857f154dc9329e4a6a522fd6787e25643e6a9f1c8e79f8f7d92ad55",
+      "bytes": 683
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_003/manifest.json",
+      "sha256": "2012a275e397fd0ba1c41438ddc8be276f48127bf51de5405323ace515220341",
+      "bytes": 4534
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_003/report.md",
+      "sha256": "4e4ecfc51ba09f45479d6eaef822abc9e4f06b2da8e3ff2930239977fe89c38f",
+      "bytes": 2276
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_004/evidence/cash_flow_reconciliation_summary.json",
+      "sha256": "a90df2eaa765ccda6ec7444b27ad955bba4630a20d9c90491e6e1c8a9484d1be",
+      "bytes": 83
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_004/evidence/cash_only_benchmark_summary.json",
+      "sha256": "8f7c711abb4705554527ec5986d6fe061e7dc473269b9c6f959ec21efac1bffa",
+      "bytes": 129
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_004/evidence/equity_normalization_summary.json",
+      "sha256": "8673ff9b20c3d9c3fd1b9b6573a35ff743db5956171341e52df923e06974f0c2",
+      "bytes": 87
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_004/evidence/equity_reconciliation_summary.json",
+      "sha256": "1ba1643bdd5ffddc4bd592b2b4594a494a805a75345e9753e12ef463ee5a938f",
+      "bytes": 63
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_004/manifest.json",
+      "sha256": "e9247f3cc2fddd83bb3b8dfc85fc07675c0f9b057f181ff2a41b08bbbd865d2f",
+      "bytes": 3606
+    },
+    {
+      "relpath": "outputs/masterplan_v2/f2_004/report.md",
+      "sha256": "7c5fb137547201b21fd72d8e4e964608ded813dab80670a233f99b0d3e84c3c6",
+      "bytes": 1429
+    },
+    {
+      "relpath": "outputs/simulacoes/compare_m3_plotly/20260216/manifest.json",
+      "sha256": "38116a26f04c71becbfd7226f4eaf2489dd2eb3fc0c4ab8b11a43440ba273ee3",
+      "bytes": 4726
+    },
+    {
+      "relpath": "outputs/simulacoes/compare_m3_plotly/20260216/report.md",
+      "sha256": "78671497b78c62b68444b757f44d618aa784b90be7e00b8bc7e2281bc2cad8d6",
+      "bytes": 2612
+    },
+    {
+      "relpath": "planning/runs/S2_001_MP011_CLOSE_G1_G4_REMAINDER/run_20260216_001/run_summary.json",
+      "sha256": "f8be45a410c2d21682b52e2c7a5b9f32eb92d0c75c94c3553a8df0720b59ebe2",
+      "bytes": 232
+    },
+    {
+      "relpath": "planning/runs/S2_002_MP007_COMPLETE_ANTI_DERIVA_W2/run_20260216_001/run_summary.json",
+      "sha256": "cf82a31abf51e148fc341b58ea71d5b453e691145d6fcdd6252dd37b26be1b28",
+      "bytes": 269
+    },
+    {
+      "relpath": "planning/runs/S2_003_MP005_MP006_REDUCE_NAO_EXECUTADA/run_20260216_001/run_summary.json",
+      "sha256": "4910b282d6dad34e04e718dcbef5a4470a9a3b292be636fd26465ca1474fcb4e",
+      "bytes": 280
+    },
+    {
+      "relpath": "planning/runs/S2_004_REFRESH_POST_SPRINT_002_AUDIT/run_20260216_001/run_summary.json",
+      "sha256": "991f3d8a4724d43e7ed0fd8988d3d42065bde16624f408c2a6ba8297af2061cd",
+      "bytes": 218
+    },
+    {
+      "relpath": "planning/runs/S3_001_MP011_CLOSE_G1_G2_G3/run_20260216_001/run_summary.json",
+      "sha256": "c79ade50ab5508720bb8d44b61ede56381b0e4967d53d10791388e7a039d07ce",
+      "bytes": 180
+    },
+    {
+      "relpath": "planning/runs/S3_002_MP001_VISAO_EXECUTIVA/run_20260216_001/run_summary.json",
+      "sha256": "42afe6f973a1de2989d89ddf3e8524cf46dbec97f074ad2b9d85d4956780e174",
+      "bytes": 164
+    },
+    {
+      "relpath": "planning/runs/S3_003_MP002_OBJETIVO_REAL_SSOT/run_20260216_001/run_summary.json",
+      "sha256": "452101e9dc04ef65da7eb929eedaaa4efcda75705fb3169496ac6bc8a0d9df7f",
+      "bytes": 170
+    },
+    {
+      "relpath": "planning/runs/S3_004_REFRESH_POST_SPRINT_003_AUDIT/run_20260216_001/run_summary.json",
+      "sha256": "436ab6cb244caa51a600887fcafaf5865eafe05b8cb6282e516fcf5ba769ef7c",
+      "bytes": 210
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_BUNDLE_CORE_F1_012_SIM_COMPARE_M3_PLOTLY_V1.json",
+      "sha256": "0900857ce14ac41e0afb8771bbf9e53e7207b2bb11ee8eddb58a981216ae6000",
+      "bytes": 1125
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_BUNDLE_CORE_LOCAL_SMOKE_20260216.json",
+      "sha256": "663f93d8e43d7d01320d092b08b6c0d78ea82aa9dabc2b8ee1db11f5910bc56b",
+      "bytes": 581
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_BUNDLE_CORE_RAG_001_DISCOVER_AND_PIN_CORPUS_V1.json",
+      "sha256": "f3c71fb598b16c6fadda31e9877de9681ff5c6ff0be4f970b2024a6482f82b94",
+      "bytes": 1370
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_BUNDLE_CORE_RAG_002_BUILD_LOCAL_VECTOR_INDEX_V1.json",
+      "sha256": "c0ff51f4f56d483cbc6d2d7d4b14f1d71b5221b3ec14db09e2769fd22c897ead",
+      "bytes": 1182
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_BUNDLE_CORE_RAG_003_APPEND_DELTA_SINCE_V3_AND_REINDEX_V1.json",
+      "sha256": "5ed2b8de02600b32da07e1a8ee71a5915e434e2cc9c6fc6927a82a627a8fd128",
+      "bytes": 1364
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_TRANSFERENCIA_CEP_DEFINITIVO_V1.json",
+      "sha256": "fdd7fce3f51d5b24287632754cd778523504d732d78c6f110c0b2e2ca6a5deab",
+      "bytes": 1986
+    },
+    {
+      "relpath": "planning/task_specs/TASK_CEP_TRANSFERENCIA_CEP_DEFINITIVO_V2.json",
+      "sha256": "1b06bc915f63c3d4bf94bf66b94d5154501eced109a6be86356189b675b358bb",
+      "bytes": 2304
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_AUDITORIA_TECNICA_COMPLETA_CDI_E_EQUITY_V1.json",
+      "sha256": "0b206ec416994bfe7013604ebf14101fabfb84fc774bc5b908ebaec45d438b61",
+      "bytes": 2078
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F0_001_SSOT_MASTERPLAN_V2_PUBLICATION.json",
+      "sha256": "4eafbcc38fc35824f7572e7edd5637d717ee13fd728a2a9aefd40e9d5420fc39",
+      "bytes": 1621
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F0_002_GOVERNANCE_INDEX_AND_BOOTSTRAP.json",
+      "sha256": "d0e7beae887e0166716ffb086003b649639e415b3182dc7270c5d25a3508fc1d",
+      "bytes": 1698
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F1_001_LEDGER_DAILY_PORTFOLIO_INTEGRITY.json",
+      "sha256": "4f856278350dbce9b96708de83d71256fb2d87e022cc560248450b0f446a108a",
+      "bytes": 1700
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F1_002_ACCOUNTING_PLOTLY_DECOMPOSITION.json",
+      "sha256": "29509d909a31e738281fd70897df00e44587e17d646d761e012f073b0bf18c03",
+      "bytes": 1725
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION.json",
+      "sha256": "cf5178f0eeb7c2613e97d90d64d6b646a66302c4cc9877f7f8d9385306ade753",
+      "bytes": 1689
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT.json",
+      "sha256": "c049e39dfcefbbbbf7357dc21f7d0aa724cce60bfb767daa5e783d6aea082349",
+      "bytes": 1718
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT.json",
+      "sha256": "dac43626503b8e8cf2e1c00b4477bbcacbdee11172911befc93c470f03b80b4d",
+      "bytes": 1707
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE.json",
+      "sha256": "70a681f84fcd67f62a0413b187cb202da786031ff8460f4b486e4839e37a51c3",
+      "bytes": 2301
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F3_001_REVALIDATE_ABLATION_E1_E5.json",
+      "sha256": "a76d36e79011f14f02f0e3c34dfef3ea9a2a0e1d45a12ca155a8abc86d346afa",
+      "bytes": 1679
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F3_002_NON_REGRESSION_WINDOW_CHECK.json",
+      "sha256": "6b1e95345f3752fb53b2239190764b6659ccd87fdc30303f7a6e36da7563ee0c",
+      "bytes": 1684
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F4_001_RL_INTRA_REGIME_INTERFACE.json",
+      "sha256": "0e0547ffba876749453e1302152bd8d0aa9b6ce92403caed0dfca2367466999f",
+      "bytes": 1704
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F4_002_W2_REJECTION_RULE_VALIDATION.json",
+      "sha256": "2b1766ff1f216c3b5b5d967655d0f3ebb1825d7f7e5ddd5e3228be8a4a9263c1",
+      "bytes": 1693
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F5_001_G1_G4_COVERAGE_CLOSEOUT.json",
+      "sha256": "ec73fca9786dd794f997214c094da8f7542b649697b24caed9d254f6c3dc53d2",
+      "bytes": 1689
+    },
+    {
+      "relpath": "planning/task_specs/masterplan_v2/TASK_CEP_BUNDLE_CORE_V2_F5_002_FINAL_GOVERNANCE_PACKAGE.json",
+      "sha256": "47303f705cf08c8759504c62a95ab8639c6f72563ceb3c20be97cdd41ba777d7",
+      "bytes": 1704
+    },
+    {
+      "relpath": "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_001_MP011_CLOSE_G1_G4_REMAINDER.json",
+      "sha256": "ee6228fbb820a58e1215e3d589c60c1bffb201f9bfd1f6db53a8cbf82630cb41",
+      "bytes": 533
+    },
+    {
+      "relpath": "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_002_MP007_COMPLETE_ANTI_DERIVA_W2.json",
+      "sha256": "da9eb834b9113f63b690e13391effa1674224a6c96e38e34cd31ba89c2ff8d0e",
+      "bytes": 653
+    },
+    {
+      "relpath": "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_003_MP005_MP006_SPCCEP_DECISION_POLICY.json",
+      "sha256": "b636f370b0bfd91fd22325abfa223ac526820983b763633c4e157b1bdadf8be0",
+      "bytes": 620
+    },
+    {
+      "relpath": "planning/task_specs/sprint_002/TASK_CEP_BUNDLE_CORE_S2_004_POST_SPRINT_002_AUDIT_REFRESH.json",
+      "sha256": "167173565f2521ce10ab3f602e99ce8c909d8462022981545ce6daa4825828c6",
+      "bytes": 529
+    },
+    {
+      "relpath": "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_001_MP011_CLOSE_G1_G2_G3.json",
+      "sha256": "4d3d2860520226c61140a7ce24f569607a69527c116a40dc04a61594268eb156",
+      "bytes": 643
+    },
+    {
+      "relpath": "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_002_MP001_VISAO_EXECUTIVA.json",
+      "sha256": "264296b0d652fd937b605a582141ecfffd6cbfc5fd2c289358d921550dd9b23a",
+      "bytes": 443
+    },
+    {
+      "relpath": "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_003_MP002_OBJETIVO_REAL_SSOT.json",
+      "sha256": "8a8a349940bbb50d278d2496eece98372072eb17ff0765373f6a826bd1b4adc8",
+      "bytes": 680
+    },
+    {
+      "relpath": "planning/task_specs/sprint_003/TASK_CEP_BUNDLE_CORE_S3_004_POST_SPRINT_003_AUDIT_REFRESH.json",
+      "sha256": "33ec1e6889eec2ceee16077cb18d4bc8ecee299180004f87716d432a380cf02d",
+      "bytes": 522
+    }
+  ]
+}

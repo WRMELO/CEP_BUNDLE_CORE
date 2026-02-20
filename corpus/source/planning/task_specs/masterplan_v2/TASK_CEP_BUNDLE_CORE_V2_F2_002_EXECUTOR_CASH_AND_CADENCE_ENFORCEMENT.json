@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V2_F2_002_EXECUTOR_CASH_AND_CADENCE_ENFORCEMENT",
+  "mode": "generate_only",
+  "phase": "Fase 2",
+  "intent": "Aplicar executor com compra só com caixa, cadência de 3 sessões e T+0 operacional.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "depends_on": [
+    "TASK_CEP_BUNDLE_CORE_V2_F2_001_ENVELOPE_CONTINUO_IMPLEMENTATION"
+  ],
+  "inputs": {
+    "ssot_required": [
+      "docs/MASTERPLAN_V2.md",
+      "docs/CONSTITUICAO.md",
+      "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md"
+    ],
+    "policy": {
+      "do_not_execute": true,
+      "do_not_modify_existing_ssot_without_dedicated_change_task": true
+    }
+  },
+  "outputs": {
+    "required": [
+      "report.md",
+      "manifest.json",
+      "evidence/"
+    ],
+    "phase_outputs": [
+      "outputs/masterplan_v2/f2_002/execution_audit.csv",
+      "outputs/masterplan_v2/f2_002/report.md",
+      "outputs/masterplan_v2/f2_002/manifest.json"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN_DISABLED_GENERATE_ONLY",
+    "S4_VERIFY_OUTPUTS",
+    "S5_VERIFY_HASHES"
+  ],
+  "acceptance_criteria": [
+    "Especificação completa e auditável da task no escopo da fase.",
+    "Outputs planejados definidos com paths explícitos.",
+    "Dependências e critérios de fail declarados.",
+    "Sem execução neste ciclo (generate_only)."
+  ],
+  "in_case_of_error": [
+    "Identificar requisito não atendido (arquivo/seção).",
+    "Registrar evidência objetiva e corrigir spec/documento correspondente."
+  ]
+}

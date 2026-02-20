@@ -1,0 +1,37 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_003_APPEND_DELTA_SINCE_V3_AND_REINDEX_V1",
+  "task_title": "Gerar delta desde V3, incorporar ao corpus e reindexar",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "baseline_marker": [
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json"
+    ],
+    "delta_detection_policy": {
+      "primary_method": "git_history_since_baseline_marker_commit_if_available",
+      "fallback_method": "file_mtime_since_baseline_marker_mtime"
+    },
+    "delta_writeouts": {
+      "delta_md": "docs/rag/DELTA_SINCE_V3.md",
+      "delta_json": "docs/rag/DELTA_SINCE_V3.json",
+      "delta_copy_root": "corpus/source/delta_since_v3/"
+    },
+    "manifest_update_policy": {
+      "new_manifest": "corpus/manifests/corpus_manifest_v2.json",
+      "do_not_overwrite_v1": true
+    },
+    "reindex_policy": {
+      "must_rebuild_index": true,
+      "index_version_tag": "v2"
+    }
+  },
+  "outputs": {
+    "delta_md": "docs/rag/DELTA_SINCE_V3.md",
+    "delta_json": "docs/rag/DELTA_SINCE_V3.json",
+    "corpus_manifest_v2": "corpus/manifests/corpus_manifest_v2.json",
+    "updated_index_root": "corpus/rag/index/",
+    "report_json": "outputs/governanca/rag/20260220/delta_since_v3/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/delta_since_v3/evidence/"
+  }
+}
+

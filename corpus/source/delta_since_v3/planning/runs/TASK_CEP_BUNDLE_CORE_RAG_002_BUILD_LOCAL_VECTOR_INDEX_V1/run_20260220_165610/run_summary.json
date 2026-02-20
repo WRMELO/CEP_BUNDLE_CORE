@@ -1,0 +1,58 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_002_BUILD_LOCAL_VECTOR_INDEX_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_CORPUS_READY",
+      "status": "PASS",
+      "details": "manifest_exists=True"
+    },
+    {
+      "gate_id": "G2_INDEX_PERSISTED",
+      "status": "PASS",
+      "details": "index e config gerados"
+    },
+    {
+      "gate_id": "G3_SMOKE_QUERY",
+      "status": "PASS",
+      "details": "smoke_results=8"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_BUILD_INDEX",
+      "status": "PASS",
+      "details": "n_docs=180 n_chunks=1241"
+    },
+    {
+      "step_id": "S2_WRITE_TOOLS",
+      "status": "PASS",
+      "details": "tools/rag/build_index.py e tools/rag/query.py gerados"
+    },
+    {
+      "step_id": "S3_SMOKE_QUERY",
+      "status": "PASS",
+      "details": "results=8"
+    },
+    {
+      "step_id": "S4_WRITE_RAG_README",
+      "status": "PASS",
+      "details": "README do RAG gerado"
+    }
+  ],
+  "deliverables": {
+    "rag_readme": "corpus/rag/README.md",
+    "rag_config": "corpus/rag/rag_config.json",
+    "rag_index_root": "corpus/rag/index",
+    "tool_build": "tools/rag/build_index.py",
+    "tool_query": "tools/rag/query.py"
+  },
+  "metrics": {
+    "n_docs": 180,
+    "n_chunks": 1241,
+    "elapsed_seconds": 0.16912293434143066,
+    "backend": "local_hashing_v1"
+  },
+  "timestamp_utc": "2026-02-20T19:56:10.282136+00:00"
+}

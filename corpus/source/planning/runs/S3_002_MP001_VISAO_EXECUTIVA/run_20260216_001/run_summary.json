@@ -1,0 +1,8 @@
+{
+  "subtask_id": "S3_002_MP001_VISAO_EXECUTIVA",
+  "mapped_masterplan": "MP-001",
+  "status": "EXECUTED",
+  "outputs": [
+    "docs/MP001_VISAO_EXECUTIVA.md"
+  ]
+}

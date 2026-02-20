@@ -1,0 +1,8 @@
+{
+  "subtask_id": "S3_004_REFRESH_POST_SPRINT_003_AUDIT",
+  "mapped_masterplan": "ALL",
+  "status": "EXECUTED",
+  "outputs": [
+    "outputs/governanca/masterplan_audit/20260216_post_sprint_003/report.md"
+  ]
+}

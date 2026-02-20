@@ -1,0 +1,57 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_001_DISCOVER_AND_PIN_CORPUS_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_ALLOWLIST_AND_ROOT",
+      "status": "PASS",
+      "details": "repo_root=/home/wilson/CEP_BUNDLE_CORE"
+    },
+    {
+      "gate_id": "G2_MINIMUM_PRESENT",
+      "status": "PASS",
+      "details": "missing=[]"
+    },
+    {
+      "gate_id": "G3_MANIFEST_VALID",
+      "status": "PASS",
+      "details": "missing_relpaths=0"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_COPY_MINIMUM_REQUIRED",
+      "status": "PASS",
+      "details": "copied_required_files=11"
+    },
+    {
+      "step_id": "S2_DISCOVER_AND_COPY_ADDITIONALS",
+      "status": "PASS",
+      "details": "additional_files=175"
+    },
+    {
+      "step_id": "S3_WRITE_MANIFEST",
+      "status": "PASS",
+      "details": "num_files=181"
+    },
+    {
+      "step_id": "S4_WRITE_README_AND_INDEX",
+      "status": "PASS",
+      "details": "README e CORPUS_INDEX gerados"
+    }
+  ],
+  "deliverables": {
+    "corpus_readme": "corpus/README.md",
+    "corpus_index": "corpus/CORPUS_INDEX.md",
+    "corpus_manifest": "corpus/manifests/corpus_manifest_v1.json",
+    "corpus_source_root": "corpus/source"
+  },
+  "metrics": {
+    "n_files": 181,
+    "total_bytes": 1157440,
+    "required_minimum_items": 7,
+    "additional_discovered_files": 175
+  },
+  "timestamp_utc": "2026-02-20T19:56:09.992284+00:00"
+}

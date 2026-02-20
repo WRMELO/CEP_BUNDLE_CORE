@@ -1,0 +1,45 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_001_DISCOVER_AND_PIN_CORPUS_V1",
+  "task_title": "Descobrir e fixar corpus em corpus/ com manifest sha256",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "must_include_minimum": [
+      "docs/CONSTITUICAO.md",
+      "docs/MASTERPLAN_V2.md",
+      "docs/MP001_VISAO_EXECUTIVA.md",
+      "docs/MP002_OBJETIVO_REAL_SSOT.md",
+      "docs/emendas/",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json"
+    ],
+    "discover_candidates": [
+      "docs/**",
+      "planning/task_specs/**",
+      "planning/runs/**",
+      "outputs/**"
+    ],
+    "exclude_globs": [
+      "**/*.parquet",
+      "**/*.pdf",
+      "**/*.ipynb",
+      "**/.git/**",
+      "**/.venv/**",
+      "**/node_modules/**",
+      "**/artifacts_large/**"
+    ],
+    "size_policy": {
+      "include_only_textual_and_small": true,
+      "max_file_bytes_default": 2000000,
+      "allow_overrides_list": []
+    }
+  },
+  "outputs": {
+    "corpus_readme": "corpus/README.md",
+    "corpus_index": "corpus/CORPUS_INDEX.md",
+    "corpus_manifest": "corpus/manifests/corpus_manifest_v1.json",
+    "corpus_source_root": "corpus/source/",
+    "report_json": "outputs/governanca/rag/20260220/corpus_discovery/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/corpus_discovery/evidence/"
+  }
+}
+

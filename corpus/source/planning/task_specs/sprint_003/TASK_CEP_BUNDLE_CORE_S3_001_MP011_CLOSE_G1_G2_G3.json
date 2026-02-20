@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S3_001_MP011_CLOSE_G1_G2_G3",
+  "masterplan_id": "MP-011",
+  "intent": "Fechar G1/G2/G3 remanescentes com criterio quantitativo operacional e evidencia objetiva.",
+  "inputs": {
+    "closure_prev": "outputs/gaps/g1_g4/20260216/g1_g4_closure.json",
+    "corpus_index": "docs/corpus/corpus_index.json",
+    "corpus_experiments": "docs/corpus/experimentos.json"
+  },
+  "outputs": {
+    "closure_g1_g3": "outputs/gaps/g1_g3/20260216/g1_g3_closure.json"
+  },
+  "gates": [
+    "S1_INPUTS_PRESENT",
+    "S2_CLOSURE_EMITTED"
+  ],
+  "acceptance": [
+    "G1/G2/G3 com ratio, threshold, gap_to_target e status"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_002_BUILD_LOCAL_VECTOR_INDEX_V1",
+  "task_title": "Construir indice vetorial local persistido no repo e ferramenta de query",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "corpus_manifest": "corpus/manifests/corpus_manifest_v1.json",
+    "corpus_source_root": "corpus/source/",
+    "allowed_extensions": [
+      ".md",
+      ".txt",
+      ".json",
+      ".yaml",
+      ".yml",
+      ".csv",
+      ".py"
+    ],
+    "chunking_policy": {
+      "strategy": "markdown_aware_with_fallback",
+      "target_chunk_chars": 1600,
+      "overlap_chars": 200
+    },
+    "embedding_policy": {
+      "must_be_local": true,
+      "no_new_installs_without_owner_approval": true
+    },
+    "retrieval_policy": {
+      "top_k_default": 8
+    }
+  },
+  "outputs": {
+    "rag_readme": "corpus/rag/README.md",
+    "rag_config": "corpus/rag/rag_config.json",
+    "rag_index_root": "corpus/rag/index/",
+    "tool_build": "tools/rag/build_index.py",
+    "tool_query": "tools/rag/query.py",
+    "report_json": "outputs/governanca/rag/20260220/rag_build/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/rag_build/evidence/"
+  }
+}
+

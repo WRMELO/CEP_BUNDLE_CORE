@@ -1,0 +1,63 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V2_ATT2_000_SSOT_SNAPSHOT_V1",
+  "generated_at": "2026-02-20T00:00:00-03:00",
+  "snapshot_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/ssot_snapshot",
+  "num_files": 11,
+  "files": [
+    {
+      "relpath": "docs/CONSTITUICAO.md",
+      "sha256": "01c962bba0979e842589e5f8898422c045e43f29d2f970dbfb58147c28605a63",
+      "bytes": 2840
+    },
+    {
+      "relpath": "docs/MASTERPLAN_V2.md",
+      "sha256": "dc75c7f54666dc9006095186c7925dff8ffe03ee60b5a80c09d951fba3b376e2",
+      "bytes": 11977
+    },
+    {
+      "relpath": "docs/MP001_VISAO_EXECUTIVA.md",
+      "sha256": "716e4391131193a60552e00478c96c2d0780ac544d23ef77a5bd338abf18a440",
+      "bytes": 1465
+    },
+    {
+      "relpath": "docs/MP002_OBJETIVO_REAL_SSOT.md",
+      "sha256": "e50124619a94a0524c89b446331a4e88e8e3225fb2a4ba89299ae60255a45219",
+      "bytes": 1464
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+      "sha256": "b741588f8021bc253e155b6caf985af80a3c3d1e24f3e85c7ac0e301ba52123f",
+      "bytes": 4728
+    },
+    {
+      "relpath": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "sha256": "4d8462a603fe2b650019109609585e56cf3d65f171e44b5a2344107beb53ff31",
+      "bytes": 5841
+    },
+    {
+      "relpath": "docs/emendas/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "sha256": "c8a4968b07a88e3583ded14fb6bc5987c255dc722307e485b15bda8c5523e8e8",
+      "bytes": 3255
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "sha256": "27447cc52c6c3a46d13c26a1787989c209b93c6a04e5cb59c5c11e1ba6bceed0",
+      "bytes": 3367
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+      "sha256": "e7a099f3fca1c4249a0baa10c05d71c369f07c9da9fe6adb47e91755b36cf72e",
+      "bytes": 2574
+    },
+    {
+      "relpath": "docs/emendas/EMENDA_TEMPLATE.md",
+      "sha256": "4bd612761cfd008cad37bfa6c42a2014496bf486a34b450bf4780812bf4a6ab5",
+      "bytes": 1017
+    }
+  ]
+}

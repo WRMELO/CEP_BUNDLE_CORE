@@ -1,0 +1,52 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V2_AUDITORIA_TECNICA_COMPLETA_CDI_E_EQUITY_V1",
+  "mode": "run_audit",
+  "phase": "Auditoria transversal",
+  "intent": "Auditar orientacoes, tasks e artefatos F1/F2 com foco em CDI diario vs acumulado, reconciliacao contábil e plausibilidade economica de equity.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "scope": {
+    "tasks": [
+      "F1_001",
+      "F1_002",
+      "F2_001",
+      "F2_002",
+      "F2_003",
+      "F2_004"
+    ],
+    "documents": [
+      "docs/MASTERPLAN_V2.md",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+      "planning/masterplan_v2/TASK_TREE_MASTERPLAN_V2.md",
+      "planning/task_specs/masterplan_v2/*.json"
+    ]
+  },
+  "inputs_required": [
+    "data/ssot/cdi/cdi_daily.parquet",
+    "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/evidence/daily_replay_sample.csv",
+    "outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet",
+    "outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet",
+    "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json",
+    "outputs/masterplan_v2/f2_004/report.md"
+  ],
+  "outputs_required": [
+    "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/report.md",
+    "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/manifest.json",
+    "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/evidence/",
+    "outputs/masterplan_v2/auditoria_tecnica_completa/20260217/plots/"
+  ],
+  "gates": [
+    "S1_VERIFY_INPUTS_PRESENT",
+    "S2_VERIFY_CDI_SCALE_AND_USAGE",
+    "S3_VERIFY_CASH_EQUITY_RECONCILIATION",
+    "S4_VERIFY_TASK_ARTIFACT_COVERAGE",
+    "S5_EMIT_FINDINGS_AND_RECOMMENDATIONS"
+  ],
+  "acceptance_criteria": [
+    "Diagnostico objetivo de uso CDI diario vs acumulado com evidencia numerica.",
+    "Diagnostico objetivo da origem da explosao de equity.",
+    "Matriz de conformidade por task/artefato emitida com status.",
+    "Recomendacao de bloqueio/liberacao para F3/F4 suportada por evidencias."
+  ]
+}

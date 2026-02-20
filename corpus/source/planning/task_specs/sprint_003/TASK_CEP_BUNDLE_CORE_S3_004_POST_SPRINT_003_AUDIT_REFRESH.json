@@ -1,0 +1,18 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S3_004_POST_SPRINT_003_AUDIT_REFRESH",
+  "masterplan_id": "ALL",
+  "intent": "Atualizar mapa e backlog apos Sprint 003.",
+  "inputs": {
+    "prior_audit": "outputs/governanca/masterplan_audit/20260216_post_sprint_002/"
+  },
+  "outputs": {
+    "post_sprint_003_audit": "outputs/governanca/masterplan_audit/20260216_post_sprint_003/"
+  },
+  "gates": [
+    "S1_MAP_REFRESHED",
+    "S2_GAPS_REFRESHED"
+  ],
+  "acceptance": [
+    "Mapa e backlog atualizados com status final dos MPs"
+  ]
+}

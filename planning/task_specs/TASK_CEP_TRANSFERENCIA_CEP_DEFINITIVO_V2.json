@@ -1,0 +1,72 @@
+{
+  "task_id": "TASK_CEP_TRANSFERENCIA_CEP_DEFINITIVO_V2",
+  "mode": "run_transfer",
+  "intent": "Criar CEP_DEFINITIVO com estrutura, secrets reais copiados, .gitignore com .obsidian, docs de setup e report/manifest.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "target_root": "/home/wilson/CEP_DEFINITIVO",
+  "steps": [
+    {
+      "step_id": "S1",
+      "type": "gate",
+      "name": "S1_GATE_PARENT_WRITABLE",
+      "action": "verify /home/wilson/ exists and is writable"
+    },
+    {
+      "step_id": "S2",
+      "type": "step",
+      "name": "S2_CREATE_DIRS",
+      "action": "create docs/, planning/secrets/, planning/utils/, data/ssot/cdi/, outputs/governanca/"
+    },
+    {
+      "step_id": "S3",
+      "type": "step",
+      "name": "S3_COPY_BRAPI_TOKEN",
+      "action": "copy CEP_NA_BOLSA/planning/secrets/brapi_token.txt to CEP_DEFINITIVO/planning/secrets/"
+    },
+    {
+      "step_id": "S4",
+      "type": "step",
+      "name": "S4_CREATE_GITIGNORE",
+      "action": "create .gitignore with planning/secrets/brapi_token.txt, planning/secrets/*.txt, .obsidian/"
+    },
+    {
+      "step_id": "S5",
+      "type": "step",
+      "name": "S5_WRITE_SETUP_DOCS",
+      "action": "write docs/SETUP_CONEXOES.md and docs/SETUP_GIT_SSH.md"
+    },
+    {
+      "step_id": "S6",
+      "type": "step",
+      "name": "S6_WRITE_README_AND_TRANSFER",
+      "action": "write README.md and docs/TRANSFERENCIA_CEP_DEFINITIVO.md"
+    },
+    {
+      "step_id": "S7",
+      "type": "step",
+      "name": "S7_CREATE_SECRETS_UTILS",
+      "action": "create planning/utils/secrets.py adapted for CEP_DEFINITIVO"
+    },
+    {
+      "step_id": "S8",
+      "type": "gate",
+      "name": "S8_GATE_ARTIFACTS_PRESENT",
+      "action": "verify all artifacts including brapi_token.txt exist"
+    },
+    {
+      "step_id": "S9",
+      "type": "step",
+      "name": "S9_GENERATE_REPORT_MANIFEST",
+      "action": "generate report.md and manifest.json with per-step/gate status"
+    }
+  ],
+  "gates": [
+    "S1_GATE_PARENT_WRITABLE",
+    "S8_GATE_ARTIFACTS_PRESENT"
+  ],
+  "overall_pass_criteria": "All steps and gates succeed",
+  "outputs": {
+    "report": "outputs/governanca/transferencia_cep_definitivo/20260220/report.md",
+    "manifest": "outputs/governanca/transferencia_cep_definitivo/20260220/manifest.json"
+  }
+}

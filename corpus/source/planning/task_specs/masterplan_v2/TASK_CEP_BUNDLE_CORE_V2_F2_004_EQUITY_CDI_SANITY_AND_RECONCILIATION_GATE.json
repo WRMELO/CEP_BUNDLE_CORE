@@ -1,0 +1,62 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V2_F2_004_EQUITY_CDI_SANITY_AND_RECONCILIATION_GATE",
+  "mode": "run_gate",
+  "phase": "Fase 2",
+  "intent": "Garantir certeza numerica de CDI/accrual de caixa/reconciliacao cash-equity e bloquear avanco para F3/F4 se houver incoerencia.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "depends_on": [
+    "TASK_CEP_BUNDLE_CORE_V2_F2_003_ENVELOPE_PLOTLY_AUDIT"
+  ],
+  "inputs": {
+    "required": [
+      "outputs/masterplan_v2/f2_002/daily_portfolio_v2.parquet",
+      "outputs/masterplan_v2/f2_002/ledger_trades_v2.parquet",
+      "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json",
+      "data/ssot/cdi/cdi_daily.parquet"
+    ],
+    "policy": {
+      "block_f3_f4_on_fail": true,
+      "do_not_modify_existing_ssot_without_dedicated_change_task": true
+    }
+  },
+  "outputs": {
+    "required": [
+      "outputs/masterplan_v2/f2_004/report.md",
+      "outputs/masterplan_v2/f2_004/manifest.json",
+      "outputs/masterplan_v2/f2_004/evidence/",
+      "outputs/masterplan_v2/f2_004/plots/"
+    ],
+    "evidence_minimum": [
+      "cdi_daily_stats.json",
+      "cash_only_benchmark.csv",
+      "cash_only_benchmark_summary.json",
+      "cash_flow_reconciliation_sample.csv",
+      "cash_flow_reconciliation_summary.json",
+      "equity_reconciliation_sample.csv",
+      "equity_reconciliation_summary.json",
+      "equity_normalization_summary.json"
+    ],
+    "plots_minimum": [
+      "baseline_vs_v2_equity_timeseries_recomputed.html"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_VERIFY_INPUTS_PRESENT",
+    "S3_VERIFY_SANITY_NUMERICA",
+    "S4_VERIFY_RECONCILIATION_TOLERANCES",
+    "S5_VERIFY_OUTPUTS_AND_HASHES"
+  ],
+  "acceptance_criteria": [
+    "CDI diario plausivel sem indicio de escala mensal/anual",
+    "benchmark cash-only plausivel e significativamente menor que equity final V2",
+    "reconciliacao de cashflow/equity dentro da tolerancia declarada",
+    "normalizacao de equity validada (primeiro valor = 1.0 dentro de eps)",
+    "report/manifest/evidence/plots completos e rastreaveis"
+  ],
+  "in_case_of_error": [
+    "Indicar gate/criterio que falhou com path de evidencia objetiva.",
+    "Bloquear avanco para F3/F4 ate corrigir e reexecutar F2_004."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_003_APPEND_DELTA_SINCE_V3_AND_REINDEX_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_BASELINE_EXISTS",
+      "status": "PASS",
+      "details": "baseline_files=['docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md', 'docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json']"
+    },
+    {
+      "gate_id": "G2_DELTA_METHOD_EVIDENCED",
+      "status": "PASS",
+      "details": "method=file_mtime_since_baseline_marker_mtime"
+    },
+    {
+      "gate_id": "G3_MANIFEST_V2_VALID",
+      "status": "PASS",
+      "details": "num_files_v1=181 num_files_v2=274"
+    },
+    {
+      "gate_id": "G4_REINDEX_SMOKE_OK",
+      "status": "PASS",
+      "details": "results=8"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_DETECT_DELTA",
+      "status": "PASS",
+      "details": "method=file_mtime_since_baseline_marker_mtime n_changed_raw=302"
+    },
+    {
+      "step_id": "S2_COPY_DELTA",
+      "status": "PASS",
+      "details": "delta_files=93"
+    },
+    {
+      "step_id": "S3_WRITE_DELTA_DOCS",
+      "status": "PASS",
+      "details": "docs/rag/DELTA_SINCE_V3.md e .json gerados"
+    },
+    {
+      "step_id": "S4_WRITE_MANIFEST_V2",
+      "status": "PASS",
+      "details": "num_files_v2=274"
+    },
+    {
+      "step_id": "S5_REINDEX_AND_SMOKE",
+      "status": "PASS",
+      "details": "n_chunks=1529"
+    }
+  ],
+  "deliverables": {
+    "delta_md": "docs/rag/DELTA_SINCE_V3.md",
+    "delta_json": "docs/rag/DELTA_SINCE_V3.json",
+    "corpus_manifest_v2": "corpus/manifests/corpus_manifest_v2.json",
+    "updated_index_root": "corpus/rag/index/"
+  },
+  "metrics": {
+    "n_delta_files": 93,
+    "num_files_v1": 181,
+    "num_files_v2": 274,
+    "n_chunks_v2": 1529,
+    "total_bytes_v2": 1970545
+  },
+  "timestamp_utc": "2026-02-20T19:56:32.532579+00:00"
+}

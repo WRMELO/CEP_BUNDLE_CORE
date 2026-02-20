@@ -1,0 +1,44 @@
+{
+  "task_id": "TASK_CEP_TRANSFERENCIA_CEP_DEFINITIVO_V1",
+  "mode": "run_transfer",
+  "intent": "Criar projeto CEP_DEFINITIVO em /home/wilson/ com estrutura e artefatos para conexao a fontes primarias (BRAPI, BCB, Stooq, B3) e secrets (Git SSH, BRAPI token).",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "target_root": "/home/wilson/CEP_DEFINITIVO",
+  "inputs": {
+    "brapi_secret_template_source": "/home/wilson/CEP_NA_BOLSA/planning/secrets/brapi_token.txt",
+    "brapi_secrets_module": "/home/wilson/CEP_NA_BOLSA/planning/utils/secrets.py",
+    "cdi_ssot_readme": "/home/wilson/CEP_BUNDLE_CORE/data/ssot/cdi/README.md",
+    "task_012_runner_reference": "/home/wilson/CEP_COMPRA/tools/task_012_runner.py"
+  },
+  "outputs": {
+    "target_root": "/home/wilson/CEP_DEFINITIVO",
+    "docs": {
+      "SETUP_CONEXOES": "docs/SETUP_CONEXOES.md",
+      "SETUP_GIT_SSH": "docs/SETUP_GIT_SSH.md",
+      "TRANSFERENCIA_CEP_DEFINITIVO": "docs/TRANSFERENCIA_CEP_DEFINITIVO.md",
+      "README": "README.md"
+    },
+    "secrets_dir": "planning/secrets/",
+    "secrets_templates": [
+      "planning/secrets/brapi_token.txt.template",
+      "planning/secrets/.gitignore"
+    ],
+    "report": "outputs/governanca/transferencia_cep_definitivo/20260220/report.md",
+    "manifest": "outputs/governanca/transferencia_cep_definitivo/20260220/manifest.json"
+  },
+  "gates": [
+    "S1_VERIFY_TARGET_PARENT_EXISTS",
+    "S2_CREATE_TARGET_STRUCTURE",
+    "S3_CREATE_SECRETS_TEMPLATES",
+    "S4_WRITE_SETUP_DOCS",
+    "S5_WRITE_README_AND_TRANSFER_DOC",
+    "S6_GENERATE_REPORT_AND_MANIFEST"
+  ],
+  "acceptance_criteria": [
+    "CEP_DEFINITIVO existe e contem docs/, planning/secrets/, data/, README",
+    "Templates de secrets criados SEM valor real do token",
+    "SETUP_CONEXOES.md lista BRAPI, BCB, Stooq, B3 com URLs e requisitos",
+    "SETUP_GIT_SSH.md lista comandos para validar ssh -T git@github.com",
+    "TRANSFERENCIA_CEP_DEFINITIVO.md descreve o que foi transferido e proximos passos"
+  ]
+}

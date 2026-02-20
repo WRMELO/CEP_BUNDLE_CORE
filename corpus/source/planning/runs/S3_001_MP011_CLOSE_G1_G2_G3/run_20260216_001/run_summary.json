@@ -1,0 +1,8 @@
+{
+  "subtask_id": "S3_001_MP011_CLOSE_G1_G2_G3",
+  "mapped_masterplan": "MP-011",
+  "status": "EXECUTED",
+  "outputs": [
+    "outputs/gaps/g1_g3/20260216/g1_g3_closure.json"
+  ]
+}

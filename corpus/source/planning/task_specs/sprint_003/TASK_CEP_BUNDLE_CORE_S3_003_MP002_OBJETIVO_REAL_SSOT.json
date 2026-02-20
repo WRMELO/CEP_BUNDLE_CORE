@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S3_003_MP002_OBJETIVO_REAL_SSOT",
+  "masterplan_id": "MP-002",
+  "intent": "Publicar SSOT operacional do objetivo real anti-deriva e anti-bloqueio.",
+  "inputs": {
+    "masterplan": "docs/MASTERPLAN.md",
+    "anti_deriva": "outputs/controle/anti_deriva_w2/20260216/anti_deriva_w2_summary.json",
+    "policy_spc_rl": "outputs/governanca/policy_spc_rl/20260216/policy_spc_rl_summary.json"
+  },
+  "outputs": {
+    "mp002_objetivo_md": "docs/MP002_OBJETIVO_REAL_SSOT.md"
+  },
+  "gates": [
+    "S1_REFERENCES_PRESENT",
+    "S2_DOC_EMITTED"
+  ],
+  "acceptance": [
+    "Funcao objetivo, prioridades, guardrails e metricas de sucesso definidos"
+  ]
+}

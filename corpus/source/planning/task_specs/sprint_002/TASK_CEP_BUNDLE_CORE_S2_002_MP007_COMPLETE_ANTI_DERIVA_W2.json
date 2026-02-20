@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_S2_002_MP007_COMPLETE_ANTI_DERIVA_W2",
+  "masterplan_id": "MP-007",
+  "intent": "Fechar anti-deriva W2 com pacote completo de guardrails e recomendacao operacional.",
+  "inputs": {
+    "ablation": "outputs/experimentos/ablation_e1_e5/20260216/results_summary.json",
+    "metrics_v5": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json"
+  },
+  "outputs": {
+    "anti_deriva_dir": "outputs/controle/anti_deriva_w2/20260216/"
+  },
+  "gates": [
+    "S1_INPUTS_PRESENT",
+    "S2_OUTPUTS_EMITTED"
+  ],
+  "acceptance": [
+    "Resumo comparativo W2 emitido",
+    "Guardrails documentados"
+  ]
+}
