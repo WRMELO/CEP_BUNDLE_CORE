@@ -1,0 +1,56 @@
+{
+  "task_id": "TASK_CEP_F1_001",
+  "steps": [
+    {
+      "step_id": "S1_GATE_ALLOWLIST",
+      "type": "gate_allowlist",
+      "params": {
+        "allowed_globs": [
+          "planning/**",
+          "scripts/**",
+          "docs/**",
+          "configs/**",
+          "data/**",
+          "outputs/**",
+          "notebooks/**"
+        ],
+        "notes": [
+          "Este gate garante que o runner nao execute coisas fora do escopo do repo."
+        ]
+      }
+    },
+    {
+      "step_id": "S2_CHECK_COMPILE",
+      "type": "check_compile",
+      "params": {
+        "paths": [
+          "scripts/agno_runner.py",
+          "planning/runners/cep_f1_001_smoke_agno_runtime_v1.py"
+        ],
+        "notes": [
+          "Deve falhar se houver SyntaxError ou imports invalidos."
+        ]
+      }
+    },
+    {
+      "step_id": "S3_RUN_SMOKE",
+      "type": "run",
+      "params": {
+        "cmd": "python planning/runners/cep_f1_001_smoke_agno_runtime_v1.py --repo_root /home/wilson/CEP_NA_BOLSA --constitution docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md --out planning/runs/TASK_CEP_F1_001"
+      }
+    },
+    {
+      "step_id": "S4_VERIFY_OUTPUTS",
+      "type": "verify_files",
+      "params": {
+        "must_exist": [
+          "planning/runs/TASK_CEP_F1_001/smoke_summary.json",
+          "planning/runs/TASK_CEP_F1_001/SMOKE_OK.txt"
+        ],
+        "notes": [
+          "Se qualquer arquivo faltar, FAIL."
+        ]
+      }
+    }
+  ]
+}

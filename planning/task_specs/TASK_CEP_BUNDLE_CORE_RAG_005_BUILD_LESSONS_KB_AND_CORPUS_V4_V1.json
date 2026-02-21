@@ -1,0 +1,30 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_005_BUILD_LESSONS_KB_AND_CORPUS_V4_V1",
+  "task_title": "Construir KB de Licoes Aprendidas e incorporar ao corpus (manifest v4, index v4)",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "current_manifest": "corpus/manifests/corpus_manifest_v3.json",
+    "current_index": "corpus/rag/index/index_v3.json",
+    "sources_priority": [
+      "docs/corpus/licoes_aprendidas.json",
+      "docs/corpus/experimentos.json",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json"
+    ],
+    "exclude_globs": [
+      "**/.obsidian/**",
+      "**/*.parquet",
+      "**/*.pdf",
+      "**/*.ipynb"
+    ]
+  },
+  "outputs": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v4": "corpus/manifests/corpus_manifest_v4.json",
+    "index_v4": "corpus/rag/index/index_v4.json",
+    "report_json": "outputs/governanca/rag/20260220/lessons_kb/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/lessons_kb/evidence/"
+  }
+}
+

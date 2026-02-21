@@ -1,0 +1,28 @@
+{
+  "approval_id": "APPROVAL-W1-UNIVERSE-SOURCES-20260221-01",
+  "scope": "W1_TRANCHE_UNIVERSE_EVIDENCE_PROMOTION",
+  "source": "TASK_CEP_BUNDLE_CORE_V3_F0_003A_W1_UNIVERSE_EVIDENCE_CANDIDATES_INTAKE (validation_pack.md)",
+  "approved_sources": [
+    {
+      "copied_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/external_refs/cep_na_bolsa/universe_tickers.csv",
+      "sha256": "d284698b91b488bfa6178df04ec2bd2c4c589b698044a55f992276a3a10731d5"
+    },
+    {
+      "copied_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/external_refs/cep_na_bolsa/inventario_operacional.csv",
+      "sha256": "9c8decb29b3a295059622e7e90e457b69e9da8a1e4a922de8723747831a83a0c"
+    },
+    {
+      "copied_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/external_refs/cep_na_bolsa/ssot_acoes_b3.csv",
+      "sha256": "38c8fe38f3280da9a97bbe618f0307012049cdddb3683ec0e46a837dbf99cf59"
+    },
+    {
+      "copied_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/external_refs/cep_na_bolsa/ssot_bdr_b3.csv",
+      "sha256": "303fddcab5a5b69752ad5e8dd436c7cc53ad46e9b3b11219c299e081c30f174d"
+    },
+    {
+      "copied_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/external_refs/cep_na_bolsa/base_operacional_xt.csv",
+      "sha256": "e67f034dc78936873a8ddd05d5f1e8c976a24a5d3d3f13fc50b29af2f1b2f2cd"
+    }
+  ],
+  "notes": "Arquivo criado para satisfazer S2_VERIFY_OWNER_APPROVAL_FILE_PRESENT do F0_003B. Nao implica consumo operacional fora do escopo do F0_003B."
+}

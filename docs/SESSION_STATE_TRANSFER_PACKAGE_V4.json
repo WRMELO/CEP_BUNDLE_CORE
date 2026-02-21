@@ -1,0 +1,41 @@
+{
+  "project": "CEP_BUNDLE_CORE",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "rag": {
+    "index_version": "v7",
+    "index_path": "corpus/rag/index/index_v7.json",
+    "lessons_count": 124,
+    "no_hits_behavior": true,
+    "min_score_lessons": 0.20
+  },
+  "lessons_high_signal": [
+    "LL-20260220-900",
+    "LL-20260220-901",
+    "LL-20260220-COST-001",
+    "LL-20260220-COST-002"
+  ],
+  "strategic_problem": {
+    "model": "M3",
+    "W1_performance": "~6x",
+    "W2_performance": "~2.3x",
+    "hypothesis": "deriva",
+    "status": "unresolved"
+  },
+  "new_focus": {
+    "period": "W1 only",
+    "goal": "understand sell events and regime conditions",
+    "segmentation": "quarterly"
+  },
+  "constraints": {
+    "do_not_modify_snapshot": true,
+    "all_new_work_inside_attempt2": true,
+    "no_inference_without_evidence": true
+  },
+  "missing_definitions": [
+    "W1 exact dates",
+    "M3 definition in W1",
+    "sell rules active in W1",
+    "cost model status in W1"
+  ]
+}

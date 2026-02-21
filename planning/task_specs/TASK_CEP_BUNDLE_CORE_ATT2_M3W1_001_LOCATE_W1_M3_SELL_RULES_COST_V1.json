@@ -1,0 +1,26 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_M3W1_001_LOCATE_W1_M3_SELL_RULES_COST_V1",
+  "task_title": "Congelar definicoes W1/M3: datas, versao, regras de venda e custo (com evidencias)",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "write_policy": {
+    "must_write_all_outputs_under_attempt2": true,
+    "do_not_modify_snapshot": true,
+    "snapshot_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/ssot_snapshot"
+  },
+  "outputs": {
+    "definitions_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/M3_W1/00_DEFINICOES_CONGELADAS_W1_M3.md",
+    "definitions_json": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/M3_W1/00_DEFINICOES_CONGELADAS_W1_M3.json",
+    "evidence_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/M3_W1/locate_definitions_evidence/",
+    "rag_dump": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/M3_W1/locate_definitions_evidence/rag_queries_dump.json"
+  },
+  "acceptance": {
+    "no_inference_rule": true,
+    "required_definitions": [
+      "W1_dates",
+      "M3_definition_for_W1",
+      "SELL_rules_active_in_W1",
+      "cost_0_025pct_active_in_W1"
+    ]
+  }
+}

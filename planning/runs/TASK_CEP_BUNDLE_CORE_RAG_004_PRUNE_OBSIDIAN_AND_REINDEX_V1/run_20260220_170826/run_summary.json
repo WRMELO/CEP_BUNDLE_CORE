@@ -1,0 +1,57 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_004_PRUNE_OBSIDIAN_AND_REINDEX_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_VERIFY_INPUTS_PRESENT",
+      "status": "PASS",
+      "details": "backend_ok=True"
+    },
+    {
+      "gate_id": "G2_DETECT_OBSIDIAN_FILES",
+      "status": "PASS",
+      "details": "n_detected=4"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_MOVE_OBSIDIAN_TO_EXCLUDED",
+      "status": "PASS",
+      "details": "moved=4 remaining=0"
+    },
+    {
+      "step_id": "S2_REBUILD_CORPUS_INDEX_FILES",
+      "status": "PASS",
+      "details": "CORPUS_INDEX e README atualizados com politica .obsidian"
+    },
+    {
+      "step_id": "S3_GENERATE_MANIFEST_V3",
+      "status": "PASS",
+      "details": "num_files_v2=274 num_files_v3=270"
+    },
+    {
+      "step_id": "S4_REINDEX_V3_AND_SMOKE",
+      "status": "PASS",
+      "details": "n_chunks_v2=1529 n_chunks_v3=1520"
+    }
+  ],
+  "deliverables": {
+    "excluded_dir": "corpus/excluded/obsidian",
+    "manifest_v3": "corpus/manifests/corpus_manifest_v3.json",
+    "index_v3": "corpus/rag/index/index_v3.json",
+    "updated_corpus_index": "corpus/CORPUS_INDEX.md",
+    "updated_corpus_readme": "corpus/README.md",
+    "updated_rag_readme": "corpus/rag/README.md"
+  },
+  "metrics": {
+    "obsidian_detected": 4,
+    "obsidian_moved": 4,
+    "num_files_v2": 274,
+    "num_files_v3": 270,
+    "n_chunks_v2": 1529,
+    "n_chunks_v3": 1520,
+    "total_bytes_v3": 1962310
+  },
+  "timestamp_utc": "2026-02-20T20:08:27.353751+00:00"
+}

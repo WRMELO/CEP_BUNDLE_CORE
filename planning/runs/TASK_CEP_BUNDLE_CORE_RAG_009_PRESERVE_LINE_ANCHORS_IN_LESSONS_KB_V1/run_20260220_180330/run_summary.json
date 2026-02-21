@@ -1,0 +1,108 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_009_PRESERVE_LINE_ANCHORS_IN_LESSONS_KB_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_INPUTS_PRESENT",
+      "status": "PASS",
+      "details": "kb=True manifest_v5=True index_v5=True import_report=True imported_files_evidence=True external_manifest=True"
+    },
+    {
+      "gate_id": "G2_NO_ABSOLUTE_PATHS_REINTRODUCED",
+      "status": "PASS",
+      "details": "legacy_abs=0 items_abs=0"
+    },
+    {
+      "gate_id": "G3_ANCHOR_RECOVERY_EVIDENCED",
+      "status": "PASS",
+      "details": "recovered_anchor_items_count=120 recovered_anchor_lessons_count=120 provenance_rows=120"
+    },
+    {
+      "gate_id": "G4_MANIFEST_V6_AND_INDEX_V6_BUILT",
+      "status": "PASS",
+      "details": "manifest_v6=True index_v6=True ll900_top3=True"
+    },
+    {
+      "gate_id": "G5_QUERY_OUTPUT_INCLUDES_EVIDENCE_ITEMS",
+      "status": "PASS",
+      "details": "has_evidence_items_field=True no_hits_unchanged=True"
+    },
+    {
+      "gate_id": "G6_RAG_CONFIG_UPDATED_ONLY_ON_PASS",
+      "status": "PASS",
+      "details": "prior_pass=True rag_index_version=v6"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_UPDATE_KB_WITH_EVIDENCE_ITEMS",
+      "status": "PASS",
+      "details": "total_lessons=122"
+    },
+    {
+      "step_id": "S2_VALIDATE_RELATIVE_EVIDENCE_PATHS",
+      "status": "PASS",
+      "details": "legacy_abs=0 items_abs=0"
+    },
+    {
+      "step_id": "S3_RECOVER_ANCHORS_FROM_TASK008_EVIDENCE",
+      "status": "PASS",
+      "details": "recovered_anchor_items_count=120"
+    },
+    {
+      "step_id": "S4_BUILD_MANIFEST_V6_AND_INDEX_V6",
+      "status": "PASS",
+      "details": "n_files_v6=306 n_chunks_v6=2180"
+    },
+    {
+      "step_id": "S5_VALIDATE_QUERY_LESSONS_OUTPUT",
+      "status": "PASS",
+      "details": "has_evidence_items_field=True"
+    },
+    {
+      "step_id": "S6_UPDATE_RAG_CONFIG_CONDITIONAL",
+      "status": "PASS",
+      "details": "prior_pass=True"
+    }
+  ],
+  "deliverables": {
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "query_tool_updated": "tools/rag/query.py",
+    "manifest_v6": "corpus/manifests/corpus_manifest_v6.json",
+    "index_v6": "corpus/rag/index/index_v6.json",
+    "report_json": "outputs/governanca/rag/20260220/preserve_anchors/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/preserve_anchors/evidence/"
+  },
+  "metrics": {
+    "total_lessons": 122,
+    "lessons_with_evidence_items": 122,
+    "recovered_anchor_items_count": 120,
+    "recovered_anchor_lessons_count": 120,
+    "anchors_by_type_counts": {
+      "line": 120,
+      "range": 0,
+      "none": 6
+    },
+    "n_files_v5": 306,
+    "n_files_v6": 306,
+    "n_chunks_v5": 2128,
+    "n_chunks_v6": 2180,
+    "example_recovered_before_after": {
+      "lesson_id": "LL-20260220-001",
+      "before": "/home/wilson/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md#L155",
+      "after": {
+        "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md",
+        "anchor": "#L155",
+        "anchor_type": "line"
+      }
+    },
+    "example_unrecovered": {
+      "lesson_id": "LL-20260220-900",
+      "path_after": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "reason": "no anchor trace found in TASK 008 evidence (imported_files/report)"
+    }
+  },
+  "timestamp_utc": "2026-02-20T21:03:32.420249+00:00"
+}

@@ -1,0 +1,49 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V3_F0_003D2_W1_CUTLINE_PROMOTION_APPROVED_ONLY",
+  "mode": "run_gate",
+  "phase": "Fase 0 - Forense W1 (tranche unica)",
+  "intent": "Promover somente o cutline aprovado (path+sha256+substring) para cutline_promoted.json consumivel por F0_003_V2. Sem inferencia. Sem LL.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "execution_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "branch_required": "local/integrated-state-20260215",
+  "policy": {
+    "do_not_modify_snapshot": true,
+    "all_outputs_inside_attempt2": true,
+    "no_inference_without_evidence": true,
+    "do_not_modify_rag_index": true,
+    "forbid_lesson_writes": true,
+    "promotion_requires_owner_approval_file": true
+  },
+  "inputs": {
+    "required": [
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/approvals/w1_cutline_approved.json",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/cutline_hunt/evidence/sha256_files_with_hits.txt"
+    ]
+  },
+  "outputs": {
+    "required": [
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/cutline_promotion/report.md",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/cutline_promotion/manifest.json",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/cutline_promotion/evidence",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/cutline_promotion/cutline_promoted.json"
+    ],
+    "evidence_minimum": [
+      "approval_file_read.txt",
+      "approval_hash_verification.txt",
+      "required_substring_check.txt"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_VERIFY_OWNER_APPROVAL_FILE_PRESENT",
+    "S3_VERIFY_APPROVED_HASH_MATCHES_SHA256_FILES_WITH_HITS",
+    "S4_VERIFY_REQUIRED_SUBSTRING_PRESENT_IN_SOURCE",
+    "S5_EMIT_CUTLINE_PROMOTED",
+    "S6_VERIFY_OUTPUTS_AND_HASHES"
+  ],
+  "acceptance_criteria": [
+    "Hash do source_file_path confere com sha256_files_with_hits.txt",
+    "required_substring encontrado no arquivo fonte",
+    "cutline_promoted.json emitido com campos: source_file_path, sha256, cutline_key, cutline_value, evidence_excerpt"
+  ]
+}

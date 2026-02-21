@@ -1,0 +1,848 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_008_IMPORT_EXTERNAL_EVIDENCE_AND_REBASE_LESSONS_V1",
+  "generated_at_utc": "2026-02-20T20:50:46.995213+00:00",
+  "num_imported_files": 120,
+  "imported_total_bytes": 1798491,
+  "files": [
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md#L125",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+      "bytes": 6391,
+      "sha256": "cf7dde5341aec57013cf07d642eaf759d832294d6419bfef6c72a0648f30b6d0",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md#L127",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+      "bytes": 6391,
+      "sha256": "cf7dde5341aec57013cf07d642eaf759d832294d6419bfef6c72a0648f30b6d0",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md#L139",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+      "bytes": 6391,
+      "sha256": "cf7dde5341aec57013cf07d642eaf759d832294d6419bfef6c72a0648f30b6d0",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md#L52",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+      "bytes": 6391,
+      "sha256": "cf7dde5341aec57013cf07d642eaf759d832294d6419bfef6c72a0648f30b6d0",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md#L81",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+      "bytes": 6391,
+      "sha256": "cf7dde5341aec57013cf07d642eaf759d832294d6419bfef6c72a0648f30b6d0",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L103",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L27",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L57",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L77",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L86",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L92",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/compra_semanal_model_selection.md#L95",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+      "bytes": 5978,
+      "sha256": "7c51b776c4be0a345a30496c904c43b456ccee3a026349c4ee2dc860b991d6b4",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md#L102",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "bytes": 4061,
+      "sha256": "98ad676d6b7800eaf4a37afd69a91949ba12990d7d7144ae11f3378127edb29b",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md#L34",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "bytes": 4061,
+      "sha256": "98ad676d6b7800eaf4a37afd69a91949ba12990d7d7144ae11f3378127edb29b",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md#L35",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "bytes": 4061,
+      "sha256": "98ad676d6b7800eaf4a37afd69a91949ba12990d7d7144ae11f3378127edb29b",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md#L72",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "bytes": 4061,
+      "sha256": "98ad676d6b7800eaf4a37afd69a91949ba12990d7d7144ae11f3378127edb29b",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/protocolo_operacional_modelos.md#L98",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+      "bytes": 4061,
+      "sha256": "98ad676d6b7800eaf4a37afd69a91949ba12990d7d7144ae11f3378127edb29b",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/task_006_pos_task.md#L35",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pos_task.md",
+      "bytes": 2156,
+      "sha256": "40bf306df55db7fff23d20125c04b802b6becd4b0c4ebaada60565e4abe0b5fa",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/task_006_pre_execucao.md#L24",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pre_execucao.md",
+      "bytes": 1290,
+      "sha256": "49698403cce33f389aa6db71a8edb04aa2f7a07ff4cd67377aa9d6b4eb96eee5",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/task_008_pos_task.md#L43",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_008_pos_task.md",
+      "bytes": 3217,
+      "sha256": "fdeaec34fcdd60b2de31a4f84d924101db3669ea18e2e2105539fcca2ab6cf88",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/task_009_pos_task.md#L45",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_009_pos_task.md",
+      "bytes": 3122,
+      "sha256": "c02b84f40c3167095f63de2fd72b7c5c6ba93b52ed78fc0f0c489fdb9a3adece",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/task_012_smoke_sell_patch.md#L6",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_012_smoke_sell_patch.md",
+      "bytes": 857,
+      "sha256": "297d2e5d2dbcbf0009893f35a88ea42cdd6b5627f492ce272a097f579ac7955e",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L4",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L45",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L47",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L50",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L59",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L61",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_pos_task.md#L63",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+      "bytes": 1151,
+      "sha256": "0d4c1e89fbebdbd0cdfd981093aeeee81ce0fdeaae99c5e1906c6de9c4a5f976",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_task_operacional.md#L4",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md",
+      "bytes": 1546,
+      "sha256": "5c1c212e391cfde55420c169896382c270369a3650bd42a8f49dfe40623b25d8",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_task_operacional.md#L48",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md",
+      "bytes": 1546,
+      "sha256": "5c1c212e391cfde55420c169896382c270369a3650bd42a8f49dfe40623b25d8",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/template_task_operacional.md#L53",
+      "dest_relpath": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md",
+      "bytes": 1546,
+      "sha256": "5c1c212e391cfde55420c169896382c270369a3650bd42a8f49dfe40623b25d8",
+      "external_repo_hint": "CEP_COMPRA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md#L13",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "bytes": 7293,
+      "sha256": "f531fa2f2aaa90c0f6597f7cb0e9be1bcf1786dd4bbd04d08cd16920a21ac118",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md#L277",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "bytes": 7293,
+      "sha256": "f531fa2f2aaa90c0f6597f7cb0e9be1bcf1786dd4bbd04d08cd16920a21ac118",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md#L295",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "bytes": 7293,
+      "sha256": "f531fa2f2aaa90c0f6597f7cb0e9be1bcf1786dd4bbd04d08cd16920a21ac118",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md#L89",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+      "bytes": 7293,
+      "sha256": "f531fa2f2aaa90c0f6597f7cb0e9be1bcf1786dd4bbd04d08cd16920a21ac118",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L146",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L17",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L203",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L213",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L221",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L228",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L240",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L283",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L291",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L299",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L322",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L324",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L328",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L340",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L346",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L348",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L55",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L72",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md#L9",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/00_constituicao/RETOMADA_PLANO_VS_EXECUCAO.md#L161",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/RETOMADA_PLANO_VS_EXECUCAO.md",
+      "bytes": 7855,
+      "sha256": "6c7da17aaa81c4099b6cfc111312d8764f397b6ee9d83a380ae4b74e4ad04525",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md#L155",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md",
+      "bytes": 12697,
+      "sha256": "26c549e47ab1247ee4e916b76ee34a0286976e8e9b356014dda541319b145e62",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md#L169",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md",
+      "bytes": 12697,
+      "sha256": "26c549e47ab1247ee4e916b76ee34a0286976e8e9b356014dda541319b145e62",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/docs/templates/runner_xbarr_r_plotly_v1.usage.md#L19",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/templates/runner_xbarr_r_plotly_v1.usage.md",
+      "bytes": 729,
+      "sha256": "b730cbaa721bc0b3e53431109c96e2dc47133e5e9b7c28b12bcafb4243ac1566",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_baseline_master_in_sample_nk/decision_package.md#L3",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_baseline_master_in_sample_nk/decision_package.md",
+      "bytes": 2536,
+      "sha256": "47d055e6738ed7f8e5f7a3ca1f0f8a9d7031158229bc18d41bc68e702b017f55",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_master_backtest_replica_bvsp_kn/decision_package.md#L3",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_master_backtest_replica_bvsp_kn/decision_package.md",
+      "bytes": 2067,
+      "sha256": "9eaf24e57f0f6879a603c936863697f4f8c76580854d85ced97429bb327d7e0e",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260209/decision_package_sizing_v2/decision_package.md#L24",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260209/decision_package_sizing_v2/decision_package.md",
+      "bytes": 1369,
+      "sha256": "af0a8b8ac4b83a850dfe7f4bffd7b1f83ad0fcf7cbe094014cc4979e6a7e826f",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260208/baseline_scan_in_sample_nk/report_baseline_scan_in_sample_nk.md#L17",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260208/baseline_scan_in_sample_nk/report_baseline_scan_in_sample_nk.md",
+      "bytes": 645,
+      "sha256": "bcea863938f74ff12d5fe0957635f94bf74b303406caebb18b59f29a50a18005",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing/sanity_summary.md#L10",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing/sanity_summary.md",
+      "bytes": 235,
+      "sha256": "2a57a2eb765fba3c07345d3c49c50d30e97b1cd4770abe61698689d3f68db2cd",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing_v2/sanity_summary.md#L11",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing_v2/sanity_summary.md",
+      "bytes": 293,
+      "sha256": "4d28f066eb31d47048f6399da17bffbccf16dce7fa0c1172d6b9887b53fe36c1",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1/f1_probe_sdk/PROBE_SDK_BRAPI_QUOTE_LIST.md#L22",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1/f1_probe_sdk/PROBE_SDK_BRAPI_QUOTE_LIST.md",
+      "bytes": 719,
+      "sha256": "38e5004908e36adb94e43ea3e4c5563e08ac8124f5850bf914d6a14b157932e7",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md#L10",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md",
+      "bytes": 234,
+      "sha256": "92aea880dda72118655ffe142d8994643cf0efa6c75dd03d6a254ff77f185cb2",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/cal/20260208/decision_baseline_master/decision_package.md#L3",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/cal/20260208/decision_baseline_master/decision_package.md",
+      "bytes": 929,
+      "sha256": "04008eeb7acb989d79c35022267400968253027d07e3e394bb506834bcbf32ab",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/fase1_calibracao/exp/20260208/baseline_scan_stability/report_baseline_scan_stability.md#L18",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/exp/20260208/baseline_scan_stability/report_baseline_scan_stability.md",
+      "bytes": 632,
+      "sha256": "a8cd22942d5c0583c9098ce10d15965ab57c8abc988d698c4f54c0a3636d91e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/freeze_sizing_default_v2/decisao_freeze_sizing_default_v2.md#L27",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/freeze_sizing_default_v2/decisao_freeze_sizing_default_v2.md",
+      "bytes": 1244,
+      "sha256": "70b468d303228ef39b17adfcbf9bfd5e793313280b78ae4d12a6f3f04bb9bc64",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md#L41",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+      "bytes": 2342,
+      "sha256": "fec01cf008cf05665aaed5115af951ad92aa0f9332bbc0d9f935f17100f25e87",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md#L51",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+      "bytes": 2342,
+      "sha256": "fec01cf008cf05665aaed5115af951ad92aa0f9332bbc0d9f935f17100f25e87",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md#L53",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+      "bytes": 2342,
+      "sha256": "fec01cf008cf05665aaed5115af951ad92aa0f9332bbc0d9f935f17100f25e87",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L15",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L152",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L209",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L219",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L227",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L23",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L234",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L246",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L289",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L297",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L305",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L328",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L330",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L334",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L346",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L352",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L354",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L519",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L572",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L582",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L584",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L61",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md#L78",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+      "bytes": 33369,
+      "sha256": "118d754d84cf18dd53acb20fe5ae1d8bf94af9ae37a622ecaee1411e01d6fe70",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L146",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L17",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L203",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L213",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L221",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L228",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L240",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L283",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L291",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L299",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L322",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L324",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L328",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L340",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L346",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L348",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L55",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L72",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md#L9",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+      "bytes": 21531,
+      "sha256": "5275db11038fe6cb380ab21d0d0c02326961922a62e0bd5fbf79f060f0b2b7e3",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md#L24",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md",
+      "bytes": 1369,
+      "sha256": "af0a8b8ac4b83a850dfe7f4bffd7b1f83ad0fcf7cbe094014cc4979e6a7e826f",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv#L10",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv",
+      "bytes": 4156,
+      "sha256": "697d9022e777304aec982b4e028dbd6543b91b1c612d75d57f1f0a41c9908344",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md#L27",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md",
+      "bytes": 4298,
+      "sha256": "0eaf17b6dc7c7ee81f76e38993a011e137c0b98be4f051eaa4f56b808f298ab8",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv#L10",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv",
+      "bytes": 3022,
+      "sha256": "f968cc1f58658e450fc62dd93888894260fd6d8847a345943c3f3bdb86b5cae0",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    },
+    {
+      "source_path": "/home/wilson/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json#L31",
+      "dest_relpath": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json",
+      "bytes": 1459,
+      "sha256": "7c559fdddd65421cd119ed4e4acb36fffef636e3321953240b50f1fe29a7520e",
+      "external_repo_hint": "CEP_NA_BOLSA"
+    }
+  ]
+}

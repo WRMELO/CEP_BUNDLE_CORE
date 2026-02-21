@@ -1,0 +1,23 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_009_PRESERVE_LINE_ANCHORS_IN_LESSONS_KB_V1",
+  "task_title": "Preservar ancoras de linha nas evidencias da KB (KB v6 + reindex v6)",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md": "corpus/lessons/LESSONS_LEARNED.md",
+    "current_manifest": "corpus/manifests/corpus_manifest_v5.json",
+    "current_index": "corpus/rag/index/index_v5.json",
+    "rag_config": "corpus/rag/rag_config.json",
+    "external_refs_manifest": "corpus/manifests/external_refs_manifest_v1.json",
+    "import_report": "outputs/governanca/rag/20260220/import_external_refs/report.json"
+  },
+  "outputs": {
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "query_tool_updated": "tools/rag/query.py",
+    "manifest_v6": "corpus/manifests/corpus_manifest_v6.json",
+    "index_v6": "corpus/rag/index/index_v6.json",
+    "report_json": "outputs/governanca/rag/20260220/preserve_anchors/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/preserve_anchors/evidence/"
+  }
+}

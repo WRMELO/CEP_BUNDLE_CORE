@@ -1,0 +1,12 @@
+{
+  "approval_id": "APPROVAL-W1-CUTLINE-20260221-01",
+  "scope": "W1_TRANCHE_CUTLINE_PROMOTION",
+  "approved_by": "OWNER",
+  "approved_at_utc": "2026-02-21T00:00:00Z",
+  "cutline_source": {
+    "source_file_path": "/home/wilson/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/manifesto_operacao_rotina.md",
+    "sha256": "8369651162d5895a5248260ba4b843f71f2de060eca9b63954155e9d8e74f3bd",
+    "required_substring": "M_target=10"
+  },
+  "notes": "Approval file criado para permitir promocao deterministica do cutline (sem LL)."
+}

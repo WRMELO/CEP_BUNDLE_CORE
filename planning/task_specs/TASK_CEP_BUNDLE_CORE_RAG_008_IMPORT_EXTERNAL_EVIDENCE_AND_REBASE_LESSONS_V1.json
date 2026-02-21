@@ -1,0 +1,23 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_008_IMPORT_EXTERNAL_EVIDENCE_AND_REBASE_LESSONS_V1",
+  "task_title": "Importar evidencias externas para o corpus e rebasing da KB de licoes",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md": "corpus/lessons/LESSONS_LEARNED.md",
+    "current_manifest": "corpus/manifests/corpus_manifest_v4.json",
+    "current_index": "corpus/rag/index/index_v4.json",
+    "rag_config": "corpus/rag/rag_config.json"
+  },
+  "outputs": {
+    "external_refs_dir": "corpus/source/external_refs/",
+    "external_refs_manifest": "corpus/manifests/external_refs_manifest_v1.json",
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v5": "corpus/manifests/corpus_manifest_v5.json",
+    "index_v5": "corpus/rag/index/index_v5.json",
+    "report_json": "outputs/governanca/rag/20260220/import_external_refs/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/import_external_refs/evidence/"
+  }
+}
+

@@ -1,0 +1,132 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_M3W1_001_LOCATE_W1_M3_SELL_RULES_COST_V1",
+  "generated_at_utc": "2026-02-20T21:25:00Z",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "rag_context": {
+    "rag_config_path": "corpus/rag/rag_config.json",
+    "index_version": "v7",
+    "index_path": "corpus/rag/index/index_v7.json"
+  },
+  "definitions": {
+    "W1_period_start_end": {
+      "status": "FOUND",
+      "value": {
+        "start_date": "2018-07-02",
+        "end_date": "2021-06-30"
+      },
+      "evidence_items": [
+        {
+          "path": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+          "anchor": "#L80-L81",
+          "anchor_type": "range",
+          "excerpt_hint": "\"start_date\": \"2018-07-02\", \"end_date\": \"2021-06-30\""
+        },
+        {
+          "path": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+          "anchor": "#L108-L109",
+          "anchor_type": "range",
+          "excerpt_hint": "\"v3_reference\" em W1 repete start/end 2018-07-02..2021-06-30"
+        }
+      ]
+    },
+    "M3_definition_valid_for_W1": {
+      "status": "PARTIAL_FOUND",
+      "value": {
+        "baseline_statement": "M3 fixo como baseline do bundle",
+        "formula": "score_m3 = z(score_m0) + z(ret_lookback_62) - z(vol_lookback_62)",
+        "cep_puro_2_criterios_vs_ajuste": "AUSENTE"
+      },
+      "evidence_items": [
+        {
+          "path": "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MASTERPLAN_V2.md",
+          "anchor": "#L25-L27",
+          "anchor_type": "range",
+          "excerpt_hint": "Baseline do bundle: M3 (fixo) e formula score_m3."
+        }
+      ],
+      "absence_notes": [
+        "Nao encontrado texto literal 'CEP puro 2 criterios' nos documentos varridos do snapshot."
+      ]
+    },
+    "SELL_rules_effectively_active_in_W1": {
+      "status": "FOUND",
+      "value": {
+        "rule_1": "Venda por protecao total via SPC/CEP (deterministica, override).",
+        "rule_2": "Venda complementar via RL para ajuste de risco/rotatividade.",
+        "constraint": "Turnover cap por regime inclui W1=0.22."
+      },
+      "evidence_items": [
+        {
+          "path": "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MASTERPLAN_V2.md",
+          "anchor": "#L102-L103",
+          "anchor_type": "range",
+          "excerpt_hint": "Camada 1 protecao total; Camada 2 venda complementar."
+        },
+        {
+          "path": "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MASTERPLAN_V2.md",
+          "anchor": "#L94",
+          "anchor_type": "line",
+          "excerpt_hint": "Venda por protecao total permanece fora do RL."
+        },
+        {
+          "path": "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MASTERPLAN_V2.md",
+          "anchor": "#L79",
+          "anchor_type": "line",
+          "excerpt_hint": "Teto turnover por regime: W1=0.22."
+        }
+      ]
+    },
+    "cost_0_025pct_active_in_W1": {
+      "status": "FOUND",
+      "value": {
+        "cost_model": "ARB_COST_0_025PCT_MOVED",
+        "rate": 0.00025,
+        "active_in_w1": true
+      },
+      "evidence_items": [
+        {
+          "path": "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+          "anchor": "#L31-L35",
+          "anchor_type": "range",
+          "excerpt_hint": "nome ARB_COST_0_025PCT_MOVED, taxa 0.00025, escopo M3/W1/W2."
+        },
+        {
+          "path": "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+          "anchor": "#L95-L100",
+          "anchor_type": "range",
+          "excerpt_hint": "W1 com cost_model ARB_COST_0_025PCT_MOVED e cost_rate 0.00025."
+        },
+        {
+          "path": "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MASTERPLAN_V2.md",
+          "anchor": "#L104",
+          "anchor_type": "line",
+          "excerpt_hint": "Aplicar 0,025% no valor de cada SELL."
+        }
+      ]
+    }
+  },
+  "documents_scanned": {
+    "attempt2_snapshot": [
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/CONSTITUICAO.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MASTERPLAN_V2.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MP001_VISAO_EXECUTIVA.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/MP002_OBJETIVO_REAL_SSOT.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/emendas/EMENDA_CASH_REMUNERACAO_CDI_V1.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/emendas/EMENDA_OPERACAO_LOCAL_EXECUCAO_V1.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "_tentativa2_reexecucao_completa_20260220/ssot_snapshot/docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json"
+    ],
+    "repo_additional": [
+      "corpus/lessons/LESSONS_LEARNED.json",
+      "corpus/lessons/LESSONS_LEARNED.md",
+      "outputs/instrumentation/m3_w1_w2/20260216_cash_cdi_v5/metrics_m3_w1_w2_v5.json",
+      "outputs/simulacoes/compare_m3_plotly/20260216/metrics_new.json",
+      "planning/runs/",
+      "planning/task_specs/"
+    ]
+  },
+  "rag_queries_dump_path": "_tentativa2_reexecucao_completa_20260220/outputs/M3_W1/locate_definitions_evidence/rag_queries_dump.json",
+  "no_inference_rule_applied": true
+}

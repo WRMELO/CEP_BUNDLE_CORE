@@ -1,0 +1,4058 @@
+{
+  "kb_name": "LESSONS_LEARNED",
+  "generated_at_utc": "2026-02-20T20:38:10.152755+00:00",
+  "n_lessons": 124,
+  "lessons": [
+    {
+      "lesson_id": "LL-20260220-001",
+      "date": null,
+      "title": "Licao extraida #1",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "9. 2023-03-10 \u2014 Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"FDIC Acts to Protect All Depositors of the former Silicon ...\"))",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md",
+          "anchor": "#L155",
+          "anchor_type": "line",
+          "excerpt_hint": "9. 2023-03-10 \u2014 Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_sour..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-002",
+      "date": null,
+      "title": "Licao extraida #2",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "O per\u00edodo de refer\u00eancia do CEP (baseline) ser\u00e1 definido formalmente por regras determin\u00edsticas, aplicadas exclusivamente \u00e0 s\u00e9rie Master (IBOVESPA, em log-retorno). O baseline deve ser um intervalo cont\u00ednuo de preg\u00f5es, contido na janela de d",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/governanca/CEP_NA_BOLSA \u2014 Ponto de Situa\u00e7\u00e3o (snapshot 2026-02-04).md",
+          "anchor": "#L155",
+          "anchor_type": "line",
+          "excerpt_hint": "O per\u00edodo de refer\u00eancia do CEP (baseline) ser\u00e1 definido formalmente por regras determin\u00edsticas, aplicadas exclusivamente \u00e0 s\u00e9rie Master (IBOVESPA, em log-retorn..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-003",
+      "date": null,
+      "title": "Licao extraida #3",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- O `window_n` deve ser igual ao `N_master` do SSOT em `docs/ssot/master_calibration.json`.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/templates/runner_xbarr_r_plotly_v1.usage.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/templates/runner_xbarr_r_plotly_v1.usage.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/templates/runner_xbarr_r_plotly_v1.usage.md",
+          "anchor": "#L19",
+          "anchor_type": "line",
+          "excerpt_hint": "- O `window_n` deve ser igual ao `N_master` do SSOT em `docs/ssot/master_calibration.json`."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-004",
+      "date": null,
+      "title": "Licao extraida #4",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Planejador deve iniciar pela Fase I e usar Agno.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/RETOMADA_PLANO_VS_EXECUCAO.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/RETOMADA_PLANO_VS_EXECUCAO.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/RETOMADA_PLANO_VS_EXECUCAO.md",
+          "anchor": "#L161",
+          "anchor_type": "line",
+          "excerpt_hint": "Planejador deve iniciar pela Fase I e usar Agno."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-005",
+      "date": null,
+      "title": "Licao extraida #5",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- bloquear risco quando houver evid\u00eancia estat\u00edstica de causa especial;",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+          "anchor": "#L13",
+          "anchor_type": "line",
+          "excerpt_hint": "- bloquear risco quando houver evid\u00eancia estat\u00edstica de causa especial;"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-006",
+      "date": null,
+      "title": "Licao extraida #6",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Estas ferramentas fazem parte **formal** do projeto e devem continuar sendo usadas:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+          "anchor": "#L13",
+          "anchor_type": "line",
+          "excerpt_hint": "Estas ferramentas fazem parte **formal** do projeto e devem continuar sendo usadas:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-007",
+      "date": null,
+      "title": "Licao extraida #7",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "> O Planejador deve:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+          "anchor": "#L13",
+          "anchor_type": "line",
+          "excerpt_hint": "> O Planejador deve:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-008",
+      "date": null,
+      "title": "Licao extraida #8",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Tudo o que vier depois deve ser compat\u00edvel com ele \u2014 ou explicitamente revisado.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V1.md",
+          "anchor": "#L13",
+          "anchor_type": "line",
+          "excerpt_hint": "Tudo o que vier depois deve ser compat\u00edvel com ele \u2014 ou explicitamente revisado."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-009",
+      "date": null,
+      "title": "Licao extraida #9",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este documento \u00e9 a \u00e2ncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que \u00e9 permitido, o que \u00e9 proibido e como o projeto deve evoluir com rastreabilidade, disciplina e auditabilidade. Qualquer mudan\u00e7a conceitual exige atu",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Este documento \u00e9 a \u00e2ncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que \u00e9 permitido, o que \u00e9 proibido e como o projeto deve evoluir com ras..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-010",
+      "date": null,
+      "title": "Licao extraida #10",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "O foco do projeto n\u00e3o \u00e9 previs\u00e3o, n\u00e3o \u00e9 narrativa de mercado e n\u00e3o \u00e9 otimiza\u00e7\u00e3o prematura, mas sim operar somente quando o processo estiver sob controle, bloquear risco quando houver evid\u00eancia estat\u00edstica de causa especial, selecionar ativo",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "O foco do projeto n\u00e3o \u00e9 previs\u00e3o, n\u00e3o \u00e9 narrativa de mercado e n\u00e3o \u00e9 otimiza\u00e7\u00e3o prematura, mas sim operar somente quando o processo estiver sob controle, bloque..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-011",
+      "date": null,
+      "title": "Licao extraida #11",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-012",
+      "date": null,
+      "title": "Licao extraida #12",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Regra de governan\u00e7a do Obsidian: o vault do Obsidian n\u00e3o entra no git. Por\u00e9m, toda decis\u00e3o relevante deve ser replicada em documentos versionados no reposit\u00f3rio (por exemplo, em docs/), para rastreabilidade e governan\u00e7a.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Regra de governan\u00e7a do Obsidian: o vault do Obsidian n\u00e3o entra no git. Por\u00e9m, toda decis\u00e3o relevante deve ser replicada em documentos versionados no reposit\u00f3rio..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-013",
+      "date": null,
+      "title": "Licao extraida #13",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, crit\u00e9rios, hash) e auditoria (contagens, duplicidades, chaves e campos cr\u00edticos).",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, crit\u00e9rios, hash) e auditoria (contagens, duplicidades, chaves e campos cr\u00edticos)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-014",
+      "date": null,
+      "title": "Licao extraida #14",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Nota de governan\u00e7a: o snapshot deve registrar os valores usados e qualquer desvio desses par\u00e2metros.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Nota de governan\u00e7a: o snapshot deve registrar os valores usados e qualquer desvio desses par\u00e2metros."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-015",
+      "date": null,
+      "title": "Licao extraida #15",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-016",
+      "date": null,
+      "title": "Licao extraida #16",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "**Emenda \u00fanica (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A constru\u00e7\u00e3o de subgrupos para Xbarra\u2013R deve usar rolling_overlapping (stride=1, janela=N_burner), an\u00e1logo ao Master. O per\u00edodo-base (bas",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "**Emenda \u00fanica (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A constru\u00e7\u00e3o de subgrupos para Xbarra\u2013R deve usar rolling..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-017",
+      "date": null,
+      "title": "Licao extraida #17",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Artefatos gerados devem incluir manifest.json com hashes.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Artefatos gerados devem incluir manifest.json com hashes."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-018",
+      "date": null,
+      "title": "Licao extraida #18",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Regra 3: 6 pontos consecutivos em tend\u00eancia monot\u00f4nica (subindo/caindo). Auxiliar/opcional (n\u00e3o deve ser gatilho \u00fanico se n\u00e3o estiver explicitamente ativada).",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "- Regra 3: 6 pontos consecutivos em tend\u00eancia monot\u00f4nica (subindo/caindo). Auxiliar/opcional (n\u00e3o deve ser gatilho \u00fanico se n\u00e3o estiver explicitamente ativada)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-019",
+      "date": null,
+      "title": "Licao extraida #19",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "A aplica\u00e7\u00e3o e valida\u00e7\u00e3o deve cobrir:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "A aplica\u00e7\u00e3o e valida\u00e7\u00e3o deve cobrir:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-020",
+      "date": null,
+      "title": "Licao extraida #20",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Justificativas por \u201ceventos externos reconhecidos\u201d s\u00e3o permitidas apenas como anota\u00e7\u00e3o ex post para auditoria e entendimento do comportamento do processo nos pontos fora de controle. Essas anota\u00e7\u00f5es n\u00e3o alteram o resultado CEP nem mudam par",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Justificativas por \u201ceventos externos reconhecidos\u201d s\u00e3o permitidas apenas como anota\u00e7\u00e3o ex post para auditoria e entendimento do comportamento do processo nos po..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-021",
+      "date": null,
+      "title": "Licao extraida #21",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Toda revis\u00e3o, quando autorizada pelo Owner, deve ser registrada como evento de governan\u00e7a e executada por task dedicada, preservando rastreabilidade completa do antes e do depois (baseline anterior e baseline revisado), sem apagamento de hi",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Toda revis\u00e3o, quando autorizada pelo Owner, deve ser registrada como evento de governan\u00e7a e executada por task dedicada, preservando rastreabilidade completa do..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-022",
+      "date": null,
+      "title": "Licao extraida #22",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relat\u00f3rios de calibra\u00e7\u00e3o/valida\u00e7\u00e3o/revis\u00e3o) deve ser produzido por task Agno, com report e evid\u00eancias. \u00c9 proibido manter \u201cscripts manuais\u201d como fonte definitiva de estad",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relat\u00f3rios de calibra\u00e7\u00e3o/valida\u00e7\u00e3o/revis\u00e3o) deve ser produzido por task Agno, com report..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-023",
+      "date": null,
+      "title": "Licao extraida #23",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substitu\u00eddo por task equivalente antes de ser considerado parte do estado governado do projeto.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substitu\u00eddo por task equivalente antes de ser considerado parte do estado..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-024",
+      "date": null,
+      "title": "Licao extraida #24",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "As tasks devem seguir conven\u00e7\u00e3o de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "As tasks devem seguir conven\u00e7\u00e3o de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-025",
+      "date": null,
+      "title": "Licao extraida #25",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Quando houver erro na resposta (texto/decis\u00e3o/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar causa, evid\u00eancias necess\u00e1rias e pr\u00f3ximo passo \u00fanico antes de prosseguir. O objetivo ",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "pass",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Quando houver erro na resposta (texto/decis\u00e3o/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar caus..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-026",
+      "date": null,
+      "title": "Licao extraida #26",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constitui\u00e7\u00e3o, come\u00e7ar pelo plano t\u00e9cnico de execu\u00e7\u00e3o da Fase I e organizar o trabalho via Agno, priorizando clareza, rastreabilidade e co",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constitui\u00e7\u00e3o, come\u00e7ar pelo plano t\u00e9cnico de execu\u00e7\u00e3o da F..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-027",
+      "date": null,
+      "title": "Licao extraida #27",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/docs/00_constituicao/CEP_NA_BOLSA_CONSTITUICAO_V2_20260204.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-028",
+      "date": null,
+      "title": "Licao extraida #28",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "\"Deve falhar se houver SyntaxError ou imports invalidos.\"",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/task_specs/TASK_CEP_F1_001_BOOTSTRAP_AGNO_RUNTIME_V1.json",
+          "anchor": "#L31",
+          "anchor_type": "line",
+          "excerpt_hint": "\"Deve falhar se houver SyntaxError ou imports invalidos.\""
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-029",
+      "date": null,
+      "title": "Licao extraida #29",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "2023-03-10,\"Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"\"FDIC Acts to Protect All Depositors of the former Silicon ...\"\"))\"",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/planning/runs/TASK_CEP_F1_006_MASTER_BASELINE_N_SELECTION_V1/S1_EVENTOS_EXTRAIDOS.csv",
+          "anchor": "#L10",
+          "anchor_type": "line",
+          "excerpt_hint": "2023-03-10,\"Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=c..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-030",
+      "date": null,
+      "title": "Licao extraida #30",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Recomenda\u00e7\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/auditorias/20260206/nao_sobrepostos/audit_nao_sobrepostos.md",
+          "anchor": "#L10",
+          "anchor_type": "line",
+          "excerpt_hint": "## Recomenda\u00e7\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-031",
+      "date": null,
+      "title": "Licao extraida #31",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Recomenda\u00e7\u00e3o t\u00e9cnica",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/exp/20260208/baseline_scan_stability/report_baseline_scan_stability.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/exp/20260208/baseline_scan_stability/report_baseline_scan_stability.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/exp/20260208/baseline_scan_stability/report_baseline_scan_stability.md",
+          "anchor": "#L18",
+          "anchor_type": "line",
+          "excerpt_hint": "## Recomenda\u00e7\u00e3o t\u00e9cnica"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-032",
+      "date": null,
+      "title": "Licao extraida #32",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Recomenda\u00e7\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/cal/20260208/decision_baseline_master/decision_package.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/cal/20260208/decision_baseline_master/decision_package.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1_calibracao/cal/20260208/decision_baseline_master/decision_package.md",
+          "anchor": "#L3",
+          "anchor_type": "line",
+          "excerpt_hint": "## Recomenda\u00e7\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-033",
+      "date": null,
+      "title": "Licao extraida #33",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "| 8 | 2023-03-10 | Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"FDIC Acts to Protect All Depositors of the former Silicon ...",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/report_master_gate_applicability.md",
+          "anchor": "#L27",
+          "anchor_type": "line",
+          "excerpt_hint": "| 8 | 2023-03-10 | Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_s..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-034",
+      "date": null,
+      "title": "Licao extraida #34",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "8,2023-03-10,\"Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com \"\"FDIC Acts to Protect All Depositors of the former Silicon ...\"\"))",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/master_gate_applicability/20260206/events_overlaps.csv",
+          "anchor": "#L10",
+          "anchor_type": "line",
+          "excerpt_hint": "8,2023-03-10,\"Fechamento do Silicon Valley Bank (stress banc\u00e1rio/risco sist\u00eamico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-035",
+      "date": null,
+      "title": "Licao extraida #35",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Prioridade entre estabilidade/controle e m\u00e9tricas financeiras deve ser reafirmada se o guardrail filtrar demais.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/050_decision_package_sizing_v2.md",
+          "anchor": "#L24",
+          "anchor_type": "line",
+          "excerpt_hint": "- Prioridade entre estabilidade/controle e m\u00e9tricas financeiras deve ser reafirmada se o guardrail filtrar demais."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-036",
+      "date": null,
+      "title": "Licao extraida #36",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este documento \u00e9 a \u00e2ncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que \u00e9 permitido, o que \u00e9 proibido e como o projeto deve evoluir com rastreabilidade, disciplina e auditabilidade. Qualquer mudan\u00e7a conceitual exige atu",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Este documento \u00e9 a \u00e2ncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que \u00e9 permitido, o que \u00e9 proibido e como o projeto deve evoluir com ras..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-037",
+      "date": null,
+      "title": "Licao extraida #37",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "O foco do projeto n\u00e3o \u00e9 previs\u00e3o, n\u00e3o \u00e9 narrativa de mercado e n\u00e3o \u00e9 otimiza\u00e7\u00e3o prematura, mas sim operar somente quando o processo estiver sob controle, bloquear risco quando houver evid\u00eancia estat\u00edstica de causa especial, selecionar ativo",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "O foco do projeto n\u00e3o \u00e9 previs\u00e3o, n\u00e3o \u00e9 narrativa de mercado e n\u00e3o \u00e9 otimiza\u00e7\u00e3o prematura, mas sim operar somente quando o processo estiver sob controle, bloque..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-038",
+      "date": null,
+      "title": "Licao extraida #38",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-039",
+      "date": null,
+      "title": "Licao extraida #39",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Regra de governan\u00e7a do Obsidian: o vault do Obsidian n\u00e3o entra no git. Por\u00e9m, toda decis\u00e3o relevante deve ser replicada em documentos versionados no reposit\u00f3rio (por exemplo, em docs/), para rastreabilidade e governan\u00e7a.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Regra de governan\u00e7a do Obsidian: o vault do Obsidian n\u00e3o entra no git. Por\u00e9m, toda decis\u00e3o relevante deve ser replicada em documentos versionados no reposit\u00f3rio..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-040",
+      "date": null,
+      "title": "Licao extraida #40",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, crit\u00e9rios, hash) e auditoria (contagens, duplicidades, chaves e campos cr\u00edticos).",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, crit\u00e9rios, hash) e auditoria (contagens, duplicidades, chaves e campos cr\u00edticos)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-041",
+      "date": null,
+      "title": "Licao extraida #41",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Nota de governan\u00e7a: o snapshot deve registrar os valores usados e qualquer desvio desses par\u00e2metros.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Nota de governan\u00e7a: o snapshot deve registrar os valores usados e qualquer desvio desses par\u00e2metros."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-042",
+      "date": null,
+      "title": "Licao extraida #42",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-043",
+      "date": null,
+      "title": "Licao extraida #43",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "**Emenda \u00fanica (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A constru\u00e7\u00e3o de subgrupos para Xbarra\u2013R deve usar rolling_overlapping (stride=1, janela=N_burner), an\u00e1logo ao Master. O per\u00edodo-base (bas",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "**Emenda \u00fanica (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A constru\u00e7\u00e3o de subgrupos para Xbarra\u2013R deve usar rolling..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-044",
+      "date": null,
+      "title": "Licao extraida #44",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Artefatos gerados devem incluir manifest.json com hashes.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Artefatos gerados devem incluir manifest.json com hashes."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-045",
+      "date": null,
+      "title": "Licao extraida #45",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Regra 3: 6 pontos consecutivos em tend\u00eancia monot\u00f4nica (subindo/caindo). Auxiliar/opcional (n\u00e3o deve ser gatilho \u00fanico se n\u00e3o estiver explicitamente ativada).",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "- Regra 3: 6 pontos consecutivos em tend\u00eancia monot\u00f4nica (subindo/caindo). Auxiliar/opcional (n\u00e3o deve ser gatilho \u00fanico se n\u00e3o estiver explicitamente ativada)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-046",
+      "date": null,
+      "title": "Licao extraida #46",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "A aplica\u00e7\u00e3o e valida\u00e7\u00e3o deve cobrir:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "A aplica\u00e7\u00e3o e valida\u00e7\u00e3o deve cobrir:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-047",
+      "date": null,
+      "title": "Licao extraida #47",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Justificativas por \u201ceventos externos reconhecidos\u201d s\u00e3o permitidas apenas como anota\u00e7\u00e3o ex post para auditoria e entendimento do comportamento do processo nos pontos fora de controle. Essas anota\u00e7\u00f5es n\u00e3o alteram o resultado CEP nem mudam par",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Justificativas por \u201ceventos externos reconhecidos\u201d s\u00e3o permitidas apenas como anota\u00e7\u00e3o ex post para auditoria e entendimento do comportamento do processo nos po..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-048",
+      "date": null,
+      "title": "Licao extraida #48",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Toda revis\u00e3o, quando autorizada pelo Owner, deve ser registrada como evento de governan\u00e7a e executada por task dedicada, preservando rastreabilidade completa do antes e do depois (baseline anterior e baseline revisado), sem apagamento de hi",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Toda revis\u00e3o, quando autorizada pelo Owner, deve ser registrada como evento de governan\u00e7a e executada por task dedicada, preservando rastreabilidade completa do..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-049",
+      "date": null,
+      "title": "Licao extraida #49",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relat\u00f3rios de calibra\u00e7\u00e3o/valida\u00e7\u00e3o/revis\u00e3o) deve ser produzido por task Agno, com report e evid\u00eancias. \u00c9 proibido manter \u201cscripts manuais\u201d como fonte definitiva de estad",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relat\u00f3rios de calibra\u00e7\u00e3o/valida\u00e7\u00e3o/revis\u00e3o) deve ser produzido por task Agno, com report..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-050",
+      "date": null,
+      "title": "Licao extraida #50",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substitu\u00eddo por task equivalente antes de ser considerado parte do estado governado do projeto.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substitu\u00eddo por task equivalente antes de ser considerado parte do estado..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-051",
+      "date": null,
+      "title": "Licao extraida #51",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "As tasks devem seguir conven\u00e7\u00e3o de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "As tasks devem seguir conven\u00e7\u00e3o de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-052",
+      "date": null,
+      "title": "Licao extraida #52",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Quando houver erro na resposta (texto/decis\u00e3o/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar causa, evid\u00eancias necess\u00e1rias e pr\u00f3ximo passo \u00fanico antes de prosseguir. O objetivo ",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "pass",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Quando houver erro na resposta (texto/decis\u00e3o/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar caus..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-053",
+      "date": null,
+      "title": "Licao extraida #53",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constitui\u00e7\u00e3o, come\u00e7ar pelo plano t\u00e9cnico de execu\u00e7\u00e3o da Fase I e organizar o trabalho via Agno, priorizando clareza, rastreabilidade e co",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constitui\u00e7\u00e3o, come\u00e7ar pelo plano t\u00e9cnico de execu\u00e7\u00e3o da F..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-054",
+      "date": null,
+      "title": "Licao extraida #54",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/operacao_rotina/20260209/ROTINA_GESTAO_CARTEIRA_001/artefatos/010_constituicao_v2.md",
+          "anchor": "#L146",
+          "anchor_type": "line",
+          "excerpt_hint": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-055",
+      "date": null,
+      "title": "Licao extraida #55",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este documento \u00e9 a \u00e2ncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que \u00e9 permitido, o que \u00e9 proibido e como o projeto deve evoluir com rastreabilidade, disciplina e auditabilidade. Qualquer mudan\u00e7a conceitual exige atu",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Este documento \u00e9 a \u00e2ncora conceitual e operacional do projeto CEP_NA_BOLSA. Ele define o que \u00e9 permitido, o que \u00e9 proibido e como o projeto deve evoluir com ras..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-056",
+      "date": null,
+      "title": "Licao extraida #56",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "O foco do projeto n\u00e3o \u00e9 previs\u00e3o, n\u00e3o \u00e9 narrativa de mercado e n\u00e3o \u00e9 otimiza\u00e7\u00e3o prematura, mas sim operar somente quando o processo estiver sob controle, bloquear risco quando houver evid\u00eancia estat\u00edstica de causa especial, selecionar ativo",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "O foco do projeto n\u00e3o \u00e9 previs\u00e3o, n\u00e3o \u00e9 narrativa de mercado e n\u00e3o \u00e9 otimiza\u00e7\u00e3o prematura, mas sim operar somente quando o processo estiver sob controle, bloque..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-057",
+      "date": null,
+      "title": "Licao extraida #57",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Estas ferramentas fazem parte formal do projeto e devem continuar sendo usadas:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-058",
+      "date": null,
+      "title": "Licao extraida #58",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Regra de governan\u00e7a do Obsidian: o vault do Obsidian n\u00e3o entra no git. Por\u00e9m, toda decis\u00e3o relevante deve ser replicada em documentos versionados no reposit\u00f3rio (por exemplo, em docs/), para rastreabilidade e governan\u00e7a.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Regra de governan\u00e7a do Obsidian: o vault do Obsidian n\u00e3o entra no git. Por\u00e9m, toda decis\u00e3o relevante deve ser replicada em documentos versionados no reposit\u00f3rio..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-059",
+      "date": null,
+      "title": "Licao extraida #59",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, crit\u00e9rios, hash) e auditoria (contagens, duplicidades, chaves e campos cr\u00edticos).",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Todo SSOT deve ser versionado, possuir manifesto (fonte, data, crit\u00e9rios, hash) e auditoria (contagens, duplicidades, chaves e campos cr\u00edticos)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-060",
+      "date": null,
+      "title": "Licao extraida #60",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Nota de governan\u00e7a: o snapshot deve registrar os valores usados e qualquer desvio desses par\u00e2metros.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Nota de governan\u00e7a: o snapshot deve registrar os valores usados e qualquer desvio desses par\u00e2metros."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-061",
+      "date": null,
+      "title": "Licao extraida #61",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Regra: toda task/runner deve registrar baseline_start/baseline_end/N_master usados (lidos do SSOT) em manifest/report."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-062",
+      "date": null,
+      "title": "Licao extraida #62",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "**Emenda \u00fanica (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A constru\u00e7\u00e3o de subgrupos para Xbarra\u2013R deve usar rolling_overlapping (stride=1, janela=N_burner), an\u00e1logo ao Master. O per\u00edodo-base (bas",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "**Emenda \u00fanica (Burners):** Para cada Queimador (ativo individual), fixar K=60 subgrupos e N_burner=3. A constru\u00e7\u00e3o de subgrupos para Xbarra\u2013R deve usar rolling..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-063",
+      "date": null,
+      "title": "Licao extraida #63",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Artefatos gerados devem incluir manifest.json com hashes.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Artefatos gerados devem incluir manifest.json com hashes."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-064",
+      "date": null,
+      "title": "Licao extraida #64",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Regra 3: 6 pontos consecutivos em tend\u00eancia monot\u00f4nica (subindo/caindo). Auxiliar/opcional (n\u00e3o deve ser gatilho \u00fanico se n\u00e3o estiver explicitamente ativada).",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "- Regra 3: 6 pontos consecutivos em tend\u00eancia monot\u00f4nica (subindo/caindo). Auxiliar/opcional (n\u00e3o deve ser gatilho \u00fanico se n\u00e3o estiver explicitamente ativada)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-065",
+      "date": null,
+      "title": "Licao extraida #65",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "A aplica\u00e7\u00e3o e valida\u00e7\u00e3o deve cobrir:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "A aplica\u00e7\u00e3o e valida\u00e7\u00e3o deve cobrir:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-066",
+      "date": null,
+      "title": "Licao extraida #66",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Justificativas por \u201ceventos externos reconhecidos\u201d s\u00e3o permitidas apenas como anota\u00e7\u00e3o ex post para auditoria e entendimento do comportamento do processo nos pontos fora de controle. Essas anota\u00e7\u00f5es n\u00e3o alteram o resultado CEP nem mudam par",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Justificativas por \u201ceventos externos reconhecidos\u201d s\u00e3o permitidas apenas como anota\u00e7\u00e3o ex post para auditoria e entendimento do comportamento do processo nos po..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-067",
+      "date": null,
+      "title": "Licao extraida #67",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Toda revis\u00e3o, quando autorizada pelo Owner, deve ser registrada como evento de governan\u00e7a e executada por task dedicada, preservando rastreabilidade completa do antes e do depois (baseline anterior e baseline revisado), sem apagamento de hi",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Toda revis\u00e3o, quando autorizada pelo Owner, deve ser registrada como evento de governan\u00e7a e executada por task dedicada, preservando rastreabilidade completa do..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-068",
+      "date": null,
+      "title": "Licao extraida #68",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relat\u00f3rios de calibra\u00e7\u00e3o/valida\u00e7\u00e3o/revis\u00e3o) deve ser produzido por task Agno, com report e evid\u00eancias. \u00c9 proibido manter \u201cscripts manuais\u201d como fonte definitiva de estad",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Todo artefato de estado do projeto (universo, SSOTs, base operacional, relat\u00f3rios de calibra\u00e7\u00e3o/valida\u00e7\u00e3o/revis\u00e3o) deve ser produzido por task Agno, com report..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-069",
+      "date": null,
+      "title": "Licao extraida #69",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substitu\u00eddo por task equivalente antes de ser considerado parte do estado governado do projeto.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Quando existir legado manual (por exemplo, listas geradas fora de task), ele deve ser substitu\u00eddo por task equivalente antes de ser considerado parte do estado..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-070",
+      "date": null,
+      "title": "Licao extraida #70",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "As tasks devem seguir conven\u00e7\u00e3o de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "As tasks devem seguir conven\u00e7\u00e3o de naming, com prefixos que indiquem a natureza do trabalho e garantam rastreabilidade:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-071",
+      "date": null,
+      "title": "Licao extraida #71",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Quando houver erro na resposta (texto/decis\u00e3o/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar causa, evid\u00eancias necess\u00e1rias e pr\u00f3ximo passo \u00fanico antes de prosseguir. O objetivo ",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "pass",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Quando houver erro na resposta (texto/decis\u00e3o/planejamento) o agente deve interromper e formular perguntas objetivas ao Owner/Estrategista para identificar caus..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-072",
+      "date": null,
+      "title": "Licao extraida #72",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constitui\u00e7\u00e3o, come\u00e7ar pelo plano t\u00e9cnico de execu\u00e7\u00e3o da Fase I e organizar o trabalho via Agno, priorizando clareza, rastreabilidade e co",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Este documento inicia e governa o projeto CEP_NA_BOLSA. O Planejador deve respeitar integralmente esta Constitui\u00e7\u00e3o, come\u00e7ar pelo plano t\u00e9cnico de execu\u00e7\u00e3o da F..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-073",
+      "date": null,
+      "title": "Licao extraida #73",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "Antes de implementar cartas CEP do Master, devem existir (por tasks) os seguintes blocos de base:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-074",
+      "date": null,
+      "title": "Licao extraida #74",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Emenda na Constitui\u00e7\u00e3o deve ser feita em passo separado.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "pass",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "- Emenda na Constitui\u00e7\u00e3o deve ser feita em passo separado."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-075",
+      "date": null,
+      "title": "Licao extraida #75",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Priorizar estabilidade CEP do portf\u00f3lio e disciplina de risco.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "- Priorizar estabilidade CEP do portf\u00f3lio e disciplina de risco."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-076",
+      "date": null,
+      "title": "Licao extraida #76",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Qual janela semanal de compra deve ser usada (1\u00ba preg\u00e3o, \u00faltimo preg\u00e3o ou parametriz\u00e1vel)?",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "- Qual janela semanal de compra deve ser usada (1\u00ba preg\u00e3o, \u00faltimo preg\u00e3o ou parametriz\u00e1vel)?"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-077",
+      "date": null,
+      "title": "Licao extraida #77",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- As m\u00e9tricas devem priorizar estabilidade CEP ou incluir m\u00e9tricas financeiras como secund\u00e1rias?",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260210/documento_unico_planejador_texto_integral_vigentes.md",
+          "anchor": "#L15",
+          "anchor_type": "line",
+          "excerpt_hint": "- As m\u00e9tricas devem priorizar estabilidade CEP ou incluir m\u00e9tricas financeiras como secund\u00e1rias?"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-078",
+      "date": null,
+      "title": "Licao extraida #78",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Priorizar estabilidade CEP do portf\u00f3lio e disciplina de risco.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+          "anchor": "#L41",
+          "anchor_type": "line",
+          "excerpt_hint": "- Priorizar estabilidade CEP do portf\u00f3lio e disciplina de risco."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-079",
+      "date": null,
+      "title": "Licao extraida #79",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Qual janela semanal de compra deve ser usada (1\u00ba preg\u00e3o, \u00faltimo preg\u00e3o ou parametriz\u00e1vel)?",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+          "anchor": "#L41",
+          "anchor_type": "line",
+          "excerpt_hint": "- Qual janela semanal de compra deve ser usada (1\u00ba preg\u00e3o, \u00faltimo preg\u00e3o ou parametriz\u00e1vel)?"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-080",
+      "date": null,
+      "title": "Licao extraida #80",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- As m\u00e9tricas devem priorizar estabilidade CEP ou incluir m\u00e9tricas financeiras como secund\u00e1rias?",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/plano_teste_sizing_w_base_w_def_w_cap.md",
+          "anchor": "#L41",
+          "anchor_type": "line",
+          "excerpt_hint": "- As m\u00e9tricas devem priorizar estabilidade CEP ou incluir m\u00e9tricas financeiras como secund\u00e1rias?"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-081",
+      "date": null,
+      "title": "Licao extraida #81",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Emenda na Constitui\u00e7\u00e3o deve ser feita em passo separado.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/freeze_sizing_default_v2/decisao_freeze_sizing_default_v2.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "pass",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/freeze_sizing_default_v2/decisao_freeze_sizing_default_v2.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/governanca/decisoes/20260209/freeze_sizing_default_v2/decisao_freeze_sizing_default_v2.md",
+          "anchor": "#L27",
+          "anchor_type": "line",
+          "excerpt_hint": "- Emenda na Constitui\u00e7\u00e3o deve ser feita em passo separado."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-082",
+      "date": null,
+      "title": "Licao extraida #82",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Conclus\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1/f1_probe_sdk/PROBE_SDK_BRAPI_QUOTE_LIST.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1/f1_probe_sdk/PROBE_SDK_BRAPI_QUOTE_LIST.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/fase1/f1_probe_sdk/PROBE_SDK_BRAPI_QUOTE_LIST.md",
+          "anchor": "#L22",
+          "anchor_type": "line",
+          "excerpt_hint": "## Conclus\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-083",
+      "date": null,
+      "title": "Licao extraida #83",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- M\u00e9todo in-sample pode favorecer K pequeno; risco registrado sem alterar crit\u00e9rio.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260208/baseline_scan_in_sample_nk/report_baseline_scan_in_sample_nk.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260208/baseline_scan_in_sample_nk/report_baseline_scan_in_sample_nk.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260208/baseline_scan_in_sample_nk/report_baseline_scan_in_sample_nk.md",
+          "anchor": "#L17",
+          "anchor_type": "line",
+          "excerpt_hint": "- M\u00e9todo in-sample pode favorecer K pequeno; risco registrado sem alterar crit\u00e9rio."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-084",
+      "date": null,
+      "title": "Licao extraida #84",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Conclus\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing_v2/sanity_summary.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing_v2/sanity_summary.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing_v2/sanity_summary.md",
+          "anchor": "#L11",
+          "anchor_type": "line",
+          "excerpt_hint": "## Conclus\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-085",
+      "date": null,
+      "title": "Licao extraida #85",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Conclus\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing/sanity_summary.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing/sanity_summary.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/exp/20260209/sanitycheck_sizing/sanity_summary.md",
+          "anchor": "#L10",
+          "anchor_type": "line",
+          "excerpt_hint": "## Conclus\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-086",
+      "date": null,
+      "title": "Licao extraida #86",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Recomenda\u00e7\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_baseline_master_in_sample_nk/decision_package.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_baseline_master_in_sample_nk/decision_package.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_baseline_master_in_sample_nk/decision_package.md",
+          "anchor": "#L3",
+          "anchor_type": "line",
+          "excerpt_hint": "## Recomenda\u00e7\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-087",
+      "date": null,
+      "title": "Licao extraida #87",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## Recomenda\u00e7\u00e3o",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_master_backtest_replica_bvsp_kn/decision_package.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_master_backtest_replica_bvsp_kn/decision_package.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260208/decision_master_backtest_replica_bvsp_kn/decision_package.md",
+          "anchor": "#L3",
+          "anchor_type": "line",
+          "excerpt_hint": "## Recomenda\u00e7\u00e3o"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-088",
+      "date": null,
+      "title": "Licao extraida #88",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Prioridade entre estabilidade/controle e m\u00e9tricas financeiras deve ser reafirmada se o guardrail filtrar demais.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260209/decision_package_sizing_v2/decision_package.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260209/decision_package_sizing_v2/decision_package.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_NA_BOLSA/CEP_NA_BOLSA/outputs/experimentos/fase1_calibracao/cal/20260209/decision_package_sizing_v2/decision_package.md",
+          "anchor": "#L24",
+          "anchor_type": "line",
+          "excerpt_hint": "- Prioridade entre estabilidade/controle e m\u00e9tricas financeiras deve ser reafirmada se o guardrail filtrar demais."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-089",
+      "date": null,
+      "title": "Licao extraida #89",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "3. Toda task deve ter crit\u00e9rios de PASS/FAIL e outputs verific\u00e1veis.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "pass",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+          "anchor": "#L102",
+          "anchor_type": "line",
+          "excerpt_hint": "3. Toda task deve ter crit\u00e9rios de PASS/FAIL e outputs verific\u00e1veis."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-090",
+      "date": null,
+      "title": "Licao extraida #90",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "4. Em caso de ambiguidade, o executor deve parar e perguntar ao Owner.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+          "anchor": "#L102",
+          "anchor_type": "line",
+          "excerpt_hint": "4. Em caso de ambiguidade, o executor deve parar e perguntar ao Owner."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-091",
+      "date": null,
+      "title": "Licao extraida #91",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- qualidade dos riscos e guardrails identificados.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+          "anchor": "#L102",
+          "anchor_type": "line",
+          "excerpt_hint": "- qualidade dos riscos e guardrails identificados."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-092",
+      "date": null,
+      "title": "Licao extraida #92",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- riscos/lacunas pendentes.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+          "anchor": "#L102",
+          "anchor_type": "line",
+          "excerpt_hint": "- riscos/lacunas pendentes."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-093",
+      "date": null,
+      "title": "Licao extraida #93",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- toda mensagem operacional deve come\u00e7ar com identifica\u00e7\u00e3o do LLM autor;",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/protocolo_operacional_modelos.md",
+          "anchor": "#L102",
+          "anchor_type": "line",
+          "excerpt_hint": "- toda mensagem operacional deve come\u00e7ar com identifica\u00e7\u00e3o do LLM autor;"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-094",
+      "date": null,
+      "title": "Licao extraida #94",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "> Regra: a primeira linha da comunicacao operacional deve identificar o LLM autor.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "> Regra: a primeira linha da comunicacao operacional deve identificar o LLM autor."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-095",
+      "date": null,
+      "title": "Licao extraida #95",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Riscos/guardrails apontados:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "- Riscos/guardrails apontados:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-096",
+      "date": null,
+      "title": "Licao extraida #96",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Riscos/guardrails apontados:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_task_operacional.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "- Riscos/guardrails apontados:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-097",
+      "date": null,
+      "title": "Licao extraida #97",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este projeto n\u00e3o altera a rotina di\u00e1ria de venda. A compra semanal deve encaixar com esse mecanismo e aceitar como dados:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "Este projeto n\u00e3o altera a rotina di\u00e1ria de venda. A compra semanal deve encaixar com esse mecanismo e aceitar como dados:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-098",
+      "date": null,
+      "title": "Licao extraida #98",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "As regras anti-concentra\u00e7\u00e3o j\u00e1 existem na Constitui\u00e7\u00e3o e n\u00e3o devem ser reescritas aqui.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "As regras anti-concentra\u00e7\u00e3o j\u00e1 existem na Constitui\u00e7\u00e3o e n\u00e3o devem ser reescritas aqui."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-099",
+      "date": null,
+      "title": "Licao extraida #99",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "A avalia\u00e7\u00e3o deve incluir penaliza\u00e7\u00e3o:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "A avalia\u00e7\u00e3o deve incluir penaliza\u00e7\u00e3o:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-100",
+      "date": null,
+      "title": "Licao extraida #100",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "A valida\u00e7\u00e3o deve respeitar causalidade:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "A valida\u00e7\u00e3o deve respeitar causalidade:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-101",
+      "date": null,
+      "title": "Licao extraida #101",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Em todos os testes, a rotina di\u00e1ria de venda deve ser a mesma, para isolar o efeito do mecanismo de compra semanal.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "Em todos os testes, a rotina di\u00e1ria de venda deve ser a mesma, para isolar o efeito do mecanismo de compra semanal."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-102",
+      "date": null,
+      "title": "Licao extraida #102",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Este projeto dever\u00e1 produzir artefatos reprodut\u00edveis e audit\u00e1veis:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "Este projeto dever\u00e1 produzir artefatos reprodut\u00edveis e audit\u00e1veis:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-103",
+      "date": null,
+      "title": "Licao extraida #103",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "A integra\u00e7\u00e3o futura deve preservar acoplamento m\u00ednimo:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/compra_semanal_model_selection.md",
+          "anchor": "#L103",
+          "anchor_type": "line",
+          "excerpt_hint": "A integra\u00e7\u00e3o futura deve preservar acoplamento m\u00ednimo:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-104",
+      "date": null,
+      "title": "Licao extraida #104",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Conclus\u00e3o evidencial: n\u00e3o houve caixa majorit\u00e1rio, nem bloqueio sistem\u00e1tico de compras, nem erro de rebase, nem erro cont\u00e1bil recorrente. O descolamento no intervalo detectado \u00e9 de performance relativa com carteira investida e baixa volatil",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_008_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_008_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_008_pos_task.md",
+          "anchor": "#L43",
+          "anchor_type": "line",
+          "excerpt_hint": "Conclus\u00e3o evidencial: n\u00e3o houve caixa majorit\u00e1rio, nem bloqueio sistem\u00e1tico de compras, nem erro de rebase, nem erro cont\u00e1bil recorrente. O descolamento no inte..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-105",
+      "date": null,
+      "title": "Licao extraida #105",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- e alinhamento com a regra do Master: rompimento positivo (upside) n\u00e3o deve gerar SELL por si s\u00f3.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+          "anchor": "#L125",
+          "anchor_type": "line",
+          "excerpt_hint": "- e alinhamento com a regra do Master: rompimento positivo (upside) n\u00e3o deve gerar SELL por si s\u00f3."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-106",
+      "date": null,
+      "title": "Licao extraida #106",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "O M4 cumpriu o guardrail por constru\u00e7\u00e3o, mas ficou \u201cmorto\u201d (absorvente em HARD_PROTECTION) e com caixa que n\u00e3o rendia como deveria. Serviu como prova de conceito do controle, mas n\u00e3o como estrat\u00e9gia oper\u00e1vel.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+          "anchor": "#L125",
+          "anchor_type": "line",
+          "excerpt_hint": "O M4 cumpriu o guardrail por constru\u00e7\u00e3o, mas ficou \u201cmorto\u201d (absorvente em HARD_PROTECTION) e com caixa que n\u00e3o rendia como deveria. Serviu como prova de conceit..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-107",
+      "date": null,
+      "title": "Licao extraida #107",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "4. Usar \u201csele\u00e7\u00e3o de baseline pelo menor R/MR no hist\u00f3rico inteiro\u201d \u00e9 hindsight e n\u00e3o representa CEP operacional. Baseline de limites deve ser governado e ex-ante; a detec\u00e7\u00e3o de estado pode ser rolling e vari\u00e1vel.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+          "anchor": "#L125",
+          "anchor_type": "line",
+          "excerpt_hint": "4. Usar \u201csele\u00e7\u00e3o de baseline pelo menor R/MR no hist\u00f3rico inteiro\u201d \u00e9 hindsight e n\u00e3o representa CEP operacional. Baseline de limites deve ser governado e ex-ant..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-108",
+      "date": null,
+      "title": "Licao extraida #108",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "5. A conclus\u00e3o conceitual do ciclo: Master n\u00e3o deve ser apenas um gate bin\u00e1rio de compra; ele deve classificar regime (BULL/BEAR/TRANSI\u00c7\u00c3O), e cada regime deve ter pol\u00edtica de carteira (n\u00edveis de liberdade de BUY), mantendo queimadores como",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+          "anchor": "#L125",
+          "anchor_type": "line",
+          "excerpt_hint": "5. A conclus\u00e3o conceitual do ciclo: Master n\u00e3o deve ser apenas um gate bin\u00e1rio de compra; ele deve classificar regime (BULL/BEAR/TRANSI\u00c7\u00c3O), e cada regime deve..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-109",
+      "date": null,
+      "title": "Licao extraida #109",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## 1.5 Conclus\u00e3o do encerramento",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md",
+          "anchor": "#L125",
+          "anchor_type": "line",
+          "excerpt_hint": "## 1.5 Conclus\u00e3o do encerramento"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-110",
+      "date": null,
+      "title": "Licao extraida #110",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Conclusao:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pos_task.md",
+          "anchor": "#L35",
+          "anchor_type": "line",
+          "excerpt_hint": "- Conclusao:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-111",
+      "date": null,
+      "title": "Licao extraida #111",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- conclusao: `equity_brl` ja inclui caixa; serie `carteira_total_brl` usara `equity_brl`.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pre_execucao.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pre_execucao.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_006_pre_execucao.md",
+          "anchor": "#L24",
+          "anchor_type": "line",
+          "excerpt_hint": "- conclusao: `equity_brl` ja inclui caixa; serie `carteira_total_brl` usara `equity_brl`."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-112",
+      "date": null,
+      "title": "Licao extraida #112",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "Conclus\u00e3o evidencial sobre o plateau: n\u00e3o h\u00e1 suporte para explicar o plateau por SELL de UCL em Xbar; no recorte de ativos em carteira com dados completos n\u00e3o houve viola\u00e7\u00f5es I/MR, e a explica\u00e7\u00e3o permanece ligada \u00e0 combina\u00e7\u00e3o de regime Mast",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_009_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_009_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_009_pos_task.md",
+          "anchor": "#L45",
+          "anchor_type": "line",
+          "excerpt_hint": "Conclus\u00e3o evidencial sobre o plateau: n\u00e3o h\u00e1 suporte para explicar o plateau por SELL de UCL em Xbar; no recorte de ativos em carteira com dados completos n\u00e3o h..."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-113",
+      "date": null,
+      "title": "Licao extraida #113",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- SELL por rompimento positivo deve ser bloqueado quando `upside_extreme=True`.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_012_smoke_sell_patch.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_012_smoke_sell_patch.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/task_012_smoke_sell_patch.md",
+          "anchor": "#L6",
+          "anchor_type": "line",
+          "excerpt_hint": "- SELL por rompimento positivo deve ser bloqueado quando `upside_extreme=True`."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-114",
+      "date": null,
+      "title": "Licao extraida #114",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "> Regra: a primeira linha da comunicacao operacional deve identificar o LLM autor.",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "> Regra: a primeira linha da comunicacao operacional deve identificar o LLM autor."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-115",
+      "date": null,
+      "title": "Licao extraida #115",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## 5. Riscos e lacunas pendentes",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "## 5. Riscos e lacunas pendentes"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-116",
+      "date": null,
+      "title": "Licao extraida #116",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Risco 1:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "- Risco 1:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-117",
+      "date": null,
+      "title": "Licao extraida #117",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Risco 2:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "- Risco 2:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-118",
+      "date": null,
+      "title": "Licao extraida #118",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Qualidade de riscos/guardrails:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "- Qualidade de riscos/guardrails:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-119",
+      "date": null,
+      "title": "Licao extraida #119",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "## 7. Recomendacao para proxima task",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "## 7. Recomendacao para proxima task"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-120",
+      "date": null,
+      "title": "Licao extraida #120",
+      "context": "Extracao de docs/corpus/licoes_aprendidas.json",
+      "problem": "- Recomendacao:",
+      "decision": "Registrar evidencias e criterios de governanca com rastreabilidade por path.",
+      "impact": "Reduz friccao de retomada e melhora capacidade de diagnostico.",
+      "evidence_paths": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "tags": [
+        "governance",
+        "imported_evidence=true",
+        "lessons",
+        "low_signal",
+        "needs_curation=true",
+        "rag"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "corpus/source/external_refs/CEP_COMPRA/CEP_COMPRA/docs/template_pos_task.md",
+          "anchor": "#L4",
+          "anchor_type": "line",
+          "excerpt_hint": "- Recomendacao:"
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-900",
+      "date": "2026-02-20",
+      "title": "PASS contestado em F2_004 exige reconciliacao economica",
+      "context": "Conflito entre status reportado e plausibilidade economica em auditoria tecnica.",
+      "problem": "F2_004 reporta PASS enquanto F2_003 mostra divergencia material de equity.",
+      "decision": "Tratar PASS como contestado ate reconciliar F2_003/F2_004 com evidencias objetivas.",
+      "impact": "Evita falso fechamento de gate e reduz risco de avancar com premissas inconsistentes.",
+      "evidence_paths": [
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+        "outputs/masterplan_v2/f2_003/report.md",
+        "outputs/masterplan_v2/f2_004/report.md"
+      ],
+      "tags": [
+        "f2_003",
+        "f2_004",
+        "governance",
+        "masterplan",
+        "pass_contestado",
+        "reconciliation"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+        "outputs/masterplan_v2/f2_003/report.md",
+        "outputs/masterplan_v2/f2_004/report.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "F2_004 reporta PASS enquanto F2_003 mostra divergencia material de equity."
+        },
+        {
+          "path": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "F2_004 reporta PASS enquanto F2_003 mostra divergencia material de equity."
+        },
+        {
+          "path": "outputs/masterplan_v2/f2_003/report.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "F2_004 reporta PASS enquanto F2_003 mostra divergencia material de equity."
+        },
+        {
+          "path": "outputs/masterplan_v2/f2_004/report.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "F2_004 reporta PASS enquanto F2_003 mostra divergencia material de equity."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-901",
+      "date": "2026-02-20",
+      "title": "Divergencia numerica e sinal de quebra de consistencia",
+      "context": "Comparacao baseline vs v2 em F2_003.",
+      "problem": "equity_final_baseline ~= 2.3854 vs equity_final_v2 ~= 183.1974 (delta_pct ~= 7579.818954%).",
+      "decision": "Priorizar auditoria de composicao de retorno e double counting de CDI antes de liberar gates seguintes.",
+      "impact": "Aumenta robustez do diagnostico e previne regressao silenciosa.",
+      "evidence_paths": [
+        "outputs/masterplan_v2/f2_003/report.md",
+        "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json"
+      ],
+      "tags": [
+        "cdi",
+        "cdi_cash",
+        "diagnostico",
+        "equity",
+        "f2_003",
+        "governance"
+      ],
+      "external_ref": false,
+      "evidence_paths_legacy": [
+        "outputs/masterplan_v2/f2_003/report.md",
+        "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json"
+      ],
+      "evidence_items": [
+        {
+          "path": "outputs/masterplan_v2/f2_003/report.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "equity_final_baseline ~= 2.3854 vs equity_final_v2 ~= 183.1974 (delta_pct ~= 7579.818954%)."
+        },
+        {
+          "path": "outputs/masterplan_v2/f2_003/evidence/equity_compare_summary.json",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "equity_final_baseline ~= 2.3854 vs equity_final_v2 ~= 183.1974 (delta_pct ~= 7579.818954%)."
+        }
+      ]
+    },
+    {
+      "lesson_id": "LL-20260220-COST-001",
+      "date": "2026-02-20",
+      "title": "Modelo de custo arbitrado 0,025%: definicao normativa e incidencia",
+      "context": "Curadoria de licao de alto sinal a partir de emenda normativa e SSOTs ativos.",
+      "problem": "Sem regra explicita de custo, comparabilidade e rastreabilidade de metricas ficam fragilizadas.",
+      "decision": "Adotar regra normativa ARB_COST_0_025PCT_MOVED com taxa 0,00025 sobre valor movido/notional, conforme emenda formal e pacotes de transferencia.",
+      "impact": "Padroniza calculo de custo operacional, reduz ambiguidade metodologica e melhora auditoria/reproducao.",
+      "evidence_paths": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+        "docs/MP001_VISAO_EXECUTIVA.md"
+      ],
+      "evidence_paths_legacy": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+        "docs/MP001_VISAO_EXECUTIVA.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "# EMENDA CONSTITUCIONAL - COST MODEL ARBITRADO 0,025%"
+        },
+        {
+          "path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "- formula: `custo_operacao = abs(notional_movimentado) * 0.00025`"
+        },
+        {
+          "path": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.json",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "cost_model rate 0.00025"
+        },
+        {
+          "path": "docs/MP001_VISAO_EXECUTIVA.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "- emendas ativas: custo 0.025%, cash CDI e operacao local;"
+        }
+      ],
+      "tags": [
+        "0_025pct",
+        "arb_cost",
+        "cost_model",
+        "governance",
+        "masterplan"
+      ],
+      "external_ref": false
+    },
+    {
+      "lesson_id": "LL-20260220-COST-002",
+      "date": "2026-02-20",
+      "title": "Custo sobre abs(notional) e turnover: implicacoes em reconciliacao e comparabilidade",
+      "context": "Curadoria de licao de alto sinal sobre aplicacao operacional do custo arbitrado 0,025%.",
+      "problem": "Sem declarar base de incidencia e aplicacao uniforme do custo, reconciliacao entre runs e historicos perde comparabilidade.",
+      "decision": "Tratar custo como funcao de abs(notional_movimentado) com taxa 0,00025 e explicitar cost_model/cost_total em manifests e reports para reconciliacao.",
+      "impact": "Melhora comparabilidade entre cenarios com turnover distinto e torna a reconciliacao auditavel.",
+      "evidence_paths": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "docs/MASTERPLAN_V2.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md"
+      ],
+      "evidence_paths_legacy": [
+        "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+        "docs/MASTERPLAN_V2.md",
+        "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md"
+      ],
+      "evidence_items": [
+        {
+          "path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "- formula: `custo_operacao = abs(notional_movimentado) * 0.00025`"
+        },
+        {
+          "path": "docs/emendas/EMENDA_COST_MODEL_ARB_0025PCT_V1.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "comparacoes historicas devem explicitar quando custo arbitrado foi aplicado."
+        },
+        {
+          "path": "docs/MASTERPLAN_V2.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "Custo de operacao: 0,025% do valor do trade aplicado em BUY e SELL."
+        },
+        {
+          "path": "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+          "anchor": null,
+          "anchor_type": "none",
+          "excerpt_hint": "aplica emenda de custo 0.025% e gera metricas liquidas."
+        }
+      ],
+      "tags": [
+        "0_025pct",
+        "abs_notional",
+        "arb_cost",
+        "cost_model",
+        "governance",
+        "reconciliation",
+        "turnover"
+      ],
+      "external_ref": false
+    }
+  ],
+  "updated_at_utc": "2026-02-20T21:10:48.546946+00:00"
+}

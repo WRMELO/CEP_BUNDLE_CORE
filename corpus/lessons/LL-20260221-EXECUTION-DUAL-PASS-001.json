@@ -1,0 +1,93 @@
+{
+  "lesson_id": "LL-20260221-EXECUTION-DUAL-PASS-001",
+  "date_utc": "2026-02-21T00:00:00Z",
+  "project": "CEP_BUNDLE_CORE",
+  "category": [
+    "governance",
+    "execution_quality",
+    "auditability"
+  ],
+  "title": "Execucao so e completa com PASS Operacional + PASS de Raciocinio",
+  "context": {
+    "scope": "W1 tranche forensic execution",
+    "objective": "Garantir que primeira execucao ja nasca auditavel sem reconstrucao posterior.",
+    "state_transfer_reference": "SESSION_STATE_TRANSFER_PACKAGE_V4"
+  },
+  "problem": "PASS operacional isolado permitiu entrega tecnica sem garantir prova de como foi decidido, dificultando explicabilidade tardia.",
+  "impact": [
+    "Risco de falso fechamento de qualidade de execucao",
+    "Retrabalho para reconstruir racional decisorio",
+    "Perda de rastreabilidade causal por ativo/regra"
+  ],
+  "decision": "Adotar criterio dual obrigatorio ACCEPT_FINAL = PASS_OPERACIONAL AND PASS_RACIOCINIO.",
+  "guardrail": "Nenhuma execucao e considerada completa sem evidencias de como foi feito e como foi decidido, incluindo FOUND e MISSING completos.",
+  "pass_definition": {
+    "PASS_OPERACIONAL": [
+      "Gates tecnicos em PASS",
+      "Artefatos obrigatorios nos paths oficiais",
+      "Manifest hashado de outputs e evidencias"
+    ],
+    "PASS_RACIOCINIO": [
+      "Trilha de como foi feito (pipeline/regras/chaves)",
+      "Trilha de como foi decidido (gatilho/flags/criterios)",
+      "Inventario completo de FOUND e MISSING"
+    ],
+    "ACCEPT_FINAL_FORMULA": "PASS_OPERACIONAL AND PASS_RACIOCINIO"
+  },
+  "signals_to_detect_regression": [
+    "Report sem secao explicita de como foi decidido",
+    "Reason_code generico sem avaliacao de sufiencia",
+    "Ausencia de inventario FOUND/MISSING",
+    "Join sem chave canonica declarada ou sem cobertura calculada"
+  ],
+  "references": [
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/report.md",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_key_audit.json",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_coverage_summary.json",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/reason_code_is_generic_check.txt",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/explainability_gaps.md"
+  ],
+  "evidence_paths": [
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/report.md",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_key_audit.json",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_coverage_summary.json",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/reason_code_is_generic_check.txt",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/explainability_gaps.md"
+  ],
+  "evidence_items": [
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_key_audit.json",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Join entre datasets funciona, mas sem trade_id canonico comum."
+    },
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_coverage_summary.json",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Cobertura de joins alta, com limite de explicabilidade por ausencia de chaves de negocio."
+    },
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/reason_code_is_generic_check.txt",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Reason codes sao genericos BUY/SELL e nao discriminam regra disparadora."
+    },
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/explainability_gaps.md",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Lacunas objetivas: ausencia de ticker no ledger e de trade_id estavel cross-dataset."
+    }
+  ],
+  "tags": [
+    "governance",
+    "execution_quality",
+    "dual_pass",
+    "pass_operacional",
+    "pass_raciocinio",
+    "observability",
+    "auditability"
+  ],
+  "external_ref": false
+}

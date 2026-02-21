@@ -1,0 +1,63 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_005_BUILD_LESSONS_KB_AND_CORPUS_V4_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_INPUTS_PRESENT",
+      "status": "PASS",
+      "details": "sources_present=4"
+    },
+    {
+      "gate_id": "G2_KB_NONEMPTY_AND_TRACEABLE",
+      "status": "PASS",
+      "details": "n_lessons=122 bad_rows=0"
+    },
+    {
+      "gate_id": "G3_MANIFEST_V4_VALID",
+      "status": "PASS",
+      "details": "num_files_v4=272"
+    },
+    {
+      "gate_id": "G4_INDEX_V4_BUILT",
+      "status": "PASS",
+      "details": "n_chunks_v4=1708"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_BUILD_LESSONS_KB",
+      "status": "PASS",
+      "details": "n_lessons=122"
+    },
+    {
+      "step_id": "S2_COPY_KB_TO_CORPUS_SOURCE",
+      "status": "PASS",
+      "details": "KB copiada para corpus/source/corpus/lessons"
+    },
+    {
+      "step_id": "S3_GENERATE_MANIFEST_V4",
+      "status": "PASS",
+      "details": "num_files_v4=272"
+    },
+    {
+      "step_id": "S4_BUILD_INDEX_V4",
+      "status": "PASS",
+      "details": "n_chunks_v4=1708"
+    }
+  ],
+  "deliverables": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v4": "corpus/manifests/corpus_manifest_v4.json",
+    "index_v4": "corpus/rag/index/index_v4.json"
+  },
+  "metrics": {
+    "n_lessons": 122,
+    "n_files_v4": 272,
+    "n_chunks_v4": 1708,
+    "total_bytes_v4": 2122028,
+    "gemini_used": false
+  },
+  "timestamp_utc": "2026-02-20T20:38:10.501089+00:00"
+}

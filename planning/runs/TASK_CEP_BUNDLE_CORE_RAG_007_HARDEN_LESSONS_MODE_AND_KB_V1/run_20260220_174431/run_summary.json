@@ -1,0 +1,68 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_007_HARDEN_LESSONS_MODE_AND_KB_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_INPUTS_PRESENT",
+      "status": "PASS",
+      "details": "kb_exists=True query_tool_exists=True"
+    },
+    {
+      "gate_id": "G2_NO_ZERO_SCORE_PADDING",
+      "status": "PASS",
+      "details": "no_zero=True no_hits_behavior=True"
+    },
+    {
+      "gate_id": "G3_EXTERNAL_EVIDENCE_FLAGGED",
+      "status": "PASS",
+      "details": "external_ref_entries=120"
+    },
+    {
+      "gate_id": "G4_ACCEPTANCE_TESTS",
+      "status": "PASS",
+      "details": "ll900_top3=True b_ok=True c_ok=True"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_NORMALIZE_KB",
+      "status": "PASS",
+      "details": "lessons=122 external_ref_count=120 low_signal=120 converted_to_relative=0"
+    },
+    {
+      "step_id": "S2_UPDATE_QUERY_TOOL_LESSONS_HARDENING",
+      "status": "PASS",
+      "details": "min_score, no_hits e drop de score zero implementados"
+    },
+    {
+      "step_id": "S3_UPDATE_RAG_README",
+      "status": "PASS",
+      "details": "README atualizado com defaults do lessons"
+    },
+    {
+      "step_id": "S4_RUN_GATES_VALIDATION",
+      "status": "PASS",
+      "details": "G2=True G3=True G4=True"
+    }
+  ],
+  "deliverables": {
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "query_tool_updated": "tools/rag/query.py",
+    "rag_readme_updated": "corpus/rag/README.md"
+  },
+  "metrics": {
+    "external_ref_entries": 120,
+    "converted_to_relative": 0,
+    "low_signal_marked": 120,
+    "query_a_top3": [
+      "LL-20260220-900",
+      "LL-20260220-025",
+      "LL-20260220-052"
+    ],
+    "query_b_n_results": 0,
+    "query_c_n_results": 4
+  },
+  "timestamp_utc": "2026-02-20T20:44:31.836816+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_006_QUERY_TOOL_LESSONS_MODE_AND_ANTINOISE_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_KB_PRESENT",
+      "status": "PASS",
+      "details": "kb_exists=True"
+    },
+    {
+      "gate_id": "G2_TOOL_UPDATED_AND_DOCUMENTED",
+      "status": "PASS",
+      "details": "query.py atualizado e README documentado"
+    },
+    {
+      "gate_id": "G3_ACCEPTANCE_TESTS_PASS",
+      "status": "PASS",
+      "details": "T1=True T2=True"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_UPDATE_QUERY_TOOL",
+      "status": "PASS",
+      "details": "query.py atualizado com modo lessons e anti-ruido"
+    },
+    {
+      "step_id": "S2_UPDATE_RAG_README",
+      "status": "PASS",
+      "details": "README atualizado"
+    },
+    {
+      "step_id": "S3_RUN_ACCEPTANCE_TESTS",
+      "status": "PASS",
+      "details": "T1=True T2=True"
+    }
+  ],
+  "deliverables": {
+    "updated_query_tool": "tools/rag/query.py",
+    "doc_update": "corpus/rag/README.md"
+  },
+  "metrics": {
+    "t1_results": 8,
+    "t2_top5_paths": [
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "docs/SESSION_STATE_TRANSFER_PACKAGE_V3.md",
+      "outputs/masterplan_v2/f2_004/report.md",
+      "outputs/masterplan_v2/f2_004/report.md",
+      "outputs/masterplan_v2/f2_004/report.md"
+    ]
+  },
+  "timestamp_utc": "2026-02-20T20:38:10.734394+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_004_PRUNE_OBSIDIAN_AND_REINDEX_V1",
+  "task_title": "Prune .obsidian do corpus e reindexar RAG (manifest v3, index v3)",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "corpus_source_root": "corpus/source/",
+    "prior_manifest_v2": "corpus/manifests/corpus_manifest_v2.json",
+    "rag_config": "corpus/rag/rag_config.json",
+    "rag_index_root": "corpus/rag/index/",
+    "exclude_globs_add": [
+      "**/.obsidian/**"
+    ]
+  },
+  "policy": {
+    "removal_mode": "MOVE_TO_EXCLUDED_AREA",
+    "excluded_root": "corpus/excluded/obsidian/",
+    "manifest_version_out": "corpus/manifests/corpus_manifest_v3.json",
+    "index_version_out": "corpus/rag/index/index_v3.json",
+    "do_not_overwrite": [
+      "corpus/manifests/corpus_manifest_v1.json",
+      "corpus/manifests/corpus_manifest_v2.json",
+      "corpus/rag/index/index_v1.json",
+      "corpus/rag/index/index_v2.json"
+    ],
+    "rag_backend_policy": {
+      "must_keep_existing_backend": true,
+      "backend_expected_from_config": "local_hashing_v1"
+    }
+  },
+  "outputs": {
+    "excluded_dir": "corpus/excluded/obsidian/",
+    "manifest_v3": "corpus/manifests/corpus_manifest_v3.json",
+    "index_v3": "corpus/rag/index/index_v3.json",
+    "report_json": "outputs/governanca/rag/20260220/prune_obsidian/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/prune_obsidian/evidence/",
+    "updated_corpus_index": "corpus/CORPUS_INDEX.md",
+    "updated_corpus_readme": "corpus/README.md",
+    "updated_rag_readme": "corpus/rag/README.md"
+  }
+}
+

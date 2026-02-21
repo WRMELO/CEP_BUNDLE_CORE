@@ -1,0 +1,117 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_010_SEED_COST_MODEL_LESSONS_0025PCT_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "gate_id": "G1_INPUTS_PRESENT",
+      "status": "PASS",
+      "details": "kb=True manifest_v6=True index_v6=True emenda_cost_model=True"
+    },
+    {
+      "gate_id": "G2_NORMATIVE_EXTRACTION_EVIDENCED",
+      "status": "PASS",
+      "details": "bad_new_lessons=0"
+    },
+    {
+      "gate_id": "G3_KB_DELTA_NONEMPTY",
+      "status": "PASS",
+      "details": "new_lessons=2 enriched_lessons=0 cost_hits=2"
+    },
+    {
+      "gate_id": "G4_MANIFEST_V7_AND_INDEX_V7_BUILT",
+      "status": "PASS",
+      "details": "manifest_v7=True index_v7=True n_chunks_v6=2180 n_chunks_v7=2185"
+    },
+    {
+      "gate_id": "G5_ACCEPTANCE_QUERY_COST",
+      "status": "PASS",
+      "details": "cost_hits=2 top3_has_required_tags=True"
+    },
+    {
+      "gate_id": "G6_NO_REGRESSIONS",
+      "status": "PASS",
+      "details": "ll900_top3=True nohits_ok=True"
+    },
+    {
+      "gate_id": "G7_RAG_CONFIG_UPDATED_ONLY_ON_PASS",
+      "status": "PASS",
+      "details": "prior_pass=True rag_index_version=v7"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_SEED_COST_LESSONS_IN_KB",
+      "status": "PASS",
+      "details": "new_lessons_count=2"
+    },
+    {
+      "step_id": "S2_VALIDATE_NORMATIVE_EVIDENCE_ITEMS",
+      "status": "PASS",
+      "details": "bad_new_lessons=0"
+    },
+    {
+      "step_id": "S3_VALIDATE_KB_DELTA_AND_COST_QUERY_SIGNAL",
+      "status": "PASS",
+      "details": "cost_hits=2"
+    },
+    {
+      "step_id": "S4_BUILD_MANIFEST_V7_AND_INDEX_V7",
+      "status": "PASS",
+      "details": "n_files_v7=306 n_chunks_v7=2185"
+    },
+    {
+      "step_id": "S5_VALIDATE_COST_ACCEPTANCE_QUERY",
+      "status": "PASS",
+      "details": "cost_hits=2"
+    },
+    {
+      "step_id": "S6_VALIDATE_NO_REGRESSIONS",
+      "status": "PASS",
+      "details": "ll900_top3=True nohits_ok=True"
+    },
+    {
+      "step_id": "S7_UPDATE_RAG_CONFIG_CONDITIONAL",
+      "status": "PASS",
+      "details": "prior_pass=True"
+    }
+  ],
+  "deliverables": {
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v7": "corpus/manifests/corpus_manifest_v7.json",
+    "index_v7": "corpus/rag/index/index_v7.json",
+    "report_json": "outputs/governanca/rag/20260220/seed_cost_lessons/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/seed_cost_lessons/evidence/"
+  },
+  "metrics": {
+    "total_lessons_before": 122,
+    "total_lessons_after": 124,
+    "new_lessons_count": 2,
+    "enriched_lessons_count": 0,
+    "new_or_modified_lessons": [
+      {
+        "lesson_id": "LL-20260220-COST-001",
+        "title": "Modelo de custo arbitrado 0,025%: definicao normativa e incidencia"
+      },
+      {
+        "lesson_id": "LL-20260220-COST-002",
+        "title": "Custo sobre abs(notional) e turnover: implicacoes em reconciliacao e comparabilidade"
+      }
+    ],
+    "cost_query_hits_count": 2,
+    "top3_titles_for_cost_query": [
+      "Modelo de custo arbitrado 0,025%: definicao normativa e incidencia",
+      "Custo sobre abs(notional) e turnover: implicacoes em reconciliacao e comparabilidade"
+    ],
+    "n_files_v6_to_v7": {
+      "v6": 306,
+      "v7": 306
+    },
+    "n_chunks_v6_to_v7": {
+      "v6": 2180,
+      "v7": 2185
+    }
+  },
+  "timestamp_utc": "2026-02-20T21:10:49.901855+00:00"
+}

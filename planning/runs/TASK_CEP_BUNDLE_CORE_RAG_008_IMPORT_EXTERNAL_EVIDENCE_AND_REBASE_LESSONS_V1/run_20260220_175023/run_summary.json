@@ -1,0 +1,91 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_008_IMPORT_EXTERNAL_EVIDENCE_AND_REBASE_LESSONS_V1",
+  "status": "FAIL",
+  "overall_pass": false,
+  "gates": [
+    {
+      "gate_id": "G1_INPUTS_PRESENT",
+      "status": "PASS",
+      "details": "kb=True manifest_v4=True index_v4=True external_before=120"
+    },
+    {
+      "gate_id": "G2_EXTERNAL_REF_EXTRACTION_DETERMINISTIC",
+      "status": "PASS",
+      "details": "candidate_paths_total=120 safe_prechecked=120"
+    },
+    {
+      "gate_id": "G3_IMPORT_WITH_GOVERNANCE",
+      "status": "PASS",
+      "details": "imported_files=0 skipped=120"
+    },
+    {
+      "gate_id": "G4_KB_REBASE_PROGRESS",
+      "status": "FAIL",
+      "details": "rebased_paths_count=0 lessons_with_any_rebase=0 external_before=120 external_after=120"
+    },
+    {
+      "gate_id": "G5_MANIFEST_V5_AND_INDEX_V5_BUILT",
+      "status": "PASS",
+      "details": "manifest_v5=True index_v5=True ll900_top3=True"
+    },
+    {
+      "gate_id": "G6_RAG_CONFIG_UPDATED_ONLY_ON_PASS",
+      "status": "PASS",
+      "details": "prior_pass=False rag_index_version=v4"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "S1_IMPORT_EXTERNAL_REFS",
+      "status": "PASS",
+      "details": "imported_files=0 imported_total_bytes=0"
+    },
+    {
+      "step_id": "S2_REBASE_KB_EVIDENCE_PATHS",
+      "status": "FAIL",
+      "details": "rebased_paths_count=0"
+    },
+    {
+      "step_id": "S3_BUILD_MANIFEST_V5_AND_INDEX_V5",
+      "status": "PASS",
+      "details": "n_files_v5=272 n_chunks_v5=1719"
+    },
+    {
+      "step_id": "S4_UPDATE_RAG_CONFIG_CONDITIONAL",
+      "status": "PASS",
+      "details": "prior_pass=False"
+    }
+  ],
+  "deliverables": {
+    "external_refs_dir": "corpus/source/external_refs/",
+    "external_refs_manifest": "corpus/manifests/external_refs_manifest_v1.json",
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v5": "corpus/manifests/corpus_manifest_v5.json",
+    "index_v5": "corpus/rag/index/index_v5.json"
+  },
+  "metrics": {
+    "external_ref_entries_before": 120,
+    "external_ref_entries_after": 120,
+    "candidate_paths_total": 120,
+    "imported_files_count": 0,
+    "imported_total_bytes": 0,
+    "skipped_files_count_by_reason": {
+      "missing_source": 120
+    },
+    "rebased_paths_count": 0,
+    "lessons_with_any_rebase": 0,
+    "converted_to_relative": 0,
+    "n_files_v4": 272,
+    "n_files_v5": 272,
+    "n_chunks_v4": 1708,
+    "n_chunks_v5": 1719,
+    "example_rebased_before": null,
+    "example_rebased_after": null,
+    "example_skipped": {
+      "source_path": "/home/wilson/CEP_COMPRA/docs/0_Relat\u00f3rio de encerramento do ciclo M0\u2026M6 (CEP_COMPRA v1).md#L125",
+      "reason": "missing_source"
+    }
+  },
+  "timestamp_utc": "2026-02-20T20:50:23.892734+00:00"
+}

@@ -1,0 +1,95 @@
+{
+  "lesson_id": "LL-20260220-W1-METHODOLOGY-001",
+  "date_utc": "2026-02-20T00:00:00Z",
+  "project": "CEP_BUNDLE_CORE",
+  "category": [
+    "governance",
+    "methodology",
+    "anti-regression"
+  ],
+  "title": "Trabalho tecnico executado fora do padrao de governanca invalida rastreabilidade e precisa ser reemitido",
+  "context": {
+    "state_transfer_reference": "SESSION_STATE_TRANSFER_PACKAGE_V4",
+    "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+    "rag_index_version": "v7"
+  },
+  "problem": "A investigacao forense de W1 foi iniciada/produzida sem pacote completo de governanca (task spec formal, gates, report.md, manifest.json e evidence/). Mesmo que o conteudo tecnico exista, nao ha prova autocontida nem hashes, logo o resultado nao e SSOT operacional.",
+  "impact": [
+    "Perda de reprodutibilidade e auditabilidade",
+    "Risco de deriva metodologica",
+    "Impossibilidade de validar congelamento de W1 como base forense"
+  ],
+  "root_cause": [
+    "Execucao fora do fluxo planning/task_specs + Agno",
+    "Ausencia de gates objetivos",
+    "Ausencia de manifest com hashes SHA-256",
+    "Ausencia de evidence/ com comandos e provas"
+  ],
+  "fix": {
+    "action": "Reemitir o congelamento de W1 como task governada, com report/manifest/evidence/gates e registro no corpus",
+    "task_id": "TASK_CEP_BUNDLE_CORE_V3_F0_001_W1_FORMAL_FORENSIC_FREEZE_AND_LESSON_LEARNED",
+    "non_negotiables": [
+      "Nao modificar snapshot",
+      "Sem inferencia sem evidencia",
+      "Artefatos completos (report.md, manifest.json, evidence/)"
+    ]
+  },
+  "guardrail": "Nenhuma investigacao estrategica ou congelamento forense e considerado valido sem pacote governado (task spec + gates + report/manifest/evidence) e hashes.",
+  "signals_to_detect_regression": [
+    "Resultado tecnico sem manifest.json",
+    "Report sem gates objetivos",
+    "Ausencia de evidence/ com provas",
+    "Analise critica sem referencia a paths e hashes"
+  ],
+  "references": [
+    "corpus/rag/index/index_v7.json",
+    "corpus/lessons/LESSONS_LEARNED.json",
+    "_tentativa2_reexecucao_completa_20260220/ssot_snapshot"
+  ],
+  "date": "2026-02-20",
+  "decision": "Impor congelamento forense previo com gates e evidencias hashadas antes de qualquer reexecucao analitica.",
+  "evidence_paths": [
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/report.md",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/manifest.json",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/w1_dates_evidence.txt",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/m3_definition_evidence.txt",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/sell_rules_evidence.txt",
+    "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/cost_cdi_status_evidence.txt"
+  ],
+  "evidence_items": [
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/w1_dates_evidence.txt",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "W1 foi congelado com datas documentadas e fonte hashada."
+    },
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/m3_definition_evidence.txt",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Definicao parcial de M3 evidenciada; termos ausentes marcados como AUSENTE."
+    },
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/sell_rules_evidence.txt",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Regras SELL foram congeladas por camada e override deterministico."
+    },
+    {
+      "path": "_tentativa2_reexecucao_completa_20260220/outputs/w1_freeze/evidence/cost_cdi_status_evidence.txt",
+      "anchor": null,
+      "anchor_type": "none",
+      "excerpt_hint": "Status de custo 0,025% e CDI em W1 confirmado por evidencias objetivas."
+    }
+  ],
+  "tags": [
+    "governance",
+    "lessons",
+    "w1",
+    "m3",
+    "forensic_freeze",
+    "methodology_break",
+    "anti-regression"
+  ],
+  "external_ref": false
+}

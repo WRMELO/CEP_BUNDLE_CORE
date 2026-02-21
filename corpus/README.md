@@ -1,7 +1,8 @@
 # Corpus Local do CEP_BUNDLE_CORE
 
 Corpus consolidado em top-level `corpus/` para suporte ao RAG local.
-Origem em `docs/`, `planning/task_specs/`, `planning/runs/` e `outputs/` curados.
+A partir do manifest v3, aplica-se exclusao de metadados de editor `.obsidian/**` do `corpus/source/`.
+Itens excluidos sao movidos para `corpus/excluded/obsidian/` para rastreabilidade.
 
-Arquivos canonicos em `corpus/source/`.
-Manifest em `corpus/manifests/corpus_manifest_v1.json`.
+Manifest atual: `corpus/manifests/corpus_manifest_v3.json`.
+

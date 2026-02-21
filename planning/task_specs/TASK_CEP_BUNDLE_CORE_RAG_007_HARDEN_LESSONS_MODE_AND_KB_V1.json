@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_007_HARDEN_LESSONS_MODE_AND_KB_V1",
+  "task_title": "Harden lessons mode e KB",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md": "corpus/lessons/LESSONS_LEARNED.md",
+    "query_tool": "tools/rag/query.py",
+    "rag_readme": "corpus/rag/README.md"
+  },
+  "outputs": {
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "query_tool_updated": "tools/rag/query.py",
+    "rag_readme_updated": "corpus/rag/README.md",
+    "report_json": "outputs/governanca/rag/20260220/lessons_hardening/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/lessons_hardening/evidence/"
+  }
+}
+

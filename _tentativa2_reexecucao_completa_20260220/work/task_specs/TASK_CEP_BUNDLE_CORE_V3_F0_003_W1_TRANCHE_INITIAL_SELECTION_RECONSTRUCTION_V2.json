@@ -1,0 +1,48 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_V3_F0_003_W1_TRANCHE_INITIAL_SELECTION_RECONSTRUCTION_V2",
+  "mode": "run_gate",
+  "phase": "Fase 0 - Forense W1 (tranche unica)",
+  "intent": "Reconstruir selecao inicial do W1 usando somente universe promovido (aprovado) + cutline promovido (aprovado). Sem inferencia. Sem LL.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "execution_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "branch_required": "local/integrated-state-20260215",
+  "policy": {
+    "do_not_modify_snapshot": true,
+    "all_outputs_inside_attempt2": true,
+    "no_inference_without_evidence": true,
+    "do_not_modify_rag_index": true,
+    "forbid_lesson_writes": true
+  },
+  "inputs": {
+    "required": [
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/universe_promotion/universe_sources_promoted.json",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/universe_promotion/inputs_inventory_with_promoted_universe.json",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/cutline_promotion/cutline_promoted.json"
+    ]
+  },
+  "outputs": {
+    "required": [
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/initial_selection_v2/report.md",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/initial_selection_v2/manifest.json",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/initial_selection_v2/evidence",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/initial_selection_v2/universe_candidates.parquet",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/initial_selection_v2/selected_initial_positions.parquet"
+    ],
+    "evidence_minimum": [
+      "promoted_universe_read.txt",
+      "cutline_promoted_read.txt",
+      "selection_rule_applied.txt"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_VERIFY_PROMOTED_INPUTS_PRESENT",
+    "S3_RECONSTRUCT_UNIVERSE_AND_ELIGIBILITY_FROM_PROMOTED",
+    "S4_APPLY_PROMOTED_CUTLINE_AND_EMIT_SELECTION",
+    "S5_VERIFY_OUTPUTS_AND_HASHES"
+  ],
+  "acceptance_criteria": [
+    "S4 deve evidenciar a regra aplicada (cutline_key/cutline_value) em selection_rule_applied.txt",
+    "selected_initial_positions.parquet gerado e hasheado"
+  ]
+}

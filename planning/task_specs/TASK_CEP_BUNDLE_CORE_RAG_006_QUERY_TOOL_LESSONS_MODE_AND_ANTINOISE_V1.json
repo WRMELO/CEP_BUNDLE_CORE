@@ -1,0 +1,18 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_006_QUERY_TOOL_LESSONS_MODE_AND_ANTINOISE_V1",
+  "task_title": "Aprimorar query tool para licoes aprendidas (modo lessons + anti-ruido)",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "query_tool": "tools/rag/query.py",
+    "rag_config": "corpus/rag/rag_config.json",
+    "index_current": "corpus/rag/index/index_v4.json"
+  },
+  "outputs": {
+    "updated_query_tool": "tools/rag/query.py",
+    "doc_update": "corpus/rag/README.md",
+    "report_json": "outputs/governanca/rag/20260220/query_tool_lessons/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/query_tool_lessons/evidence/"
+  }
+}
+

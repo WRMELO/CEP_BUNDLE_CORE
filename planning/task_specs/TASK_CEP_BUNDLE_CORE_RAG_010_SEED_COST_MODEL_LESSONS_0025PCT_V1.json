@@ -1,0 +1,21 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_RAG_010_SEED_COST_MODEL_LESSONS_0025PCT_V1",
+  "task_title": "Seed de licoes: modelo de custo arbitrado 0,025% (KB + index v7)",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "inputs": {
+    "kb_json": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v6": "corpus/manifests/corpus_manifest_v6.json",
+    "index_v6": "corpus/rag/index/index_v6.json",
+    "rag_config": "corpus/rag/rag_config.json",
+    "query_tool": "tools/rag/query.py"
+  },
+  "outputs": {
+    "kb_json_updated": "corpus/lessons/LESSONS_LEARNED.json",
+    "kb_md_updated": "corpus/lessons/LESSONS_LEARNED.md",
+    "manifest_v7": "corpus/manifests/corpus_manifest_v7.json",
+    "index_v7": "corpus/rag/index/index_v7.json",
+    "report_json": "outputs/governanca/rag/20260220/seed_cost_lessons/report.json",
+    "evidence_dir": "outputs/governanca/rag/20260220/seed_cost_lessons/evidence/"
+  }
+}
