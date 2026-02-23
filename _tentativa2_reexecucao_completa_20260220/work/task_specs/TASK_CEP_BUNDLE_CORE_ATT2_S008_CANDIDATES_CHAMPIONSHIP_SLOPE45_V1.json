@@ -1,0 +1,54 @@
+{
+  "instruction_id": "INSTR_CEP_BUNDLE_CORE_ATT2_CONFIRM_S008_CANDIDATES_CHAMPIONSHIP_SLOPE45_V1",
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_S008_CANDIDATES_CHAMPIONSHIP_SLOPE45_V1",
+  "target_role": "CURSOR_AGENT",
+  "project": "CEP_BUNDLE_CORE",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "inputs": {
+    "ranking_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v2_warmup_buffer/ranking/burners_ranking_daily.parquet",
+    "owner_visual_checklist_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "config": {
+      "score_col": "OEE_OVERALL",
+      "points_table_top10_f1": [25, 18, 15, 12, 10, 8, 6, 4, 2, 1],
+      "topk_daily_points": 10,
+      "topk_pool": 15,
+      "tie_policy": {
+        "include_all_at_cutoff": true,
+        "cutoff_points_position_for_excess": 10
+      },
+      "slopes": {
+        "windows": [30, 45, 60],
+        "primary_window": 45,
+        "alive_filter_window": 60,
+        "alive_filter_rule": "slope_60 > 0"
+      },
+      "temporal_rule": "decision_date D uses data_end_date = previous trading day (already embedded in S007)."
+    }
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/s008_candidates_championship_slope45_v1",
+    "required_files": [
+      "candidates/candidates_daily.parquet",
+      "championship/points_awarded_daily.parquet",
+      "championship/points_cumulative_daily.parquet",
+      "championship/standings_daily.parquet",
+      "slopes/slopes_pool_daily.parquet",
+      "metadata/dataset_metadata.json",
+      "report.md",
+      "manifest.json",
+      "evidence/sample_first_selection_day.csv",
+      "evidence/tie_cutoff_days_count.csv",
+      "visual/decisions_flow.mmd"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN",
+    "S4_VERIFY_OUTPUTS",
+    "S5_VERIFY_HASHES"
+  ]
+}
+

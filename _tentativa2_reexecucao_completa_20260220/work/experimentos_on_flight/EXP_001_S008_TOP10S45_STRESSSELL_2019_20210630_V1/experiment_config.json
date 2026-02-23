@@ -1,0 +1,31 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_EXP_001_S008_TOP10S45_STRESSSELL_2019_20210630_OVERWRITE_V2",
+  "experiment_id": "EXP_001_S008_TOP10S45_STRESSSELL_2019_20210630_V1",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "period": {
+    "start_date": "2019-01-01",
+    "end_date": "2021-06-30"
+  },
+  "capital": {
+    "initial_brl": 100000.0
+  },
+  "rules": {
+    "cost_rate": 0.00025,
+    "cash_cdi_lag_days": 1,
+    "initial_buy_top_n": 10,
+    "initial_weight_per_ticker": 0.1,
+    "max_weight_existing_ticker": 0.15,
+    "max_weight_new_ticker": 0.1,
+    "no_reentry_same_day_after_stress_sell": true,
+    "buy_order": "ranking_top10_best_to_worst",
+    "stress_sell_rule": "sell_when_state_end_not_in_control",
+    "price_execution": "close_same_day",
+    "allow_fractional_quantity": true
+  },
+  "paths": {
+    "experiment_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/experimentos_on_flight/EXP_001_S008_TOP10S45_STRESSSELL_2019_20210630_V1",
+    "outputs_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260223/EXP_001_S008_TOP10S45_STRESSSELL_2019_20210630_V1"
+  }
+}
+

@@ -1,7 +1,6 @@
 # LESSONS LEARNED
 
-- n_lessons: 124
-
+- n_lessons: 135
 ## LL-20260220-001 - Licao extraida #1
 - context: Extracao de docs/corpus/licoes_aprendidas.json
 - problem: 9. 2023-03-10 — Fechamento do Silicon Valley Bank (stress bancário/risco sistêmico). ([FDIC](https://www.fdic.gov/news/press-releases/2023/pr23019.html?utm_source=chatgpt.com "FDIC Acts to Protect All Depositors of the former Silicon ..."))
@@ -1139,3 +1138,89 @@
   - path=`_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/join_coverage_summary.json` anchor=`None` anchor_type=`none` excerpt_hint=`Cobertura de joins alta, com limite de explicabilidade por ausencia de chaves de negocio.`
   - path=`_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/reason_code_is_generic_check.txt` anchor=`None` anchor_type=`none` excerpt_hint=`Reason codes sao genericos BUY/SELL e nao discriminam regra disparadora.`
   - path=`_tentativa2_reexecucao_completa_20260220/outputs/w1_tranche/forensic_understanding_v1/evidence/explainability_gaps.md` anchor=`None` anchor_type=`none` excerpt_hint=`Lacunas objetivas: ausencia de ticker no ledger e de trade_id estavel cross-dataset.`
+
+## LL-20260223-S008-001 - Invariavel temporal: decisao D usa somente dados ate o close de D-1
+- context: Todos os artefatos que alimentam decisao (ranking, campeonato, slope) devem ser causais e auditaveis.
+- problem: Sintoma: Risco de look-ahead e inconsistência entre artefatos quando o dia e tratado de forma ambigua. Root cause: Ausencia de regra unica e explicitada de data_end_date.
+- decision: Ranking_D, Campeonato_D e Slope_D sao calculados exclusivamente com informacao ate o close de D-1.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v2_warmup_buffer/report.md` anchor=`None` anchor_type=`none` excerpt_hint=`Ranking_D, Campeonato_D e Slope_D sao calculados exclusivamente com informacao ate o close de D-1.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/evidence/season_context.csv` anchor=`None` anchor_type=`none` excerpt_hint=`Ranking_D, Campeonato_D e Slope_D sao calculados exclusivamente com informacao ate o close de D-1.`
+
+## LL-20260223-S008-002 - Warm-up precisa produzir estado util no D-1 do primeiro dia de selecao
+- context: Primeiro dia de selecao em 2018-07-02 depende de data_end_date=2018-06-29.
+- problem: Sintoma: OEE=0 para todos no primeiro dia e ordenacao alfabetica (empate total). Root cause: Ausencia de CEP state/eta no data_end_date; baseline terminava no ultimo pregao do warm-up sem buffer para N=3.
+- decision: Aplicar warmup buffer igual a N (N=3) para tickers preexistentes, deslocando baseline_end em 3 pregoes e gerando CEP states ate o fim do warm-up.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v2_warmup_buffer/evidence/first_selection_day_check.csv` anchor=`None` anchor_type=`none` excerpt_hint=`Aplicar warmup buffer igual a N (N=3) para tickers preexistentes, deslocando baseline_end em 3 pregoes e gerando CEP states ate o fim do warm-up.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v2_warmup_buffer/evidence/deprecation_note_v1.md` anchor=`None` anchor_type=`none` excerpt_hint=`Aplicar warmup buffer igual a N (N=3) para tickers preexistentes, deslocando baseline_end em 3 pregoes e gerando CEP states ate o fim do warm-up.`
+
+## LL-20260223-S008-003 - Separar medicao de acao: medir todo dia, agir so quando o controlador decidir
+- context: Instrumentacao continua (engenharia de processos) reduz acoplamento e aumenta auditabilidade.
+- problem: Sintoma: Medicao dependente de buy/sell gera trilha acoplada e nao reproduzivel. Root cause: Confusao entre estado observado e execucao.
+- decision: Ranking/campeonato rodam diariamente, independente de haver operacao.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v2_warmup_buffer/ranking/burners_ranking_daily.parquet` anchor=`None` anchor_type=`none` excerpt_hint=`Ranking/campeonato rodam diariamente, independente de haver operacao.`
+
+## LL-20260223-S008-004 - OEE (condicao) e campeonato (competitividade acumulada) sao complementares
+- context: OEE mede efetividade recente; campeonato mede dominancia relativa ao longo do tempo.
+- problem: Sintoma: Um unico indicador nao responde simultaneamente estado e historico competitivo. Root cause: Mistura de perguntas (condicao vs memoria).
+- decision: OEE e indicador de condicao/efetividade; campeonato F1 e indicador acumulado de performance relativa.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/artifacts/final_standings_2018.parquet` anchor=`None` anchor_type=`none` excerpt_hint=`OEE e indicador de condicao/efetividade; campeonato F1 e indicador acumulado de performance relativa.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/visual/plotly_championship_2018H2.html` anchor=`None` anchor_type=`none` excerpt_hint=`OEE e indicador de condicao/efetividade; campeonato F1 e indicador acumulado de performance relativa.`
+
+## LL-20260223-S008-005 - Campeonato puro favorece vencedores do inicio; slope mede competitividade recente
+- context: Curvas acumuladas podem estacionar (vencedor antigo) ou acelerar tarde (emergente).
+- problem: Sintoma: Top final pode incluir campeoes envelhecidos e excluir emergentes. Root cause: Indicador acumulado nao mede derivada (momento).
+- decision: Calcular slope dos pontos acumulados em janelas recentes para medir aceleracao/desaceleracao competitiva.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/visual/plotly_championship_2018H2.html` anchor=`None` anchor_type=`none` excerpt_hint=`Calcular slope dos pontos acumulados em janelas recentes para medir aceleracao/desaceleracao competitiva.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/slope_top15_2018h2_v1/visual/plotly_slopes_top15_2018H2.html` anchor=`None` anchor_type=`none` excerpt_hint=`Calcular slope dos pontos acumulados em janelas recentes para medir aceleracao/desaceleracao competitiva.`
+
+## LL-20260223-S008-006 - Janela de slope: 45 pregoes como compromisso operacional
+- context: 30 pregoes e muito responsivo; 60 pregoes e mais inercial.
+- problem: Sintoma: Escolha de janela pode capturar ruido (30) ou reagir tarde (60). Root cause: Falta de compromisso robustez vs responsividade.
+- decision: Usar slope_45 como metrica principal; slope_60 como filtro; slope_30 como diagnostico.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/slope_top15_2018h2_v1/visual/plotly_slopes_top15_2018H2.html` anchor=`None` anchor_type=`none` excerpt_hint=`Usar slope_45 como metrica principal; slope_60 como filtro; slope_30 como diagnostico.`
+
+## LL-20260223-S008-007 - Regra auditavel para selecao no pool: filtro vivo + ordenacao por slope_45
+- context: Selecao de candidatos deve ter camadas: pool -> filtro -> ordenacao.
+- problem: Sintoma: So pontos compra passado; so curto prazo compra ruido. Root cause: Ausencia de regra em camadas.
+- decision: Pool=Top 15 do campeonato; filtro slope_60>0; ordenar por slope_45 desc; slope_30 diagnostico.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/artifacts/final_standings_2018.parquet` anchor=`None` anchor_type=`none` excerpt_hint=`Pool=Top 15 do campeonato; filtro slope_60>0; ordenar por slope_45 desc; slope_30 diagnostico.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/slope_top15_2018h2_v1/artifacts/slopes_top15.parquet` anchor=`None` anchor_type=`none` excerpt_hint=`Pool=Top 15 do campeonato; filtro slope_60>0; ordenar por slope_45 desc; slope_30 diagnostico.`
+
+## LL-20260223-S008-008 - Empate no cutoff: politica explicita, mesmo quando nao ocorre no periodo testado
+- context: Top-10 diario pode ter empates no 10o lugar.
+- problem: Sintoma: Sem regra, desempate implicito entra (ordem alfabetica/ordem de leitura). Root cause: Politica de empate nao formalizada.
+- decision: Incluir todos empatados no cutoff; excedentes recebem pontos do 10o (1 ponto).
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/evidence/tie_cutoff_days_count.csv` anchor=`None` anchor_type=`none` excerpt_hint=`Incluir todos empatados no cutoff; excedentes recebem pontos do 10o (1 ponto).`
+
+## LL-20260223-S008-009 - Experimentos nao promovem estado confirmado automaticamente
+- context: Experimentos devem suportar critica sem contaminar a trilha ativa.
+- problem: Sintoma: Risco de contaminar checklist/estados com resultados nao promovidos. Root cause: Governanca fraca entre experimental e ativo.
+- decision: Experimentos escrevem em outputs/experimentos e nao alteram checklist; promocao exige decisao explicita.
+- impact: Padroniza a leitura de competitividade (campeonato+slope) com governanca auditavel no trilho experimental.
+- tags: cep_bundle_core, championship, experimento, governance, s008, slope
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/evidence/checklist_unchanged_check.txt` anchor=`None` anchor_type=`none` excerpt_hint=`Experimentos escrevem em outputs/experimentos e nao alteram checklist; promocao exige decisao explicita.`

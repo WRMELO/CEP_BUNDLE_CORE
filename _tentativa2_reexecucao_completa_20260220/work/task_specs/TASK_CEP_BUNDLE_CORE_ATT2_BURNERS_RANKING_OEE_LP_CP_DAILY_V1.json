@@ -1,0 +1,56 @@
+{
+  "instruction_id": "INSTR_CEP_BUNDLE_CORE_ATT2_TASK_BURNERS_RANKING_OEE_LP_CP_DAILY_V1",
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_BURNERS_RANKING_OEE_LP_CP_DAILY_V1",
+  "target_role": "CURSOR_AGENT",
+  "project": "CEP_BUNDLE_CORE",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "inputs": {
+    "base_canonica_panel_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_canonica_completa_v2_448_cdi_excess_v1/panel/base_operacional_canonica.parquet",
+    "base_canonica_calendar_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_canonica_completa_v2_448_cdi_excess_v1/calendar/calendar_trading_days.parquet",
+    "approved_universe_ssot_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/ssot_approved_tickers_448_k60_n3_window_20251030_w62_with_history_audit_v2/ssot_approved_tickers.parquet",
+    "owner_visual_checklist_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "config": {
+      "signal_col_x": "excess_log",
+      "warmup_start": "2018-01-01",
+      "warmup_end": "2018-06-30",
+      "first_selection_month": "2018-07",
+      "cp_window_sessions": 62,
+      "cep": {
+        "chart_type": "XBAR_R",
+        "N": 3,
+        "K": 60,
+        "spc_constants": {
+          "A2_for_N3": 1.023,
+          "D3_for_N3": 0.0,
+          "D4_for_N3": 2.574
+        }
+      }
+    }
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v1",
+    "required_files": [
+      "ranking/burners_ranking_daily.parquet",
+      "cep_states/cep_states_daily.parquet",
+      "baseline_limits/baseline_limits_by_ticker.parquet",
+      "metadata/dataset_metadata.json",
+      "report.md",
+      "manifest.json",
+      "evidence/date_range_summary.csv",
+      "evidence/eligibility_summary.csv",
+      "evidence/cep_state_counts.csv",
+      "evidence/oee_summary_samples.txt",
+      "visual/decisions_flow.mmd"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN",
+    "S4_VERIFY_RANKING_OUTPUTS",
+    "S5_VERIFY_OUTPUTS_AND_HASHES"
+  ]
+}
+

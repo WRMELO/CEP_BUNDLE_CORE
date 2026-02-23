@@ -1,0 +1,49 @@
+{
+  "instruction_id": "INSTR_CEP_BUNDLE_CORE_ATT2_EXPERIMENTO_CHAMPIONSHIP_F1_FROM_S007V2_2018H2_PLOTLY_V1",
+  "task_id": "EXPERIMENTO_CEPBC_ATT2_CHAMPIONSHIP_F1_S007V2_2018H2_PLOTLY_V1",
+  "target_role": "CURSOR_AGENT",
+  "project": "CEP_BUNDLE_CORE",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "inputs": {
+    "ranking_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/burners_ranking_oee_lp_cp_daily_v2_warmup_buffer/ranking/burners_ranking_daily.parquet",
+    "checklist_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "config": {
+      "season_start": "2018-07-02",
+      "season_end": "2018-12-31",
+      "score_col": "OEE_OVERALL",
+      "points_table_top10_f1": [25, 18, 15, 12, 10, 8, 6, 4, 2, 1],
+      "cutoff_tie_policy": {
+        "include_all_at_cutoff": true,
+        "extra_tied_beyond_10_get_points_of_position": 10
+      },
+      "plotly": {
+        "top_lines_final_standings_n": 15,
+        "output_html_filename": "plotly_championship_2018H2.html"
+      }
+    }
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1",
+    "required_files": [
+      "artifacts/points_awarded_daily.parquet",
+      "artifacts/points_cumulative_daily.parquet",
+      "artifacts/final_standings_2018.parquet",
+      "evidence/season_context.csv",
+      "evidence/tie_cutoff_days_count.csv",
+      "evidence/top10_sample_first5days.csv",
+      "visual/plotly_championship_2018H2.html",
+      "report.md",
+      "manifest.json"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN",
+    "S4_VERIFY_OUTPUTS",
+    "S5_VERIFY_HASHES"
+  ]
+}
+

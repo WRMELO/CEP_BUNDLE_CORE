@@ -1,0 +1,35 @@
+{
+  "instruction_id": "INSTR_CEPBC_ATT2_EXPERIMENTO_SLOPE_TOP15_CHAMPIONSHIP_2018H2_V1",
+  "task_id": "EXPERIMENTO_SLOPE_TOP15_2018H2_V1",
+  "target_role": "CURSOR_AGENT",
+  "project": "CEP_BUNDLE_CORE",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "inputs": {
+    "points_cumulative_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/artifacts/points_cumulative_daily.parquet",
+    "final_standings_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/artifacts/final_standings_2018.parquet",
+    "checklist_path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "config": {
+      "top_n": 15,
+      "windows": [30, 45, 60],
+      "season_end_date_col": "decision_date"
+    }
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/slope_top15_2018h2_v1",
+    "required_files": [
+      "artifacts/slopes_top15.parquet",
+      "visual/plotly_slopes_top15_2018H2.html",
+      "report.md",
+      "manifest.json"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN",
+    "S4_VERIFY_OUTPUTS",
+    "S5_VERIFY_HASHES"
+  ]
+}
+

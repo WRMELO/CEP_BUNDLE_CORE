@@ -1,0 +1,70 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_SSOT_APPROVED_TICKERS_448_WITH_HISTORY_AUDIT_V2",
+  "mode": "run_gate",
+  "phase": "Tentativa 2 - SSOT approved tickers 448 + history audit",
+  "intent": "Reproduzir deterministicamente a interseção estável 557x448 e auditar continuidade histórica por presença de linha (sem filtrar por histórico).",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "execution_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "branch_required": "local/integrated-state-20260215",
+  "policy": {
+    "do_not_modify_snapshot": true,
+    "all_new_work_inside_attempt2": true,
+    "parquet_is_canonical": true,
+    "csv_only_for_human_evidence": true,
+    "versioning_rule": "DO NOT delete V1 artifacts"
+  },
+  "inputs": {
+    "base_operacional_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_v1/base_operacional_daily.parquet",
+    "base_operacional_coverage_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_v1/base_operacional_coverage.parquet",
+    "owner_visual_checklist_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "selection_window": {
+      "start_date": "2025-10-30",
+      "expected_W": 62,
+      "sig_col": "ret_simple"
+    },
+    "history_audit": {
+      "anchor_date": "2018-01-01",
+      "presence_definition": "ROW_EXISTENCE_ONLY"
+    },
+    "params": {
+      "K": 60,
+      "N": 3,
+      "expected_baseline_ok_count": 557,
+      "expected_selected_count": 448,
+      "expected_breakdown_selected": {
+        "ACAO": 443,
+        "BOTH": 5
+      }
+    },
+    "expected_tickers_file": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/reference/universe_expected_448_from_owner.txt"
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/ssot_approved_tickers_448_k60_n3_window_20251030_w62_with_history_audit_v2",
+    "required_files": [
+      "ssot_approved_tickers.parquet",
+      "ssot_approved_tickers.md",
+      "report.md",
+      "manifest.json",
+      "evidence/calendar_source.txt",
+      "evidence/window_calendar_dates_list.txt",
+      "evidence/window_calendar_summary.csv",
+      "evidence/baseline_ok_557_breakdown.csv",
+      "evidence/selected_448_breakdown.csv",
+      "evidence/selected_448_tickers_sorted.txt",
+      "evidence/selected_vs_expected_diff.txt",
+      "evidence/history_audit_per_ticker.csv",
+      "evidence/history_audit_failures_sample.txt",
+      "evidence/deprecations_note.md",
+      "visual/decisions_flow.mmd"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN",
+    "S4_VERIFY_SELECTION",
+    "S5_VERIFY_HISTORY_AUDIT_ARTIFACTS",
+    "S6_VERIFY_OUTPUTS_AND_HASHES"
+  ]
+}
+

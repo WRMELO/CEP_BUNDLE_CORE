@@ -1,0 +1,69 @@
+{
+  "instruction_id": "INSTR_CEP_BUNDLE_CORE_ATT2_TASK_BUILD_BASE_OPERACIONAL_CANONICA_COMPLETA_V2_448_CDI_EXCESS_V1",
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_BUILD_BASE_OPERACIONAL_CANONICA_COMPLETA_V2_448_CDI_EXCESS_V1",
+  "target_role": "CURSOR_AGENT",
+  "project": "CEP_BUNDLE_CORE",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "branch_required": "local/integrated-state-20260215",
+  "attempt2_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "inputs": {
+    "approved_universe_ssot_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/ssot_approved_tickers_448_k60_n3_window_20251030_w62_with_history_audit_v2/ssot_approved_tickers.parquet",
+    "base_operacional_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_v1/base_operacional_daily.parquet",
+    "ssot_cdi_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/ssot_reference_refresh_v1/cdi_daily.parquet",
+    "lessons_learned_paths": {
+      "json": "/home/wilson/CEP_BUNDLE_CORE/corpus/lessons/LESSONS_LEARNED.json",
+      "md": "/home/wilson/CEP_BUNDLE_CORE/corpus/lessons/LESSONS_LEARNED.md"
+    },
+    "owner_visual_checklist_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "required_panel_cols_min": [
+      "date",
+      "ticker",
+      "asset_class",
+      "ret_simple"
+    ],
+    "cdi_column_policy": {
+      "preferred_daily_return_col_candidates": [
+        "cdi_ret_t",
+        "ret_simple",
+        "cdi_ret_simple",
+        "daily_return",
+        "rate_daily",
+        "cdi_daily_return"
+      ],
+      "action_if_missing": "FAIL_WITH_OBJECTIVE_MESSAGE_LISTING_COLUMNS_FOUND",
+      "cdi_return_col_forced_if_present": "cdi_ret_t"
+    }
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_canonica_completa_v2_448_cdi_excess_v1",
+    "required_files": [
+      "panel/base_operacional_canonica.parquet",
+      "coverage/base_operacional_coverage.parquet",
+      "calendar/calendar_trading_days.parquet",
+      "metadata/dataset_metadata.json",
+      "report.md",
+      "manifest.json",
+      "evidence/schema_panel_found.json",
+      "evidence/schema_cdi_found.json",
+      "evidence/key_uniqueness_check.csv",
+      "evidence/join_coverage_summary.csv",
+      "evidence/date_range_summary.csv",
+      "evidence/missingness_summary.csv",
+      "evidence/domain_checks_summary.csv",
+      "visual/decisions_flow.mmd"
+    ],
+    "schema_contract_minimum": [
+      "date",
+      "ticker",
+      "asset_class",
+      "ret_simple",
+      "logret",
+      "cdi_ret_simple",
+      "cdi_logret",
+      "excess_diff",
+      "excess_ratio",
+      "excess_log"
+    ]
+  }
+}
+

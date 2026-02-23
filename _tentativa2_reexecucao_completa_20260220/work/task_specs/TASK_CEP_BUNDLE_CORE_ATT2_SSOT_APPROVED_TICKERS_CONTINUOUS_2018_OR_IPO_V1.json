@@ -1,0 +1,65 @@
+{
+  "task_id": "TASK_CEP_BUNDLE_CORE_ATT2_SSOT_APPROVED_TICKERS_CONTINUOUS_2018_OR_IPO_V1",
+  "mode": "run_gate",
+  "phase": "Tentativa 2 - SSOT operacional de tickers aprovados",
+  "intent": "Selecionar SSOT de tickers aprovados com baseline_ok(K=60,N=3) e continuidade diaria desde max(2018-01-01, first_date) ate dataset_end_date usando sig_col=ret_simple.",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "execution_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "branch_required": "local/integrated-state-20260215",
+  "policy": {
+    "do_not_modify_snapshot": true,
+    "all_new_work_inside_attempt2": true,
+    "parquet_is_canonical": true,
+    "csv_only_for_human_evidence": true
+  },
+  "inputs": {
+    "base_operacional_daily_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_v1/base_operacional_daily.parquet",
+    "base_operacional_coverage_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/base_operacional_v1/base_operacional_coverage.parquet",
+    "owner_visual_checklist_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+    "anchor_date": "2018-01-01",
+    "sig_col": "ret_simple",
+    "calendar_preference": {
+      "calendar_ticker_primary": "^BVSP",
+      "fallback": "GLOBAL_UNIQUE_DATES_FROM_PANEL"
+    },
+    "params": {
+      "K": 60,
+      "N": 3,
+      "expected_baseline_ok_count": 557,
+      "expected_selected_count": 448,
+      "expected_breakdown_selected": {
+        "ACAO": 443,
+        "BOTH": 5
+      }
+    },
+    "expected_tickers_file_to_create": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/reference/universe_expected_448_from_owner_CONTINUOUS_2018_OR_IPO.txt"
+  },
+  "outputs": {
+    "output_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/ssot_approved_tickers_continuous_from_20180101_or_ipo_k60_n3_v1",
+    "required_files": [
+      "ssot_approved_tickers.parquet",
+      "ssot_approved_tickers.md",
+      "report.md",
+      "manifest.json",
+      "evidence/calendar_source.txt",
+      "evidence/canonical_calendar_dates_list.txt",
+      "evidence/canonical_calendar_summary.csv",
+      "evidence/baseline_ok_557_breakdown.csv",
+      "evidence/per_ticker_continuity_stats.csv",
+      "evidence/missing_dates_samples.txt",
+      "evidence/selected_breakdown.csv",
+      "evidence/selected_tickers_sorted.txt",
+      "evidence/selected_vs_expected_diff.txt",
+      "evidence/deprecations_note.md",
+      "visual/decisions_flow.mmd"
+    ]
+  },
+  "gates": [
+    "S1_GATE_ALLOWLIST",
+    "S2_CHECK_COMPILE",
+    "S3_RUN",
+    "S4_VERIFY_SELECTION",
+    "S5_VERIFY_OUTPUTS_AND_HASHES"
+  ]
+}
+
