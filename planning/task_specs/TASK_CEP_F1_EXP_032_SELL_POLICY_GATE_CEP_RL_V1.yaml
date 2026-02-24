@@ -1,0 +1,25 @@
+{
+  "instruction_id": "TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1",
+  "task_id": "TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1",
+  "target_role": "agent",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "working_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "agnostic_requirements": {
+    "must_use_agno_task": true,
+    "task_spec_path": "planning/task_specs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1.yaml",
+    "run_artifacts_root": "planning/runs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1/",
+    "outputs_dir": "outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1"
+  },
+  "gates_required": [
+    "S1_GATE_ALLOWLIST_PATHS",
+    "S2_CHECK_COMPILE_OR_IMPORT",
+    "S3_RUN_EXPERIMENT",
+    "S4_VERIFY_NO_LEAKAGE",
+    "S5_VERIFY_OUTPUTS_AND_MANIFEST",
+    "S6_SUMMARIZE_RESULTS_AND_DECISION_NOTES"
+  ],
+  "supersedes": {
+    "instruction_id": "TASK_CEP_EXP_002_SELL_POLICY_GATE_CEP_RL_V1",
+    "non_overridden_artifacts_policy": "MARK_INACTIVE_FOR_NON_AUDIT"
+  }
+}

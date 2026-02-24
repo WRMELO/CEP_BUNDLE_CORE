@@ -1,0 +1,114 @@
+{
+  "task_id": "TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "supersedes": "TASK_CEP_EXP_002_SELL_POLICY_GATE_CEP_RL_V1",
+  "gates": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS",
+      "details": {
+        "outputs_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1",
+        "run_dir": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1/run_20260224_132958"
+      }
+    },
+    {
+      "name": "S2_CHECK_COMPILE_OR_IMPORT",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_RUN_EXPERIMENT",
+      "status": "PASS",
+      "details": {
+        "returncode": 0
+      }
+    },
+    {
+      "name": "S4_VERIFY_NO_LEAKAGE",
+      "status": "PASS",
+      "details": {
+        "time_convention": "features_em_D_decisao_pos_close_execucao_D_plus_1",
+        "uses_only_same_or_past_data_for_decisions": true,
+        "expost_label_used_for_metrics_only": true,
+        "rl_feedback_released_only_at_D_plus_3_or_later": true
+      }
+    },
+    {
+      "name": "S5_VERIFY_OUTPUTS_AND_MANIFEST",
+      "status": "PASS",
+      "details": {
+        "exists_ok": true,
+        "manifest_ok": true
+      }
+    },
+    {
+      "name": "S6_SUMMARIZE_RESULTS_AND_DECISION_NOTES",
+      "status": "PASS",
+      "details": {
+        "best_cagr_variant": {
+          "variant": "deterministic",
+          "slope_w": 4,
+          "CAGR": 2.1654987723,
+          "MDD": -0.2032926913
+        },
+        "best_low_churn_variant": {
+          "variant": "hybrid_rl",
+          "slope_w": 4,
+          "turnover_sell": 2.2732853294,
+          "cost_total": 191.058785
+        }
+      }
+    }
+  ],
+  "steps": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_CHECK_COMPILE_OR_IMPORT",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_RUN_EXPERIMENT",
+      "status": "PASS"
+    },
+    {
+      "name": "S4_VERIFY_NO_LEAKAGE",
+      "status": "PASS"
+    },
+    {
+      "name": "S5_VERIFY_OUTPUTS_AND_MANIFEST",
+      "status": "PASS"
+    },
+    {
+      "name": "S6_SUMMARIZE_RESULTS_AND_DECISION_NOTES",
+      "status": "PASS"
+    }
+  ],
+  "deliverables": {
+    "outputs_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1",
+    "report_md": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/report.md",
+    "summary_json": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/summary.json",
+    "metrics_detail_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/tables",
+    "manifest_json": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/manifest.json",
+    "inactive_marker_previous_output": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/fase1_calibracao/exp_002_sell_policy_gate_rl/INACTIVE_FOR_NON_AUDIT.md",
+    "inactive_marker_previous_work": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/experimentos_on_flight/EXP_002_SELL_POLICY_GATE_CEP_RL_V1/INACTIVE_FOR_NON_AUDIT.md",
+    "run_report_json": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1/run_20260224_132958/report.json"
+  },
+  "decision_notes": {
+    "best_cagr_variant": {
+      "variant": "deterministic",
+      "slope_w": 4,
+      "CAGR": 2.1654987723,
+      "MDD": -0.2032926913
+    },
+    "best_low_churn_variant": {
+      "variant": "hybrid_rl",
+      "slope_w": 4,
+      "turnover_sell": 2.2732853294,
+      "cost_total": 191.058785
+    }
+  },
+  "timestamp_utc": "2026-02-24T13:30:39.208403+00:00"
+}
