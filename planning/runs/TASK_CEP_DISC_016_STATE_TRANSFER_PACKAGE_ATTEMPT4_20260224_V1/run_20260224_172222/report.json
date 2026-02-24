@@ -1,0 +1,99 @@
+{
+  "task_id": "TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS",
+      "details": {
+        "outputs_dir": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1",
+        "run_dir": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1/run_20260224_172222"
+      }
+    },
+    {
+      "name": "S2_COLLECT_ATTEMPT3_AND_CURRENT_STATE",
+      "status": "PASS",
+      "details": {
+        "attempt3_found": true,
+        "attempt3_paths": [
+          "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/state_transfer_package_attempt3_v1/20260223/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT3_V1.md",
+          "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/state_transfer_package_attempt3_v1/20260223/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT3_V1.json"
+        ],
+        "current_state_collected_from": [
+          "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1/run_20260224_132958/report.json",
+          "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1/run_20260224_133406/report.json",
+          "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1/run_20260224_140219/report.json",
+          "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1/run_20260224_150546/report.json"
+        ]
+      }
+    },
+    {
+      "name": "S3_COLLECT_RUNS_OUTPUTS_AND_ACTIVE_INACTIVE_MAP",
+      "status": "PASS",
+      "details": {
+        "active_inactive_sources": [
+          "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+          "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/README_SUPERSEDENCE.md",
+          "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/experimentos_on_flight/EXP_002_SELL_POLICY_GATE_CEP_RL_V1/INACTIVE_FOR_NON_AUDIT.md"
+        ]
+      }
+    },
+    {
+      "name": "S4_DRAFT_MD_AND_JSON",
+      "status": "PASS",
+      "details": {
+        "md": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.md",
+        "json": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.json"
+      }
+    },
+    {
+      "name": "S5_VERIFY_REFERENCES_EXIST_AND_MANIFEST_HASHES",
+      "status": "PASS",
+      "details": {
+        "manifest": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/manifest.json",
+        "missing_expected_non_blocking": [],
+        "pending_instruction_not_provided_yet": "TASK_CEP_DISC_014_BOOTSTRAP_PARA_TRANSFERENCIA_S001_S005_20260224_V2"
+      }
+    },
+    {
+      "name": "S6_WRITE_FINAL_ARTIFACTS_AND_RUN_REPORT",
+      "status": "PASS",
+      "details": {
+        "deliverables_written": true
+      }
+    }
+  ],
+  "steps": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_COLLECT_ATTEMPT3_AND_CURRENT_STATE",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_COLLECT_RUNS_OUTPUTS_AND_ACTIVE_INACTIVE_MAP",
+      "status": "PASS"
+    },
+    {
+      "name": "S4_DRAFT_MD_AND_JSON",
+      "status": "PASS"
+    },
+    {
+      "name": "S5_VERIFY_REFERENCES_EXIST_AND_MANIFEST_HASHES",
+      "status": "PASS"
+    },
+    {
+      "name": "S6_WRITE_FINAL_ARTIFACTS_AND_RUN_REPORT",
+      "status": "PASS"
+    }
+  ],
+  "deliverables": {
+    "transfer_md": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.md",
+    "transfer_json": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.json",
+    "manifest": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/manifest.json"
+  },
+  "timestamp_utc": "2026-02-24T17:22:22Z"
+}

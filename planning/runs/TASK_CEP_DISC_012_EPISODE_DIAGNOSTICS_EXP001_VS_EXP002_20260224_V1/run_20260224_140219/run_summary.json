@@ -1,0 +1,73 @@
+{
+  "task_id": "TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_LOCATE_INPUTS_AND_VERIFY_CANONICAL_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_EXTRACT_AND_NORMALIZE_TABLES_PARQUET_FIRST",
+      "status": "PASS",
+      "details": {
+        "tables": 11
+      }
+    },
+    {
+      "name": "S4_RECONCILE_EQUITY_AND_COSTS",
+      "status": "PASS",
+      "details": {
+        "max_identity_residual_abs": 5.820766091346741e-11,
+        "max_delta_residual_abs": 8.822098607197404e-11,
+        "tolerance": 1e-06
+      }
+    },
+    {
+      "name": "S5_EPISODE_REPORTS_WITH_RULE_ATTRIBUTION",
+      "status": "PASS"
+    },
+    {
+      "name": "S6_VERIFY_MANIFEST_HASHES_AND_SUMMARY",
+      "status": "PASS"
+    }
+  ],
+  "steps": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_LOCATE_INPUTS_AND_VERIFY_CANONICAL_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_EXTRACT_AND_NORMALIZE_TABLES_PARQUET_FIRST",
+      "status": "PASS"
+    },
+    {
+      "name": "S4_RECONCILE_EQUITY_AND_COSTS",
+      "status": "PASS"
+    },
+    {
+      "name": "S5_EPISODE_REPORTS_WITH_RULE_ATTRIBUTION",
+      "status": "PASS"
+    },
+    {
+      "name": "S6_VERIFY_MANIFEST_HASHES_AND_SUMMARY",
+      "status": "PASS"
+    }
+  ],
+  "deliverables": {
+    "e1_report": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/episode_diagnostics/20260224/E1_20191125_20191202/report.md",
+    "e2_report": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/episode_diagnostics/20260224/E2_20200302_20200310/report.md",
+    "e3_report": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/episode_diagnostics/20260224/E3_20210211_20210630/report.md",
+    "shared_tables_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/episode_diagnostics/20260224/shared/tables",
+    "shared_manifest": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/episode_diagnostics/20260224/shared/manifest.json"
+  },
+  "timestamp_utc": "2026-02-24T14:02:20.688064+00:00"
+}

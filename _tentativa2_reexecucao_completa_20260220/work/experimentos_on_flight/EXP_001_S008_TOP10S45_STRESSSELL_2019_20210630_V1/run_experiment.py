@@ -79,6 +79,26 @@ def find_latest_required_path(attempt2_root: Path, suffix: str) -> Path:
     return candidates[-1][1]
 
 
+def load_split_factor_map(corporate_actions_path: Path) -> dict[pd.Timestamp, dict[str, float]]:
+    if not corporate_actions_path.exists():
+        return {}
+    ca = pd.read_parquet(corporate_actions_path)
+    required_cols = {"ticker", "action_type", "ex_date", "factor"}
+    if not required_cols.issubset(set(ca.columns)):
+        return {}
+    ca = ca[ca["action_type"].isin(["SPLIT", "REVERSE_SPLIT", "BONUS"])].copy()
+    ca["ex_date"] = pd.to_datetime(ca["ex_date"]).dt.normalize()
+    out: dict[pd.Timestamp, dict[str, float]] = {}
+    for _, r in ca.iterrows():
+        d = pd.Timestamp(r["ex_date"]).normalize()
+        t = str(r["ticker"])
+        f = float(r["factor"])
+        if not np.isfinite(f) or f <= 0.0:
+            continue
+        out.setdefault(d, {})[t] = f
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
@@ -127,6 +147,15 @@ def main() -> int:
     s007_ranking_path = find_latest_required_path(attempt2_root, "/ranking/burners_ranking_daily.parquet")
     s006_panel_path = find_latest_required_path(attempt2_root, "/panel/base_operacional_canonica.parquet")
     cdi_daily_path = attempt2_root / "outputs" / "ssot_reference_refresh_v1" / "cdi_daily.parquet"
+    corporate_actions_path = Path(
+        cfg.get(
+            "paths",
+            {},
+        ).get(
+            "corporate_actions_path",
+            attempt2_root / "outputs" / "governanca" / "corporate_actions" / "20260224" / "split_handling_v1" / "ssot" / "corporate_actions.parquet",
+        )
+    ).resolve()
     if not cdi_daily_path.exists():
         raise RuntimeError(f"CDI diario ausente: {cdi_daily_path}")
 
@@ -145,6 +174,7 @@ def main() -> int:
                 f"s007_ranking_path={s007_ranking_path}",
                 f"s006_panel_path={s006_panel_path}",
                 f"cdi_daily_path={cdi_daily_path}",
+                f"corporate_actions_path={corporate_actions_path}",
                 f"work_root={work_root}",
                 f"output_root={output_root}",
                 f"allow_ok={allow_ok}",
@@ -182,8 +212,8 @@ def main() -> int:
     run_error = ""
     sanity: dict[str, Any] = {}
     try:
-        start_date = pd.Timestamp("2019-01-01")
-        end_date = pd.Timestamp("2021-06-30")
+        start_date = pd.Timestamp(cfg.get("period", {}).get("start_date", "2019-01-01")).normalize()
+        end_date = pd.Timestamp(cfg.get("period", {}).get("end_date", "2021-06-30")).normalize()
         cost_rate = 0.00025
         initial_capital = 100000.0
         top_n = 10
@@ -211,6 +241,7 @@ def main() -> int:
         panel = panel[panel["date"] <= end_date].copy()
         price_wide = panel.pivot(index="date", columns="ticker", values="close").sort_index().ffill()
         prev_close_wide = price_wide.shift(1)
+        split_factor_map = load_split_factor_map(corporate_actions_path)
 
         cdi = pd.read_parquet(cdi_daily_path, columns=["date", "cdi_ret_t"])
         cdi_prev = previous_cdi_map(cdi)
@@ -233,6 +264,7 @@ def main() -> int:
         positions_daily = []
         signals_used = []
         equity_curve = []
+        split_events = []
 
         first_buy_day = decision_days[0]
 
@@ -242,7 +274,41 @@ def main() -> int:
             prev_prices = prev_close_wide.loc[d] if d in prev_close_wide.index else pd.Series(dtype=float)
             cash_start = cash
 
-            # 1) Executa vendas pendentes (sinal D, execução D+1)
+            # 1) Aplica corporate actions (inicio de D, antes de qualquer trade)
+            for t, factor in split_factor_map.get(d, {}).items():
+                qty_prev = int(positions.get(t, 0))
+                if qty_prev <= 0:
+                    continue
+                qty_new = int(round(qty_prev * factor))
+                if qty_new <= 0:
+                    qty_new = 0
+                positions[t] = qty_new
+                split_events.append(
+                    {
+                        "decision_date": d,
+                        "ticker": t,
+                        "factor": float(factor),
+                        "qty_prev": qty_prev,
+                        "qty_new": qty_new,
+                        "cash_unchanged": True,
+                    }
+                )
+                ledger_entries.append(
+                    {
+                        "decision_date": d,
+                        "entry_type": "CORPORATE_ACTION_SPLIT",
+                        "ticker": t,
+                        "qty": qty_new,
+                        "price": None,
+                        "notional": 0.0,
+                        "cost": 0.0,
+                        "cash_before": cash,
+                        "cash_after": cash,
+                        "reason": f"SPLIT_FACTOR_{factor}",
+                    }
+                )
+
+            # 2) Executa vendas pendentes (sinal D, execução D+1)
             for t in sorted(pending_sell_exec.get(d, set())):
                 qty = int(positions.get(t, 0))
                 if qty <= 0:
@@ -284,7 +350,7 @@ def main() -> int:
                     }
                 )
 
-            # 2) Sinais de compra do dia (S008 TOP10) com validação CEP
+            # 3) Sinais de compra do dia (S008 TOP10) com validação CEP
             day = cand[cand["decision_date"] == d].copy()
             top10 = day[
                 (day["in_pool_top15"] == True)
@@ -301,7 +367,7 @@ def main() -> int:
                 if t in top10_tickers:
                     blocked_reentry.remove(t)
 
-            # 3) Equity de referência para pesos (antes das compras do dia)
+            # 4) Equity de referência para pesos (antes das compras do dia)
             def value_with_prev_close() -> float:
                 total = 0.0
                 for t, q in positions.items():
@@ -314,7 +380,7 @@ def main() -> int:
 
             equity_ref = cash + value_with_prev_close()
 
-            # 4) Compras
+            # 5) Compras
             def buy_max_qty(px: float, target_value: float) -> int:
                 if not np.isfinite(px) or px <= 0:
                     return 0
@@ -463,7 +529,7 @@ def main() -> int:
                         }
                     )
 
-            # 5) Gera sinais de stress em D para execução em D+1
+            # 6) Gera sinais de stress em D para execução em D+1
             if d in next_day_map:
                 nd = next_day_map[d]
                 for t, q in positions.items():
@@ -482,7 +548,7 @@ def main() -> int:
                             }
                         )
 
-            # 6) CDI sobre caixa no fim do dia (após movimentações)
+            # 7) CDI sobre caixa no fim do dia (após movimentações)
             cdi_prev_ret = float(cdi_prev.get(d, 0.0))
             cash_before_cdi = cash
             cdi_amount = cash_before_cdi * cdi_prev_ret
@@ -502,7 +568,7 @@ def main() -> int:
                 }
             )
 
-            # 7) Equity(D) = sum(qty(D) * Close(D-1)) + Caixa(D)
+            # 8) Equity(D) = sum(qty(D) * Close(D-1)) + Caixa(D)
             pos_value_prev = value_with_prev_close()
             equity_d = cash + pos_value_prev
             equity_curve.append(
@@ -568,6 +634,9 @@ def main() -> int:
             columns=["decision_date", "ticker", "qty", "close_d", "close_d_1"]
         )
         sig_df = pd.DataFrame(signals_used).sort_values(["decision_date", "signal_type", "ticker"]) if signals_used else pd.DataFrame()
+        split_df = pd.DataFrame(split_events).sort_values(["decision_date", "ticker"]) if split_events else pd.DataFrame(
+            columns=["decision_date", "ticker", "factor", "qty_prev", "qty_new", "cash_unchanged"]
+        )
 
         ledger_daily_df.to_parquet(output_root / "ledger_daily.parquet", index=False)
         ledger_entries_df.to_parquet(output_root / "ledger_entries.parquet", index=False)
@@ -575,12 +644,14 @@ def main() -> int:
         trades_df.to_parquet(output_root / "trades.parquet", index=False)
         pos_df.to_parquet(output_root / "positions_daily.parquet", index=False)
         sig_df.to_parquet(output_root / "signals_used.parquet", index=False)
+        split_df.to_parquet(output_root / "corporate_actions_applied.parquet", index=False)
 
         resolved = {
             "s008_candidates_path": str(s008_candidates_path),
             "s007_burner_status_path": str(s007_ranking_path),
             "s006_prices_panel_path": str(s006_panel_path),
             "cdi_daily_path": str(cdi_daily_path),
+            "corporate_actions_path": str(corporate_actions_path),
         }
         write_json(evidence_dir / "resolved_inputs.json", resolved)
         write_text(
@@ -644,6 +715,7 @@ def main() -> int:
             (output_root / "trades.parquet").exists(),
             (output_root / "positions_daily.parquet").exists(),
             (output_root / "signals_used.parquet").exists(),
+            (output_root / "corporate_actions_applied.parquet").exists(),
             (output_root / "report.md").exists(),
             evidence_dir.exists(),
         ]
@@ -651,7 +723,7 @@ def main() -> int:
 
         sanity = {
             "period_has_rows": len(equity_df) > 0,
-            "last_day_not_after_2021_06_30": decision_days[-1] <= pd.Timestamp("2021-06-30"),
+            "last_day_not_after_config_end_date": decision_days[-1] <= end_date,
             "equity_rule_d_minus_1_applied": True,
             "integer_shares_only": bool((trades_df["qty"] == trades_df["qty"].astype(int)).all()) if len(trades_df) else True,
             "cash_never_negative": bool((ledger_daily_df["cash_end_brl"] >= -1e-9).all()) if len(ledger_daily_df) else True,
@@ -671,6 +743,7 @@ def main() -> int:
             output_root / "trades.parquet",
             output_root / "positions_daily.parquet",
             output_root / "signals_used.parquet",
+            output_root / "corporate_actions_applied.parquet",
             output_root / "report.md",
             output_root / "manifest.json",
             evidence_dir,

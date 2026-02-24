@@ -834,6 +834,46 @@
       "path": "/home/wilson/CEP_COMPRA/outputs/experimentos/controle_rl/EXP_003C_master_buy_ssot_v8/flowchart_controle_rl_operacional.md",
       "line": 47,
       "excerpt": "    GR2[\"Limites de risco: MDD/underwater críticos, concentração, custos/turnover, quarentena\"]"
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md",
+      "line": 25,
+      "excerpt": "S007 ACTIVE (RULEFLAGS GLOBAL 20260223) é a fonte canônica para consumo ativo."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_001_S008_TOP10S45_STRESSSELL_20180701_20260204_CORPACTION_BRAPI_V1/report.md",
+      "line": 6,
+      "excerpt": "Run full-period resolve S007 por caminho legado; lição: pinagem canônica obrigatória."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/fullperiod_brapi_v1/manifest.json",
+      "line": 7,
+      "excerpt": "SSOT corporativo full-period inclui JCP/DIVIDEND/SPLIT/BONUS/REVERSE_SPLIT em escala total."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1/run_20260224_150515/report.json",
+      "line": 18,
+      "excerpt": "Execução FAIL seguida de PASS evidencia necessidade de mini-RCA obrigatório em reruns."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1/run_20260224_150546/report.json",
+      "line": 18,
+      "excerpt": "Rerun PASS após FAIL deve carregar causa-raiz e verificação de não-regressão."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/fullperiod_brapi_v1/evidence/fetch_errors.csv",
+      "line": 1,
+      "excerpt": "Falhas 404 em tickers BRAPI reforçam política explícita de fallback/retry/cobertura."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1/run_20260224_133406/report.json",
+      "line": 30,
+      "excerpt": "Supersedência explícita + parquet-first reduz ambiguidade operacional."
+    },
+    {
+      "path": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_20180701_20260204_CORPACTION_BRAPI_V1/charts/plotly_equity_base1_exp001_exp002abl6_cdi_bvsp_sp500_fullperiod.csv",
+      "line": 2,
+      "excerpt": "Comparativo base 1 exige primeiro dia comum explícito e regra de interseção temporal."
     }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "task_id": "TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "report_json": "/home/wilson/CEP_BUNDLE_CORE/planning/runs/TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1/run_20260224_172222/report.json",
+  "deliverables": {
+    "transfer_md": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.md",
+    "transfer_json": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.json",
+    "manifest": "/home/wilson/CEP_BUNDLE_CORE/outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/manifest.json"
+  },
+  "timestamp_utc": "2026-02-24T17:22:22Z"
+}

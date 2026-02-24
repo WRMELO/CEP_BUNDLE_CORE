@@ -1,0 +1,17 @@
+{
+  "instruction_id": "TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1",
+  "task_id": "TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1",
+  "target_role": "agent",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "working_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "agnostic_requirements": {
+    "must_use_agno_task": true,
+    "task_spec_path": "planning/task_specs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1.yaml",
+    "run_artifacts_root": "planning/runs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1/",
+    "outputs_dir": "outputs/governanca/corporate_actions/20260224/split_handling_v1"
+  },
+  "episodes": [
+    {"ticker": "EQTL3", "ex_date": "2019-11-28", "factor": 5.0, "window_end_reference": "2019-12-02"},
+    {"ticker": "ENEV3", "ex_date": "2021-03-12", "factor": 4.0, "window_end_reference": "2021-03-15"}
+  ]
+}

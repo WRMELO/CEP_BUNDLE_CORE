@@ -1,0 +1,74 @@
+{
+  "task_id": "TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1",
+  "status": "FAIL",
+  "overall_pass": false,
+  "gates": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_BUILD_SSOT_CORPORATE_ACTIONS",
+      "status": "PASS",
+      "details": {
+        "rows": 2
+      }
+    },
+    {
+      "name": "S3_IMPLEMENT_SPLIT_APPLICATION_IN_BACKTEST",
+      "status": "FAIL"
+    },
+    {
+      "name": "S4_BUILD_ADJUSTED_RETURN_SERIES_FOR_CEP",
+      "status": "PASS"
+    },
+    {
+      "name": "S5_AUDIT_IDENTITY_CHECKS_AND_ANOMALY_FLAGS",
+      "status": "PASS",
+      "details": {
+        "identity_ok_all": true,
+        "adjusted_logret_ok_all": true,
+        "qa_missing_ssot_flags_count": 0
+      }
+    },
+    {
+      "name": "S6_VALIDATE_ON_KNOWN_EPISODES_EQTL3_ENEV3_WITH_REPORT",
+      "status": "PASS"
+    }
+  ],
+  "steps": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_BUILD_SSOT_CORPORATE_ACTIONS",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_IMPLEMENT_SPLIT_APPLICATION_IN_BACKTEST",
+      "status": "FAIL"
+    },
+    {
+      "name": "S4_BUILD_ADJUSTED_RETURN_SERIES_FOR_CEP",
+      "status": "PASS"
+    },
+    {
+      "name": "S5_AUDIT_IDENTITY_CHECKS_AND_ANOMALY_FLAGS",
+      "status": "PASS"
+    },
+    {
+      "name": "S6_VALIDATE_ON_KNOWN_EPISODES_EQTL3_ENEV3_WITH_REPORT",
+      "status": "PASS"
+    }
+  ],
+  "deliverables": {
+    "ssot_parquet": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/split_handling_v1/ssot/corporate_actions.parquet",
+    "design_note": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/split_handling_v1/design/split_handling_design_note.md",
+    "audit_identity": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/split_handling_v1/audits/identity_checks_eqtl3_enev3.parquet",
+    "audit_qa_detector": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/split_handling_v1/audits/qa_detector_missing_ssot_flags.parquet",
+    "episode_validation_note": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/split_handling_v1/episode_validation_note.md",
+    "manifest": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/split_handling_v1/manifest.json"
+  },
+  "timestamp_utc": "2026-02-24T15:05:15.599395+00:00"
+}

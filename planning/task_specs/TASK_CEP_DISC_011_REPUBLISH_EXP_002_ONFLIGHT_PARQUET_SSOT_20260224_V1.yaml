@@ -1,0 +1,37 @@
+{
+  "instruction_id": "TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1",
+  "task_id": "TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1",
+  "target_role": "agent",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "working_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "agnostic_requirements": {
+    "must_use_agno_task": true,
+    "task_spec_path": "planning/task_specs/TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1.yaml",
+    "run_artifacts_root": "planning/runs/TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1/",
+    "outputs_dir": "outputs/governanca/republish/20260224/republish_exp_002_onflight_parquet_ssot_v1"
+  },
+  "inputs": {
+    "source_outputs_dir_current": "outputs/experimentos/fase1_calibracao/exp/20260224/exp_002_sell_policy_gate_rl",
+    "source_run_report": "planning/runs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1/run_20260224_132708/report.json",
+    "source_task_spec": "planning/task_specs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1.yaml"
+  },
+  "target_canonical": {
+    "canonical_outputs_dir": "outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1",
+    "canonical_files_expected": [
+      "report.md",
+      "summary.json",
+      "manifest.json",
+      "tables/"
+    ],
+    "parquet_policy": "Parquet-first: para cada tabela em CSV em tables/, gerar equivalente .parquet com mesmo basename; manter CSV apenas como espelho de leitura."
+  },
+  "supersedence_rules": {
+    "mark_inactive_paths": [
+      "outputs/experimentos/fase1_calibracao/exp/20260224/exp_002_sell_policy_gate_rl",
+      "work/experimentos_on_flight/EXP_002_SELL_POLICY_GATE_CEP_RL_V1"
+    ],
+    "inactive_marker_filename": "INACTIVE_FOR_NON_AUDIT.md",
+    "readme_supersedence_parent_dir": "outputs/experimentos/on_flight/",
+    "readme_filename": "README_SUPERSEDENCE.md"
+  }
+}

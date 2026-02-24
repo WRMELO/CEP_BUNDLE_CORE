@@ -1,0 +1,80 @@
+{
+  "task_id": "TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1",
+  "status": "PASS",
+  "overall_pass": true,
+  "gates": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_VERIFY_SOURCE_EXISTS_AND_PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_REPUBLISH_TO_CANONICAL_ONFLIGHT",
+      "status": "PASS",
+      "details": {
+        "csv_copied": 6
+      }
+    },
+    {
+      "name": "S4_ENFORCE_PARQUET_FIRST",
+      "status": "PASS",
+      "details": {
+        "parquet_generated": 6,
+        "parquet_missing": []
+      }
+    },
+    {
+      "name": "S5_WRITE_SUPERSEDENCE_AND_SSOT_README",
+      "status": "PASS",
+      "details": {
+        "readme": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/README_SUPERSEDENCE.md"
+      }
+    },
+    {
+      "name": "S6_VERIFY_MANIFEST_HASHES_AND_NO_AMBIGUITY",
+      "status": "PASS",
+      "details": {
+        "ambiguity": []
+      }
+    }
+  ],
+  "steps": [
+    {
+      "name": "S1_GATE_ALLOWLIST_PATHS",
+      "status": "PASS"
+    },
+    {
+      "name": "S2_VERIFY_SOURCE_EXISTS_AND_PASS",
+      "status": "PASS"
+    },
+    {
+      "name": "S3_REPUBLISH_TO_CANONICAL_ONFLIGHT",
+      "status": "PASS"
+    },
+    {
+      "name": "S4_ENFORCE_PARQUET_FIRST",
+      "status": "PASS"
+    },
+    {
+      "name": "S5_WRITE_SUPERSEDENCE_AND_SSOT_README",
+      "status": "PASS"
+    },
+    {
+      "name": "S6_VERIFY_MANIFEST_HASHES_AND_NO_AMBIGUITY",
+      "status": "PASS"
+    }
+  ],
+  "deliverables": {
+    "canonical_outputs_dir": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1",
+    "inactive_markers": [
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/fase1_calibracao/exp/20260224/exp_002_sell_policy_gate_rl/INACTIVE_FOR_NON_AUDIT.md",
+      "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/work/experimentos_on_flight/EXP_002_SELL_POLICY_GATE_CEP_RL_V1/INACTIVE_FOR_NON_AUDIT.md"
+    ],
+    "readme_supersedence": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/README_SUPERSEDENCE.md",
+    "canonical_manifest": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/manifest.json"
+  },
+  "timestamp_utc": "2026-02-24T13:34:06.866241+00:00"
+}

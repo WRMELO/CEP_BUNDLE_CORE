@@ -1,0 +1,38 @@
+{
+  "instruction_id": "TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1",
+  "task_id": "TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1",
+  "target_role": "agent",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "working_root": "/home/wilson/CEP_BUNDLE_CORE/_tentativa2_reexecucao_completa_20260220",
+  "agnostic_requirements": {
+    "must_use_agno_task": true,
+    "task_spec_path": "planning/task_specs/TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1.yaml",
+    "run_artifacts_root": "planning/runs/TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1/",
+    "outputs_dir": "outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1/episode_diagnostics/20260224"
+  },
+  "inputs": {
+    "exp001_root": "outputs/experimentos/on_flight/20260223/EXP_001_S008_TOP10S45_STRESSSELL_2019_20210630_V1",
+    "exp002_root": "outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_2019_20210630_V1",
+    "exp002_variant_to_explain": "deterministic_w4",
+    "episodes": [
+      {
+        "episode_id": "E1_20191125_20191202",
+        "date_start": "2019-11-25",
+        "date_end": "2019-12-02",
+        "question": "Queda em EXP_001 evitada em EXP_002: identificar quais regras/trades/posições explicam o delta de equity."
+      },
+      {
+        "episode_id": "E2_20200302_20200310",
+        "date_start": "2020-03-02",
+        "date_end": "2020-03-10",
+        "question": "Queda maior em EXP_002 do que em EXP_001: decompor contribuição por posição, custos e decisão (gate/severidade)."
+      },
+      {
+        "episode_id": "E3_20210211_20210630",
+        "date_start": "2021-02-11",
+        "date_end": "2021-06-30",
+        "question": "Explicar detalhadamente cada movimento que derruba o resultado relativo de EXP_002 vs EXP_001, com timeline de decisões e contribuições."
+      }
+    ]
+  }
+}

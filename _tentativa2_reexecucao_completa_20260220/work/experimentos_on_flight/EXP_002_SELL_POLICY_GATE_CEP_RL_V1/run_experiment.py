@@ -73,6 +73,60 @@ def previous_cdi_map(cdi_df: pd.DataFrame) -> dict[pd.Timestamp, float]:
     return {d: float(r) for d, r in zip(cdi["date"], cdi["prev_ret"])}
 
 
+def load_corporate_actions_maps(corporate_actions_path: Path) -> tuple[dict[pd.Timestamp, dict[str, float]], dict[pd.Timestamp, dict[str, float]]]:
+    if not corporate_actions_path.exists():
+        return {}, {}
+    ca = pd.read_parquet(corporate_actions_path)
+    required_cols = {"ticker", "action_type", "ex_date"}
+    if not required_cols.issubset(set(ca.columns)):
+        return {}, {}
+    ca["ex_date"] = pd.to_datetime(ca["ex_date"]).dt.normalize()
+    split_map: dict[pd.Timestamp, dict[str, float]] = {}
+    cash_map: dict[pd.Timestamp, dict[str, float]] = {}
+    for _, r in ca.iterrows():
+        d = pd.Timestamp(r["ex_date"]).normalize()
+        t = str(r["ticker"])
+        at = str(r.get("action_type", ""))
+        if at in {"SPLIT", "REVERSE_SPLIT", "BONUS"}:
+            f = float(r.get("factor", np.nan))
+            if np.isfinite(f) and f > 0.0:
+                split_map.setdefault(d, {})[t] = f
+        if at in {"DIVIDEND", "JCP"}:
+            rate = float(r.get("rate", np.nan))
+            if np.isfinite(rate) and rate > 0.0:
+                cash_map.setdefault(d, {})[t] = cash_map.setdefault(d, {}).get(t, 0.0) + rate
+    return split_map, cash_map
+
+
+def build_adjusted_logret_from_splits(
+    price_wide: pd.DataFrame,
+    split_factor_map: dict[pd.Timestamp, dict[str, float]],
+    cash_rate_map: dict[pd.Timestamp, dict[str, float]],
+) -> pd.DataFrame:
+    raw_logret = np.log(price_wide / price_wide.shift(1))
+    adj = raw_logret.copy()
+    for d, tmap in split_factor_map.items():
+        if d not in adj.index:
+            continue
+        for t, f in tmap.items():
+            if t not in adj.columns:
+                continue
+            if np.isfinite(f) and f > 0:
+                adj.loc[d, t] = float(adj.loc[d, t]) + float(np.log(f))
+    # Total-return adjustment on ex-date for cash dividends/JCP.
+    for d, tmap in cash_rate_map.items():
+        if d not in adj.index or d not in price_wide.index:
+            continue
+        close_row = price_wide.loc[d]
+        for t, rate in tmap.items():
+            if t not in adj.columns:
+                continue
+            close_d = float(close_row.get(t, np.nan))
+            if np.isfinite(close_d) and close_d > 0 and np.isfinite(rate) and rate > 0:
+                adj.loc[d, t] = float(adj.loc[d, t]) + float(np.log((close_d + rate) / close_d))
+    return adj
+
+
 def rolling_zscore(df_wide: pd.DataFrame, lookback: int, min_periods: int) -> pd.DataFrame:
     mean = df_wide.rolling(lookback, min_periods=min_periods).mean()
     std = df_wide.rolling(lookback, min_periods=min_periods).std(ddof=0)
@@ -202,6 +256,7 @@ def run_single_variant(
     logret_wide: pd.DataFrame,
     portfolio_logret: pd.Series,
     cdi_prev: dict[pd.Timestamp, float],
+    split_factor_map: dict[pd.Timestamp, dict[str, float]],
 ) -> VariantResult:
     start_date = pd.Timestamp(cfg["period"]["start_date"]).normalize()
     end_date = pd.Timestamp(cfg["period"]["end_date"]).normalize()
@@ -273,6 +328,7 @@ def run_single_variant(
     decisions: list[dict[str, Any]] = []
     regime_log: list[dict[str, Any]] = []
     holding_events: list[dict[str, Any]] = []
+    split_events: list[dict[str, Any]] = []
     regime_on = False
     regime_switches = 0
 
@@ -306,7 +362,29 @@ def run_single_variant(
                 rl_state_action_sum[state_bucket][action] += reward
                 rl_state_action_cnt[state_bucket][action] += 1
 
-        # 1) Executa vendas pendentes (sinal em D, execucao em D+1)
+        # 1) Aplica corporate actions (inicio de D, antes de trades)
+        for t, factor in split_factor_map.get(d, {}).items():
+            qty_prev = int(positions.get(t, 0))
+            if qty_prev <= 0:
+                continue
+            qty_new = int(round(qty_prev * factor))
+            if qty_new <= 0:
+                qty_new = 0
+            positions[t] = qty_new
+            split_events.append(
+                {
+                    "decision_date": d,
+                    "ticker": t,
+                    "factor": float(factor),
+                    "qty_prev": qty_prev,
+                    "qty_new": qty_new,
+                    "cash_unchanged": True,
+                    "variant": variant,
+                    "slope_w": slope_w,
+                }
+            )
+
+        # 2) Executa vendas pendentes (sinal em D, execucao em D+1)
         for order in pending_sell_exec.get(d, []):
             t = str(order["ticker"])
             qty_cur = int(positions.get(t, 0))
@@ -348,7 +426,7 @@ def run_single_variant(
                 holding_events.append({"ticker": t, "exit_date": d, "holding_days": holding_days})
                 del last_entry_date[t]
 
-        # 2) regime defensivo com histerese por slope_w
+        # 3) regime defensivo com histerese por slope_w
         s_today = slope_by_day.get(d, np.nan)
         prev1 = slope_by_day.get(decision_days[max(0, decision_days.index(d) - 1)], np.nan)
         prev2 = slope_by_day.get(decision_days[max(0, decision_days.index(d) - 2)], np.nan)
@@ -373,7 +451,7 @@ def run_single_variant(
             }
         )
 
-        # 3) candidatos de compra (S008) e unlock de quarentena
+        # 4) candidatos de compra (S008) e unlock de quarentena
         day = cand[cand["decision_date"] == d].copy()
         top10 = day[
             (day["in_pool_top15"] == True)
@@ -388,7 +466,7 @@ def run_single_variant(
             if t in top10_tickers:
                 blocked_reentry.remove(t)
 
-        # 4) gera score de severidade por ticker em carteira
+        # 5) gera score de severidade por ticker em carteira
         equity_ref = cash + value_with_prev_close(d)
         score_rows = []
         for t, q in positions.items():
@@ -450,7 +528,7 @@ def run_single_variant(
                     avgs[a] = rl_state_action_sum[state_bucket][a] / c if c > 0 else 0.5
                 global_action = int(sorted(avgs.items(), key=lambda kv: (-kv[1], kv[0]))[0][0])
 
-        # 5) agenda ordens de venda para D+1
+        # 6) agenda ordens de venda para D+1
         if d in next_day_map:
             nd = next_day_map[d]
             for _, r in ranked.iterrows():
@@ -514,7 +592,7 @@ def run_single_variant(
                     }
                 )
 
-        # 6) compras (mesma politica do baseline)
+        # 7) compras (mesma politica do baseline)
         def buy_max_qty(px: float, target_value: float) -> int:
             if not np.isfinite(px) or px <= 0:
                 return 0
@@ -625,7 +703,7 @@ def run_single_variant(
                     }
                 )
 
-        # 7) CDI no fim do dia
+        # 8) CDI no fim do dia
         cdi_prev_ret = float(cdi_prev.get(d, 0.0))
         cash += cash * cdi_prev_ret
         pos_value_prev = value_with_prev_close(d)
@@ -686,6 +764,7 @@ def run_single_variant(
         "missed_sell_rate": missed_sell_rate,
         "false_sell_rate": false_sell_rate,
         "regret_3d": regret_3d,
+        "split_events_applied": int(len(split_events)),
         "decision_rows": int(len(decisions_df)),
         "trade_rows": int(len(trades_df)),
     }
@@ -762,6 +841,7 @@ def main() -> int:
     s008_candidates_path = find_latest_required_path(attempt2_root, "/candidates/candidates_daily.parquet")
     s006_panel_path = find_latest_required_path(attempt2_root, "/panel/base_operacional_canonica.parquet")
     s007_ruleflags_path = Path(cfg["paths"]["s007_active_ruleflags_path"]).resolve()
+    corporate_actions_path = Path(cfg.get("paths", {}).get("corporate_actions_path", attempt2_root / "outputs" / "governanca" / "corporate_actions" / "20260224" / "split_handling_v1" / "ssot" / "corporate_actions.parquet")).resolve()
     cdi_daily_path = attempt2_root / "outputs" / "ssot_reference_refresh_v1" / "cdi_daily.parquet"
     if not s007_ruleflags_path.exists():
         raise RuntimeError(f"S007 ruleflags ativo ausente: {s007_ruleflags_path}")
@@ -797,11 +877,12 @@ def main() -> int:
     s007["date"] = pd.to_datetime(s007["date"]).dt.normalize()
     s007 = s007[(s007["date"] >= start_date) & (s007["date"] <= end_date)].copy()
 
-    panel = pd.read_parquet(s006_panel_path, columns=["date", "ticker", "close", "logret"])
+    panel = pd.read_parquet(s006_panel_path, columns=["date", "ticker", "close"])
     panel["date"] = pd.to_datetime(panel["date"]).dt.normalize()
     panel = panel[(panel["date"] >= start_date) & (panel["date"] <= end_date)].copy()
     price_wide = panel.pivot(index="date", columns="ticker", values="close").sort_index().ffill()
-    logret_wide = panel.pivot(index="date", columns="ticker", values="logret").sort_index()
+    split_factor_map, cash_rate_map = load_corporate_actions_maps(corporate_actions_path)
+    logret_wide = build_adjusted_logret_from_splits(price_wide, split_factor_map, cash_rate_map)
     portfolio_logret = logret_wide.mean(axis=1).fillna(0.0)
 
     cdi = pd.read_parquet(cdi_daily_path, columns=["date", "cdi_ret_t"])
@@ -821,6 +902,7 @@ def main() -> int:
                     logret_wide=logret_wide,
                     portfolio_logret=portfolio_logret,
                     cdi_prev=cdi_prev,
+                    split_factor_map=split_factor_map,
                 )
             )
 
@@ -857,6 +939,7 @@ def main() -> int:
             "s006_panel_path": str(s006_panel_path),
             "s007_ruleflags_path": str(s007_ruleflags_path),
             "cdi_daily_path": str(cdi_daily_path),
+            "corporate_actions_path": str(corporate_actions_path),
         },
     )
 

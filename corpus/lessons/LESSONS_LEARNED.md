@@ -1224,3 +1224,84 @@
 - tags: cep_bundle_core, championship, experimento, governance, s008, slope
 - evidence_items:
   - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/championship_f1_from_s007v2_2018h2_plotly_v1/evidence/checklist_unchanged_check.txt` anchor=`None` anchor_type=`none` excerpt_hint=`Experimentos escrevem em outputs/experimentos e nao alteram checklist; promocao exige decisao explicita.`
+
+## LL-20260224-POSTTRANSFER-001 - Pinagem canônica obrigatória para inputs ativos críticos
+- context: No pós-transferência, a cadeia ativa fixava S007 ruleflags_global como fonte operacional.
+- problem: Sintoma: run full-period de EXP_001 resolveu input por latest PASS e consumiu caminho não canônico para S007; root cause: heurística de resolução por sufixo sem pinagem de fonte ativa.
+- decision: Para S006/S007/S008 e demais fontes críticas, proibir resolução por latest PASS e exigir path explícito vindo do checklist ativo/SSOT vigente.
+- impact: Elimina regressão silenciosa de governança e garante reprodutibilidade operacional entre ciclos.
+- tags: cep_bundle_core, governance, canonical_input, ssot, s007, post_transfer
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/work/checklists/checklist_orientacoes_owner.md` anchor=`None` anchor_type=`none` excerpt_hint=`S007 ACTIVE definido por ruleflags_global 20260223.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/state_transfer_package_attempt3_v1/20260223/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT3_V1.json` anchor=`None` anchor_type=`none` excerpt_hint=`s007_old deprecado e s007_ruleflags_global ativo.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_001_S008_TOP10S45_STRESSSELL_20180701_20260204_CORPACTION_BRAPI_V1/report.md` anchor=`None` anchor_type=`none` excerpt_hint=`resolved_s007_burner_status aponta para caminho legadao nao canônico.`
+
+## LL-20260224-POSTTRANSFER-002 - Corporate actions precisam de duas camadas: quantidade e caixa econômico
+- context: A reexecução full-period exigiu split/bonus/dividendos/JCP na rotina diária.
+- problem: Sintoma: split/bonus aplicados, mas dividendos/JCP sem fluxo completo de receivable para caixa; root cause: implementação parcial focada em ajuste de série/posição.
+- decision: Padronizar pipeline em duas camadas: (1) qty/custo para eventos de quantidade no ex-date; (2) cash receivable no ex-date e liquidação no payment-date para dividendos/JCP.
+- impact: Evita drawdowns contábeis falsos e melhora fidelidade de equity econômico total return.
+- tags: cep_bundle_core, corporate_actions, dividend, jcp, total_return, post_transfer
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/work/experimentos_on_flight/EXP_002_SELL_POLICY_GATE_CEP_RL_V1/run_experiment.py` anchor=`None` anchor_type=`none` excerpt_hint=`mapa de cash events existe para ajuste de logretorno, sem fluxo completo de recebíveis no caixa.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/fullperiod_brapi_v1/manifest.json` anchor=`None` anchor_type=`none` excerpt_hint=`eventos incluem JCP/DIVIDEND em escala total.`
+
+## LL-20260224-POSTTRANSFER-003 - Curva oficial de decisão deve ser equity econômico (Total Return)
+- context: A estratégia usa CEP/RL sensível a variações diárias de equity e retornos.
+- problem: Sintoma: usar curva sem proventos completos pode induzir sinais artificiais; root cause: separação incompleta entre curva operacional de caixa e curva econômica.
+- decision: Definir por norma: decisões CEP/RL usam equity econômico total return; curva de caixa operacional permanece apenas para controle de liquidez.
+- impact: Reduz risco de decisões reativas a eventos contábeis e aumenta qualidade causal dos gatilhos.
+- tags: cep_bundle_core, equity, total_return, cep, rl, post_transfer
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_20180701_20260204_CORPACTION_BRAPI_V1/report.md` anchor=`None` anchor_type=`none` excerpt_hint=`comparabilidade e análise dependem da definição correta de equity.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/fullperiod_brapi_v1/ssot/corporate_actions.parquet` anchor=`None` anchor_type=`none` excerpt_hint=`há eventos de caixa e quantidade para suportar curva total return.`
+
+## LL-20260224-POSTTRANSFER-004 - Reexecuções do Owner devem virar task Agno formal
+- context: No pós-transferência houve execuções com manifest de output, mas sem trilha completa em planning/runs para a rodada full-period.
+- problem: Sintoma: governança de execução fica heterogênea entre ciclos; root cause: execução direta sem task wrapper.
+- decision: Toda reexecução solicitada pelo Owner deve gerar task spec + run report formal com gates e OVERALL PASS/FAIL.
+- impact: Uniformiza auditoria e reduz ambiguidade em retomadas e revisões forenses.
+- tags: cep_bundle_core, governance, agno, runs, auditability, post_transfer
+- evidence_items:
+  - path=`planning/runs/TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1/run_20260224_132958/report.json` anchor=`None` anchor_type=`none` excerpt_hint=`formato canônico de run report com gates.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_001_S008_TOP10S45_STRESSSELL_20180701_20260204_CORPACTION_BRAPI_V1/manifest.json` anchor=`None` anchor_type=`none` excerpt_hint=`output com PASS, porém sem planning/run próprio desta rodada.`
+
+## LL-20260224-POSTTRANSFER-005 - Política de falhas do provedor deve ser explícita e auditável
+- context: Coleta BRAPI full-period para corporate actions em 448 tickers.
+- problem: Sintoma: 404 para parte do universo sem fallback formal documentado; root cause: ausência de política unificada de retry/fallback/exception list.
+- decision: Formalizar política para 401/404/429/5xx com retries, fallback por alias quando aplicável e relatório de cobertura residual.
+- impact: Melhora robustez operacional e clareza sobre impacto de lacunas de provedor nos resultados.
+- tags: cep_bundle_core, provider, brapi, resilience, coverage, post_transfer
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/fullperiod_brapi_v1/evidence/fetch_errors.csv` anchor=`None` anchor_type=`none` excerpt_hint=`lista de tickers com 404 e mensagem do provedor.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/governanca/corporate_actions/20260224/fullperiod_brapi_v1/manifest.json` anchor=`None` anchor_type=`none` excerpt_hint=`errors_count registrado no manifesto.`
+
+## LL-20260224-POSTTRANSFER-006 - FAIL para PASS requer mini-RCA obrigatória
+- context: TASK_CEP_DISC_013 teve execução FAIL e rerun PASS no mesmo dia.
+- problem: Sintoma: rerun resolve mas contexto da falha pode se perder; root cause: ausência de seção obrigatória de causa-raiz/ação corretiva no report final.
+- decision: Incluir mini-RCA quando houver FAIL->PASS: causa raiz, correção aplicada e verificação de não regressão.
+- impact: Aumenta aprendizado operacional e reduz repetição de falhas em ciclos futuros.
+- tags: cep_bundle_core, governance, rca, fail_to_pass, quality, post_transfer
+- evidence_items:
+  - path=`planning/runs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1/run_20260224_150515/report.json` anchor=`None` anchor_type=`none` excerpt_hint=`gate S3 FAIL na primeira execução.`
+  - path=`planning/runs/TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1/run_20260224_150546/report.json` anchor=`None` anchor_type=`none` excerpt_hint=`rerun com PASS total sem mini-RCA padronizada.`
+
+## LL-20260224-POSTTRANSFER-007 - Supersedência explícita evita ambiguidade operacional
+- context: Republish para on_flight canônico com política parquet-first.
+- problem: Sintoma: coexistência de outputs múltiplos pode causar consumo indevido; root cause: ausência de marcação explícita de ativo/inativo.
+- decision: Manter padrão obrigatório: INACTIVE_FOR_NON_AUDIT + README_SUPERSEDENCE + manifest canônico.
+- impact: Reduz risco de uso de artefatos superseded e fortalece trilha de auditoria.
+- tags: cep_bundle_core, supersedence, parquet_first, governance, post_transfer
+- evidence_items:
+  - path=`planning/runs/TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1/run_20260224_133406/report.json` anchor=`None` anchor_type=`none` excerpt_hint=`gates de supersedência e parquet-first em PASS.`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/README_SUPERSEDENCE.md` anchor=`None` anchor_type=`none` excerpt_hint=`documentação central de caminhos ativos e inativos.`
+
+## LL-20260224-POSTTRANSFER-008 - Comparativos base 1 exigem regra explícita de interseção temporal
+- context: Gráfico único com 10 séries (EXP_001, 6 ablações EXP_002, CDI, BVSP, SP500).
+- problem: Sintoma: sem declarar interseção de datas e base inicial, comparação pode ficar enganosa; root cause: ausência de metadado explícito de normalização.
+- decision: Padronizar em relatório: primeiro dia comum, critério de join temporal e série resultante usada no plot.
+- impact: Melhora interpretabilidade e evita divergência de leitura entre análises.
+- tags: cep_bundle_core, plotly, base1, benchmark, comparability, post_transfer
+- evidence_items:
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_20180701_20260204_CORPACTION_BRAPI_V1/charts/plotly_equity_base1_exp001_exp002abl6_cdi_bvsp_sp500_fullperiod.csv` anchor=`None` anchor_type=`none` excerpt_hint=`séries normalizadas em base 1 no primeiro dia comum (2018-07-02).`
+  - path=`_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/20260224/EXP_002_S008_SELLGATE_CEP_RL_ABL345_20180701_20260204_CORPACTION_BRAPI_V1/charts/plotly_equity_base1_exp001_exp002abl6_cdi_bvsp_sp500_fullperiod.html` anchor=`None` anchor_type=`none` excerpt_hint=`visual comparativo único das 10 curvas.`

@@ -1,0 +1,105 @@
+{
+  "instruction_id": "TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1",
+  "target_role": "agent",
+  "repo_root": "/home/wilson/CEP_BUNDLE_CORE",
+  "objective": "Gerar um novo pacote de transferência de estado (MD+JSON) com a situação real atual e tudo o que foi feito/aprendido desde o transfer pack que iniciou este chat. Incluir protocolo de relacionamento e obrigatoriedade de Agno task. Registrar pendências e próximos passos, com o primeiro passo do próximo chat definido.",
+  "agnostic_requirements": {
+    "must_use_agno_task": true,
+    "task_spec_path": "planning/task_specs/TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1.yaml",
+    "run_artifacts_root": "planning/runs/TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1/",
+    "outputs_dir": "outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1"
+  },
+  "inputs": {
+    "prior_transfer_pack_paths": [
+      "SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT3_V1.md",
+      "SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT3_V1.json"
+    ],
+    "owner_checklist_path": "checklist_orientacoes_owner.md",
+    "roots_to_scan": [
+      "planning/runs/",
+      "planning/task_specs/",
+      "_tentativa2_reexecucao_completa_20260220/outputs/experimentos/on_flight/",
+      "_tentativa2_reexecucao_completa_20260220/outputs/experimentos/fase1_calibracao/",
+      "_tentativa2_reexecucao_completa_20260220/outputs/governanca/",
+      "_tentativa2_reexecucao_completa_20260220/work/"
+    ]
+  },
+  "must_capture_since_attempt3": {
+    "themes": [
+      "EXP_001 vs EXP_002 (melhor CAGR determinístico w=4; melhor churn/custo híbrido w=4; melhor híbrido em retorno w=5)",
+      "Correções de governança de paths (on_flight naming) e Parquet-first",
+      "Diagnóstico auditado por episódios (E1/E2/E3) com reconciliação de equity/custos",
+      "Descoberta: quedas falsas em EQTL3 e ENEV3 explicadas por split autorizado; necessidade de corporate actions",
+      "Decisão: não iniciar dry-run ainda; proposta de ambiente novo em folha '_para_transferencia' até S005",
+      "Pendência: salto contábil/equity spike em abril/2025 nos gráficos reexecutados; precisa investigação",
+      "Instrução pendente não executada: TASK_CEP_DISC_014_BOOTSTRAP_PARA_TRANSFERENCIA_S001_S005_20260224_V2 (primeira do próximo chat)"
+    ],
+    "tasks_expected_to_list_if_found": [
+      "TASK_CEP_F1_EXP_032_SELL_POLICY_GATE_CEP_RL_V1",
+      "TASK_CEP_DISC_011_REPUBLISH_EXP_002_ONFLIGHT_PARQUET_SSOT_20260224_V1",
+      "TASK_CEP_DISC_012_EPISODE_DIAGNOSTICS_EXP001_VS_EXP002_20260224_V1",
+      "TASK_CEP_DISC_013_CORPORATE_ACTIONS_SPLIT_HANDLING_V1",
+      "TASK_CEP_DISC_014_BOOTSTRAP_PARA_TRANSFERENCIA_S001_S005_20260224_V2"
+    ]
+  },
+  "md_requirements": {
+    "sections_in_order": [
+      "1. Situação real atual (resumo executivo)",
+      "2. Protocolo de relacionamento e formato combinado (CTO→Owner: O que/Por que/Como/Resultado esperado + JSON; sem código no chat; Agente deve responder com gates e evidências)",
+      "3. Regra de validade e cadeia ACTIVE (S001..S008) e supersedências (ACTIVE vs INACTIVE)",
+      "4. O que foi executado desde Attempt3 (tasks, runs, outputs, status PASS/FAIL, paths)",
+      "5. Achados auditados desta fase (episódios E1/E2/E3; split como causa; lições para CEP e carteira)",
+      "6. Problemas abertos (abril/2025 equity spike; ranking/compras furadas; corporate actions ainda a implementar/validar)",
+      "7. Próximos passos (ordenados, com o primeiro fixado)",
+      "8. Inventário de evidências (paths canônicos + manifest/hashes)"
+    ],
+    "style": "texto corrido, objetivo, sem emojis; sem especulação; tudo que for fato deve apontar para um artefato/path."
+  },
+  "json_requirements": {
+    "package_id": "SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1",
+    "must_fields": [
+      "package_date_utc",
+      "repo_root",
+      "attempt2_root",
+      "branch",
+      "valid_state_definition",
+      "active_chain",
+      "governance_decisions",
+      "recent_tasks_and_runs",
+      "key_findings",
+      "open_issues",
+      "next_steps",
+      "key_artifact_references",
+      "pending_instruction_to_run_first_next_chat"
+    ],
+    "pending_instruction_to_run_first_next_chat": "TASK_CEP_DISC_014_BOOTSTRAP_PARA_TRANSFERENCIA_S001_S005_20260224_V2"
+  },
+  "gates_required": [
+    "S1_GATE_ALLOWLIST_PATHS",
+    "S2_COLLECT_ATTEMPT3_AND_CURRENT_STATE",
+    "S3_COLLECT_RUNS_OUTPUTS_AND_ACTIVE_INACTIVE_MAP",
+    "S4_DRAFT_MD_AND_JSON",
+    "S5_VERIFY_REFERENCES_EXIST_AND_MANIFEST_HASHES",
+    "S6_WRITE_FINAL_ARTIFACTS_AND_RUN_REPORT"
+  ],
+  "deliverables": [
+    "outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.md",
+    "outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1.json",
+    "outputs/governanca/transfer_packs/20260224/SESSION_STATE_TRANSFER_PACKAGE_ATTEMPT4_V1/manifest.json",
+    "planning/runs/TASK_CEP_DISC_016_STATE_TRANSFER_PACKAGE_ATTEMPT4_20260224_V1/.../report.json"
+  ],
+  "acceptance_criteria": [
+    "MD e JSON apontam apenas para paths existentes e canônicos.",
+    "Inclui explicitamente tudo o que foi feito/aprendido desde Attempt3 (temas listados).",
+    "Lista o problema aberto de abril/2025 e registra como próximo estudo.",
+    "Registra que a primeira instrução do próximo chat é TASK_CEP_DISC_014_BOOTSTRAP_PARA_TRANSFERENCIA_S001_S005_20260224_V2.",
+    "Inclui protocolo de relacionamento e obrigatoriedade de Agno task."
+  ],
+  "error_handling": {
+    "in_case_of_response_error_not_code": [
+      "Perguntar ao Owner qual é o path do gráfico/artefato oficial que evidencia o salto de abril/2025",
+      "Perguntar até qual data o episódio de abril/2025 deve ser analisado no próximo ciclo",
+      "Perguntar qual critério operacional define 'compras furadas' para orientar validação"
+    ]
+  }
+}
